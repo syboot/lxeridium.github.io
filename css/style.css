@@ -19,14 +19,14 @@
 @font-face {
   font-family: 'UbuntuMono';
   src: url("https://cdn.jsdelivr.net/gh/lxeridium/cdn/fonts/UbuntuMono-Regular.ttf");
-  font-weight: 'normal';
-  font-style: 'normal';
+  /*font-weight: 'normal';*/
+  /*font-style: 'normal';*/
 }
 @font-face {
   font-family: 'Varela Round';
   src: url("https://cdn.jsdelivr.net/gh/lxeridium/cdn/fonts/VarelaRound-Regular.ttf");
-  font-weight: 'normal';
-  font-style: 'normal';
+  /*font-weight: 'normal';*/
+  /*font-style: 'normal';*/
 }
 * {
   box-sizing: border-box;
@@ -1462,7 +1462,7 @@ pre {
 .hljs {
   margin: -16px !important;
   padding: 16px !important;
-  -webkit-font-smoothing: auto;
+  /*-webkit-font-smoothing: auto;*/
   -moz-osx-font-smoothing: auto;
 }
 .hljs::-webkit-scrollbar {
@@ -1577,7 +1577,7 @@ pre {
   border-radius: 4px;
   border: 1px solid #e7e7e7;
   line-height: 1.5;
-  -webkit-font-smoothing: auto;
+  /*-webkit-font-smoothing: auto;*/
   -moz-osx-font-smoothing: auto;
   transition: all 0.28s ease;
   -moz-transition: all 0.28s ease;
@@ -3161,7 +3161,7 @@ footer p {
   font-size: 0.8125rem;
 }
 footer .licenses {
-  color: fade(, 50%);
+  color: fade( 0%, 50%);
   text-decoration: underline;
 }
 footer .codename {
@@ -3568,7 +3568,7 @@ footer .copyright p {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  -webkit-font-smoothing: auto;
+  /*-webkit-font-smoothing: auto;*/
   -moz-osx-font-smoothing: auto;
 }
 .l_main .post section.meta .new-meta-box,
