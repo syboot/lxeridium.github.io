@@ -214,13 +214,6 @@
 
   
   <url>
-    <loc>http://lxeridium.github.io/tags/ubuntu/</loc>
-    <lastmod>2020-10-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://lxeridium.github.io/tags/centos/</loc>
     <lastmod>2020-10-22</lastmod>
     <changefreq>daily</changefreq>
@@ -228,7 +221,21 @@
   </url>
   
   <url>
+    <loc>http://lxeridium.github.io/tags/ubuntu/</loc>
+    <lastmod>2020-10-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://lxeridium.github.io/tags/linux/</loc>
+    <lastmod>2020-10-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/cmd/</loc>
     <lastmod>2020-10-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -249,13 +256,6 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/tags/cmd/</loc>
-    <lastmod>2020-10-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://lxeridium.github.io/tags/software/</loc>
     <lastmod>2020-10-22</lastmod>
     <changefreq>daily</changefreq>
@@ -270,14 +270,14 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/tags/system/</loc>
+    <loc>http://lxeridium.github.io/tags/windows/</loc>
     <lastmod>2020-10-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/tags/windows/</loc>
+    <loc>http://lxeridium.github.io/tags/system/</loc>
     <lastmod>2020-10-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -293,13 +293,6 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/categories/linux/ubuntu/</loc>
-    <lastmod>2020-10-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://lxeridium.github.io/categories/linux/centos/</loc>
     <lastmod>2020-10-22</lastmod>
     <changefreq>daily</changefreq>
@@ -307,7 +300,7 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/categories/linux/opensuse/</loc>
+    <loc>http://lxeridium.github.io/categories/linux/ubuntu/</loc>
     <lastmod>2020-10-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -315,6 +308,13 @@
   
   <url>
     <loc>http://lxeridium.github.io/categories/linux/cmd/</loc>
+    <lastmod>2020-10-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/linux/opensuse/</loc>
     <lastmod>2020-10-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -342,13 +342,6 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/categories/linux/system/</loc>
-    <lastmod>2020-10-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://lxeridium.github.io/categories/windows/</loc>
     <lastmod>2020-10-22</lastmod>
     <changefreq>daily</changefreq>
@@ -357,6 +350,13 @@
   
   <url>
     <loc>http://lxeridium.github.io/categories/windows/tools/</loc>
+    <lastmod>2020-10-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/linux/system/</loc>
     <lastmod>2020-10-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
