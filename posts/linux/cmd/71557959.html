@@ -490,7 +490,126 @@
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
           
-          
+          <h2 id="文件传输"><a href="#文件传输" class="headerlink" title="文件传输"></a>文件传输</h2><h3 id="Linux-tftp命令"><a href="#Linux-tftp命令" class="headerlink" title="Linux tftp命令"></a>Linux tftp命令</h3><p>Linux tftp命令用于传输文件。</p>
+<p>FTP让用户得以下载存放于远端主机的文件，也能将文件上传到远端主机放置。tftp是简单的文字模式ftp程序，它所使用的指令和FTP类似。<br>语法</p>
+<p>tftp [主机名称或IP地址]</p>
+<p>操作说明：</p>
+<pre><code>connect：连接到远程tftp服务器
+mode：文件传输模式
+put：上传文件
+get：下载文件
+quit：退出
+verbose：显示详细的处理信息
+trace：显示包路径
+status：显示当前状态信息
+binary：二进制传输模式
+ascii：ascii 传送模式
+rexmt：设置包传输的超时时间
+timeout：设置重传的超时时间
+help：帮助信息
+? ：帮助信息</code></pre><h3 id="Linux-ftp命令"><a href="#Linux-ftp命令" class="headerlink" title="Linux ftp命令"></a>Linux ftp命令</h3><p>Linux ftp命令设置文件系统相关功能。</p>
+<p>FTP是ARPANet的标准文件传输协议，该网络就是现今Internet的前身。<br>语法</p>
+<p>ftp [-dignv][主机名称或IP地址]</p>
+<p>参数：</p>
+<pre><code>-d 详细显示指令执行过程，便于排错或分析程序执行的情形。
+-i 关闭互动模式，不询问任何问题。
+-g 关闭本地主机文件名称支持特殊字符的扩充特性。
+-n 不使用自动登陆。
+-v 显示指令执行过程。</code></pre><h2 id="磁盘管理"><a href="#磁盘管理" class="headerlink" title="磁盘管理"></a>磁盘管理</h2><h3 id="Linux-ls（英文全拼：list-files）"><a href="#Linux-ls（英文全拼：list-files）" class="headerlink" title="Linux ls（英文全拼：list files）"></a>Linux ls（英文全拼：list files）</h3><p>Linux ls 命令用于显示指定工作目录下之内容（列出目前工作目录所含之文件及子目录)。<br>语法</p>
+<p> ls [-alrtAFR] [name…]</p>
+<p>参数 :</p>
+<pre><code>-a 显示所有文件及目录 (. 开头的隐藏文件不会列出)
+-l 除文件名称外，亦将文件型态、权限、拥有者、文件大小等资讯详细列出
+-r 将文件以相反次序显示(原定依英文字母次序)
+-t 将文件依建立时间之先后次序列出
+-A 同 -a ，但不列出 &quot;.&quot; (目前目录) 及 &quot;..&quot; (父目录)
+-F 在列出的文件名称后加一符号；例如可执行档则加 &quot;*&quot;, 目录则加 &quot;/&quot;
+-R 若目录下有文件，则以下之文件亦皆依序列出</code></pre><h3 id="Linux-cd（英文全拼：change-directory）"><a href="#Linux-cd（英文全拼：change-directory）" class="headerlink" title="Linux cd（英文全拼：change directory）"></a>Linux cd（英文全拼：change directory）</h3><p>Linux cd 命令用于切换当前工作目录。</p>
+<p>其中 dirName 表示法可为绝对路径或相对路径。若目录名称省略，则变换至使用者的 home 目录 (也就是刚 login 时所在的目录)。</p>
+<p>另外，~ 也表示为 home 目录 的意思， . 则是表示目前所在的目录， .. 则表示目前目录位置的上一层目录。<br>语法</p>
+<p>cd [dirName]</p>
+<pre><code>dirName：要切换的目标目录。</code></pre><h3 id="Linux-df（英文全拼：disk-free）"><a href="#Linux-df（英文全拼：disk-free）" class="headerlink" title="Linux df（英文全拼：disk free）"></a>Linux df（英文全拼：disk free）</h3><p> Linux df 命令用于显示目前在 Linux 系统上的文件系统磁盘使用情况统计。<br> 语法</p>
+<p> df [选项]… [FILE]…</p>
+<pre><code>文件-a, --all 包含所有的具有 0 Blocks 的文件系统
+文件--block-size={SIZE} 使用 {SIZE} 大小的 Blocks
+文件-h, --human-readable 使用人类可读的格式(预设值是不加这个选项的...)
+文件-H, --si 很像 -h, 但是用 1000 为单位而不是用 1024
+文件-i, --inodes 列出 inode 资讯，不列出已使用 block
+文件-k, --kilobytes 就像是 --block-size=1024
+文件-l, --local 限制列出的文件结构
+文件-m, --megabytes 就像 --block-size=1048576
+文件--no-sync 取得资讯前不 sync (预设值)
+文件-P, --portability 使用 POSIX 输出格式
+文件--sync 在取得资讯前 sync
+文件-t, --type=TYPE 限制列出文件系统的 TYPE
+文件-T, --print-type 显示文件系统的形式
+文件-x, --exclude-type=TYPE 限制列出文件系统不要显示 TYPE
+文件-v (忽略)
+文件--help 显示这个帮手并且离开
+文件--version 输出版本资讯并且离开</code></pre><h3 id="Linux-pwd（英文全拼：print-work-directory）"><a href="#Linux-pwd（英文全拼：print-work-directory）" class="headerlink" title="Linux pwd（英文全拼：print work directory）"></a>Linux pwd（英文全拼：print work directory）</h3><p>Linux pwd 命令用于显示工作目录。</p>
+<p>执行 pwd 指令可立刻得知您目前所在的工作目录的绝对路径名称。<br>语法</p>
+<p>pwd [–help][–version]</p>
+<p>参数说明:</p>
+<pre><code>--help 在线帮助。
+--version 显示版本信息。</code></pre><h3 id="Linux-tree命令"><a href="#Linux-tree命令" class="headerlink" title="Linux tree命令"></a>Linux tree命令</h3><p>Linux tree命令用于以树状图列出目录的内容。</p>
+<p>执行tree指令，它会列出指定目录下的所有文件，包括子目录里的文件。<br>语法</p>
+<p>tree [-aACdDfFgilnNpqstux][-I &lt;范本样式&gt;][-P &lt;范本样式&gt;][目录…]</p>
+<p>参数说明：</p>
+<pre><code>-a 显示所有文件和目录。
+-A 使用ASNI绘图字符显示树状图而非以ASCII字符组合。
+-C 在文件和目录清单加上色彩，便于区分各种类型。
+-d 显示目录名称而非内容。
+-D 列出文件或目录的更改时间。
+-f 在每个文件或目录之前，显示完整的相对路径名称。
+-F 在执行文件，目录，Socket，符号连接，管道名称名称，各自加上&quot;*&quot;,&quot;/&quot;,&quot;=&quot;,&quot;@&quot;,&quot;|&quot;号。
+-g 列出文件或目录的所属群组名称，没有对应的名称时，则显示群组识别码。
+-i 不以阶梯状列出文件或目录名称。
+-L level 限制目录显示层级。
+-l 如遇到性质为符号连接的目录，直接列出该连接所指向的原始目录。
+-n 不在文件和目录清单加上色彩。
+-N 直接列出文件和目录名称，包括控制字符。
+-p 列出权限标示。
+-P&lt;范本样式&gt; 只显示符合范本样式的文件或目录名称。
+-q 用&quot;?&quot;号取代控制字符，列出文件和目录名称。
+-s 列出文件或目录大小。
+-t 用文件和目录的更改时间排序。
+-u 列出文件或目录的拥有者名称，没有对应的名称时，则显示用户识别码。
+-x 将范围局限在现行的文件系统中，若指定目录下的某些子目录，其存放于另一个文件系统上，则将该子目录予以排除在寻找范围外。</code></pre><h3 id="Linux-mount命令"><a href="#Linux-mount命令" class="headerlink" title="Linux mount命令"></a>Linux mount命令</h3><p> Linux mount命令是经常会使用到的命令，它用于挂载Linux系统外的文件。<br> 语法</p>
+<p> mount [-hV]<br> mount -a [-fFnrsvw] [-t vfstype]<br> mount [-fnrsvw] [-o options [,…]] device | dir<br> mount [-fnrsvw] [-t vfstype] [-o options] device dir</p>
+<p> 参数说明：</p>
+<pre><code>-V：显示程序版本
+-h：显示辅助讯息
+-v：显示较讯息，通常和 -f 用来除错。
+-a：将 /etc/fstab 中定义的所有档案系统挂上。
+-F：这个命令通常和 -a 一起使用，它会为每一个 mount 的动作产生一个行程负责执行。在系统需要挂上大量 NFS 档案系统时可以加快挂上的动作。
+-f：通常用在除错的用途。它会使 mount 并不执行实际挂上的动作，而是模拟整个挂上的过程。通常会和 -v 一起使用。
+-n：一般而言，mount 在挂上后会在 /etc/mtab 中写入一笔资料。但在系统中没有可写入档案系统存在的情况下可以用这个选项取消这个动作。
+-s-r：等于 -o ro
+-w：等于 -o rw
+-L：将含有特定标签的硬盘分割挂上。
+-U：将档案分割序号为 的档案系统挂下。-L 和 -U 必须在/proc/partition 这种档案存在时才有意义。
+-t：指定档案系统的型态，通常不必指定。mount 会自动选择正确的型态。
+-o async：打开非同步模式，所有的档案读写动作都会用非同步模式执行。
+-o sync：在同步模式下执行。
+-o atime、-o noatime：当 atime 打开时，系统会在每次读取档案时更新档案的『上一次调用时间』。当我们使用 flash 档案系统时可能会选项把这个选项关闭以减少写入的次数。
+-o auto、-o noauto：打开/关闭自动挂上模式。
+-o defaults:使用预设的选项 rw, suid, dev, exec, auto, nouser, and async.
+-o dev、-o nodev-o exec、-o noexec允许执行档被执行。
+-o suid、-o nosuid：
+允许执行档在 root 权限下执行。
+-o user、-o nouser：使用者可以执行 mount/umount 的动作。
+-o remount：将一个已经挂下的档案系统重新用不同的方式挂上。例如原先是唯读的系统，现在用可读写的模式重新挂上。
+-o ro：用唯读模式挂上。
+-o rw：用可读写模式挂上。
+-o loop=：使用 loop 模式用来将一个档案当成硬盘分割挂上系统。</code></pre><h3 id="Linux-mkdir（英文全拼：make-directory）"><a href="#Linux-mkdir（英文全拼：make-directory）" class="headerlink" title="Linux mkdir（英文全拼：make directory）"></a>Linux mkdir（英文全拼：make directory）</h3><p>Linux mkdir 命令用于创建目录。<br>语法</p>
+<p>mkdir [-p] dirName</p>
+<p>参数说明：</p>
+<pre><code>-p 确保目录名称存在，不存在的就建一个。</code></pre><h3 id="Linux-rmdir（英文全拼：remove-directory）"><a href="#Linux-rmdir（英文全拼：remove-directory）" class="headerlink" title="Linux rmdir（英文全拼：remove directory）"></a>Linux rmdir（英文全拼：remove directory）</h3><p>Linux rmdir 命令删除空的目录。<br>语法</p>
+<p>rmdir [-p] dirName</p>
+<p>参数：</p>
+<pre><code>-p 是当子目录被删除后使它也成为空目录的话，则顺便一并删除。</code></pre><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i3/2200652270622/O1CN01LJ6A1s1GSuwym6en3_!!2200652270622.jpg" alt="秋冬款高档小香风珍珠针织二件套装"></p>
+<p><a href="https://item.taobao.com/item.htm?id=617158065194" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
+<pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
           
             <div class='article_footer'>
               
@@ -572,10 +691,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-06-23T03:03:48+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-23T14:44:33+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年6月23日</p>
+    <p>更新于：2020年10月23日</p>
   </a>
 </div>
 
@@ -662,7 +781,8 @@
             
               <a class='prev' href='/posts/linux/cmd/c9e91e3c.html'>
                 <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>linux 常用命令 5-3讲</p>
-                <p class='content'></p>
+                <p class='content'>磁盘维护Linux sync命令Linux sync命令用于数据同步,sync命令是在关闭Linux系统时使用的。
+Linux 系统中欲写入硬盘的资料有的时候为了效率起见，会写到 filesys...</p>
               </a>
             
             
@@ -713,6 +833,20 @@ cat [-AbeEnstTuv] [–help] [–version] fileN...</p>
     
     
 
+
+  <section class="widget toc-wrapper shadow desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>directory</span>
+    
+  </header>
+
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#文件传输"><span class="toc-text">文件传输</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-tftp命令"><span class="toc-text">Linux tftp命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-ftp命令"><span class="toc-text">Linux ftp命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#磁盘管理"><span class="toc-text">磁盘管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-ls（英文全拼：list-files）"><span class="toc-text">Linux ls（英文全拼：list files）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-cd（英文全拼：change-directory）"><span class="toc-text">Linux cd（英文全拼：change directory）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-df（英文全拼：disk-free）"><span class="toc-text">Linux df（英文全拼：disk free）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-pwd（英文全拼：print-work-directory）"><span class="toc-text">Linux pwd（英文全拼：print work directory）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-tree命令"><span class="toc-text">Linux tree命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-mount命令"><span class="toc-text">Linux mount命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-mkdir（英文全拼：make-directory）"><span class="toc-text">Linux mkdir（英文全拼：make directory）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-rmdir（英文全拼：remove-directory）"><span class="toc-text">Linux rmdir（英文全拼：remove directory）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#赞助广告"><span class="toc-text">赞助广告</span></a></li></ol></li></ol>
+    </div>
+  </section>
 
 
   
