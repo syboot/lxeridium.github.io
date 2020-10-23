@@ -490,7 +490,287 @@
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
           
-          
+          <h2 id="系统管理"><a href="#系统管理" class="headerlink" title="系统管理"></a>系统管理</h2><h3 id="Linux-w命令"><a href="#Linux-w命令" class="headerlink" title="Linux w命令"></a>Linux w命令</h3><p>Linux w命令用于显示目前登入系统的用户信息。</p>
+<p>执行这项指令可得知目前登入系统的用户有哪些人，以及他们正在执行的程序。</p>
+<p>单独执行 w 指令会显示所有的用户，您也可指定用户名称，仅显示某位用户的相关信息。<br>语法</p>
+<p>w [-fhlsuV][用户名称]</p>
+<p>参数说明：</p>
+<pre><code>-f 　开启或关闭显示用户从何处登入系统。
+-h 　不显示各栏位的标题信息列。
+-l 　使用详细格式列表，此为预设值。
+-s 　使用简洁格式列表，不显示用户登入时间，终端机阶段作业和程序所耗费的CPU时间。
+-u 　忽略执行程序的名称，以及该程序耗费CPU时间的信息。
+-V 　显示版本信息。</code></pre><h3 id="Linux-reboot命令"><a href="#Linux-reboot命令" class="headerlink" title="Linux reboot命令"></a>Linux reboot命令</h3><p>Linux reboot命令用于用来重新启动计算机。</p>
+<p>若系统的 runlevel 为 0 或 6 ，则重新开机，否则以 shutdown 指令（加上 -r 参数）来取代<br>语法</p>
+<p>reboot [-n] [-w] [-d] [-f] [-i]</p>
+<p>参数：</p>
+<pre><code>-n : 在重开机前不做将记忆体资料写回硬盘的动作
+-w : 并不会真的重开机，只是把记录写到 /var/log/wtmp 档案里
+-d : 不把记录写到 /var/log/wtmp 档案里（-n 这个参数包含了 -d）
+-f : 强迫重开机，不呼叫 shutdown 这个指令
+-i : 在重开机之前先把所有网络相关的装置先停止</code></pre><h3 id="Linux-useradd-命令"><a href="#Linux-useradd-命令" class="headerlink" title="Linux useradd 命令"></a>Linux useradd 命令</h3><p>Linux useradd 命令用于建立用户帐号。</p>
+<p>useradd 可用来建立用户帐号。帐号建好之后，再用 passwd 设定帐号的密码。而可用 userdel 删除帐号。使用 useradd 指令所建立的帐号，实际上是保存在 /etc/passwd 文本文件中。<br>语法</p>
+<p>useradd [-mMnr][-c &lt;备注&gt;][-d &lt;登入目录&gt;][-e &lt;有效期限&gt;][-f &lt;缓冲天数&gt;][-g &lt;群组&gt;][-G &lt;群组&gt;][-s <shell>][-u <uid>][用户帐号]</p>
+<p>或</p>
+<p>useradd -D [-b][-e &lt;有效期限&gt;][-f &lt;缓冲天数&gt;][-g &lt;群组&gt;][-G &lt;群组&gt;][-s <shell>]</p>
+<p>参数说明：</p>
+<pre><code>-c&lt;备注&gt; 　加上备注文字。备注文字会保存在passwd的备注栏位中。
+-d&lt;登入目录&gt; 　指定用户登入时的起始目录。
+-D 　变更预设值．
+-e&lt;有效期限&gt; 　指定帐号的有效期限。
+-f&lt;缓冲天数&gt; 　指定在密码过期后多少天即关闭该帐号。
+-g&lt;群组&gt; 　指定用户所属的群组。
+-G&lt;群组&gt; 　指定用户所属的附加群组。
+-m 　自动建立用户的登入目录。
+-M 　不要自动建立用户的登入目录。
+-n 　取消建立以用户名称为名的群组．
+-r 　建立系统帐号。
+-s&lt;shell&gt;　 　指定用户登入后所使用的shell。
+-u&lt;uid&gt; 　指定用户ID。</code></pre><h3 id="inux-top命令"><a href="#inux-top命令" class="headerlink" title="inux top命令"></a>inux top命令</h3><p>Linux top命令用于实时显示 process 的动态。</p>
+<p>使用权限：所有使用者。<br>语法</p>
+<p>top [-] [d delay] [q] [c] [S] [s] [i] [n] [b]</p>
+<p>参数说明：</p>
+<pre><code>d : 改变显示的更新速度，或是在交谈式指令列( interactive command)按 s
+q : 没有任何延迟的显示速度，如果使用者是有 superuser 的权限，则 top 将会以最高的优先序执行
+c : 切换显示模式，共有两种模式，一是只显示执行档的名称，另一种是显示完整的路径与名称S : 累积模式，会将己完成或消失的子行程 ( dead child process ) 的 CPU time 累积起来
+s : 安全模式，将交谈式指令取消, 避免潜在的危机
+i : 不显示任何闲置 (idle) 或无用 (zombie) 的行程
+n : 更新的次数，完成后将会退出 top
+b : 批次档模式，搭配 &quot;n&quot; 参数一起使用，可以用来将 top 的结果输出到档案内</code></pre><h3 id="Linux-ps-（英文全拼：process-status）命令"><a href="#Linux-ps-（英文全拼：process-status）命令" class="headerlink" title="Linux ps （英文全拼：process status）命令"></a>Linux ps （英文全拼：process status）命令</h3><p>Linux ps 命令用于显示当前进程的状态，类似于 windows 的任务管理器。<br>语法</p>
+<p>ps [options] [–help]</p>
+<p>参数：</p>
+<pre><code>ps 的参数非常多, 在此仅列出几个常用的参数并大略介绍含义
+-A 列出所有的进程
+-w 显示加宽可以显示较多的资讯
+-au 显示较详细的资讯
+-aux 显示所有包含其他使用者的行程
+au(x) 输出格式 :
+USER PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND
+USER: 行程拥有者
+PID: pid
+%CPU: 占用的 CPU 使用率
+%MEM: 占用的记忆体使用率
+VSZ: 占用的虚拟记忆体大小
+RSS: 占用的记忆体大小
+TTY: 终端的次要装置号码 (minor device number of tty)
+STAT: 该行程的状态:
+D: 无法中断的休眠状态 (通常 IO 的进程)
+R: 正在执行中
+S: 静止状态
+T: 暂停执行
+Z: 不存在但暂时无法消除
+W: 没有足够的记忆体分页可分配
+&lt;: 高优先序的行程
+N: 低优先序的行程
+L: 有记忆体分页分配并锁在记忆体内 (实时系统或捱A I/O)
+START: 行程开始时间
+TIME: 执行的时间
+COMMAND:所执行的指令</code></pre><h3 id="Linux-last-命令"><a href="#Linux-last-命令" class="headerlink" title="Linux last 命令"></a>Linux last 命令</h3><p>Linux last 命令用于显示用户最近登录信息。</p>
+<p>使用权限：所有使用者。<br>语法</p>
+<p>shell&gt;&gt; last [options]</p>
+<p>参数说明：</p>
+<pre><code>-R 省略 hostname 的栏位
+-num 展示前 num 个
+username 展示 username 的登入讯息
+tty 限制登入讯息包含终端机代号</code></pre><h3 id="Linux-kill-命令"><a href="#Linux-kill-命令" class="headerlink" title="Linux kill 命令"></a>Linux kill 命令</h3><p>Linux kill 命令用于删除执行中的程序或工作。</p>
+<p>kill 可将指定的信息送至程序。预设的信息为 SIGTERM(15)，可将指定程序终止。若仍无法终止该程序，可使用 SIGKILL(9) 信息尝试强制删除程序。程序或工作的编号可利用 ps 指令或 jobs 指令查看。<br>语法</p>
+<p>kill [-s &lt;信息名称或编号&gt;][程序]　或　kill [-l &lt;信息编号&gt;]</p>
+<p>参数说明：</p>
+<pre><code>-l &lt;信息编号&gt; 　若不加&lt;信息编号&gt;选项，则 -l 参数会列出全部的信息名称。
+-s &lt;信息名称或编号&gt; 　指定要送出的信息。
+[程序] 　[程序]可以是程序的PID或是PGID，也可以是工作编号。</code></pre><p>使用 kill -l 命令列出所有可用信号。</p>
+<p>最常用的信号是：</p>
+<pre><code>1 (HUP)：重新加载进程。
+9 (KILL)：杀死一个进程。
+15 (TERM)：正常停止一个进程。</code></pre><h3 id="Linux-sleep命令"><a href="#Linux-sleep命令" class="headerlink" title="Linux sleep命令"></a>Linux sleep命令</h3><p>Linux sleep命令可以用来将目前动作延迟一段时间。</p>
+<p>使用权限：所有使用者。<br>语法</p>
+<p>sleep [–help] [–version] number[smhd]</p>
+<p>参数说明：</p>
+<pre><code>--help : 显示辅助讯息
+--version : 显示版本编号
+number : 时间长度，后面可接 s、m、h 或 d
+其中 s 为秒，m 为 分钟，h 为小时，d 为日数</code></pre><h3 id="Linux-su（英文全拼：swith-user）"><a href="#Linux-su（英文全拼：swith-user）" class="headerlink" title="Linux su（英文全拼：swith user）"></a>Linux su（英文全拼：swith user）</h3><p>Linux su 命令用于变更为其他使用者的身份，除 root 外，需要键入该使用者的密码。</p>
+<p>使用权限：所有使用者。<br>语法</p>
+<p>su [-fmp] [-c command] [-s shell] [–help] [–version] [-] [USER [ARG]]</p>
+<p>参数说明：</p>
+<pre><code>-f 或 --fast 不必读启动档（如 csh.cshrc 等），仅用于 csh 或 tcsh
+-m -p 或 --preserve-environment 执行 su 时不改变环境变数
+-c command 或 --command=command 变更为帐号为 USER 的使用者并执行指令（command）后再变回原来使用者
+-s shell 或 --shell=shell 指定要执行的 shell （bash csh tcsh 等），预设值为 /etc/passwd 内的该使用者（USER） shell
+--help 显示说明文件
+--version 显示版本资讯
+- -l 或 --login 这个参数加了之后，就好像是重新 login 为该使用者一样，大部份环境变数（HOME SHELL USER等等）都是以该使用者（USER）为主，并且工作目录也会改变，如果没有指定 USER ，内定是 root
+USER 欲变更的使用者帐号
+ARG 传入新的 shell 参数</code></pre><h2 id="系统设置"><a href="#系统设置" class="headerlink" title="系统设置"></a>系统设置</h2><h3 id="Linux-lsmod（英文全拼：list-modules）"><a href="#Linux-lsmod（英文全拼：list-modules）" class="headerlink" title="Linux lsmod（英文全拼：list modules）"></a>Linux lsmod（英文全拼：list modules）</h3><p>Linux lsmod 命令用于显示已载入系统的模块。</p>
+<p>执行 lsmod 指令，会列出所有已载入系统的模块。Linux 操作系统的核心具有模块化的特性，应此在编译核心时，务须把全部的功能都放入核心。您可以将这些功能编译成一个个单独的模块，待需要时再分别载入。<br>语法</p>
+<h3 id="Linux-export-命令"><a href="#Linux-export-命令" class="headerlink" title="Linux export 命令"></a>Linux export 命令</h3><p>Linux export 命令用于设置或显示环境变量。</p>
+<p>在 shell 中执行程序时，shell 会提供一组环境变量。export 可新增，修改或删除环境变量，供后续执行的程序使用。export 的效力仅限于该次登陆操作。<br>语法</p>
+<p>export [-fnp][变量名称]=[变量设置值]</p>
+<p>参数说明：</p>
+<pre><code>-f 　代表[变量名称]中为函数名称。
+-n 　删除指定的变量。变量实际上并未删除，只是不会输出到后续指令的执行环境中。
+-p 　列出所有的shell赋予程序的环境变量。</code></pre><h3 id="Linux-passwd命令"><a href="#Linux-passwd命令" class="headerlink" title="Linux passwd命令"></a>Linux passwd命令</h3><p>Linux passwd命令用来更改使用者的密码<br>语法</p>
+<p>passwd [-k] [-l] [-u [-f]] [-d] [-S] [username]</p>
+<p>必要参数：</p>
+<pre><code>-d 删除密码
+-f 强迫用户下次登录时必须修改口令
+-w 口令要到期提前警告的天数
+-k 更新只能发送在过期之后
+-l 停止账号使用
+-S 显示密码信息
+-u 启用已被停止的账户
+-x 指定口令最长存活期
+-g 修改群组密码
+指定口令最短存活期
+-i 口令过期后多少天停用账户</code></pre><p>选择参数：</p>
+<pre><code>--help 显示帮助信息
+--version 显示版本信息</code></pre><h3 id="Linux-modprobe命令"><a href="#Linux-modprobe命令" class="headerlink" title="Linux modprobe命令"></a>Linux modprobe命令</h3><p>Linux modprobe命令用于自动处理可载入模块。</p>
+<p>modprobe可载入指定的个别模块，或是载入一组相依的模块。modprobe会根据depmod所产生的相依关系，决定要载入哪些模块。若在载入过程中发生错误，在modprobe会卸载整组的模块。<br>语法</p>
+<p>modprobe [-acdlrtvV][–help][模块文件][符号名称 = 符号值]</p>
+<p>参数：</p>
+<pre><code>-a或--all 　载入全部的模块。
+-c或--show-conf 　显示所有模块的设置信息。
+-d或--debug 　使用排错模式。
+-l或--list 　显示可用的模块。
+-r或--remove 　模块闲置不用时，即自动卸载模块。
+-t或--type 　指定模块类型。
+-v或--verbose 　执行时显示详细的信息。
+-V或--version 　显示版本信息。
+-help 　显示帮助。</code></pre><h3 id="Linux-lsmod（英文全拼：list-modules）-1"><a href="#Linux-lsmod（英文全拼：list-modules）-1" class="headerlink" title="Linux lsmod（英文全拼：list modules）"></a>Linux lsmod（英文全拼：list modules）</h3><p>Linux lsmod 命令用于显示已载入系统的模块。</p>
+<p>执行 lsmod 指令，会列出所有已载入系统的模块。Linux 操作系统的核心具有模块化的特性，应此在编译核心时，务须把全部的功能都放入核心。您可以将这些功能编译成一个个单独的模块，待需要时再分别载入。<br>lsmod</p>
+<h3 id="Linux-rpm-命令"><a href="#Linux-rpm-命令" class="headerlink" title="Linux rpm 命令"></a>Linux rpm 命令</h3><p>Linux rpm 命令用于管理套件。</p>
+<p>rpm（英文全拼：redhat package manager） 原本是 Red Hat Linux 发行版专门用来管理 Linux 各项套件的程序，由于它遵循 GPL 规则且功能强大方便，因而广受欢迎。逐渐受到其他发行版的采用。RPM 套件管理方式的出现，让 Linux 易于安装，升级，间接提升了 Linux 的适用度。<br>语法</p>
+<p>rpm [-acdhilqRsv][-b&lt;完成阶段&gt;&lt;套间档&gt;+][-e&lt;套件挡&gt;][-f&lt;文件&gt;+][-i&lt;套件档&gt;][-p&lt;套件档&gt;＋][-U&lt;套件档&gt;][-vv][–addsign&lt;套件档&gt;+][–allfiles][–allmatches][–badreloc][–buildroot&lt;根目录&gt;][–changelog][–checksig&lt;套件档&gt;+][–clean][–dbpath&lt;数据库目录&gt;][–dump][–excludedocs][–excludepath&lt;排除目录&gt;][–force][–ftpproxy&lt;主机名称或IP地址&gt;][–ftpport&lt;通信端口&gt;][–help][–httpproxy&lt;主机名称或IP地址&gt;][–httpport&lt;通信端口&gt;][–ignorearch][–ignoreos][–ignoresize][–includedocs][–initdb][justdb][–nobulid][–nodeps][–nofiles][–nogpg][–nomd5][–nopgp][–noorder][–noscripts][–notriggers][–oldpackage][–percent][–pipe&lt;执行指令&gt;][–prefix&lt;目的目录&gt;][–provides][–queryformat&lt;档头格式&gt;][–querytags][–rcfile&lt;配置档&gt;][–rebulid&lt;套件档&gt;][–rebuliddb][–recompile&lt;套件档&gt;][–relocate&lt;原目录&gt;=&lt;新目录&gt;][–replacefiles][–replacepkgs][–requires][–resign&lt;套件档&gt;+][–rmsource][–rmsource&lt;文件&gt;][–root&lt;根目录&gt;][–scripts][–setperms][–setugids][–short-circuit][–sign][–target=&lt;安装平台&gt;+][–test][–timecheck&lt;检查秒数&gt;][–triggeredby&lt;套件档&gt;][–triggers][–verify][–version][–whatprovides&lt;功能特性&gt;][–whatrequires&lt;功能特性&gt;]</p>
+<p>参数说明：</p>
+<pre><code>-a 　查询所有套件。
+-b&lt;完成阶段&gt;&lt;套件档&gt;+或-t &lt;完成阶段&gt;&lt;套件档&gt;+ 　设置包装套件的完成阶段，并指定套件档的文件名称。
+-c 　只列出组态配置文件，本参数需配合&quot;-l&quot;参数使用。
+-d 　只列出文本文件，本参数需配合&quot;-l&quot;参数使用。
+-e&lt;套件档&gt;或--erase&lt;套件档&gt; 　删除指定的套件。
+-f&lt;文件&gt;+ 　查询拥有指定文件的套件。
+-h或--hash 　套件安装时列出标记。
+-i 　显示套件的相关信息。
+-i&lt;套件档&gt;或--install&lt;套件档&gt; 　安装指定的套件档。
+-l 　显示套件的文件列表。
+-p&lt;套件档&gt;+ 　查询指定的RPM套件档。
+-q 　使用询问模式，当遇到任何问题时，rpm指令会先询问用户。
+-R 　显示套件的关联性信息。
+-s 　显示文件状态，本参数需配合&quot;-l&quot;参数使用。
+-U&lt;套件档&gt;或--upgrade&lt;套件档&gt; 升级指定的套件档。
+-v 　显示指令执行过程。
+-vv 　详细显示指令执行过程，便于排错。
+-addsign&lt;套件档&gt;+ 　在指定的套件里加上新的签名认证。
+--allfiles 　安装所有文件。
+--allmatches 　删除符合指定的套件所包含的文件。
+--badreloc 　发生错误时，重新配置文件。
+--buildroot&lt;根目录&gt; 　设置产生套件时，欲当作根目录的目录。
+--changelog 　显示套件的更改记录。
+--checksig&lt;套件档&gt;+ 　检验该套件的签名认证。
+--clean 　完成套件的包装后，删除包装过程中所建立的目录。
+--dbpath&lt;数据库目录&gt; 　设置欲存放RPM数据库的目录。
+--dump 　显示每个文件的验证信息。本参数需配合&quot;-l&quot;参数使用。
+--excludedocs 　安装套件时，不要安装文件。
+--excludepath&lt;排除目录&gt; 　忽略在指定目录里的所有文件。
+--force 　强行置换套件或文件。
+--ftpproxy&lt;主机名称或IP地址&gt; 　指定FTP代理服务器。
+--ftpport&lt;通信端口&gt; 　设置FTP服务器或代理服务器使用的通信端口。
+--help 　在线帮助。
+--httpproxy&lt;主机名称或IP地址&gt; 　指定HTTP代理服务器。
+--httpport&lt;通信端口&gt; 　设置HTTP服务器或代理服务器使用的通信端口。
+--ignorearch 　不验证套件档的结构正确性。
+--ignoreos 　不验证套件档的结构正确性。
+--ignoresize 　安装前不检查磁盘空间是否足够。
+--includedocs 　安装套件时，一并安装文件。
+--initdb 　确认有正确的数据库可以使用。
+--justdb 　更新数据库，当不变动任何文件。
+--nobulid 　不执行任何完成阶段。
+--nodeps 　不验证套件档的相互关联性。
+--nofiles 　不验证文件的属性。
+--nogpg 　略过所有GPG的签名认证。
+--nomd5 　不使用MD5编码演算确认文件的大小与正确性。
+--nopgp 　略过所有PGP的签名认证。
+--noorder 　不重新编排套件的安装顺序，以便满足其彼此间的关联性。
+--noscripts 　不执行任何安装Script文件。
+--notriggers 　不执行该套件包装内的任何Script文件。
+--oldpackage 　升级成旧版本的套件。
+--percent 　安装套件时显示完成度百分比。
+--pipe&lt;执行指令&gt; 　建立管道，把输出结果转为该执行指令的输入数据。
+--prefix&lt;目的目录&gt; 　若重新配置文件，就把文件放到指定的目录下。
+--provides 　查询该套件所提供的兼容度。
+--queryformat&lt;档头格式&gt; 　设置档头的表示方式。
+--querytags 　列出可用于档头格式的标签。
+--rcfile&lt;配置文件&gt; 　使用指定的配置文件。
+--rebulid&lt;套件档&gt; 　安装原始代码套件，重新产生二进制文件的套件。
+--rebuliddb 　以现有的数据库为主，重建一份数据库。
+--recompile&lt;套件档&gt; 　此参数的效果和指定&quot;--rebulid&quot;参数类似，当不产生套件档。
+--relocate&lt;原目录&gt;=&lt;新目录&gt; 　把本来会放到原目录下的文件改放到新目录。
+--replacefiles 　强行置换文件。
+--replacepkgs 　强行置换套件。
+--requires 　查询该套件所需要的兼容度。
+--resing&lt;套件档&gt;+ 　删除现有认证，重新产生签名认证。
+--rmsource 　完成套件的包装后，删除原始代码。
+--rmsource&lt;文件&gt; 　删除原始代码和指定的文件。
+--root&lt;根目录&gt; 　设置欲当作根目录的目录。
+--scripts 　列出安装套件的Script的变量。
+--setperms 　设置文件的权限。
+--setugids 　设置文件的拥有者和所属群组。
+--short-circuit 　直接略过指定完成阶段的步骤。
+--sign 　产生PGP或GPG的签名认证。
+--target=&lt;安装平台&gt;+ 　设置产生的套件的安装平台。
+--test 　仅作测试，并不真的安装套件。
+--timecheck&lt;检查秒数&gt; 　设置检查时间的计时秒数。
+--triggeredby&lt;套件档&gt; 　查询该套件的包装者。
+--triggers 　展示套件档内的包装Script。
+--verify 　此参数的效果和指定&quot;-q&quot;参数相同。
+--version 　显示版本信息。
+--whatprovides&lt;功能特性&gt; 　查询该套件对指定的功能特性所提供的兼容度。
+--whatrequires&lt;功能特性&gt; 　查询该套件对指定的功能特性所需要的兼容度。</code></pre><h3 id="Linux-crontab"><a href="#Linux-crontab" class="headerlink" title="Linux crontab"></a>Linux crontab</h3><p>Linux crontab是用来定期执行程序的命令。</p>
+<p>当安装完成操作系统之后，默认便会启动此任务调度命令。</p>
+<p>crond 命令每分锺会定期检查是否有要执行的工作，如果有要执行的工作便会自动执行该工作。</p>
+<p>注意：新创建的 cron 任务，不会马上执行，至少要过 2 分钟后才可以，当然你可以重启 cron 来马上执行。</p>
+<p>而 linux 任务调度的工作主要分为以下两类：</p>
+<pre><code>1、系统执行的工作：系统周期性所要执行的工作，如备份系统数据、清理缓存
+2、个人执行的工作：某个用户定期要做的工作，例如每隔10分钟检查邮件服务器是否有新信，这些工作可由每个用户自行设置 </code></pre><p>语法</p>
+<p>crontab [ -u user ] file</p>
+<p>或</p>
+<p>crontab [ -u user ] { -l | -r | -e }</p>
+<p>说明：</p>
+<p>crontab 是用来让使用者在固定时间或固定间隔执行程序之用，换句话说，也就是类似使用者的时程表。</p>
+<p>-u user 是指设定指定 user 的时程表，这个前提是你必须要有其权限(比如说是 root)才能够指定他人的时程表。如果不使用 -u user 的话，就是表示设定自己的时程表。</p>
+<p>参数说明：</p>
+<pre><code>-e : 执行文字编辑器来设定时程表，内定的文字编辑器是 VI，如果你想用别的文字编辑器，则请先设定 VISUAL 环境变数来指定使用那个文字编辑器(比如说 setenv VISUAL joe)
+-r : 删除目前的时程表
+-l : 列出目前的时程表</code></pre><p>时间格式如下：</p>
+<p>f1 f2 f3 f4 f5 program</p>
+<pre><code>其中 f1 是表示分钟，f2 表示小时，f3 表示一个月份中的第几日，f4 表示月份，f5 表示一个星期中的第几天。program 表示要执行的程序。
+当 f1 为 * 时表示每分钟都要执行 program，f2 为 * 时表示每小时都要执行程序，其馀类推
+当 f1 为 a-b 时表示从第 a 分钟到第 b 分钟这段时间内要执行，f2 为 a-b 时表示从第 a 到第 b 小时都要执行，其馀类推
+当 f1 为 */n 时表示每 n 分钟个时间间隔执行一次，f2 为 */n 表示每 n 小时个时间间隔执行一次，其馀类推
+当 f1 为 a, b, c,... 时表示第 a, b, c,... 分钟要执行，f2 为 a, b, c,... 时表示第 a, b, c...个小时要执行，其馀类推</code></pre><hr>
+<hr>
+<p>|    |    |    |    |<br>|    |    |    |    +—– 星期中星期几 (0 - 7) (星期天 为0)<br>|    |    |    +———- 月份 (1 - 12)<br>|    |    +————— 一个月中的第几天 (1 - 31)<br>|    +——————– 小时 (0 - 23)<br>+————————- 分钟 (0 - 59)</p>
+<p>使用者也可以将所有的设定先存放在文件中，用 crontab file 的方式来设定执行时间。</p>
+<h3 id="Linux-bind"><a href="#Linux-bind" class="headerlink" title="Linux bind"></a>Linux bind</h3><p>Linux bind命令用于显示或设置键盘按键与其相关的功能。</p>
+<p>您可以利用bind命令了解有哪些按键组合与其功能，也可以自行指定要用哪些按键组合。<br>语法</p>
+<p>bind [-dlv][-f &lt;按键配置文件&gt;][-m &lt;按键配置&gt;][-q &lt;功能&gt;]</p>
+<p>参数说明：</p>
+<pre><code>-d 　显示按键配置的内容。
+-f&lt;按键配置文件&gt; 　载入指定的按键配置文件。
+-l 　列出所有的功能。
+-m&lt;按键配置&gt; 　指定按键配置。
+-q&lt;功能&gt; 　显示指定功能的按键。
+-v 　列出目前的按键配置与其功能。</code></pre><h3 id="Linux-chroot命令"><a href="#Linux-chroot命令" class="headerlink" title="Linux chroot命令"></a>Linux chroot命令</h3><p>Linux chroot命令用于改变根目录。</p>
+<p>chroot(change root)命令把根目录换成指定的目的目录。<br>、<br>语法</p>
+<p>chroot [–help][–version][目的目录][执行指令…]</p>
+<p>参数说明：</p>
+<pre><code>--help 　在线帮助。
+--version 　显示版本信息。</code></pre><h3 id="Linux-alias命令"><a href="#Linux-alias命令" class="headerlink" title="Linux alias命令"></a>Linux alias命令</h3><p>Linux alias命令用于设置指令的别名。</p>
+<p>用户可利用alias，自定指令的别名。若仅输入alias，则可列出目前所有的别名设置。alias的效力仅及于该次登入的操作。若要每次登入是即自动设好别名，可在.profile或.cshrc中设定指令的别名。<br>语法</p>
+<p>alias[别名]=[指令名称]</p>
+<p>参数说明：若不加任何参数，则列出目前所有的别名设置。</p>
+<h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd1.alicdn.com/imgextra/i4/2200652270622/O1CN01SSHPPl1GSuylF5K9b_!!2200652270622.jpg" alt="高端赫本风水波纹双面尼羊毛两件套"></p>
+<p><a href="https://item.taobao.com/item.htm?id=627807620055" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
+<pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
           
             <div class='article_footer'>
               
@@ -572,10 +852,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-06-23T03:03:48+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-23T19:57:57+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年6月23日</p>
+    <p>更新于：2020年10月23日</p>
   </a>
 </div>
 
@@ -662,13 +942,16 @@
             
               <a class='prev' href='/posts/linux/cmd/ec8241e0.html'>
                 <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>linux 常用命令 5-5讲</p>
-                <p class='content'></p>
+                <p class='content'>备份压缩Linux tar（英文全拼：tape archive ）Linux tar 命令用于备份文件。
+tar 是用来建立，还原备份文件的工具程序，它可以加入，解开备份文件内的文件。语法
+ta...</p>
               </a>
             
             
               <a class='next' href='/posts/linux/cmd/c9e91e3c.html'>
                 <p class='title'>linux 常用命令 5-3讲<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                <p class='content'></p>
+                <p class='content'>磁盘维护Linux sync命令Linux sync命令用于数据同步,sync命令是在关闭Linux系统时使用的。
+Linux 系统中欲写入硬盘的资料有的时候为了效率起见，会写到 filesys...</p>
               </a>
             
           </div>
@@ -711,6 +994,20 @@
     
     
 
+
+  <section class="widget toc-wrapper shadow desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>directory</span>
+    
+  </header>
+
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#系统管理"><span class="toc-text">系统管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-w命令"><span class="toc-text">Linux w命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-reboot命令"><span class="toc-text">Linux reboot命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-useradd-命令"><span class="toc-text">Linux useradd 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#inux-top命令"><span class="toc-text">inux top命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-ps-（英文全拼：process-status）命令"><span class="toc-text">Linux ps （英文全拼：process status）命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-last-命令"><span class="toc-text">Linux last 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-kill-命令"><span class="toc-text">Linux kill 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-sleep命令"><span class="toc-text">Linux sleep命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-su（英文全拼：swith-user）"><span class="toc-text">Linux su（英文全拼：swith user）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统设置"><span class="toc-text">系统设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-lsmod（英文全拼：list-modules）"><span class="toc-text">Linux lsmod（英文全拼：list modules）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-export-命令"><span class="toc-text">Linux export 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-passwd命令"><span class="toc-text">Linux passwd命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-modprobe命令"><span class="toc-text">Linux modprobe命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-lsmod（英文全拼：list-modules）-1"><span class="toc-text">Linux lsmod（英文全拼：list modules）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-rpm-命令"><span class="toc-text">Linux rpm 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-crontab"><span class="toc-text">Linux crontab</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-bind"><span class="toc-text">Linux bind</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-chroot命令"><span class="toc-text">Linux chroot命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-alias命令"><span class="toc-text">Linux alias命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#赞助广告"><span class="toc-text">赞助广告</span></a></li></ol></li></ol>
+    </div>
+  </section>
 
 
   

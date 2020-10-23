@@ -490,7 +490,204 @@
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
           
-          
+          <h2 id="备份压缩"><a href="#备份压缩" class="headerlink" title="备份压缩"></a>备份压缩</h2><h3 id="Linux-tar（英文全拼：tape-archive-）"><a href="#Linux-tar（英文全拼：tape-archive-）" class="headerlink" title="Linux tar（英文全拼：tape archive ）"></a>Linux tar（英文全拼：tape archive ）</h3><p>Linux tar 命令用于备份文件。</p>
+<p>tar 是用来建立，还原备份文件的工具程序，它可以加入，解开备份文件内的文件。<br>语法</p>
+<p>tar [-ABcdgGhiklmMoOpPrRsStuUvwWxzZ][-b &lt;区块数目&gt;][-C &lt;目的目录&gt;][-f &lt;备份文件&gt;][-F &lt;Script文件&gt;][-K &lt;文件&gt;][-L &lt;媒体容量&gt;][-N &lt;日期时间&gt;][-T &lt;范本文件&gt;][-V &lt;卷册名称&gt;][-X &lt;范本文件&gt;][-&lt;设备编号&gt;&lt;存储密度&gt;][–after-date=&lt;日期时间&gt;][–atime-preserve][–backuup=&lt;备份方式&gt;][–checkpoint][–concatenate][–confirmation][–delete][–exclude=&lt;范本样式&gt;][–force-local][–group=&lt;群组名称&gt;][–help][–ignore-failed-read][–new-volume-script=&lt;Script文件&gt;][–newer-mtime][–no-recursion][–null][–numeric-owner][–owner=&lt;用户名称&gt;][–posix][–erve][–preserve-order][–preserve-permissions][–record-size=&lt;区块数目&gt;][–recursive-unlink][–remove-files][–rsh-command=&lt;执行指令&gt;][–same-owner][–suffix=&lt;备份字尾字符串&gt;][–totals][–use-compress-program=&lt;执行指令&gt;][–version][–volno-file=&lt;编号文件&gt;][文件或目录…]</p>
+<p>参数：</p>
+<pre><code>-A或--catenate 新增文件到已存在的备份文件。
+-b&lt;区块数目&gt;或--blocking-factor=&lt;区块数目&gt; 设置每笔记录的区块数目，每个区块大小为12Bytes。
+-B或--read-full-records 读取数据时重设区块大小。
+-c或--create 建立新的备份文件。
+-C&lt;目的目录&gt;或--directory=&lt;目的目录&gt; 切换到指定的目录。
+-d或--diff或--compare 对比备份文件内和文件系统上的文件的差异。
+-f&lt;备份文件&gt;或--file=&lt;备份文件&gt; 指定备份文件。
+-F&lt;Script文件&gt;或--info-script=&lt;Script文件&gt; 每次更换磁带时，就执行指定的Script文件。
+-g或--listed-incremental 处理GNU格式的大量备份。
+-G或--incremental 处理旧的GNU格式的大量备份。
+-h或--dereference 不建立符号连接，直接复制该连接所指向的原始文件。
+-i或--ignore-zeros 忽略备份文件中的0 Byte区块，也就是EOF。
+-k或--keep-old-files 解开备份文件时，不覆盖已有的文件。
+-K&lt;文件&gt;或--starting-file=&lt;文件&gt; 从指定的文件开始还原。
+-l或--one-file-system 复制的文件或目录存放的文件系统，必须与tar指令执行时所处的文件系统相同，否则不予复制。
+-L&lt;媒体容量&gt;或-tape-length=&lt;媒体容量&gt; 设置存放每体的容量，单位以1024 Bytes计算。
+-m或--modification-time 还原文件时，不变更文件的更改时间。
+-M或--multi-volume 在建立，还原备份文件或列出其中的内容时，采用多卷册模式。
+-N&lt;日期格式&gt;或--newer=&lt;日期时间&gt; 只将较指定日期更新的文件保存到备份文件里。
+-o或--old-archive或--portability 将资料写入备份文件时使用V7格式。
+-O或--stdout 把从备份文件里还原的文件输出到标准输出设备。
+-p或--same-permissions 用原来的文件权限还原文件。
+-P或--absolute-names 文件名使用绝对名称，不移除文件名称前的&quot;/&quot;号。
+-r或--append 新增文件到已存在的备份文件的结尾部分。
+-R或--block-number 列出每个信息在备份文件中的区块编号。
+-s或--same-order 还原文件的顺序和备份文件内的存放顺序相同。
+-S或--sparse 倘若一个文件内含大量的连续0字节，则将此文件存成稀疏文件。
+-t或--list 列出备份文件的内容。
+-T&lt;范本文件&gt;或--files-from=&lt;范本文件&gt; 指定范本文件，其内含有一个或多个范本样式，让tar解开或建立符合设置条件的文件。
+-u或--update 仅置换较备份文件内的文件更新的文件。
+-U或--unlink-first 解开压缩文件还原文件之前，先解除文件的连接。
+-v或--verbose 显示指令执行过程。
+-V&lt;卷册名称&gt;或--label=&lt;卷册名称&gt; 建立使用指定的卷册名称的备份文件。
+-w或--interactive 遭遇问题时先询问用户。
+-W或--verify 写入备份文件后，确认文件正确无误。
+-x或--extract或--get 从备份文件中还原文件。
+-X&lt;范本文件&gt;或--exclude-from=&lt;范本文件&gt; 指定范本文件，其内含有一个或多个范本样式，让ar排除符合设置条件的文件。
+-z或--gzip或--ungzip 通过gzip指令处理备份文件。
+-Z或--compress或--uncompress 通过compress指令处理备份文件。
+-&lt;设备编号&gt;&lt;存储密度&gt; 设置备份用的外围设备编号及存放数据的密度。
+--after-date=&lt;日期时间&gt; 此参数的效果和指定&quot;-N&quot;参数相同。
+--atime-preserve 不变更文件的存取时间。
+--backup=&lt;备份方式&gt;或--backup 移除文件前先进行备份。
+--checkpoint 读取备份文件时列出目录名称。
+--concatenate 此参数的效果和指定&quot;-A&quot;参数相同。
+--confirmation 此参数的效果和指定&quot;-w&quot;参数相同。
+--delete 从备份文件中删除指定的文件。
+--exclude=&lt;范本样式&gt; 排除符合范本样式的文件。
+--group=&lt;群组名称&gt; 把加入设备文件中的文件的所属群组设成指定的群组。
+--help 在线帮助。
+--ignore-failed-read 忽略数据读取错误，不中断程序的执行。
+--new-volume-script=&lt;Script文件&gt; 此参数的效果和指定&quot;-F&quot;参数相同。
+--newer-mtime 只保存更改过的文件。
+--no-recursion 不做递归处理，也就是指定目录下的所有文件及子目录不予处理。
+--null 从null设备读取文件名称。
+--numeric-owner 以用户识别码及群组识别码取代用户名称和群组名称。
+--owner=&lt;用户名称&gt; 把加入备份文件中的文件的拥有者设成指定的用户。
+--posix 将数据写入备份文件时使用POSIX格式。
+--preserve 此参数的效果和指定&quot;-ps&quot;参数相同。
+--preserve-order 此参数的效果和指定&quot;-A&quot;参数相同。
+--preserve-permissions 此参数的效果和指定&quot;-p&quot;参数相同。
+--record-size=&lt;区块数目&gt; 此参数的效果和指定&quot;-b&quot;参数相同。
+--recursive-unlink 解开压缩文件还原目录之前，先解除整个目录下所有文件的连接。
+--remove-files 文件加入备份文件后，就将其删除。
+--rsh-command=&lt;执行指令&gt; 设置要在远端主机上执行的指令，以取代rsh指令。
+--same-owner 尝试以相同的文件拥有者还原文件。
+--suffix=&lt;备份字尾字符串&gt; 移除文件前先行备份。
+--totals 备份文件建立后，列出文件大小。
+--use-compress-program=&lt;执行指令&gt; 通过指定的指令处理备份文件。
+--version 显示版本信息。
+--volno-file=&lt;编号文件&gt; 使用指定文件内的编号取代预设的卷册编号。</code></pre><h3 id="Linux-unzip命令"><a href="#Linux-unzip命令" class="headerlink" title="Linux unzip命令"></a>Linux unzip命令</h3><p>Linux unzip命令用于解压缩zip文件</p>
+<p>unzip为.zip压缩文件的解压缩程序。<br>语法</p>
+<p>unzip [-cflptuvz][-agCjLMnoqsVX][-P &lt;密码&gt;][.zip文件][文件][-d &lt;目录&gt;][-x &lt;文件&gt;] 或 unzip [-Z]</p>
+<p>参数：</p>
+<pre><code>-c 将解压缩的结果显示到屏幕上，并对字符做适当的转换。
+-f 更新现有的文件。
+-l 显示压缩文件内所包含的文件。
+-p 与-c参数类似，会将解压缩的结果显示到屏幕上，但不会执行任何的转换。
+-t 检查压缩文件是否正确。
+-u 与-f参数类似，但是除了更新现有的文件外，也会将压缩文件中的其他文件解压缩到目录中。
+-v 执行是时显示详细的信息。
+-z 仅显示压缩文件的备注文字。
+-a 对文本文件进行必要的字符转换。
+-b 不要对文本文件进行字符转换。
+-C 压缩文件中的文件名称区分大小写。
+-j 不处理压缩文件中原有的目录路径。
+-L 将压缩文件中的全部文件名改为小写。
+-M 将输出结果送到more程序处理。
+-n 解压缩时不要覆盖原有的文件。
+-o 不必先询问用户，unzip执行后覆盖原有文件。
+-P&lt;密码&gt; 使用zip的密码选项。
+-q 执行时不显示任何信息。
+-s 将文件名中的空白字符转换为底线字符。
+-V 保留VMS的文件版本信息。
+-X 解压缩时同时回存文件原来的UID/GID。
+[.zip文件] 指定.zip压缩文件。
+[文件] 指定要处理.zip压缩文件中的哪些文件。
+-d&lt;目录&gt; 指定文件解压缩后所要存储的目录。
+-x&lt;文件&gt; 指定不要处理.zip压缩文件中的哪些文件。
+-Z unzip -Z等于执行zipinfo指令。</code></pre><h3 id="Linux-gzip命令"><a href="#Linux-gzip命令" class="headerlink" title="Linux gzip命令"></a>Linux gzip命令</h3><p>Linux gzip命令用于压缩文件。</p>
+<p>gzip是个使用广泛的压缩程序，文件经它压缩过后，其名称后面会多出”.gz”的扩展名。<br>语法</p>
+<p>gzip [-acdfhlLnNqrtvV][-S &lt;压缩字尾字符串&gt;][-&lt;压缩效率&gt;][–best/fast][文件…] 或 gzip [-acdfhlLnNqrtvV][-S &lt;压缩字尾字符串&gt;][-&lt;压缩效率&gt;][–best/fast][目录]</p>
+<p>参数：</p>
+<pre><code>-a或--ascii 　使用ASCII文字模式。
+-c或--stdout或--to-stdout 　把压缩后的文件输出到标准输出设备，不去更动原始文件。
+-d或--decompress或----uncompress 　解开压缩文件。
+-f或--force 　强行压缩文件。不理会文件名称或硬连接是否存在以及该文件是否为符号连接。
+-h或--help 　在线帮助。
+-l或--list 　列出压缩文件的相关信息。
+-L或--license 　显示版本与版权信息。
+-n或--no-name 　压缩文件时，不保存原来的文件名称及时间戳记。
+-N或--name 　压缩文件时，保存原来的文件名称及时间戳记。
+-q或--quiet 　不显示警告信息。
+-r或--recursive 　递归处理，将指定目录下的所有文件及子目录一并处理。
+-S&lt;压缩字尾字符串&gt;或----suffix&lt;压缩字尾字符串&gt; 　更改压缩字尾字符串。
+-t或--test 　测试压缩文件是否正确无误。
+-v或--verbose 　显示指令执行过程。
+-V或--version 　显示版本信息。
+-&lt;压缩效率&gt; 　压缩效率是一个介于1－9的数值，预设值为&quot;6&quot;，指定愈大的数值，压缩效率就会愈高。
+--best 　此参数的效果和指定&quot;-9&quot;参数相同。
+--fast 　此参数的效果和指定&quot;-1&quot;参数相同。</code></pre><h3 id="Linux-cpio命令"><a href="#Linux-cpio命令" class="headerlink" title="Linux cpio命令"></a>Linux cpio命令</h3><p>Linux cpio命令用于备份文件。</p>
+<p>cpio 是用来建立，还原备份档的工具程序，它可以加入，解开 cpio 或 tar 备份档内的文件。<br>语法</p>
+<p>cpio [-0aABckLovV][-C &lt;输入/输出大小&gt;][-F &lt;备份档&gt;][-H &lt;备份格式&gt;][-O &lt;备份档&gt;][–block-size=&lt;区块大小&gt;][–force-local][–help][–quiet][–version] 或 cpio [-bBcdfikmnrsStuvV][-C &lt;输入/输出大小&gt;][-E &lt;范本文件&gt;][-F &lt;备份档&gt;][-H &lt;备份格式&gt;][-I &lt;备份档&gt;][-M &lt;回传信息&gt;][-R &lt;拥有者&gt;&lt;:/.&gt;&lt;所属群组&gt;][–block-size=&lt;区块大小&gt;][–force-local][–help][–no-absolute-filenames][–no-preserve-owner][–only-verify-crc][–quiet][–sparse][–version][范本样式…] 或 cpio [-0adkiLmpuvV][-R &lt;拥有者&gt;&lt;:/.&gt;&lt;所属群组&gt;][–help][–no-preserve-owner][–quiet][–sparse][–version][目的目]</p>
+<p>参数：</p>
+<pre><code>-0或--null 　接受新增列控制字符，通常配合find指令的&quot;-print0&quot;参数使用。
+-a或--reset-access-time 　重新设置文件的存取时间。
+-A或--append 　附加到已存在的备份档中，且这个备份档必须存放在磁盘上，而不能放置于磁带机里。
+-b或--swap 　此参数的效果和同时指定&quot;-sS&quot;参数相同。
+-B 　将输入/输出的区块大小改成5210 Bytes。
+-c 　使用旧ASCII备份格式。
+-C&lt;区块大小&gt;或--io-size=&lt;区块大小&gt; 　设置输入/输出的区块大小，单位是Byte。
+-d或--make-directories 　如有需要cpio会自行建立目录。
+-E&lt;范本文件&gt;或--pattern-file=&lt;范本文件&gt; 　指定范本文件，其内含有一个或多个范本样式，让cpio解开符合范本条件的文件，格式为每列一个范本样式。
+-f或--nonmatching 　让cpio解开所有不符合范本条件的文件。
+-F&lt;备份档&gt;或--file=&lt;备份档&gt; 　指定备份档的名称，用来取代标准输入或输出，也能借此通过网络使用另一台主机的保存设备存取备份档。
+-H&lt;备份格式&gt; 　指定备份时欲使用的文件格式。
+-i或--extract 　执行copy-in模式，还原备份档。
+-l&lt;备份档&gt; 　指定备份档的名称，用来取代标准输入，也能借此通过网络使用另一台主机的保存设备读取备份档。
+-k 　此参数将忽略不予处理，仅负责解决cpio不同版本间的兼容性问题。
+-l或--link 　以硬连接的方式取代复制文件，可在copy-pass模式下运用。
+-L或--dereference 　不建立符号连接，直接复制该连接所指向的原始文件。
+-m或preserve-modification-time 　不去更换文件的更改时间。
+-M&lt;回传信息&gt;或--message=&lt;回传信息&gt; 　设置更换保存媒体的信息。
+-n或--numeric-uid-gid 　使用&quot;-tv&quot;参数列出备份档的内容时，若再加上参数&quot;-n&quot;，则会以用户识别码和群组识别码替代拥有者和群组名称列出文件清单。
+-o或--create 　执行copy-out模式，建立备份档。
+-O&lt;备份档&gt; 　指定备份档的名称，用来取代标准输出，也能借此通过网络　使用另一台主机的保存设备存放备份档。
+-p或--pass-through 　执行copy-pass模式，略过备份步骤，直接将文件复制到目的目录。
+-r或--rename 　当有文件名称需要更动时，采用互动模式。
+-R&lt;拥有者&gt;&lt;:/.&gt;&lt;所属群组&gt;或
+----owner&lt;拥有者&gt;&lt;:/.&gt;&lt;所属群组&gt; 　在copy-in模式还原备份档，或copy-pass模式复制文件时，可指定这些备份，复制的文件的拥有者与所属群组。
+-s或--swap-bytes 　交换每对字节的内容。
+-S或--swap-halfwords 　交换每半个字节的内容。
+-t或--list 　将输入的内容呈现出来。
+-u或--unconditional 　置换所有文件，不论日期时间的新旧与否，皆不予询问而直接覆盖。
+-v或--verbose 　详细显示指令的执行过程。
+-V或--dot 　执行指令时，在每个文件的执行程序前面加上&quot;.&quot;号
+--block-size=&lt;区块大小&gt; 　设置输入/输出的区块大小，假如设置数值为5，则区块大小为2500，若设置成10，则区块大小为5120，依次类推。
+--force-local 　强制将备份档存放在本地主机。
+--help 　在线帮助。
+--no-absolute-filenames 　使用相对路径建立文件名称。
+--no-preserve-owner 　不保留文件的拥有者，谁解开了备份档，那些文件就归谁所有。
+-only-verify-crc 　当备份档采用CRC备份格式时，可使用这项参数检查备份档内的每个文件是否正确无误。
+--quiet 　不显示复制了多少区块。
+--sparse 　倘若一个文件内含大量的连续0字节，则将此文件存成稀疏文件。
+--version 　显示版本信息。</code></pre><h3 id="Linux-gunzip命令"><a href="#Linux-gunzip命令" class="headerlink" title="Linux gunzip命令"></a>Linux gunzip命令</h3><p>Linux gunzip命令用于解压文件。</p>
+<p>gunzip是个使用广泛的解压缩程序，它用于解开被gzip压缩过的文件，这些压缩文件预设最后的扩展名为”.gz”。事实上gunzip就是gzip的硬连接，因此不论是压缩或解压缩，都可通过gzip指令单独完成。<br>语法</p>
+<p>参数：</p>
+<p>gunzip [-acfhlLnNqrtvV][-s &lt;压缩字尾字符串&gt;][文件…] 或 gunzip [-acfhlLnNqrtvV][-s &lt;压缩字尾字符串&gt;][目录]</p>
+<pre><code>-a或--ascii 　使用ASCII文字模式。
+-c或--stdout或--to-stdout 　把解压后的文件输出到标准输出设备。
+-f或-force 　强行解开压缩文件，不理会文件名称或硬连接是否存在以及该文件是否为符号连接。
+-h或--help 　在线帮助。
+-l或--list 　列出压缩文件的相关信息。
+-L或--license 　显示版本与版权信息。
+-n或--no-name 　解压缩时，若压缩文件内含有远来的文件名称及时间戳记，则将其忽略不予处理。
+-N或--name 　解压缩时，若压缩文件内含有原来的文件名称及时间戳记，则将其回存到解开的文件上。
+-q或--quiet 　不显示警告信息。
+-r或--recursive 　递归处理，将指定目录下的所有文件及子目录一并处理。
+-S&lt;压缩字尾字符串&gt;或--suffix&lt;压缩字尾字符串&gt; 　更改压缩字尾字符串。
+-t或--test 　测试压缩文件是否正确无误。
+-v或--verbose 　显示指令执行过程。
+-V或--version 显示版本信息。</code></pre><h2 id="设备管理"><a href="#设备管理" class="headerlink" title="设备管理"></a>设备管理</h2><h3 id="Linux-MAKEDEV命令"><a href="#Linux-MAKEDEV命令" class="headerlink" title="Linux MAKEDEV命令"></a>Linux MAKEDEV命令</h3><p>Linux MAKEDEV命令用于新增 /dev/ 下的装置档案，多数分区已经将所有的档案都产生，故一般而言不太会需要用到这个命令。<br>语法</p>
+<p>MAKEDEV -V<br>MAKEDEV [ -n ] [ -v ] update<br>MAKEDEV [ -n ] [ -v ] [ -d ] device …</p>
+<h3 id="poweroff-命令"><a href="#poweroff-命令" class="headerlink" title="poweroff 命令"></a>poweroff 命令</h3><p>poweroff 命令用于关闭计算器并切断电源。</p>
+<p>语法</p>
+<p>poweroff [-n] [-w] [-d] [-f] [-i] [-h]</p>
+<p>参数说明：</p>
+<pre><code>-n : 在关机前不做将记忆体资料写回硬盘的动作
+-w : 并不会真的关机，只是把记录写到 /var/log/wtmp 档案里
+-d : 不把记录写到 /var/log/wtmp 文件里
+-i : 在关机之前先把所有网络相关的装置先停止
+-p : 关闭操作系统之前将系统中所有的硬件设置为备用模式。</code></pre><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i2/2200652270622/O1CN01A9LSoi1GSuyqYAlvI_!!2200652270622.jpg" alt="羊毛双面呢高腰小香风套装"></p>
+<p><a href="https://item.taobao.com/item.htm?id=629273346606" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
+<pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
           
             <div class='article_footer'>
               
@@ -572,10 +769,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-06-23T03:03:48+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-23T20:06:35+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年6月23日</p>
+    <p>更新于：2020年10月23日</p>
   </a>
 </div>
 
@@ -668,7 +865,9 @@
             
               <a class='next' href='/posts/linux/cmd/543e2685.html'>
                 <p class='title'>linux 常用命令 5-4讲<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                <p class='content'></p>
+                <p class='content'>系统管理Linux w命令Linux w命令用于显示目前登入系统的用户信息。
+执行这项指令可得知目前登入系统的用户有哪些人，以及他们正在执行的程序。
+单独执行 w 指令会显示所有的用户，您也可指...</p>
               </a>
             
           </div>
@@ -711,6 +910,20 @@
     
     
 
+
+  <section class="widget toc-wrapper shadow desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>directory</span>
+    
+  </header>
+
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#备份压缩"><span class="toc-text">备份压缩</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-tar（英文全拼：tape-archive-）"><span class="toc-text">Linux tar（英文全拼：tape archive ）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-unzip命令"><span class="toc-text">Linux unzip命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-gzip命令"><span class="toc-text">Linux gzip命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-cpio命令"><span class="toc-text">Linux cpio命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-gunzip命令"><span class="toc-text">Linux gunzip命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设备管理"><span class="toc-text">设备管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-MAKEDEV命令"><span class="toc-text">Linux MAKEDEV命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#poweroff-命令"><span class="toc-text">poweroff 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#赞助广告"><span class="toc-text">赞助广告</span></a></li></ol></li></ol>
+    </div>
+  </section>
 
 
   
