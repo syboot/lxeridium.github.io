@@ -1,27 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+
+  <url>
+    <loc>http://lxeridium.github.io/posts/linux/software/92293203.html</loc>
+
+    <lastmod>2020-10-28</lastmod>
+
+  </url>
+
+  <url>
+    <loc>http://lxeridium.github.io/posts/linux/software/7b4a9736.html</loc>
+
+    <lastmod>2020-10-28</lastmod>
+
+  </url>
+
+  <url>
+    <loc>http://lxeridium.github.io/posts/linux/software/c4da7a0.html</loc>
+
+    <lastmod>2020-10-28</lastmod>
+
+  </url>
+
   <url>
     <loc>http://lxeridium.github.io/posts/linux/software/e243c68c.html</loc>
-    
+
     <lastmod>2020-10-28</lastmod>
-    
+
   </url>
-  
+
+  <url>
+    <loc>http://lxeridium.github.io/posts/systools/virtualbox/5d94ee4c.html</loc>
+
+    <lastmod>2020-10-28</lastmod>
+
+  </url>
+
   <url>
     <loc>http://lxeridium.github.io/posts/linux/opensuse/5485e43a.html</loc>
-    
+
     <lastmod>2020-10-26</lastmod>
-    
+
   </url>
-  
+
   <url>
     <loc>http://lxeridium.github.io/posts/linux/centos/71db4db0.html</loc>
-    
+
     <lastmod>2020-10-26</lastmod>
-    
+
   </url>
-  
+
   <url>
     <loc>http://lxeridium.github.io/posts/linux/centos/8455ae15.html</loc>
     
@@ -156,13 +184,6 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/posts/systools/virtualbox/5d94ee4c.html</loc>
-    
-    <lastmod>2020-10-19</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://lxeridium.github.io/posts/linux/opensuse/a3febc18.html</loc>
     
     <lastmod>2020-06-24</lastmod>
@@ -178,27 +199,6 @@
   
   <url>
     <loc>http://lxeridium.github.io/posts/linux/software/e52e0295.html</loc>
-    
-    <lastmod>2020-06-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/posts/linux/software/92293203.html</loc>
-    
-    <lastmod>2020-06-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/posts/linux/software/c4da7a0.html</loc>
-    
-    <lastmod>2020-06-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/posts/linux/software/7b4a9736.html</loc>
     
     <lastmod>2020-06-19</lastmod>
     
