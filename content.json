@@ -19,16 +19,6 @@
       "text": "404 很抱歉，您访问的页面不存在 可能是输入地址有误或该地址已被删除"
     },
     {
-      "title": "about",
-      "date": "2020-06-22T19:00:32.000Z",
-      "updated": "2020-10-22T19:00:05.699Z",
-      "comments": true,
-      "path": "about/index.html",
-      "permalink": "http://lxeridium.github.io/about/index.html",
-      "excerpt": "",
-      "text": ""
-    },
-    {
       "title": "archives",
       "date": "2020-05-14T09:09:50.000Z",
       "updated": "2020-10-22T18:15:21.245Z",
@@ -45,6 +35,16 @@
       "comments": true,
       "path": "categories/index.html",
       "permalink": "http://lxeridium.github.io/categories/index.html",
+      "excerpt": "",
+      "text": ""
+    },
+    {
+      "title": "tags",
+      "date": "2020-05-14T08:59:58.000Z",
+      "updated": "2020-10-22T18:57:21.683Z",
+      "comments": true,
+      "path": "tags/index.html",
+      "permalink": "http://lxeridium.github.io/tags/index.html",
       "excerpt": "",
       "text": ""
     },
@@ -69,22 +69,22 @@
       "text": ""
     },
     {
+      "title": "about",
+      "date": "2020-06-22T19:00:32.000Z",
+      "updated": "2020-10-22T19:00:05.699Z",
+      "comments": true,
+      "path": "about/index.html",
+      "permalink": "http://lxeridium.github.io/about/index.html",
+      "excerpt": "",
+      "text": ""
+    },
+    {
       "title": "link",
       "date": "2020-05-14T09:09:13.000Z",
       "updated": "2020-10-22T20:30:16.819Z",
       "comments": true,
       "path": "friends/index.html",
       "permalink": "http://lxeridium.github.io/friends/index.html",
-      "excerpt": "",
-      "text": ""
-    },
-    {
-      "title": "tags",
-      "date": "2020-05-14T08:59:58.000Z",
-      "updated": "2020-10-22T18:57:21.683Z",
-      "comments": true,
-      "path": "tags/index.html",
-      "permalink": "http://lxeridium.github.io/tags/index.html",
       "excerpt": "",
       "text": ""
     }
@@ -94,7 +94,7 @@
       "title": "linux opensuse yast2 使用",
       "slug": "linux-opensuse-yast2-使用",
       "date": "2020-06-19T09:06:02.000Z",
-      "updated": "2020-11-03T04:01:33.685Z",
+      "updated": "2020-11-03T06:25:46.634Z",
       "comments": true,
       "path": "posts/linux/opensuse/a3febc18.html",
       "link": "",
@@ -166,7 +166,7 @@
       "title": "linux 常用软件介绍(一)(5-4)",
       "slug": "linux-常用软件介绍-一-5-4",
       "date": "2020-06-19T05:44:57.000Z",
-      "updated": "2020-11-01T17:52:59.821Z",
+      "updated": "2020-11-03T06:27:21.512Z",
       "comments": true,
       "path": "posts/linux/software/92293203.html",
       "link": "",
@@ -197,7 +197,7 @@
       "title": "linux 常用软件介绍(一)(5-3)",
       "slug": "linux-常用软件介绍-一-5-3",
       "date": "2020-06-19T05:44:52.000Z",
-      "updated": "2020-11-01T17:52:55.185Z",
+      "updated": "2020-11-03T06:30:29.392Z",
       "comments": true,
       "path": "posts/linux/software/c4da7a0.html",
       "link": "",
@@ -228,7 +228,7 @@
       "title": "linux 常用软件介绍(一)(5-2)",
       "slug": "linux-常用软件介绍-一-5-2",
       "date": "2020-06-19T05:44:48.000Z",
-      "updated": "2020-11-01T17:52:48.020Z",
+      "updated": "2020-11-03T06:30:41.589Z",
       "comments": true,
       "path": "posts/linux/software/7b4a9736.html",
       "link": "",
@@ -259,7 +259,7 @@
       "title": "linux 常用软件介绍(一)(5-1)",
       "slug": "linux-常用软件介绍-一-5-1",
       "date": "2020-06-19T05:44:44.000Z",
-      "updated": "2020-10-28T13:36:57.598Z",
+      "updated": "2020-11-03T06:30:52.929Z",
       "comments": true,
       "path": "posts/linux/software/e243c68c.html",
       "link": "",
@@ -283,6 +283,68 @@
           "name": "software",
           "slug": "software",
           "permalink": "http://lxeridium.github.io/tags/software/"
+        }
+      ]
+    },
+    {
+      "title": "SecureCRT  ssh 工具的使用",
+      "slug": "SecureCRT-工具的使用",
+      "date": "2020-06-19T05:39:42.000Z",
+      "updated": "2020-11-03T07:34:00.607Z",
+      "comments": true,
+      "path": "posts/windows/tools/558a0679.html",
+      "link": "",
+      "permalink": "http://lxeridium.github.io/posts/windows/tools/558a0679.html",
+      "excerpt": "",
+      "text": "SecureCRT ssh 工具适用于Windows，Mac和Linux的SecureCRT客户端为计算专业人士提供了坚如磐石的终端仿真，通过高级会话管理以及多种节省时间和简化重复任务的方式提高了生产率。SecureCRT为组织中的每个人提供安全的远程访问，文件传输和数据隧道。 特点： 选项卡组使用选项卡组在更短的时间内完成更多功能。 在标签中组织的会话之间轻松切换。 十六进制视图有助于调试串行通信。仅当配置串行会话时，会话选项对话框中显示有效的COM端口。 命令窗口现在可以将命令发送到选定的选项卡组或可见会话。 使用新的右键单击“添加关键字...”选项快速添加关键字。 在智能卡（PIV / CAC）上选择一个用于公钥认证的特定证书。支持PKCS＃11证书。在所有平台上，可以直接从指定的证书中提取用户名。 可以将证书用作原始密钥。公开密钥可以以Open SSH格式导出。 可以添加到SSH代理。SecureCRT 下载软件页面 赞助广告 查看购买上图商品 淘宝店铺 品牌官网 感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com",
+      "categories": [
+        {
+          "name": "windows",
+          "slug": "windows",
+          "permalink": "http://lxeridium.github.io/categories/windows/"
+        },
+        {
+          "name": "tools",
+          "slug": "windows/tools",
+          "permalink": "http://lxeridium.github.io/categories/windows/tools/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "windows",
+          "slug": "windows",
+          "permalink": "http://lxeridium.github.io/tags/windows/"
+        }
+      ]
+    },
+    {
+      "title": "Xshell   ssh 工具的使用",
+      "slug": "Xshell-工具的使用",
+      "date": "2020-06-19T05:39:42.000Z",
+      "updated": "2020-11-03T07:33:33.586Z",
+      "comments": true,
+      "path": "posts/windows/tools/def4c97f.html",
+      "link": "",
+      "permalink": "http://lxeridium.github.io/posts/windows/tools/def4c97f.html",
+      "excerpt": "",
+      "text": "Xshell ssh 工具Xshell是一个强大的安全终端模拟软件，它支持SSH1/SSH2以及Microsoft Windows平台的TELNET协议。Xshell可以在Windows界面下用来访问远端不同系统下的服务器 功能强大，免费享用Xshell和Xftp免费许可的性能在性能和特性集上是无与伦比的管理个人服务器或在家提高您的管理技能。我们的免费授权您的任何个人非商业用途。免费许可涵盖任何认证教育机构的学生、教师和员工。使用Xshell和Xftp进行教学、学习和管理。 支持： 支持SSH1, SSH2, SFTP, TELNET, RLOGIN和串行协议 支持Windows Vista/7/8/10，服务器2008/2012/2016 支持OpenSSH和ssh.com服务器 支持在一个窗口中有多个选项卡 支持在一个窗口中显示多个选项卡组 多用户设置 保持活跃功能 SOCKS4/5, HTTP代理连接 自定义键映射 VB, Jscript, Python脚本 IPv6 支持 Kerberos(MIT Keberos, Microsoft SSPI)身份验证支持 SSH / Telnet追踪 会话管理器提供了一种方便的方式来管理和运行多个会话为本地和远程主机创建和管理会话文件 为本地和远程主机创建和管理会话文件 支持会话对话框、地址栏、本地提示、会话快捷方式和打开会话的链接栏 为快速连接提供默认会话 与多个会话同时连接 地址栏支持URL命令，并允许连接到远程主机与或不保存的会话 支持自动登录和登录脚本 在“会话”对话框中支持文件夹和树视图 批量更新会话 进出口会话 可与Xmanager程序互操作，用于X11转发 可与Xagent程序互操作，用于代理身份验证和转发 可与Xftp程序互操作文件传输 在记事本中编辑滚动缓冲区 通过菜单命令顺序选择Xshell窗口免费版本申请 有两个工具可以，免费使用 “Xshell” “Xftp” 可以都勾选。 免费版本申请页面 特点： 会话管理器 强调集 选项卡式的环境 组成窗格 SSH PKCS # 11的支持 双重字体集成 水平滚动条 主密码 同步输入 快速的命令 本地的Shell 关键字映射 X11 转发 搜索网页上的文字 预警功能 脚本 终端锁 用户定义文本编辑器Xshell 下载软件页面 赞助广告 查看购买上图商品 淘宝店铺 品牌官网 感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com",
+      "categories": [
+        {
+          "name": "windows",
+          "slug": "windows",
+          "permalink": "http://lxeridium.github.io/categories/windows/"
+        },
+        {
+          "name": "tools",
+          "slug": "windows/tools",
+          "permalink": "http://lxeridium.github.io/categories/windows/tools/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "windows",
+          "slug": "windows",
+          "permalink": "http://lxeridium.github.io/tags/windows/"
         }
       ]
     },
@@ -318,16 +380,47 @@
       ]
     },
     {
+      "title": "Proxmox-ve-虚拟化工具-安装",
+      "slug": "Proxmox-ve-虚拟化工具-安装",
+      "date": "2020-05-27T08:08:03.000Z",
+      "updated": "2020-11-03T08:42:53.342Z",
+      "comments": true,
+      "path": "posts/systools/Proxmox-ve/7e1b7d35.html",
+      "link": "",
+      "permalink": "http://lxeridium.github.io/posts/systools/Proxmox-ve/7e1b7d35.html",
+      "excerpt": "",
+      "text": "Proxmox-veProxmox VE是一款套开源的虚拟化管理软件，用户可通过网页的方式来管理服务器上使用 QEMU/kvm 以及 OpenVZ/lxc 技术运行的虚拟机。同时提供了一些先进功能的支持，如集群、HA等。借助内置的Web界面，您可以轻松管理虚拟机和容器，软件定义的存储和网络，高可用性集群以及单个解决方案上的多个现成工具。ProxmoxVE的一个重要设计目标就是尽可能简化管理员的工作。你既可以用单机模式使用ProxmoxVE，也可以组建多节点ProxmoxVE集群。所有的管理工作都可以通过基于web页面的管理界面完成，即使是一个小白用户也可以在几分钟内上手安装使用ProxmoxVE。 官方网站：https://www.proxmox.com/ proxmox下载地址页Proxmox6.0手册.pdf 下载 提取码: 4p2qProxmox VE 6.2 ISO Installer 下载 安装流程1，准备环境下载 Proxmox VE 6.2 ISO ，用U盘或光盘安装。 安装盘制作工具。2，安装安装过程中都是常规问题，没有别的复杂情况。安装完之后会重启， 使用 SSH 登录，或是用 https://&lt;ipaddress&gt;:8006/ 访问网页管理页面。3，注释事项密码和时区需要注意一下。4，配置测试测试ssh 是否可以登录。 网页管理端 是否可以登录。赞助广告 查看购买上图商品 淘宝店铺 品牌官网 感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com",
+      "categories": [
+        {
+          "name": "systools",
+          "slug": "systools",
+          "permalink": "http://lxeridium.github.io/categories/systools/"
+        },
+        {
+          "name": "Proxmox-ve",
+          "slug": "systools/Proxmox-ve",
+          "permalink": "http://lxeridium.github.io/categories/systools/Proxmox-ve/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Proxmox-ve",
+          "slug": "Proxmox-ve",
+          "permalink": "http://lxeridium.github.io/tags/Proxmox-ve/"
+        }
+      ]
+    },
+    {
       "title": "VirtualBox-虚拟机工具 安装",
       "slug": "VirtualBox-虚拟机工具-安装",
       "date": "2020-05-27T08:08:03.000Z",
-      "updated": "2020-10-28T13:30:11.392Z",
+      "updated": "2020-11-03T07:40:14.040Z",
       "comments": true,
       "path": "posts/systools/virtualbox/5d94ee4c.html",
       "link": "",
       "permalink": "http://lxeridium.github.io/posts/systools/virtualbox/5d94ee4c.html",
       "excerpt": "",
-      "text": "1.下载VirtualBox-虚拟机6.0. VirtualBox是针对x86硬件的通用完整虚拟机，主要针对服务器，台式机和嵌入式应用。 官方网站：https://www.virtualbox.org/下载地址：https://www.virtualbox.org/wiki/Downloads [快速下载链接列表](https://www.virtualbox.org/wiki/Downloads) [Windows hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-Win.exe) [OS X hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-OSX.dmg) [Linux distributions](https://www.virtualbox.org/wiki/Linux_Downloads) [Solaris hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-SunOS.tar.gz) 安装流程1，准备环境2，安装找到之前下载的VirtualBox EXE文件。然后双击该文件。这样做将打开VirtualBox安装窗口。 前三页全部单击“下一步”。 出现提示时，单击“是”。点击安装驱动（可能会出现多次，操作同上） 出现提示时，单击“安装”。这样做将允许VirtualBox开始在您的计算机上安装。 出现提示时，单击“完成”。它在窗口的右下角。这样做将关闭安装窗口并打开VirtualBox。 现在，您已经安装并打开了VirtualBox，可以创建一个虚拟机，以便在PC上运行任何操作系统。3，注释事项默认安装位置为c盘，注意磁盘空间。 出现提示的驱动安装一动都要装上。4，配置测试测试是否可以打开VirtualBox应用。 配置：工具-&gt;全局设定。默认虚拟电脑位置要放到一个空闲空间大一点的盘上去。 扩展安装：工具-&gt;扩展。从官方网站上下载一个“Oracle VM VirtualBox Extensjon Pack” ,扩展有一些好用的功能。赞助广告 查看购买上图商品 淘宝店铺 品牌官网 感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com",
+      "text": "virtualbox1.下载VirtualBox-虚拟机6.0. VirtualBox是针对x86硬件的通用完整虚拟机，主要针对服务器，台式机和嵌入式应用。 官方网站：https://www.virtualbox.org/下载地址：https://www.virtualbox.org/wiki/Downloads [快速下载链接列表](https://www.virtualbox.org/wiki/Downloads) [Windows hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-Win.exe) [OS X hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-OSX.dmg) [Linux distributions](https://www.virtualbox.org/wiki/Linux_Downloads) [Solaris hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-SunOS.tar.gz) 安装流程1，准备环境2，安装找到之前下载的VirtualBox EXE文件。然后双击该文件。这样做将打开VirtualBox安装窗口。 前三页全部单击“下一步”。 出现提示时，单击“是”。点击安装驱动（可能会出现多次，操作同上） 出现提示时，单击“安装”。这样做将允许VirtualBox开始在您的计算机上安装。 出现提示时，单击“完成”。它在窗口的右下角。这样做将关闭安装窗口并打开VirtualBox。 现在，您已经安装并打开了VirtualBox，可以创建一个虚拟机，以便在PC上运行任何操作系统。3，注释事项默认安装位置为c盘，注意磁盘空间。 出现提示的驱动安装一动都要装上。4，配置测试测试是否可以打开VirtualBox应用。 配置：工具-&gt;全局设定。默认虚拟电脑位置要放到一个空闲空间大一点的盘上去。 扩展安装：工具-&gt;扩展。从官方网站上下载一个“Oracle VM VirtualBox Extensjon Pack” ,扩展有一些好用的功能。赞助广告 查看购买上图商品 淘宝店铺 品牌官网 感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com",
       "categories": [
         {
           "name": "systools",
@@ -445,7 +538,7 @@
       "title": "Linux-系统-安装前须知",
       "slug": "Linux-系统-安装前须知",
       "date": "2020-05-27T07:25:55.000Z",
-      "updated": "2020-10-21T18:02:09.392Z",
+      "updated": "2020-11-03T08:24:42.639Z",
       "comments": true,
       "path": "posts/linux/system/3f185f.html",
       "link": "",
@@ -809,6 +902,11 @@
       "permalink": "http://lxeridium.github.io/categories/systools/"
     },
     {
+      "name": "Proxmox-ve",
+      "slug": "systools/Proxmox-ve",
+      "permalink": "http://lxeridium.github.io/categories/systools/Proxmox-ve/"
+    },
+    {
       "name": "virtualbox",
       "slug": "systools/virtualbox",
       "permalink": "http://lxeridium.github.io/categories/systools/virtualbox/"
@@ -859,6 +957,11 @@
       "name": "windows",
       "slug": "windows",
       "permalink": "http://lxeridium.github.io/tags/windows/"
+    },
+    {
+      "name": "Proxmox-ve",
+      "slug": "Proxmox-ve",
+      "permalink": "http://lxeridium.github.io/tags/Proxmox-ve/"
     },
     {
       "name": "virtualbox",

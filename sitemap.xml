@@ -2,7 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://lxeridium.github.io/posts/linux/opensuse/a3febc18.html</loc>
+        <loc>http://lxeridium.github.io/posts/systools/Proxmox-ve/7e1b7d35.html</loc>
+
+        <lastmod>2020-11-03</lastmod>
+
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/posts/linux/system/3f185f.html</loc>
+
+        <lastmod>2020-11-03</lastmod>
+
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/posts/systools/virtualbox/5d94ee4c.html</loc>
+
+        <lastmod>2020-11-03</lastmod>
+
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/posts/windows/tools/558a0679.html</loc>
+
+        <lastmod>2020-11-03</lastmod>
+
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/posts/windows/tools/def4c97f.html</loc>
+
+        <lastmod>2020-11-03</lastmod>
+
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/posts/linux/software/e243c68c.html</loc>
+
+        <lastmod>2020-11-03</lastmod>
+
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/posts/linux/software/7b4a9736.html</loc>
+
+        <lastmod>2020-11-03</lastmod>
+
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/posts/linux/software/c4da7a0.html</loc>
 
         <lastmod>2020-11-03</lastmod>
 
@@ -11,35 +60,14 @@
     <url>
         <loc>http://lxeridium.github.io/posts/linux/software/92293203.html</loc>
 
-        <lastmod>2020-11-01</lastmod>
+        <lastmod>2020-11-03</lastmod>
 
     </url>
 
     <url>
-        <loc>http://lxeridium.github.io/posts/linux/software/c4da7a0.html</loc>
+        <loc>http://lxeridium.github.io/posts/linux/opensuse/a3febc18.html</loc>
 
-        <lastmod>2020-11-01</lastmod>
-
-    </url>
-
-    <url>
-        <loc>http://lxeridium.github.io/posts/linux/software/7b4a9736.html</loc>
-
-        <lastmod>2020-11-01</lastmod>
-
-    </url>
-
-    <url>
-        <loc>http://lxeridium.github.io/posts/linux/software/e243c68c.html</loc>
-
-        <lastmod>2020-10-28</lastmod>
-
-    </url>
-
-    <url>
-        <loc>http://lxeridium.github.io/posts/systools/virtualbox/5d94ee4c.html</loc>
-
-        <lastmod>2020-10-28</lastmod>
+        <lastmod>2020-11-03</lastmod>
 
     </url>
 
@@ -79,37 +107,37 @@
     </url>
 
     <url>
-    <loc>http://lxeridium.github.io/posts/linux/cmd/ec8241e0.html</loc>
-    
-    <lastmod>2020-10-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/posts/linux/cmd/543e2685.html</loc>
-    
-    <lastmod>2020-10-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/posts/linux/cmd/c9e91e3c.html</loc>
-    
-    <lastmod>2020-10-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/posts/linux/cmd/71557959.html</loc>
-    
-    <lastmod>2020-10-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/404.html</loc>
-    
-    <lastmod>2020-10-22</lastmod>
+        <loc>http://lxeridium.github.io/posts/linux/cmd/ec8241e0.html</loc>
+
+        <lastmod>2020-10-23</lastmod>
+
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/posts/linux/cmd/543e2685.html</loc>
+
+        <lastmod>2020-10-23</lastmod>
+
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/posts/linux/cmd/c9e91e3c.html</loc>
+
+        <lastmod>2020-10-23</lastmod>
+
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/posts/linux/cmd/71557959.html</loc>
+
+        <lastmod>2020-10-23</lastmod>
+
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/404.html</loc>
+
+        <lastmod>2020-10-22</lastmod>
     
   </url>
   
@@ -177,13 +205,6 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/posts/linux/system/3f185f.html</loc>
-    
-    <lastmod>2020-10-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://lxeridium.github.io/posts/windows/tools/65bd21fb.html</loc>
     
     <lastmod>2020-10-21</lastmod>
@@ -201,165 +222,178 @@
     <loc>http://lxeridium.github.io/posts/linux/software/e52e0295.html</loc>
     
     <lastmod>2020-06-19</lastmod>
-    
-  </url>
-  
 
-  <url>
-    <loc>http://lxeridium.github.io/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
   </url>
 
-  
-  <url>
-    <loc>http://lxeridium.github.io/tags/centos/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/tags/ubuntu/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/tags/linux/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/tags/opensuse/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/tags/yast2/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/tags/cmd/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/tags/software/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/tags/virtualbox/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/tags/system/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/tags/windows/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
-  
-  <url>
-    <loc>http://lxeridium.github.io/categories/linux/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/categories/linux/centos/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/categories/linux/ubuntu/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/categories/linux/opensuse/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/categories/linux/cmd/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/categories/linux/software/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/categories/systools/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/categories/systools/virtualbox/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/categories/linux/system/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/categories/windows/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/categories/windows/tools/</loc>
-      <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
+    <url>
+        <loc>http://lxeridium.github.io/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+
+    <url>
+        <loc>http://lxeridium.github.io/tags/centos/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/tags/system/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/tags/windows/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/tags/Proxmox-ve/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/tags/ubuntu/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/tags/virtualbox/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/tags/linux/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/tags/opensuse/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/tags/yast2/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/tags/cmd/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/tags/software/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+
+    <url>
+        <loc>http://lxeridium.github.io/categories/linux/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/categories/linux/centos/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/categories/linux/system/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/categories/windows/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/categories/systools/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/categories/linux/ubuntu/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/categories/windows/tools/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/categories/linux/opensuse/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/categories/systools/Proxmox-ve/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/categories/linux/cmd/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/categories/systools/virtualbox/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/categories/linux/software/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
 </urlset>

@@ -416,95 +416,425 @@
 	
 		
   <section class="post-list ">
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
 
 
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/posts/linux/cmd/71557959.html">
-      linux 常用命令 5-2讲
-    </a>
-  </h2>
+      <div class='post-wrapper'>
+          <article class="post white-box shadow reveal ">
 
 
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a href="http://lxeridium.github.io" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
-    <p>Syboot</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/linux/cmd/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>linux/cmd</p>
-    </a>
-  </div>
+              <section class='meta'>
 
 
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年5月27日</p>
-  </a>
-</div>
+                  <div class="meta" id="header-meta">
 
-            
-          
-            
-              
 
-            
-          
-            
-              
+                      <h2 class="title">
+                          <a href="/posts/linux/cmd/c9e91e3c.html">
+                              linux 常用命令 5-3讲
+                          </a>
+                      </h2>
 
-            
-          
-        </div>
-        
-          <hr>
-        
+
+                      <div class='new-meta-box'>
+
+
+                          <div class='new-meta-item author'>
+                              <a href="http://lxeridium.github.io" rel="nofollow">
+                                  <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
+                                  <p>Syboot</p>
+                              </a>
+                          </div>
+
+
+                          <div class='new-meta-item category'>
+                              <a href='/categories/linux/cmd/' rel="nofollow">
+                                  <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+                                  <p>linux/cmd</p>
+                              </a>
+                          </div>
+
+
+                          <div class="new-meta-item date">
+                              <a class='notlink'>
+                                  <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+                                  <p>发布于：2020年5月27日</p>
+                              </a>
+                          </div>
+
+
+                      </div>
+
+                      <hr>
+
+                  </div>
+
+              </section>
+
+
+              <section class="article typo">
+                  <div class="article-entry" itemprop="articleBody">
+
+                      <h2 id="磁盘维护"><a href="#磁盘维护" class="headerlink" title="磁盘维护"></a>磁盘维护</h2>
+                      <h3 id="Linux-sync命令"><a href="#Linux-sync命令" class="headerlink" title="Linux sync命令"></a>Linux
+                          sync命令</h3>
+                      <p>Linux sync命令用于数据同步,sync命令是在关闭Linux系统时使用的。</p>
+                      <p>Linux 系统中欲写入硬盘的资料有的时候为了效率起见，会写到 filesystem buffer 中，这个 buffer 是一块记忆体空间，如果欲写入硬盘的资料存于此 buffer
+                          中，而系统又突然断电的话，那么资料就会流失了，sync 指令会将存于 buffer 中的资料强制写入硬盘中。</p>
+                      <p>sync(选项)<br>选项<br>–help：显示帮助；<br> –version：显示版本信息。</p>
+                      <h3 id="rsync命令"><a href="#rsync命令" class="headerlink" title="rsync命令"></a>rsync命令</h3>
+                      <p>rsync命令是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件。<br>rsync使用所谓的“rsync算法”来使本地和远程两个主机之间的文件达到同步，这个算法只传送两个文件的不同部分，而不是每次都整份传送，因此速度相当快。<br>rsync是一个功能非常强大的工具，其命令也有很多功能特色选项，我们下面就对它的选项一一进行分析说明。<br>语法
+                      </p>
+                      <p>rsync [OPTION]… SRC DEST<br>rsync [OPTION]… SRC [USER@]host:DEST<br>rsync [OPTION]…
+                          [USER@]HOST:SRC DEST<br>rsync [OPTION]… [USER@]HOST::SRC DEST<br>rsync [OPTION]… SRC
+                          [USER@]HOST::DEST<br>rsync [OPTION]… rsync://[USER@]HOST[:PORT]/SRC [DEST]</p>
+                      <p>参数：</p>
+                      <pre><code>-v, --verbose 详细模式输出。
+-q, --quiet 精简输出模式。
+-c, --checksum 打开校验开关，强制对文件传输进行校验。
+-a, --archive 归档模式，表示以递归方式传输文件，并保持所有文件属性，等于-rlptgoD。
+-r, --recursive 对子目录以递归模式处理。
+-R, --relative 使用相对路径信息。
+-b, --backup 创建备份，也就是对于目的已经存在有同样的文件名时，将老的文件重新命名为~filename。可以使用--suffix选项来指定不同的备份文件前缀。
+--backup-dir 将备份文件(如~filename)存放在在目录下。
+-suffix=SUFFIX 定义备份文件前缀。
+-u, --update 仅仅进行更新，也就是跳过所有已经存在于DST，并且文件时间晚于要备份的文件，不覆盖更新的文件。
+-l, --links 保留软链结。
+-L, --copy-links 想对待常规文件一样处理软链结。
+--copy-unsafe-links 仅仅拷贝指向SRC路径目录树以外的链结。
+--safe-links 忽略指向SRC路径目录树以外的链结。
+-H, --hard-links 保留硬链结。
+-p, --perms 保持文件权限。
+-o, --owner 保持文件属主信息。
+-g, --group 保持文件属组信息。
+-D, --devices 保持设备文件信息。
+-t, --times 保持文件时间信息。
+-S, --sparse 对稀疏文件进行特殊处理以节省DST的空间。
+-n, --dry-run现实哪些文件将被传输。
+-w, --whole-file 拷贝文件，不进行增量检测。
+-x, --one-file-system 不要跨越文件系统边界。
+-B, --block-size=SIZE 检验算法使用的块尺寸，默认是700字节。
+-e, --rsh=command 指定使用rsh、ssh方式进行数据同步。
+--rsync-path=PATH 指定远程服务器上的rsync命令所在路径信息。
+-C, --cvs-exclude 使用和CVS一样的方法自动忽略文件，用来排除那些不希望传输的文件。
+--existing 仅仅更新那些已经存在于DST的文件，而不备份那些新创建的文件。
+--delete 删除那些DST中SRC没有的文件。
+--delete-excluded 同样删除接收端那些被该选项指定排除的文件。
+--delete-after 传输结束以后再删除。
+--ignore-errors 及时出现IO错误也进行删除。
+--max-delete=NUM 最多删除NUM个文件。
+--partial 保留那些因故没有完全传输的文件，以是加快随后的再次传输。
+--force 强制删除目录，即使不为空。
+--numeric-ids 不将数字的用户和组id匹配为用户名和组名。
+--timeout=time ip超时时间，单位为秒。
+-I, --ignore-times 不跳过那些有同样的时间和长度的文件。
+--size-only 当决定是否要备份文件时，仅仅察看文件大小而不考虑文件时间。
+--modify-window=NUM 决定文件是否时间相同时使用的时间戳窗口，默认为0。
+-T --temp-dir=DIR 在DIR中创建临时文件。
+--compare-dest=DIR 同样比较DIR中的文件来决定是否需要备份。
+-P 等同于 --partial。
+--progress 显示备份过程。
+-z, --compress 对备份的文件在传输时进行压缩处理。
+--exclude=PATTERN 指定排除不需要传输的文件模式。
+--include=PATTERN 指定不排除而需要传输的文件模式。
+--exclude-from=FILE 排除FILE中指定模式的文件。
+--include-from=FILE 不排除FILE指定模式匹配的文件。
+--version 打印版本信息。
+--address 绑定到特定的地址。
+--config=FILE 指定其他的配置文件，不使用默认的rsyncd.conf文件。
+--port=PORT 指定其他的rsync服务端口。
+--blocking-io 对远程shell使用阻塞IO。
+-stats 给出某些文件的传输状态。
+--progress 在传输时现实传输过程。
+--log-format=formAT 指定日志文件格式。
+--password-file=FILE 从FILE中得到密码。
+--bwlimit=KBPS 限制I/O带宽，KBytes per second。
+-h, --help 显示帮助信息。</code></pre>
+                      <h3 id="Linux-fsck（英文全拼：file-system-check）"><a href="#Linux-fsck（英文全拼：file-system-check）"
+                                                                     class="headerlink"
+                                                                     title="Linux fsck（英文全拼：file system check）"></a>Linux
+                          fsck（英文全拼：file system check）</h3>
+                      <p>Linux fsck 命令用于检查与修复 Linux 档案系统，可以同时检查一个或多个 Linux 档案系统。<br>语法</p>
+                      <p>fsck [-sACVRP] [-t fstype] [–] [fsck-options] filesys […]</p>
+                      <p>参数 ：</p>
+                      <pre><code>filesys ： device 名称(eg./dev/sda1)，mount 点 (eg. / 或 /usr)
+-t : 给定档案系统的型式，若在 /etc/fstab 中已有定义或 kernel 本身已支援的则不需加上此参数
+-s : 依序一个一个地执行 fsck 的指令来检查
+-A : 对/etc/fstab 中所有列出来的 partition 做检查
+-C : 显示完整的检查进度
+-d : 列印 e2fsck 的 debug 结果
+-p : 同时有 -A 条件时，同时有多个 fsck 的检查一起执行
+-R : 同时有 -A 条件时，省略 / 不检查
+-V : 详细显示模式
+-a : 如果检查有错则自动修复
+-r : 如果检查有错则由使用者回答是否修复</code></pre>
+                      <h3 id="Linux-fdisk"><a href="#Linux-fdisk" class="headerlink" title="Linux fdisk"></a>Linux fdisk
+                      </h3>
+                      <p>是一个创建和维护分区表的程序，它兼容DOS类型的分区表、BSD或者SUN类型的磁盘列表。<br> 语法</p>
+                      <p> fdisk [必要参数][选择参数]</p>
+                      <p> 必要参数：</p>
+                      <pre><code>-l 列出素所有分区表
+-u 与&quot;-l&quot;搭配使用，显示分区数目</code></pre>
+                      <p> 选择参数：</p>
+                      <pre><code>-s&lt;分区编号&gt; 指定分区
+-v 版本信息</code></pre>
+                      <p> 菜单操作说明</p>
+                      <pre><code>m ：显示菜单和帮助信息
+a ：活动分区标记/引导分区
+d ：删除分区
+l ：显示分区类型
+n ：新建分区
+p ：显示分区信息
+q ：退出不保存
+t ：设置分区号
+v ：进行分区检查
+w ：保存修改
+x ：扩展应用，高级功能</code></pre>
+                      <h3 id="Linux-mkfs（英文全拼：make-file-system）"><a href="#Linux-mkfs（英文全拼：make-file-system）"
+                                                                    class="headerlink"
+                                                                    title="Linux mkfs（英文全拼：make file system）"></a>Linux
+                          mkfs（英文全拼：make file system）</h3>
+                      <p>Linux mkfs 命令用于在特定的分区上建立 linux 文件系统。</p>
+                      <p>使用方式 :</p>
+                      <p>mkfs [-V] [-t fstype] [fs-options] filesys [blocks]</p>
+                      <p>参数 ：</p>
+                      <pre><code>device ： 预备检查的硬盘分区，例如：/dev/sda1
+-V : 详细显示模式
+-t : 给定档案系统的型式，Linux 的预设值为 ext2
+-c : 在制做档案系统前，检查该partition 是否有坏轨
+-l bad_blocks_file : 将有坏轨的block资料加到 bad_blocks_file 里面
+block : 给定 block 的大小</code></pre>
+                      <h3 id="Linux-dd命令"><a href="#Linux-dd命令" class="headerlink" title="Linux dd命令"></a>Linux dd命令
+                      </h3>
+                      <p>Linux dd命令用于读取、转换并输出数据。</p>
+                      <p>dd可从标准输入或文件中读取数据，根据指定的格式来转换数据，再输出到文件、设备或标准输出。</p>
+                      <p>参数说明:</p>
+                      <pre><code>if=文件名：输入文件名，默认为标准输入。即指定源文件。
+of=文件名：输出文件名，默认为标准输出。即指定目的文件。
+ibs=bytes：一次读入bytes个字节，即指定一个块大小为bytes个字节。
+obs=bytes：一次输出bytes个字节，即指定一个块大小为bytes个字节。
+bs=bytes：同时设置读入/输出的块大小为bytes个字节。
+cbs=bytes：一次转换bytes个字节，即指定转换缓冲区大小。
+skip=blocks：从输入文件开头跳过blocks个块后再开始复制。
+seek=blocks：从输出文件开头跳过blocks个块后再开始复制。
+count=blocks：仅拷贝blocks个块，块大小等于ibs指定的字节数。
+conv=&lt;关键字&gt;，关键字可以有以下11种：
+    conversion：用指定的参数转换文件。
+    ascii：转换ebcdic为ascii
+    ebcdic：转换ascii为ebcdic
+    ibm：转换ascii为alternate ebcdic
+    block：把每一行转换为长度为cbs，不足部分用空格填充
+    unblock：使每一行的长度都为cbs，不足部分用空格填充
+    lcase：把大写字符转换为小写字符
+    ucase：把小写字符转换为大写字符
+    swab：交换输入的每对字节
+    noerror：出错时不停止
+    notrunc：不截短输出文件
+    sync：将每个输入块填充到ibs个字节，不足部分用空（NUL）字符补齐。
+--help：显示帮助信息
+--version：显示版本信息</code></pre>
+                      <h2 id="网络通讯"><a href="#网络通讯" class="headerlink" title="网络通讯"></a>网络通讯</h2>
+                      <h3 id="Linux-netconfig命令"><a href="#Linux-netconfig命令" class="headerlink"
+                                                    title="Linux netconfig命令"></a>Linux netconfig命令</h3>
+                      <p>Linux netconfig命令用于设置网络环境。</p>
+                      <p>这是Slackware发行版内附程序，它具有互动式的问答界面，让用户轻易完成网络环境的设置。 </p>
+                      <p>帮助；</p>
+                      <pre><code>  --bootproto=(dhcp|bootp|none) Boot protocol to use （
+  --gateway=STRING Network gateway （指定网关）
+  --ip=STRING IP address （指定IP 地址）
+  --nameserver=STRING Nameserver （指定DNS 客户端）
+  --netmask=STRING Netmask （指定网络掩码）
+  --hostname=STRING Hostname （ 指定主机名）
+  --domain=STRING Domain name （指定域名）
+  -d, --device=STRING Network device （指定网络设备）
+  --nodns No DNS lookups （没有DNS 查询）
+  --hwaddr=STRING Ethernet hardware address （指定网卡的物理地址）
+  --description=STRING Description of the device （描述性文字）
+Help options: ( 帮助选项）
+  -?, --help Show this help message
+  --usage Display brief usage messag e</code></pre>
+                      <h3 id="Linux-netstat-命令"><a href="#Linux-netstat-命令" class="headerlink"
+                                                   title="Linux netstat 命令"></a>Linux netstat 命令</h3>
+                      <p>Linux netstat 命令用于显示网络状态。</p>
+                      <p>利用 netstat 指令可让你得知整个 Linux 系统的网络情况。</p>
+                      <p>netstat [-acCeFghilMnNoprstuvVwx][-A&lt;网络类型&gt;][–ip]</p>
+                      <p>参数说明：</p>
+                      <pre><code>-a或--all 显示所有连线中的Socket。
+-A&lt;网络类型&gt;或--&lt;网络类型&gt; 列出该网络类型连线中的相关地址。
+-c或--continuous 持续列出网络状态。
+-C或--cache 显示路由器配置的快取信息。
+-e或--extend 显示网络其他相关信息。
+-F或--fib 显示FIB。
+-g或--groups 显示多重广播功能群组组员名单。
+-h或--help 在线帮助。
+-i或--interfaces 显示网络界面信息表单。
+-l或--listening 显示监控中的服务器的Socket。
+-M或--masquerade 显示伪装的网络连线。
+-n或--numeric 直接使用IP地址，而不通过域名服务器。
+-N或--netlink或--symbolic 显示网络硬件外围设备的符号连接名称。
+-o或--timers 显示计时器。
+-p或--programs 显示正在使用Socket的程序识别码和程序名称。
+-r或--route 显示Routing Table。
+-s或--statistics 显示网络工作信息统计表。
+-t或--tcp 显示TCP传输协议的连线状况。
+-u或--udp 显示UDP传输协议的连线状况。
+-v或--verbose 显示指令执行过程。
+-V或--version 显示版本信息。
+-w或--raw 显示RAW传输协议的连线状况。
+-x或--unix 此参数的效果和指定&quot;-A unix&quot;参数相同。
+--ip或--inet 此参数的效果和指定&quot;-A inet&quot;参数相同。</code></pre>
+                      <h3 id="Linux-ping命令"><a href="#Linux-ping命令" class="headerlink" title="Linux ping命令"></a>Linux
+                          ping命令</h3>
+                      <p>Linux ping命令用于检测主机。</p>
+                      <p>执行ping指令会使用ICMP传输协议，发出要求回应的信息，若远端主机的网络功能没有问题，就会回应该信息，因而得知该主机运作正常。</p>
+                      <p>ping [-dfnqrRv][-c&lt;完成次数&gt;][-i&lt;间隔秒数&gt;][-I&lt;网络界面&gt;][-l&lt;前置载入&gt;][-p&lt;范本样式&gt;][-s&lt;数据包大小&gt;][-t&lt;存活数值&gt;][主机名称或IP地址]</p>
+                      <p>参数说明：</p>
+                      <pre><code>-d 使用Socket的SO_DEBUG功能。
+-c&lt;完成次数&gt; 设置完成要求回应的次数。
+-f 极限检测。
+-i&lt;间隔秒数&gt; 指定收发信息的间隔时间。
+-I&lt;网络界面&gt; 使用指定的网络接口送出数据包。
+-l&lt;前置载入&gt; 设置在送出要求信息之前，先行发出的数据包。
+-n 只输出数值。
+-p&lt;范本样式&gt; 设置填满数据包的范本样式。
+-q 不显示指令执行过程，开头和结尾的相关信息除外。
+-r 忽略普通的Routing Table，直接将数据包送到远端主机上。
+-R 记录路由过程。
+-s&lt;数据包大小&gt; 设置数据包的大小。
+-t&lt;存活数值&gt; 设置存活数值TTL的大小。
+-v 详细显示指令的执行过程。</code></pre>
+                      <h3 id="Linux-tcpdump命令"><a href="#Linux-tcpdump命令" class="headerlink"
+                                                  title="Linux tcpdump命令"></a>Linux tcpdump命令</h3>
+                      <p>Linux tcpdump命令用于倾倒网络传输数据。</p>
+                      <p>执行tcpdump指令可列出经过指定网络界面的数据包文件头，在Linux操作系统中，你必须是系统管理员。</p>
+                      <p>tcpdump [-adeflnNOpqStvx][-c&lt;数据包数目&gt;][-dd][-ddd][-F&lt;表达文件&gt;][-i&lt;网络界面&gt;][-r&lt;数据包文件&gt;][-s&lt;数据包大小&gt;][-tt][-T&lt;数据包类型&gt;][-vv][-w&lt;数据包文件&gt;][输出数据栏位]</p>
+                      <p>参数说明：</p>
+                      <pre><code>-a 尝试将网络和广播地址转换成名称。
+-c&lt;数据包数目&gt; 收到指定的数据包数目后，就停止进行倾倒操作。
+-d 把编译过的数据包编码转换成可阅读的格式，并倾倒到标准输出。
+-dd 把编译过的数据包编码转换成C语言的格式，并倾倒到标准输出。
+-ddd 把编译过的数据包编码转换成十进制数字的格式，并倾倒到标准输出。
+-e 在每列倾倒资料上显示连接层级的文件头。
+-f 用数字显示网际网络地址。
+-F&lt;表达文件&gt; 指定内含表达方式的文件。
+-i&lt;网络界面&gt; 使用指定的网络截面送出数据包。
+-l 使用标准输出列的缓冲区。
+-n 不把主机的网络地址转换成名字。
+-N 不列出域名。
+-O 不将数据包编码最佳化。
+-p 不让网络界面进入混杂模式。
+-q 快速输出，仅列出少数的传输协议信息。
+-r&lt;数据包文件&gt; 从指定的文件读取数据包数据。
+-s&lt;数据包大小&gt; 设置每个数据包的大小。
+-S 用绝对而非相对数值列出TCP关联数。
+-t 在每列倾倒资料上不显示时间戳记。
+-tt 在每列倾倒资料上显示未经格式化的时间戳记。
+-T&lt;数据包类型&gt; 强制将表达方式所指定的数据包转译成设置的数据包类型。
+-v 详细显示指令执行过程。
+-vv 更详细显示指令执行过程。
+-x 用十六进制字码列出数据包资料。
+-w&lt;数据包文件&gt; 把数据包数据写入指定的文件。</code></pre>
+                      <h3 id="Linux-nc命令"><a href="#Linux-nc命令" class="headerlink" title="Linux nc命令"></a>Linux nc命令
+                      </h3>
+                      <p>Linux nc命令用于设置路由器。</p>
+                      <p>执行本指令可设置路由器的相关参数。</p>
+                      <p>nc [-hlnruz][-g&lt;网关…&gt;][-G&lt;指向器数目&gt;][-i&lt;延迟秒数&gt;][-o&lt;输出文件&gt;][-p&lt;通信端口&gt;][-s&lt;来源位址&gt;][-v…][-w&lt;超时秒数&gt;][主机名称][通信端口…]</p>
+                      <p>参数说明：</p>
+                      <pre><code>-g&lt;网关&gt; 设置路由器跃程通信网关，最多可设置8个。
+-G&lt;指向器数目&gt; 设置来源路由指向器，其数值为4的倍数。
+-h 在线帮助。
+-i&lt;延迟秒数&gt; 设置时间间隔，以便传送信息及扫描通信端口。
+-l 使用监听模式，管控传入的资料。
+-n 直接使用IP地址，而不通过域名服务器。
+-o&lt;输出文件&gt; 指定文件名称，把往来传输的数据以16进制字码倾倒成该文件保存。
+-p&lt;通信端口&gt; 设置本地主机使用的通信端口。
+-r 乱数指定本地与远端主机的通信端口。
+-s&lt;来源位址&gt; 设置本地主机送出数据包的IP地址。
+-u 使用UDP传输协议。
+-v 显示指令执行过程。
+-w&lt;超时秒数&gt; 设置等待连线的时间。
+-z 使用0输入/输出模式，只在扫描通信端口时使用。</code></pre>
+                      <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3>
+                      <p>
+                          <img src="https://gd4.alicdn.com/imgextra/i4/2200652270622/O1CN01ZYLvoe1GSux128hem_!!2200652270622.jpg"
+                               alt="秋冬款高档小香风珍珠针织二件套装"></p>
+                      <p><a href="https://item.taobao.com/item.htm?id=616681472021" target="_blank" rel="noopener">查看购买上图商品</a>
+                          <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a
+                                  href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
+                      <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
+
+                  </div>
+
+
+              </section>
+          </article>
+
       </div>
-    
-  </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="文件传输"><a href="#文件传输" class="headerlink" title="文件传输"></a>文件传输</h2><h3 id="Linux-tftp命令"><a href="#Linux-tftp命令" class="headerlink" title="Linux tftp命令"></a>Linux tftp命令</h3><p>Linux tftp命令用于传输文件。</p>
-<p>FTP让用户得以下载存放于远端主机的文件，也能将文件上传到远端主机放置。tftp是简单的文字模式ftp程序，它所使用的指令和FTP类似。<br>语法</p>
-<p>tftp [主机名称或IP地址]</p>
-<p>操作说明：</p>
-<pre><code>connect：连接到远程tftp服务器
+      <div class='post-wrapper'>
+          <article class="post white-box shadow reveal ">
+
+
+              <section class='meta'>
+
+
+                  <div class="meta" id="header-meta">
+
+
+                      <h2 class="title">
+                          <a href="/posts/linux/cmd/71557959.html">
+                              linux 常用命令 5-2讲
+                          </a>
+                      </h2>
+
+
+                      <div class='new-meta-box'>
+
+
+                          <div class='new-meta-item author'>
+                              <a href="http://lxeridium.github.io" rel="nofollow">
+                                  <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
+                                  <p>Syboot</p>
+                              </a>
+                          </div>
+
+
+                          <div class='new-meta-item category'>
+                              <a href='/categories/linux/cmd/' rel="nofollow">
+                                  <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+                                  <p>linux/cmd</p>
+                              </a>
+                          </div>
+
+
+                          <div class="new-meta-item date">
+                              <a class='notlink'>
+                                  <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+                                  <p>发布于：2020年5月27日</p>
+                              </a>
+                          </div>
+
+
+                      </div>
+
+                      <hr>
+
+                  </div>
+
+              </section>
+
+
+              <section class="article typo">
+                  <div class="article-entry" itemprop="articleBody">
+
+                      <h2 id="文件传输"><a href="#文件传输" class="headerlink" title="文件传输"></a>文件传输</h2>
+                      <h3 id="Linux-tftp命令"><a href="#Linux-tftp命令" class="headerlink" title="Linux tftp命令"></a>Linux
+                          tftp命令</h3>
+                      <p>Linux tftp命令用于传输文件。</p>
+                      <p>FTP让用户得以下载存放于远端主机的文件，也能将文件上传到远端主机放置。tftp是简单的文字模式ftp程序，它所使用的指令和FTP类似。<br>语法</p>
+                      <p>tftp [主机名称或IP地址]</p>
+                      <p>操作说明：</p>
+                      <pre><code>connect：连接到远程tftp服务器
 mode：文件传输模式
 put：上传文件
 get：下载文件
@@ -611,24 +941,39 @@ help：帮助信息
 -o remount：将一个已经挂下的档案系统重新用不同的方式挂上。例如原先是唯读的系统，现在用可读写的模式重新挂上。
 -o ro：用唯读模式挂上。
 -o rw：用可读写模式挂上。
--o loop=：使用 loop 模式用来将一个档案当成硬盘分割挂上系统。</code></pre><h3 id="Linux-mkdir（英文全拼：make-directory）"><a href="#Linux-mkdir（英文全拼：make-directory）" class="headerlink" title="Linux mkdir（英文全拼：make directory）"></a>Linux mkdir（英文全拼：make directory）</h3><p>Linux mkdir 命令用于创建目录。<br>语法</p>
-<p>mkdir [-p] dirName</p>
-<p>参数说明：</p>
-<pre><code>-p 确保目录名称存在，不存在的就建一个。</code></pre><h3 id="Linux-rmdir（英文全拼：remove-directory）"><a href="#Linux-rmdir（英文全拼：remove-directory）" class="headerlink" title="Linux rmdir（英文全拼：remove directory）"></a>Linux rmdir（英文全拼：remove directory）</h3><p>Linux rmdir 命令删除空的目录。<br>语法</p>
-<p>rmdir [-p] dirName</p>
-<p>参数：</p>
-<pre><code>-p 是当子目录被删除后使它也成为空目录的话，则顺便一并删除。</code></pre><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i3/2200652270622/O1CN01LJ6A1s1GSuwym6en3_!!2200652270622.jpg" alt="秋冬款高档小香风珍珠针织二件套装"></p>
-<p><a href="https://item.taobao.com/item.htm?id=617158065194" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
-<pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
-      
-    </div>
-    
-      
-    
-  </section>
-</article>
+-o loop=：使用 loop 模式用来将一个档案当成硬盘分割挂上系统。</code></pre>
+                      <h3 id="Linux-mkdir（英文全拼：make-directory）"><a href="#Linux-mkdir（英文全拼：make-directory）"
+                                                                   class="headerlink"
+                                                                   title="Linux mkdir（英文全拼：make directory）"></a>Linux
+                          mkdir（英文全拼：make directory）</h3>
+                      <p>Linux mkdir 命令用于创建目录。<br>语法</p>
+                      <p>mkdir [-p] dirName</p>
+                      <p>参数说明：</p>
+                      <pre><code>-p 确保目录名称存在，不存在的就建一个。</code></pre>
+                      <h3 id="Linux-rmdir（英文全拼：remove-directory）"><a href="#Linux-rmdir（英文全拼：remove-directory）"
+                                                                     class="headerlink"
+                                                                     title="Linux rmdir（英文全拼：remove directory）"></a>Linux
+                          rmdir（英文全拼：remove directory）</h3>
+                      <p>Linux rmdir 命令删除空的目录。<br>语法</p>
+                      <p>rmdir [-p] dirName</p>
+                      <p>参数：</p>
+                      <pre><code>-p 是当子目录被删除后使它也成为空目录的话，则顺便一并删除。</code></pre>
+                      <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3>
+                      <p>
+                          <img src="https://gd3.alicdn.com/imgextra/i3/2200652270622/O1CN01LJ6A1s1GSuwym6en3_!!2200652270622.jpg"
+                               alt="秋冬款高档小香风珍珠针织二件套装"></p>
+                      <p><a href="https://item.taobao.com/item.htm?id=617158065194" target="_blank" rel="noopener">查看购买上图商品</a>
+                          <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a
+                                  href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
+                      <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
 
-          </div>
+                  </div>
+
+
+              </section>
+          </article>
+
+      </div>
         
       
         
@@ -1371,101 +1716,245 @@ pcs 配置系统完全支持 Corosync 3, knet, 和节点名称</code></pre><h3 i
           <li><a class="flat-box child"
             title="/categories/linux/centos/" href="/categories/linux/centos/"
             id="categorieslinuxcentos"
-            ><div class='name'>centos</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/linux/cmd/" href="/categories/linux/cmd/"
-            id="categorieslinuxcmd"
-            ><div class='name'>cmd</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/linux/opensuse/" href="/categories/linux/opensuse/"
-            id="categorieslinuxopensuse"
-            ><div class='name'>opensuse</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/linux/software/" href="/categories/linux/software/"
-            id="categorieslinuxsoftware"
-            ><div class='name'>software</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/linux/system/" href="/categories/linux/system/"
-            id="categorieslinuxsystem"
-            ><div class='name'>system</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/linux/ubuntu/" href="/categories/linux/ubuntu/"
-            id="categorieslinuxubuntu"
-            ><div class='name'>ubuntu</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/systools/" href="/categories/systools/"
-            id="categoriessystools"
-            ><div class='name'>systools</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/systools/virtualbox/" href="/categories/systools/virtualbox/"
-            id="categoriessystoolsvirtualbox"
-            ><div class='name'>virtualbox</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/windows/" href="/categories/windows/"
-            id="categorieswindows"
-            ><div class='name'>windows</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/windows/tools/" href="/categories/windows/tools/"
-            id="categorieswindowstools"
-            ><div class='name'>tools</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
+                > < div
+class
+= 'name' > centos < /div><div class='badge'>(3)</
+div > < /a></
+li >
+
+< li > < a
+class
+= "flat-box child"
+title = "/categories/linux/cmd/"
+href = "/categories/linux/cmd/"
+id = "categorieslinuxcmd"
+    > < div
+class
+= 'name' > cmd < /div><div class='badge'>(5)</
+div > < /a></
+li >
+
+< li > < a
+class
+= "flat-box child"
+title = "/categories/linux/opensuse/"
+href = "/categories/linux/opensuse/"
+id = "categorieslinuxopensuse"
+    > < div
+class
+= 'name' > opensuse < /div><div class='badge'>(3)</
+div > < /a></
+li >
+
+< li > < a
+class
+= "flat-box child"
+title = "/categories/linux/software/"
+href = "/categories/linux/software/"
+id = "categorieslinuxsoftware"
+    > < div
+class
+= 'name' > software < /div><div class='badge'>(5)</
+div > < /a></
+li >
+
+< li > < a
+class
+= "flat-box child"
+title = "/categories/linux/system/"
+href = "/categories/linux/system/"
+id = "categorieslinuxsystem"
+    > < div
+class
+= 'name' > system < /div><div class='badge'>(1)</
+div > < /a></
+li >
+
+< li > < a
+class
+= "flat-box child"
+title = "/categories/linux/ubuntu/"
+href = "/categories/linux/ubuntu/"
+id = "categorieslinuxubuntu"
+    > < div
+class
+= 'name' > ubuntu < /div><div class='badge'>(2)</
+div > < /a></
+li >
+
+< li > < a
+class
+= "flat-box"
+title = "/categories/systools/"
+href = "/categories/systools/"
+id = "categoriessystools"
+    > < div
+class
+= 'name' > systools < /div><div class='badge'>(2)</
+div > < /a></
+li >
+
+< li > < a
+class
+= "flat-box child"
+title = "/categories/systools/Proxmox-ve/"
+href = "/categories/systools/Proxmox-ve/"
+id = "categoriessystoolsProxmox-ve"
+    > < div
+class
+= 'name' > Proxmox - ve < /div><div class='badge'>(1)</
+div > < /a></
+li >
+
+< li > < a
+class
+= "flat-box child"
+title = "/categories/systools/virtualbox/"
+href = "/categories/systools/virtualbox/"
+id = "categoriessystoolsvirtualbox"
+    > < div
+class
+= 'name' > virtualbox < /div><div class='badge'>(1)</
+div > < /a></
+li >
+
+< li > < a
+class
+= "flat-box"
+title = "/categories/windows/"
+href = "/categories/windows/"
+id = "categorieswindows"
+    > < div
+class
+= 'name' > windows < /div><div class='badge'>(3)</
+div > < /a></
+li >
+
+< li > < a
+class
+= "flat-box child"
+title = "/categories/windows/tools/"
+href = "/categories/windows/tools/"
+id = "categorieswindowstools"
+    > < div
+class
+= 'name' > tools < /div><div class='badge'>(3)</
+div > < /a></
+li >
+
+< /ul>
+< /div>
+< /section>
 
 
-  
+< section
+class
+= "widget tagcloud shadow desktop mobile" >
 
-  
-    
-    
-  
+    < header >
 
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>tags</span></a>
-    
-  </header>
+    < a
+href = '/tags/' > < i
+class
+= "fas fa-tags fa-fw"
+aria - hidden = "true" > < /i><span class='name'>tags</s
+pan > < /a>
 
-
-    <div class='content'>
-      <a href="/tags/centos/" style="font-size: 19px; color: #777">centos</a> <a href="/tags/cmd/" style="font-size: 21.5px; color: #666">cmd</a> <a href="/tags/linux/" style="font-size: 24px; color: #555">linux</a> <a href="/tags/opensuse/" style="font-size: 19px; color: #777">opensuse</a> <a href="/tags/software/" style="font-size: 21.5px; color: #666">software</a> <a href="/tags/system/" style="font-size: 14px; color: #999">system</a> <a href="/tags/ubuntu/" style="font-size: 16.5px; color: #888">ubuntu</a> <a href="/tags/virtualbox/" style="font-size: 14px; color: #999">virtualbox</a> <a href="/tags/windows/" style="font-size: 14px; color: #999">windows</a> <a href="/tags/yast2/" style="font-size: 14px; color: #999">yast2</a>
-    </div>
-  </section>
+< /header>
 
 
-  
+< div
+class
+= 'content' >
+    < a
+href = "/tags/Proxmox-ve/"
+style = "font-size: 14px; color: #999" > Proxmox - ve < /a> <a href="/
+tags / centos / " style="
+font - size
+:
+19
+px;
+color: #777
+">centos</a> <a href=" / tags / cmd / " style="
+font - size
+:
+21.5
+px;
+color: #666
+">cmd</a> <a href=" / tags / linux / " style="
+font - size
+:
+24
+px;
+color: #555
+">linux</a> <a href=" / tags / opensuse / " style="
+font - size
+:
+19
+px;
+color: #777
+">opensuse</a> <a href=" / tags / software / " style="
+font - size
+:
+21.5
+px;
+color: #666
+">software</a> <a href=" / tags / system / " style="
+font - size
+:
+14
+px;
+color: #999
+">system</a> <a href=" / tags / ubuntu / " style="
+font - size
+:
+16.5
+px;
+color: #888
+">ubuntu</a> <a href=" / tags / virtualbox / " style="
+font - size
+:
+14
+px;
+color: #999
+">virtualbox</a> <a href=" / tags / windows / " style="
+font - size
+:
+19
+px;
+color: #777
+">windows</a> <a href=" / tags / yast2 / " style="
+font - size
+:
+14
+px;
+color: #999
+">yast2</a>
+< /div>
+< /section>
 
-  
+
+< /aside>
 
 
-</aside>
+< footer
+class
+= "clearfix" >
+    <!--    <br><br>-->
 
 
-  
-  <footer class="clearfix">
-<!--    <br><br>-->
-    
-      
-<!--        <br>-->
-        <div class="social-wrapper">
-          
-            
-              <a href="/atom.xml"
-                class="social fas fa-rss flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
+    <!--        <br>-->
+    < div
+class
+= "social-wrapper" >
+
+
+    < a
+href = "/atom.xml"
+class
+= "social fas fa-rss flat-btn"
+target = "_blank"
+rel = "external nofollow noopener noreferrer" >
               </a>
             
           
