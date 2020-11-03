@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
+        <loc>http://lxeridium.github.io/posts/systools/Docker-Desktop/7bf5306c.html</loc>
+
+        <lastmod>2020-11-03</lastmod>
+
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/posts/systools/VMware-player/525b92fc.html</loc>
+
+        <lastmod>2020-11-03</lastmod>
+
+    </url>
+
+    <url>
         <loc>http://lxeridium.github.io/posts/systools/Proxmox-ve/7e1b7d35.html</loc>
 
         <lastmod>2020-11-03</lastmod>
@@ -138,17 +152,17 @@
         <loc>http://lxeridium.github.io/404.html</loc>
 
         <lastmod>2020-10-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/friends/index.html</loc>
-    
-    <lastmod>2020-10-22</lastmod>
-    
-  </url>
-  
-  <url>
+
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/friends/index.html</loc>
+
+        <lastmod>2020-10-22</lastmod>
+
+    </url>
+
+    <url>
     <loc>http://lxeridium.github.io/docstarted/index.html</loc>
     
     <lastmod>2020-10-22</lastmod>
@@ -215,15 +229,15 @@
     <loc>http://lxeridium.github.io/posts/linux/ubuntu/205e4283.html</loc>
     
     <lastmod>2020-06-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/posts/linux/software/e52e0295.html</loc>
-    
-    <lastmod>2020-06-19</lastmod>
 
   </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/posts/linux/software/e52e0295.html</loc>
+
+        <lastmod>2020-06-19</lastmod>
+
+    </url>
 
 
     <url>
@@ -311,6 +325,20 @@
         <priority>0.6</priority>
     </url>
 
+    <url>
+        <loc>http://lxeridium.github.io/tags/VMware-player/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/tags/Docker-Desktop/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
 
     <url>
         <loc>http://lxeridium.github.io/categories/linux/</loc>
@@ -391,6 +419,20 @@
 
     <url>
         <loc>http://lxeridium.github.io/categories/linux/software/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/categories/systools/VMware-player/</loc>
+        <lastmod>2020-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/categories/systools/Docker-Desktop/</loc>
         <lastmod>2020-11-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>

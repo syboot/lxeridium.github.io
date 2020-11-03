@@ -442,6 +442,68 @@
       ]
     },
     {
+      "title": "VMware-Workstation-16-Player-虚拟化工具-安装",
+      "slug": "VMwareWorkstationPlayer-虚拟化工具-安装",
+      "date": "2020-05-27T08:08:03.000Z",
+      "updated": "2020-11-03T18:10:53.368Z",
+      "comments": true,
+      "path": "posts/systools/VMware-player/525b92fc.html",
+      "link": "",
+      "permalink": "http://lxeridium.github.io/posts/systools/VMware-player/525b92fc.html",
+      "excerpt": "",
+      "text": "VMware Workstation 16 PlayerVMware Workstation Player 是在 Windows 或 Linux PC 上运行单一虚拟机的理想实用程序。各类组织利用 Workstation Player 交付代管企业桌面，而学生和教育工作者则用它来进行学习和培训。现在提供免费版本，用于非商业、个人和家用目的。我们还鼓励学生和非盈利组织借助此产品获益。商业组织需要商业许可证方可使用 Workstation Player。 官方网站：https://www.vmware.com/cn.html VMware Workstation 16 Player 下载地址页 安装流程1，准备环境下载 VMware-player-16.0.0-16894299.exe 。2，安装安装过程中都是常规问题，没有别的复杂情况。一路下一步，默认安装到C盘，可以自己更改。3，注释事项安装位置，后续虚拟系统存放在一个较大的盘上，避免空间不足。4，配置测试VMware-player 有很多插件，在你安装系统时会提示，有的是必须装的。赞助广告 查看购买上图商品 淘宝店铺 品牌官网 感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com",
+      "categories": [
+        {
+          "name": "systools",
+          "slug": "systools",
+          "permalink": "http://lxeridium.github.io/categories/systools/"
+        },
+        {
+          "name": "VMware-player",
+          "slug": "systools/VMware-player",
+          "permalink": "http://lxeridium.github.io/categories/systools/VMware-player/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "VMware-player",
+          "slug": "VMware-player",
+          "permalink": "http://lxeridium.github.io/tags/VMware-player/"
+        }
+      ]
+    },
+    {
+      "title": "Docker-Desktop-虚拟化工具-安装",
+      "slug": "Docker-Desktop-虚拟化工具-安装",
+      "date": "2020-05-27T08:08:03.000Z",
+      "updated": "2020-11-03T19:31:48.756Z",
+      "comments": true,
+      "path": "posts/systools/Docker-Desktop/7bf5306c.html",
+      "link": "",
+      "permalink": "http://lxeridium.github.io/posts/systools/Docker-Desktop/7bf5306c.html",
+      "excerpt": "",
+      "text": "Docker DesktopDocker是一个用于创建容器化应用程序的完整开发平台，而Docker Desktop for Windows是在Windows上开始使用Docker的最佳方式。 如何在Windows 10上打开Hyper-V使用PowerShell启用Hyper-V 以管理员身份打开PowerShell控制台。 Run the following command:1Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All 如果找不到该命令，请确保您以管理员身份运行PowerShell。安装完成后，请重新启动。 Enable Hyper-V 打开参考页面 WSL 2 installation is incomplete.在满足条件的Windows系统上下载 Linux 内核更新包WSL 2 更新 WSL 2 Linux 内核 页面 docker-desktop在满足条件的Windows系统上下载Docker Desktop的安装包． docker-desktop 下载页面 官方网站：https://www.vmware.com/cn.html VMware Workstation 16 Player 下载地址页 安装流程1，准备环境Docker Desktop支持Windows 10 64位: 专业版，企业版，教育版 (Build 15063 或以上). 开启了Hyper-V 安装了Linux 内核更新包WSL 22，安装安装过程是简单的，直接双击下载的安装.3，注释事项Windows 10 系统 开启Hyper-V和WSL 24，配置测试Docker running ...... ok赞助广告 查看购买上图商品 淘宝店铺 品牌官网 感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com",
+      "categories": [
+        {
+          "name": "systools",
+          "slug": "systools",
+          "permalink": "http://lxeridium.github.io/categories/systools/"
+        },
+        {
+          "name": "Docker-Desktop",
+          "slug": "systools/Docker-Desktop",
+          "permalink": "http://lxeridium.github.io/categories/systools/Docker-Desktop/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Docker-Desktop",
+          "slug": "Docker-Desktop",
+          "permalink": "http://lxeridium.github.io/tags/Docker-Desktop/"
+        }
+      ]
+    },
+    {
       "title": "CentOS8-openSUSE-Ubuntu-基本命令对照",
       "slug": "CentOS8-openSUSE-Ubuntu-基本命令对照",
       "date": "2020-05-27T07:29:57.000Z",
@@ -912,6 +974,16 @@
       "permalink": "http://lxeridium.github.io/categories/systools/virtualbox/"
     },
     {
+      "name": "VMware-player",
+      "slug": "systools/VMware-player",
+      "permalink": "http://lxeridium.github.io/categories/systools/VMware-player/"
+    },
+    {
+      "name": "Docker-Desktop",
+      "slug": "systools/Docker-Desktop",
+      "permalink": "http://lxeridium.github.io/categories/systools/Docker-Desktop/"
+    },
+    {
       "name": "centos",
       "slug": "linux/centos",
       "permalink": "http://lxeridium.github.io/categories/linux/centos/"
@@ -967,6 +1039,16 @@
       "name": "virtualbox",
       "slug": "virtualbox",
       "permalink": "http://lxeridium.github.io/tags/virtualbox/"
+    },
+    {
+      "name": "VMware-player",
+      "slug": "VMware-player",
+      "permalink": "http://lxeridium.github.io/tags/VMware-player/"
+    },
+    {
+      "name": "Docker-Desktop",
+      "slug": "Docker-Desktop",
+      "permalink": "http://lxeridium.github.io/tags/Docker-Desktop/"
     },
     {
       "name": "centos",
