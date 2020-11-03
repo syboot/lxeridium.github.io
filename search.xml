@@ -251,6 +251,33 @@
 
 
     <entry>
+        <title>Docker-Desktop-虚拟化工具-安装</title>
+        <link href="/posts/systools/Docker-Desktop/7bf5306c.html"/>
+        <url>/posts/systools/Docker-Desktop/7bf5306c.html</url>
+
+        <content type="html">
+            <![CDATA[<h3 id="Docker-Desktop"><a href="#Docker-Desktop" class="headerlink" title="Docker Desktop"></a>Docker Desktop</h3><p>Docker是一个用于创建容器化应用程序的完整开发平台，而Docker Desktop for Windows是在Windows上开始使用Docker的最佳方式。</p><h4 id="如何在Windows-10上打开Hyper-V"><a href="#如何在Windows-10上打开Hyper-V" class="headerlink" title="如何在Windows 10上打开Hyper-V"></a>如何在Windows 10上打开Hyper-V</h4><p>使用PowerShell启用Hyper-V</p><pre><code>以管理员身份打开PowerShell控制台。Run the following command:</code></pre><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Enable-WindowsOptionalFeature</span> <span class="literal">-Online</span> <span class="literal">-FeatureName</span> Microsoft<span class="literal">-Hyper</span><span class="literal">-V</span> <span class="literal">-All</span></span><br></pre></td></tr></table></figure><p>如果找不到该命令，请确保您以管理员身份运行PowerShell。安装完成后，请重新启动。</p><p><a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v" target="_blank" rel="noopener">Enable Hyper-V 打开参考页面</a></p><h4 id="WSL-2-installation-is-incomplete"><a href="#WSL-2-installation-is-incomplete" class="headerlink" title="WSL 2 installation is incomplete."></a>WSL 2 installation is incomplete.</h4><p>在满足条件的Windows系统上下载 Linux 内核更新包WSL 2</p><p><a href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-kernel" target="_blank" rel="noopener">更新 WSL 2 Linux 内核 页面</a></p><h4 id="docker-desktop"><a href="#docker-desktop" class="headerlink" title="docker-desktop"></a>docker-desktop</h4><p>在满足条件的Windows系统上下载Docker Desktop的安装包．</p><p><a href="https://www.docker.com/products/docker-desktop" target="_blank" rel="noopener">docker-desktop 下载页面</a></p><p>官方网站：<a href="https://www.vmware.com/cn.html" target="_blank" rel="noopener">https://www.vmware.com/cn.html</a></p><p><a href="https://www.vmware.com/cn/products/workstation-player/workstation-player-evaluation.html" target="_blank" rel="noopener">VMware Workstation 16 Player 下载地址页</a></p><h2 id="安装流程"><a href="#安装流程" class="headerlink" title="安装流程"></a>安装流程</h2><h3 id="1，准备环境"><a href="#1，准备环境" class="headerlink" title="1，准备环境"></a>1，准备环境</h3><pre><code>Docker Desktop支持Windows 10 64位: 专业版，企业版，教育版 (Build 15063 或以上). 开启了Hyper-V安装了Linux 内核更新包WSL 2</code></pre><h3 id="2，安装"><a href="#2，安装" class="headerlink" title="2，安装"></a>2，安装</h3><pre><code>安装过程是简单的，直接双击下载的安装.</code></pre><h3 id="3，注释事项"><a href="#3，注释事项" class="headerlink" title="3，注释事项"></a>3，注释事项</h3><pre><code>Windows 10 系统  开启Hyper-V和WSL 2</code></pre><h3 id="4，配置测试"><a href="#4，配置测试" class="headerlink" title="4，配置测试"></a>4，配置测试</h3><pre><code>Docker running ......  ok</code></pre><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd4.alicdn.com/imgextra/i4/2200652270622/O1CN01oo7QKu1GSuyWmRu4C_!!2200652270622.jpg" alt="双面呢羊毛两件套"></p><p><a href="https://item.taobao.com/item.htm?id=626507248943" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p><pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>]]></content>
+
+
+        <categories>
+
+            <category>systools</category>
+
+            <category>Docker-Desktop</category>
+
+        </categories>
+
+
+        <tags>
+
+            <tag>Docker-Desktop</tag>
+
+        </tags>
+
+    </entry>
+
+
+    <entry>
         <title>Proxmox-ve-虚拟化工具-安装</title>
         <link href="/posts/systools/Proxmox-ve/7e1b7d35.html"/>
         <url>/posts/systools/Proxmox-ve/7e1b7d35.html</url>
@@ -271,33 +298,6 @@
         <tags>
 
             <tag>Proxmox-ve</tag>
-
-        </tags>
-
-    </entry>
-
-
-    <entry>
-        <title>VirtualBox-虚拟机工具 安装</title>
-        <link href="/posts/systools/virtualbox/5d94ee4c.html"/>
-        <url>/posts/systools/virtualbox/5d94ee4c.html</url>
-
-        <content type="html">
-            <![CDATA[<h3 id="virtualbox"><a href="#virtualbox" class="headerlink" title="virtualbox"></a>virtualbox</h3><p>1.下载VirtualBox-虚拟机6.0.</p><p>VirtualBox是针对x86硬件的通用完整虚拟机，主要针对服务器，台式机和嵌入式应用。</p><p>官方网站：<a href="https://www.virtualbox.org/" target="_blank" rel="noopener">https://www.virtualbox.org/</a><br>下载地址：<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">https://www.virtualbox.org/wiki/Downloads</a> </p><pre><code>[快速下载链接列表](https://www.virtualbox.org/wiki/Downloads)[Windows hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-Win.exe)[OS X hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-OSX.dmg)[Linux distributions](https://www.virtualbox.org/wiki/Linux_Downloads)[Solaris hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-SunOS.tar.gz) </code></pre><h2 id="安装流程"><a href="#安装流程" class="headerlink" title="安装流程"></a>安装流程</h2><h3 id="1，准备环境"><a href="#1，准备环境" class="headerlink" title="1，准备环境"></a>1，准备环境</h3><h3 id="2，安装"><a href="#2，安装" class="headerlink" title="2，安装"></a>2，安装</h3><pre><code>找到之前下载的VirtualBox EXE文件。然后双击该文件。这样做将打开VirtualBox安装窗口。前三页全部单击“下一步”。出现提示时，单击“是”。点击安装驱动（可能会出现多次，操作同上）出现提示时，单击“安装”。这样做将允许VirtualBox开始在您的计算机上安装。出现提示时，单击“完成”。它在窗口的右下角。这样做将关闭安装窗口并打开VirtualBox。现在，您已经安装并打开了VirtualBox，可以创建一个虚拟机，以便在PC上运行任何操作系统。</code></pre><h3 id="3，注释事项"><a href="#3，注释事项" class="headerlink" title="3，注释事项"></a>3，注释事项</h3><pre><code>默认安装位置为c盘，注意磁盘空间。出现提示的驱动安装一动都要装上。</code></pre><h3 id="4，配置测试"><a href="#4，配置测试" class="headerlink" title="4，配置测试"></a>4，配置测试</h3><pre><code>测试是否可以打开VirtualBox应用。配置：工具-&gt;全局设定。默认虚拟电脑位置要放到一个空闲空间大一点的盘上去。扩展安装：工具-&gt;扩展。从官方网站上下载一个“Oracle VM VirtualBox Extensjon Pack” ,扩展有一些好用的功能。</code></pre><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd4.alicdn.com/imgextra/i4/2200652270622/O1CN01oo7QKu1GSuyWmRu4C_!!2200652270622.jpg" alt="双面呢羊毛两件套"></p><p><a href="https://item.taobao.com/item.htm?id=626507248943" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p><pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>]]></content>
-
-
-        <categories>
-
-            <category>systools</category>
-
-            <category>virtualbox</category>
-
-        </categories>
-
-
-        <tags>
-
-            <tag>virtualbox</tag>
 
         </tags>
 
@@ -332,26 +332,26 @@
 
 
     <entry>
-        <title>Docker-Desktop-虚拟化工具-安装</title>
-        <link href="/posts/systools/Docker-Desktop/7bf5306c.html"/>
-        <url>/posts/systools/Docker-Desktop/7bf5306c.html</url>
+        <title>VirtualBox-虚拟机工具 安装</title>
+        <link href="/posts/systools/virtualbox/5d94ee4c.html"/>
+        <url>/posts/systools/virtualbox/5d94ee4c.html</url>
 
         <content type="html">
-            <![CDATA[<h3 id="Docker-Desktop"><a href="#Docker-Desktop" class="headerlink" title="Docker Desktop"></a>Docker Desktop</h3><p>Docker是一个用于创建容器化应用程序的完整开发平台，而Docker Desktop for Windows是在Windows上开始使用Docker的最佳方式。</p><h4 id="如何在Windows-10上打开Hyper-V"><a href="#如何在Windows-10上打开Hyper-V" class="headerlink" title="如何在Windows 10上打开Hyper-V"></a>如何在Windows 10上打开Hyper-V</h4><p>使用PowerShell启用Hyper-V</p><pre><code>以管理员身份打开PowerShell控制台。Run the following command:</code></pre><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Enable-WindowsOptionalFeature</span> <span class="literal">-Online</span> <span class="literal">-FeatureName</span> Microsoft<span class="literal">-Hyper</span><span class="literal">-V</span> <span class="literal">-All</span></span><br></pre></td></tr></table></figure><p>如果找不到该命令，请确保您以管理员身份运行PowerShell。安装完成后，请重新启动。</p><p><a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v" target="_blank" rel="noopener">Enable Hyper-V 打开参考页面</a></p><h4 id="WSL-2-installation-is-incomplete"><a href="#WSL-2-installation-is-incomplete" class="headerlink" title="WSL 2 installation is incomplete."></a>WSL 2 installation is incomplete.</h4><p>在满足条件的Windows系统上下载 Linux 内核更新包WSL 2</p><p><a href="https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-kernel" target="_blank" rel="noopener">更新 WSL 2 Linux 内核 页面</a></p><h4 id="docker-desktop"><a href="#docker-desktop" class="headerlink" title="docker-desktop"></a>docker-desktop</h4><p>在满足条件的Windows系统上下载Docker Desktop的安装包．</p><p><a href="https://www.docker.com/products/docker-desktop" target="_blank" rel="noopener">docker-desktop 下载页面</a></p><p>官方网站：<a href="https://www.vmware.com/cn.html" target="_blank" rel="noopener">https://www.vmware.com/cn.html</a></p><p><a href="https://www.vmware.com/cn/products/workstation-player/workstation-player-evaluation.html" target="_blank" rel="noopener">VMware Workstation 16 Player 下载地址页</a></p><h2 id="安装流程"><a href="#安装流程" class="headerlink" title="安装流程"></a>安装流程</h2><h3 id="1，准备环境"><a href="#1，准备环境" class="headerlink" title="1，准备环境"></a>1，准备环境</h3><pre><code>Docker Desktop支持Windows 10 64位: 专业版，企业版，教育版 (Build 15063 或以上). 开启了Hyper-V安装了Linux 内核更新包WSL 2</code></pre><h3 id="2，安装"><a href="#2，安装" class="headerlink" title="2，安装"></a>2，安装</h3><pre><code>安装过程是简单的，直接双击下载的安装.</code></pre><h3 id="3，注释事项"><a href="#3，注释事项" class="headerlink" title="3，注释事项"></a>3，注释事项</h3><pre><code>Windows 10 系统  开启Hyper-V和WSL 2</code></pre><h3 id="4，配置测试"><a href="#4，配置测试" class="headerlink" title="4，配置测试"></a>4，配置测试</h3><pre><code>Docker running ......  ok</code></pre><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd4.alicdn.com/imgextra/i4/2200652270622/O1CN01oo7QKu1GSuyWmRu4C_!!2200652270622.jpg" alt="双面呢羊毛两件套"></p><p><a href="https://item.taobao.com/item.htm?id=626507248943" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p><pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>]]></content>
+            <![CDATA[<h3 id="virtualbox"><a href="#virtualbox" class="headerlink" title="virtualbox"></a>virtualbox</h3><p>1.下载VirtualBox-虚拟机6.0.</p><p>VirtualBox是针对x86硬件的通用完整虚拟机，主要针对服务器，台式机和嵌入式应用。</p><p>官方网站：<a href="https://www.virtualbox.org/" target="_blank" rel="noopener">https://www.virtualbox.org/</a><br>下载地址：<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">https://www.virtualbox.org/wiki/Downloads</a> </p><pre><code>[快速下载链接列表](https://www.virtualbox.org/wiki/Downloads)[Windows hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-Win.exe)[OS X hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-OSX.dmg)[Linux distributions](https://www.virtualbox.org/wiki/Linux_Downloads)[Solaris hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-SunOS.tar.gz) </code></pre><h2 id="安装流程"><a href="#安装流程" class="headerlink" title="安装流程"></a>安装流程</h2><h3 id="1，准备环境"><a href="#1，准备环境" class="headerlink" title="1，准备环境"></a>1，准备环境</h3><h3 id="2，安装"><a href="#2，安装" class="headerlink" title="2，安装"></a>2，安装</h3><pre><code>找到之前下载的VirtualBox EXE文件。然后双击该文件。这样做将打开VirtualBox安装窗口。前三页全部单击“下一步”。出现提示时，单击“是”。点击安装驱动（可能会出现多次，操作同上）出现提示时，单击“安装”。这样做将允许VirtualBox开始在您的计算机上安装。出现提示时，单击“完成”。它在窗口的右下角。这样做将关闭安装窗口并打开VirtualBox。现在，您已经安装并打开了VirtualBox，可以创建一个虚拟机，以便在PC上运行任何操作系统。</code></pre><h3 id="3，注释事项"><a href="#3，注释事项" class="headerlink" title="3，注释事项"></a>3，注释事项</h3><pre><code>默认安装位置为c盘，注意磁盘空间。出现提示的驱动安装一动都要装上。</code></pre><h3 id="4，配置测试"><a href="#4，配置测试" class="headerlink" title="4，配置测试"></a>4，配置测试</h3><pre><code>测试是否可以打开VirtualBox应用。配置：工具-&gt;全局设定。默认虚拟电脑位置要放到一个空闲空间大一点的盘上去。扩展安装：工具-&gt;扩展。从官方网站上下载一个“Oracle VM VirtualBox Extensjon Pack” ,扩展有一些好用的功能。</code></pre><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd4.alicdn.com/imgextra/i4/2200652270622/O1CN01oo7QKu1GSuyWmRu4C_!!2200652270622.jpg" alt="双面呢羊毛两件套"></p><p><a href="https://item.taobao.com/item.htm?id=626507248943" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p><pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>]]></content>
 
 
         <categories>
 
             <category>systools</category>
 
-            <category>Docker-Desktop</category>
+            <category>virtualbox</category>
 
         </categories>
 
 
         <tags>
 
-            <tag>Docker-Desktop</tag>
+            <tag>virtualbox</tag>
 
         </tags>
 
@@ -369,19 +369,19 @@
 
         <categories>
 
-            <category> linux </category>
-          
-          <category> centos </category>
-          
-      </categories>
-      
-      
+            <category>linux</category>
+
+            <category>centos</category>
+
+        </categories>
+
+
         <tags>
-            
-            <tag> centos </tag>
-            
+
+            <tag>centos</tag>
+
         </tags>
-      
+
     </entry>
     
     

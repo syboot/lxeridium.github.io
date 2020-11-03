@@ -380,6 +380,37 @@
       ]
     },
     {
+      "title": "Docker-Desktop-虚拟化工具-安装",
+      "slug": "Docker-Desktop-虚拟化工具-安装",
+      "date": "2020-05-27T08:08:03.000Z",
+      "updated": "2020-11-03T19:31:48.756Z",
+      "comments": true,
+      "path": "posts/systools/Docker-Desktop/7bf5306c.html",
+      "link": "",
+      "permalink": "http://lxeridium.github.io/posts/systools/Docker-Desktop/7bf5306c.html",
+      "excerpt": "",
+      "text": "Docker DesktopDocker是一个用于创建容器化应用程序的完整开发平台，而Docker Desktop for Windows是在Windows上开始使用Docker的最佳方式。 如何在Windows 10上打开Hyper-V使用PowerShell启用Hyper-V 以管理员身份打开PowerShell控制台。 Run the following command:1Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All 如果找不到该命令，请确保您以管理员身份运行PowerShell。安装完成后，请重新启动。 Enable Hyper-V 打开参考页面 WSL 2 installation is incomplete.在满足条件的Windows系统上下载 Linux 内核更新包WSL 2 更新 WSL 2 Linux 内核 页面 docker-desktop在满足条件的Windows系统上下载Docker Desktop的安装包． docker-desktop 下载页面 官方网站：https://www.vmware.com/cn.html VMware Workstation 16 Player 下载地址页 安装流程1，准备环境Docker Desktop支持Windows 10 64位: 专业版，企业版，教育版 (Build 15063 或以上). 开启了Hyper-V 安装了Linux 内核更新包WSL 22，安装安装过程是简单的，直接双击下载的安装.3，注释事项Windows 10 系统 开启Hyper-V和WSL 24，配置测试Docker running ...... ok赞助广告 查看购买上图商品 淘宝店铺 品牌官网 感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com",
+      "categories": [
+        {
+          "name": "systools",
+          "slug": "systools",
+          "permalink": "http://lxeridium.github.io/categories/systools/"
+        },
+        {
+          "name": "Docker-Desktop",
+          "slug": "systools/Docker-Desktop",
+          "permalink": "http://lxeridium.github.io/categories/systools/Docker-Desktop/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Docker-Desktop",
+          "slug": "Docker-Desktop",
+          "permalink": "http://lxeridium.github.io/tags/Docker-Desktop/"
+        }
+      ]
+    },
+    {
       "title": "Proxmox-ve-虚拟化工具-安装",
       "slug": "Proxmox-ve-虚拟化工具-安装",
       "date": "2020-05-27T08:08:03.000Z",
@@ -407,37 +438,6 @@
           "name": "Proxmox-ve",
           "slug": "Proxmox-ve",
           "permalink": "http://lxeridium.github.io/tags/Proxmox-ve/"
-        }
-      ]
-    },
-    {
-      "title": "VirtualBox-虚拟机工具 安装",
-      "slug": "VirtualBox-虚拟机工具-安装",
-      "date": "2020-05-27T08:08:03.000Z",
-      "updated": "2020-11-03T07:40:14.040Z",
-      "comments": true,
-      "path": "posts/systools/virtualbox/5d94ee4c.html",
-      "link": "",
-      "permalink": "http://lxeridium.github.io/posts/systools/virtualbox/5d94ee4c.html",
-      "excerpt": "",
-      "text": "virtualbox1.下载VirtualBox-虚拟机6.0. VirtualBox是针对x86硬件的通用完整虚拟机，主要针对服务器，台式机和嵌入式应用。 官方网站：https://www.virtualbox.org/下载地址：https://www.virtualbox.org/wiki/Downloads [快速下载链接列表](https://www.virtualbox.org/wiki/Downloads) [Windows hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-Win.exe) [OS X hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-OSX.dmg) [Linux distributions](https://www.virtualbox.org/wiki/Linux_Downloads) [Solaris hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-SunOS.tar.gz) 安装流程1，准备环境2，安装找到之前下载的VirtualBox EXE文件。然后双击该文件。这样做将打开VirtualBox安装窗口。 前三页全部单击“下一步”。 出现提示时，单击“是”。点击安装驱动（可能会出现多次，操作同上） 出现提示时，单击“安装”。这样做将允许VirtualBox开始在您的计算机上安装。 出现提示时，单击“完成”。它在窗口的右下角。这样做将关闭安装窗口并打开VirtualBox。 现在，您已经安装并打开了VirtualBox，可以创建一个虚拟机，以便在PC上运行任何操作系统。3，注释事项默认安装位置为c盘，注意磁盘空间。 出现提示的驱动安装一动都要装上。4，配置测试测试是否可以打开VirtualBox应用。 配置：工具-&gt;全局设定。默认虚拟电脑位置要放到一个空闲空间大一点的盘上去。 扩展安装：工具-&gt;扩展。从官方网站上下载一个“Oracle VM VirtualBox Extensjon Pack” ,扩展有一些好用的功能。赞助广告 查看购买上图商品 淘宝店铺 品牌官网 感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com",
-      "categories": [
-        {
-          "name": "systools",
-          "slug": "systools",
-          "permalink": "http://lxeridium.github.io/categories/systools/"
-        },
-        {
-          "name": "virtualbox",
-          "slug": "systools/virtualbox",
-          "permalink": "http://lxeridium.github.io/categories/systools/virtualbox/"
-        }
-      ],
-      "tags": [
-        {
-          "name": "virtualbox",
-          "slug": "virtualbox",
-          "permalink": "http://lxeridium.github.io/tags/virtualbox/"
         }
       ]
     },
@@ -473,16 +473,16 @@
       ]
     },
     {
-      "title": "Docker-Desktop-虚拟化工具-安装",
-      "slug": "Docker-Desktop-虚拟化工具-安装",
+      "title": "VirtualBox-虚拟机工具 安装",
+      "slug": "VirtualBox-虚拟机工具-安装",
       "date": "2020-05-27T08:08:03.000Z",
-      "updated": "2020-11-03T19:31:48.756Z",
+      "updated": "2020-11-03T07:40:14.040Z",
       "comments": true,
-      "path": "posts/systools/Docker-Desktop/7bf5306c.html",
+      "path": "posts/systools/virtualbox/5d94ee4c.html",
       "link": "",
-      "permalink": "http://lxeridium.github.io/posts/systools/Docker-Desktop/7bf5306c.html",
+      "permalink": "http://lxeridium.github.io/posts/systools/virtualbox/5d94ee4c.html",
       "excerpt": "",
-      "text": "Docker DesktopDocker是一个用于创建容器化应用程序的完整开发平台，而Docker Desktop for Windows是在Windows上开始使用Docker的最佳方式。 如何在Windows 10上打开Hyper-V使用PowerShell启用Hyper-V 以管理员身份打开PowerShell控制台。 Run the following command:1Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All 如果找不到该命令，请确保您以管理员身份运行PowerShell。安装完成后，请重新启动。 Enable Hyper-V 打开参考页面 WSL 2 installation is incomplete.在满足条件的Windows系统上下载 Linux 内核更新包WSL 2 更新 WSL 2 Linux 内核 页面 docker-desktop在满足条件的Windows系统上下载Docker Desktop的安装包． docker-desktop 下载页面 官方网站：https://www.vmware.com/cn.html VMware Workstation 16 Player 下载地址页 安装流程1，准备环境Docker Desktop支持Windows 10 64位: 专业版，企业版，教育版 (Build 15063 或以上). 开启了Hyper-V 安装了Linux 内核更新包WSL 22，安装安装过程是简单的，直接双击下载的安装.3，注释事项Windows 10 系统 开启Hyper-V和WSL 24，配置测试Docker running ...... ok赞助广告 查看购买上图商品 淘宝店铺 品牌官网 感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com",
+      "text": "virtualbox1.下载VirtualBox-虚拟机6.0. VirtualBox是针对x86硬件的通用完整虚拟机，主要针对服务器，台式机和嵌入式应用。 官方网站：https://www.virtualbox.org/下载地址：https://www.virtualbox.org/wiki/Downloads [快速下载链接列表](https://www.virtualbox.org/wiki/Downloads) [Windows hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-Win.exe) [OS X hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-OSX.dmg) [Linux distributions](https://www.virtualbox.org/wiki/Linux_Downloads) [Solaris hosts](https://download.virtualbox.org/virtualbox/6.1.14/VirtualBox-6.1.14-140239-SunOS.tar.gz) 安装流程1，准备环境2，安装找到之前下载的VirtualBox EXE文件。然后双击该文件。这样做将打开VirtualBox安装窗口。 前三页全部单击“下一步”。 出现提示时，单击“是”。点击安装驱动（可能会出现多次，操作同上） 出现提示时，单击“安装”。这样做将允许VirtualBox开始在您的计算机上安装。 出现提示时，单击“完成”。它在窗口的右下角。这样做将关闭安装窗口并打开VirtualBox。 现在，您已经安装并打开了VirtualBox，可以创建一个虚拟机，以便在PC上运行任何操作系统。3，注释事项默认安装位置为c盘，注意磁盘空间。 出现提示的驱动安装一动都要装上。4，配置测试测试是否可以打开VirtualBox应用。 配置：工具-&gt;全局设定。默认虚拟电脑位置要放到一个空闲空间大一点的盘上去。 扩展安装：工具-&gt;扩展。从官方网站上下载一个“Oracle VM VirtualBox Extensjon Pack” ,扩展有一些好用的功能。赞助广告 查看购买上图商品 淘宝店铺 品牌官网 感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com",
       "categories": [
         {
           "name": "systools",
@@ -490,16 +490,16 @@
           "permalink": "http://lxeridium.github.io/categories/systools/"
         },
         {
-          "name": "Docker-Desktop",
-          "slug": "systools/Docker-Desktop",
-          "permalink": "http://lxeridium.github.io/categories/systools/Docker-Desktop/"
+          "name": "virtualbox",
+          "slug": "systools/virtualbox",
+          "permalink": "http://lxeridium.github.io/categories/systools/virtualbox/"
         }
       ],
       "tags": [
         {
-          "name": "Docker-Desktop",
-          "slug": "Docker-Desktop",
-          "permalink": "http://lxeridium.github.io/tags/Docker-Desktop/"
+          "name": "virtualbox",
+          "slug": "virtualbox",
+          "permalink": "http://lxeridium.github.io/tags/virtualbox/"
         }
       ]
     },
@@ -964,14 +964,14 @@
       "permalink": "http://lxeridium.github.io/categories/systools/"
     },
     {
+      "name": "Docker-Desktop",
+      "slug": "systools/Docker-Desktop",
+      "permalink": "http://lxeridium.github.io/categories/systools/Docker-Desktop/"
+    },
+    {
       "name": "Proxmox-ve",
       "slug": "systools/Proxmox-ve",
       "permalink": "http://lxeridium.github.io/categories/systools/Proxmox-ve/"
-    },
-    {
-      "name": "virtualbox",
-      "slug": "systools/virtualbox",
-      "permalink": "http://lxeridium.github.io/categories/systools/virtualbox/"
     },
     {
       "name": "VMware-player",
@@ -979,9 +979,9 @@
       "permalink": "http://lxeridium.github.io/categories/systools/VMware-player/"
     },
     {
-      "name": "Docker-Desktop",
-      "slug": "systools/Docker-Desktop",
-      "permalink": "http://lxeridium.github.io/categories/systools/Docker-Desktop/"
+      "name": "virtualbox",
+      "slug": "systools/virtualbox",
+      "permalink": "http://lxeridium.github.io/categories/systools/virtualbox/"
     },
     {
       "name": "centos",
@@ -1031,14 +1031,14 @@
       "permalink": "http://lxeridium.github.io/tags/windows/"
     },
     {
+      "name": "Docker-Desktop",
+      "slug": "Docker-Desktop",
+      "permalink": "http://lxeridium.github.io/tags/Docker-Desktop/"
+    },
+    {
       "name": "Proxmox-ve",
       "slug": "Proxmox-ve",
       "permalink": "http://lxeridium.github.io/tags/Proxmox-ve/"
-    },
-    {
-      "name": "virtualbox",
-      "slug": "virtualbox",
-      "permalink": "http://lxeridium.github.io/tags/virtualbox/"
     },
     {
       "name": "VMware-player",
@@ -1046,9 +1046,9 @@
       "permalink": "http://lxeridium.github.io/tags/VMware-player/"
     },
     {
-      "name": "Docker-Desktop",
-      "slug": "Docker-Desktop",
-      "permalink": "http://lxeridium.github.io/tags/Docker-Desktop/"
+      "name": "virtualbox",
+      "slug": "virtualbox",
+      "permalink": "http://lxeridium.github.io/tags/virtualbox/"
     },
     {
       "name": "centos",
