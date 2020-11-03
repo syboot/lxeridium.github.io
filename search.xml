@@ -9,7 +9,7 @@
       <url>/posts/linux/opensuse/a3febc18.html</url>
       
         <content type="html">
-            <![CDATA[<h3 id="opensuse-yast2-使用"><a href="#opensuse-yast2-使用" class="headerlink" title="opensuse yast2 使用"></a>opensuse yast2 使用</h3><p>YaST (Yet another Setup Tool，SUSE特制的强大设置工具) 是系统管理配置的核心工具。</p><p><a href="https://imgchr.com/i/BrO0Fs" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/03/BrO0Fs.jpg" alt="BrO0Fs.jpg"></a></p><p>特点：</p><p>默认YaST模块<br>使用图形界面的各种强大的配置模块，Yast几乎可完成所有的系统任务，比如：</p><pre><code>安装和卸载软件（下章介绍）设置您的打印机配置防火墙开启和禁用系统服务设置网络共享(Windows域成员资格，Samba服务器)磁盘分区管理（给硬盘/优盘分区和格式化，可以挂载Windows分区）启用NTP（网络时间同步协议）服务引导装载程序（多操作系统引导，设置默认启动的系统）软件安装源（添加、修改或禁用软件源）硬件信息网络设置用户和组管理（设置用户权限、添加删除用户）在线更新还有很多很多……</code></pre><p>附加YaST模块<br>除了默认安装的模块，还有很多其他的可用Yast模块（需要自己装，请阅读后面软件安装的章节）。默认未安装的一些著名的模块：（这些多是服务器用的）</p><pre><code>Apache网页服务器(包名：yast2-http-server)SSH远程安全登录服务 (包名：yast2-sshd)FTP服务器(包名：yast2-ftp-server)NFS网络文件系统服务器 (包名：yast2-nfs-server)还有很多……</code></pre><h3 id="终端中的-YaST"><a href="#终端中的-YaST" class="headerlink" title="终端中的 YaST"></a>终端中的 YaST</h3><p>在终端中同样也可以使用 YaST（ncurses终端模式）—— 这对没有图形界面环境运行的服务很有用，比如用SSH远程登录或您的图形界面 环境坏掉了或压根没装图形界面。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> yast2</span></span><br></pre></td></tr></table></figure><p><a href="https://imgchr.com/i/BrO1JI" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/03/BrO1JI.jpg" alt="BrO1JI.jpg"></a></p><p>中文也支持的很好，在终端下可以配置 服务器的大多数功能。</p>]]></content>
+            <![CDATA[<h3 id="opensuse-yast2-使用"><a href="#opensuse-yast2-使用" class="headerlink" title="opensuse yast2 使用"></a>opensuse yast2 使用</h3><p>YaST (Yet another Setup Tool，SUSE特制的强大设置工具) 是系统管理配置的核心工具。</p><p><a href="https://imgchr.com/i/BrO0Fs" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/03/BrO0Fs.jpg" alt="BrO0Fs.jpg"></a></p><p>特点：</p><p>默认YaST模块<br>使用图形界面的各种强大的配置模块，Yast几乎可完成所有的系统任务，比如：</p><pre><code>安装和卸载软件（下章介绍）设置您的打印机配置防火墙开启和禁用系统服务设置网络共享(Windows域成员资格，Samba服务器)磁盘分区管理（给硬盘/优盘分区和格式化，可以挂载Windows分区）启用NTP（网络时间同步协议）服务引导装载程序（多操作系统引导，设置默认启动的系统）软件安装源（添加、修改或禁用软件源）硬件信息网络设置用户和组管理（设置用户权限、添加删除用户）在线更新还有很多很多……</code></pre><p>附加YaST模块<br>除了默认安装的模块，还有很多其他的可用Yast模块（需要自己装，请阅读后面软件安装的章节）。默认未安装的一些著名的模块：（这些多是服务器用的）</p><pre><code>Apache网页服务器(包名：yast2-http-server)SSH远程安全登录服务 (包名：yast2-sshd)FTP服务器(包名：yast2-ftp-server)NFS网络文件系统服务器 (包名：yast2-nfs-server)还有很多……</code></pre><h3 id="终端中的-YaST"><a href="#终端中的-YaST" class="headerlink" title="终端中的 YaST"></a>终端中的 YaST</h3><p>在终端中同样也可以使用 YaST（ncurses终端模式）—— 这对没有图形界面环境运行的服务很有用，比如用SSH远程登录或您的图形界面 环境坏掉了或压根没装图形界面。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> yast2</span></span><br></pre></td></tr></table></figure><p><a href="https://imgchr.com/i/BrO1JI" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/03/BrO1JI.jpg" alt="BrO1JI.jpg"></a></p><p>中文也支持的很好，在终端下可以配置 服务器的大多数功能。</p><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN0135F3Wl1GSuzGZ9E9r_!!2200652270622.jpg" alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p><p><a href="https://item.taobao.com/item.htm?id=631021890672" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p><pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>]]></content>
       
       
       <categories>
@@ -59,27 +59,26 @@
         </tags>
       
     </entry>
-    
-    
-    
+
+
     <entry>
-      <title>linux 常用软件介绍(一)(5-4)</title>
-      <link href="/posts/linux/software/92293203.html"/>
-      <url>/posts/linux/software/92293203.html</url>
+        <title>linux 常用软件介绍(一)(5-4)</title>
+        <link href="/posts/linux/software/92293203.html"/>
+        <url>/posts/linux/software/92293203.html</url>
 
         <content type="html">
             <![CDATA[<h2 id="linux-常用软件介绍-一-5-4"><a href="#linux-常用软件介绍-一-5-4" class="headerlink" title="linux 常用软件介绍(一)(5-4)"></a>linux 常用软件介绍(一)(5-4)</h2><p>电子书工具  电子邮件  </p><h3 id="电子书工具"><a href="#电子书工具" class="headerlink" title="电子书工具"></a>电子书工具</h3><h4 id="Calibre"><a href="#Calibre" class="headerlink" title="Calibre"></a>Calibre</h4><p>Calibre 是 Linux 最受欢迎的电子书应用。老实说，这不仅仅是一个简单的电子书阅读器。它是一个完整的电子书解决方案。</p><p>特点：</p><pre><code>Calibre 通过管理元数据来排序和分组电子书。你能从各种来源下载一本电子书的元数据或创建和编辑现有的字段。Calibre 支持所有主流电子书格式并兼容多种电子阅读器。在转换时，你能通过改变电子书风格，创建内容表和调整边距的选项来转换任何一种电子书格式到另一种。你也能转换个人文档为电子书。</code></pre><p><a href="https://www.calibre-ebook.com/" target="_blank" rel="noopener">Calibre 下载页面</a></p><h4 id="Okular"><a href="#Okular" class="headerlink" title="Okular"></a>Okular</h4><p>Okular 是另一个开源的基于 KDE 开发的跨平台文档查看器，它已经作为 KDE 应用发布的一部分了。</p><p>特点：</p><pre><code>Okular 支持多种文档格式像 PDF、Postscript、DjVu、CHM、XPS、ePub 和其他。支持在 PDF 文档中评论、高亮和绘制不同的形状等。无需修改原始 PDF 文件，分别保存上述这些更改。电子书中的文本能被提取到一个文本文件，并且有个名为 Jovie 的内置文本阅读服务。</code></pre><p><a href="https://okular.kde.org/" target="_blank" rel="noopener">Okular 下载页面</a></p><h4 id="Bookworm"><a href="#Bookworm" class="headerlink" title="Bookworm"></a>Bookworm</h4><p>Bookworm 是另一个支持多种文件格式诸如 epub、pdf、mobi、cbr 和 cbz 的自由开源的电子阅读器。</p><p>特点：</p><pre><code>支持epub，pdf，mobi，cbr和cbz格式的电子书。支持编辑书籍元数据和过滤。提供诸如放大/缩小，边距设置，线宽增加/减少之类的功能。支持浅色，深褐色和深色的不同读取配置文件。还支持夜间模式。为您喜欢的书上的页面添加书签，以供日后阅读。支持全屏模式。</code></pre><p><a href="https://github.com/babluboy/bookworm" target="_blank" rel="noopener">Bookworm 下载页面</a></p><h3 id="电子邮件"><a href="#电子邮件" class="headerlink" title="电子邮件"></a>电子邮件</h3><h4 id="Thunderbird"><a href="#Thunderbird" class="headerlink" title="Thunderbird"></a>Thunderbird</h4><p>Mozilla Thunderbird 非常的好用的邮件客户端，虽然很多人都习惯在网页上收发邮件，不过还是有很多资深网民喜欢用本地邮件客户端收发邮件，<br>它是经过对 Mozilla 的邮件组件的进行重新设计后的产品，它可整合多个网络邮箱于一体，随时都能拉取邮件到本地处理，或者随时发送邮件。<br>简单易用，功能强大，个性化配置，Thunderbird 邮件客户端带给你全方位的体验。</p><p>特点：</p><pre><code>Thunderbird 支持 IMAP 、POP 邮件协议以及 HTML 邮件格式。轻松导入您已有的邮件账号和信息。内置 RSS 技术, 功能强大的快速搜索, 自动拼写检查等。   </code></pre><p><a href="https://www.thunderbird.net/zh-CN/" target="_blank" rel="noopener">Thunderbird 下载页面</a></p><h4 id="Claws-Mail"><a href="#Claws-Mail" class="headerlink" title="Claws Mail"></a>Claws Mail</h4><p>Claws Mail对邮件和信息的管理采用MH格式，因此具有良好的通用性。此外，还可以利用fetchmail、procmail以及其它外部程序来增强它的功能。</p><p>特点：</p><pre><code>多用户支持线程操作过滤器支持SSL连接支持X-Face功能支持内建图片浏览功能支持插件邮箱的导入和导出功能GnuPG的支持标签支持打印功能排序工具POP和SMTP协议的认证等等</code></pre><p><a href="https://www.claws-mail.org/" target="_blank" rel="noopener">Claws Mail 下载页面</a></p><h4 id="KMail"><a href="#KMail" class="headerlink" title="KMail"></a>KMail</h4><p>KMail 是一个电子邮件客户端 。它的设计目标是希望成为一个企业级 MUA。支持文件夹、邮件过滤、浏览HTML电子邮件和国际字符集。<br>KMail支持OpenPGP标准，可以自动加密、解密、凭证和验证电子邮件的凭证及其经由内嵌或OpenPGP/MIME方法加密的附件。</p><p>特点：</p><pre><code>安全-KMail具有安全的默认设置，以保护您的隐私，强大的端到端加密支持以及垃圾邮件检测。强大-功能包括离线支持，多种发件人身份，多语言支持，强大的过滤，搜索和标记功能，邮件列表管理以及非常灵活的配置。集成-会议邀请可以作为事件轻松添加到KOrganizer中，从KAddressBook加载地址自动完成，头像和加密首选项。符合标准-支持标准邮​​件协议，推送电子邮件，服务器端过滤以及嵌入式OpenPGP，PGP / MIME和S / MIME。</code></pre><p><a href="https://apps.kde.org/en/kmail2" target="_blank" rel="noopener">KMail 下载页面</a></p><h4 id="SeaMonkey-mail"><a href="#SeaMonkey-mail" class="headerlink" title="SeaMonkey mail"></a>SeaMonkey mail</h4><p>SeaMonkey 就是一个完整的 Web 应用程序套件，包括一个网页浏览器、一个高级邮件和新闻组客户端、一个IRC 聊天客户端以及一个简单的 HTML 编辑器。</p><p>特点：</p><pre><code>SeaMonkey包含Internet浏览器电子邮件和新闻组客户端随附的Web Feed阅读器HTML编辑器IRC聊天Web开发工具</code></pre><p><a href="https://www.seamonkey-project.org/releases/" target="_blank" rel="noopener">SeaMonkey 下载页面</a></p><h4 id="Evolution"><a href="#Evolution" class="headerlink" title="Evolution"></a>Evolution</h4><p>使用gnome作为桌面环境的朋友一定对Evolution不会陌生，它为gnome桌面环境下电子邮件、个人信息、日程安排、日历等方面提供了一整套高效的解决方案</p><p>特点：</p><pre><code>Evolution管理多个POP，IMAP，Microsoft Exchange和本地电子邮件帐户。Evolution集成了日历，通讯录和电子邮件。强大的HTML支持，包括小的HTML“模板”（例如，用于框架内嵌图像）。灵活的过滤器和虚拟文件夹，用于消息的组织，分类和优先级。Evolution与SpamAssassin集成以进行垃圾邮件过滤，可以轻松训练贝叶斯部分。可以标记消息（例如用于后续操作），并可以为其分配颜色。Evolution同时支持OpenPGP和S / MIME以进行安全消息传递。</code></pre><p><a href="https://wiki.gnome.org/Apps/Evolution" target="_blank" rel="noopener">Evolution 下载页面</a></p><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg" alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p><p><a href="https://item.taobao.com/item.htm?id=625058323217" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p><pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> linux </category>
-          
-          <category> software </category>
-          
-      </categories>
-      
-      
+
+
+        <categories>
+
+            <category>linux</category>
+
+            <category>software</category>
+
+        </categories>
+
+
         <tags>
             
             <tag> software </tag>
