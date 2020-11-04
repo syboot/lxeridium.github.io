@@ -54,9 +54,17 @@
         <link href="http://lxeridium.github.io/posts/linux/software/e52e0295.html"/>
         <id>http://lxeridium.github.io/posts/linux/software/e52e0295.html</id>
         <published>2020-06-19T05:45:03.000Z</published>
-        <updated>2020-06-19T20:54:09.049Z</updated>
+        <updated>2020-11-04T17:35:43.696Z</updated>
+
+        <content type="html">
+            <![CDATA[<h3 id="linux-常用软件介绍-一-5-5"><a href="#linux-常用软件介绍-一-5-5" class="headerlink" title="linux 常用软件介绍(一)(5-5)"></a>linux 常用软件介绍(一)(5-5)</h3><p>办公套件</p><h4 id="WPS-office"><a href="#WPS-office" class="headerlink" title="WPS office"></a>WPS office</h4><p>  WPS office- 中国流行的办公套件，功能完善。<br>  新一代办公解决方案，借助PDF，Cloud，OCR，文件修复和其他强大的工具，WPS Office迅速成为越来越多的人在办公软件中的首选。</p><pre><code>与Microsoft Office，Google文档，Adobe PDF高度兼容。超小安装包，超快速启动速度。PC支持WPS的8种语言，Android支持WPS的46种语言创建精彩的演示有效地创建和编辑文档所有电子表格功能PDF编辑，转换等</code></pre><p><a href="https://linux.wps.com/" target="_blank" rel="noopener">WPS office for linux 下载页面</a></p><h4 id="libreoffice"><a href="#libreoffice" class="headerlink" title="libreoffice"></a>libreoffice</h4><p>自由免费的全能办公套件，对个人和企业均免费，不用支付授权费用。</p><p>更简洁，更快，更智能<br>LibreOffice 是一款功能强大的办公软件，默认使用开放文档格式 (OpenDocument Format , ODF), 并支持 *.docx, *.xlsx, *.pptx 等其他格式。<br>它包含了 Writer, Calc, Impress, Draw, Base 以及 Math 等组件，可用于处理文本文档、电子表格、演示文稿、绘图以及公式编辑。<br>它可以运行于 Windows, GNU/Linux 以及 macOS 等操作系统上，并具有一致的用户体验。</p><p><a href="https://www.libreoffice.org/download/download/" target="_blank" rel="noopener">libreoffice 下载页面</a></p><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg" alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p><p><a href="https://item.taobao.com/item.htm?id=625058323217" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p><pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>]]></content>
 
         <summary type="html">
+
+
+            &lt;h3 id=&quot;linux-常用软件介绍-一-5-5&quot;&gt;&lt;a href=&quot;#linux-常用软件介绍-一-5-5&quot; class=&quot;headerlink&quot;
+            title=&quot;linux 常用软件介绍(一)(5-5)&quot;&gt;&lt;/a&gt;linux 常用软件介绍(一)(5-5)&lt;/h3&gt;&lt;p&gt;办公
+
 
         </summary>
 
@@ -525,17 +533,18 @@
         <category term="opensuse" scheme="http://lxeridium.github.io/tags/opensuse/"/>
 
     </entry>
-  
-  <entry>
-    <title>linux-CentOS8-install 安装</title>
-    <link href="http://lxeridium.github.io/posts/linux/centos/71db4db0.html"/>
-    <id>http://lxeridium.github.io/posts/linux/centos/71db4db0.html</id>
-    <published>2020-05-27T07:22:04.000Z</published>
-    <updated>2020-10-26T15:14:40.144Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="CentOS8-install-安装"><a href="#CentOS8-install-安装" class="headerlink" title="CentOS8-install 安装"></a>CentOS8-install 安装</h2><p>CentOS 8.x的版本有CentOS 8.x和CentOS Stream两个版本，</p><p>CentOS Stream是一个面向开发人员的发行版，是Red Hat Enterprise Linux的滚动发行版。</p><p>CentOS 8.x 服务器一般建议安装的版本。</p><h3 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h3><p><a href="https://imgchr.com/i/BKaD54" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BKaD54.jpg" alt="BKaD54.jpg"></a></p><ol><li>选择“Install CentOS Linux 8.0”选项并按回车。</li></ol><p><a href="https://imgchr.com/i/BKa5Ie" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BKa5Ie.jpg" alt="BKa5Ie.jpg"></a></p><ol start="2"><li>选择 “中文”</li></ol><p><a href="https://imgchr.com/i/BKavdS" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BKavdS.jpg" alt="BKavdS.jpg"></a></p><ol start="3"><li>选择 “安装目的地” 选择当前磁盘。  分区需要按照要求设定安装。  测试可以随意。 建议使用LVM逻辑卷</li></ol><p><a href="https://imgchr.com/i/BKdnJJ" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BKdnJJ.jpg" alt="BKdnJJ.jpg"></a></p><ol start="4"><li>安装到服务器上就选择 “最小安装”。 快速装好后，在初始化你想用的软件。</li></ol><p><a href="https://imgchr.com/i/BKskLR" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BKskLR.jpg" alt="BKskLR.jpg"></a></p><ol start="5"><li>修改 “主机名”</li></ol><p><a href="https://imgchr.com/i/BKyPtf" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BKyPtf.jpg" alt="BKyPtf.jpg"></a></p><ol start="6"><li>打开 “以太网”。</li></ol><p><a href="https://imgchr.com/i/BKymBn" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BKymBn.jpg" alt="BKymBn.jpg"></a></p><ol start="7"><li>点击 “开始安装“</li></ol><p><a href="https://imgchr.com/i/BKy19U" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BKy19U.jpg" alt="BKy19U.jpg"></a><br><a href="https://imgchr.com/i/BK6Baq" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BK6Baq.jpg" alt="BK6Baq.jpg"></a></p><ol start="8"><li><p>设置 ”root 密码“  ， 创建新用户</p></li><li><p>等待完成安装。</p></li><li><p>中文的装的没问题了。 自己改为英文在安装，这样记忆会有一点吧。 熟练了那个语言都可以了。 毕竟安装的过程和内容是不变的。</p></li></ol><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i2/2200652270622/O1CN01A9LSoi1GSuyqYAlvI_!!2200652270622.jpg" alt="羊毛双面呢高腰小香风套装"></p><p><a href="https://item.taobao.com/item.htm?id=629273346606" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p><pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>]]></content>
-    
-    <summary type="html">
+
+    <entry>
+        <title>linux-CentOS8-install 安装</title>
+        <link href="http://lxeridium.github.io/posts/linux/centos/71db4db0.html"/>
+        <id>http://lxeridium.github.io/posts/linux/centos/71db4db0.html</id>
+        <published>2020-05-27T07:22:04.000Z</published>
+        <updated>2020-10-26T15:14:40.144Z</updated>
+
+        <content type="html">
+            <![CDATA[<h2 id="CentOS8-install-安装"><a href="#CentOS8-install-安装" class="headerlink" title="CentOS8-install 安装"></a>CentOS8-install 安装</h2><p>CentOS 8.x的版本有CentOS 8.x和CentOS Stream两个版本，</p><p>CentOS Stream是一个面向开发人员的发行版，是Red Hat Enterprise Linux的滚动发行版。</p><p>CentOS 8.x 服务器一般建议安装的版本。</p><h3 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h3><p><a href="https://imgchr.com/i/BKaD54" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BKaD54.jpg" alt="BKaD54.jpg"></a></p><ol><li>选择“Install CentOS Linux 8.0”选项并按回车。</li></ol><p><a href="https://imgchr.com/i/BKa5Ie" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BKa5Ie.jpg" alt="BKa5Ie.jpg"></a></p><ol start="2"><li>选择 “中文”</li></ol><p><a href="https://imgchr.com/i/BKavdS" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BKavdS.jpg" alt="BKavdS.jpg"></a></p><ol start="3"><li>选择 “安装目的地” 选择当前磁盘。  分区需要按照要求设定安装。  测试可以随意。 建议使用LVM逻辑卷</li></ol><p><a href="https://imgchr.com/i/BKdnJJ" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BKdnJJ.jpg" alt="BKdnJJ.jpg"></a></p><ol start="4"><li>安装到服务器上就选择 “最小安装”。 快速装好后，在初始化你想用的软件。</li></ol><p><a href="https://imgchr.com/i/BKskLR" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BKskLR.jpg" alt="BKskLR.jpg"></a></p><ol start="5"><li>修改 “主机名”</li></ol><p><a href="https://imgchr.com/i/BKyPtf" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BKyPtf.jpg" alt="BKyPtf.jpg"></a></p><ol start="6"><li>打开 “以太网”。</li></ol><p><a href="https://imgchr.com/i/BKymBn" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BKymBn.jpg" alt="BKymBn.jpg"></a></p><ol start="7"><li>点击 “开始安装“</li></ol><p><a href="https://imgchr.com/i/BKy19U" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BKy19U.jpg" alt="BKy19U.jpg"></a><br><a href="https://imgchr.com/i/BK6Baq" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/26/BK6Baq.jpg" alt="BK6Baq.jpg"></a></p><ol start="8"><li><p>设置 ”root 密码“  ， 创建新用户</p></li><li><p>等待完成安装。</p></li><li><p>中文的装的没问题了。 自己改为英文在安装，这样记忆会有一点吧。 熟练了那个语言都可以了。 毕竟安装的过程和内容是不变的。</p></li></ol><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i2/2200652270622/O1CN01A9LSoi1GSuyqYAlvI_!!2200652270622.jpg" alt="羊毛双面呢高腰小香风套装"></p><p><a href="https://item.taobao.com/item.htm?id=629273346606" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p><pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>]]></content>
+
+        <summary type="html">
     
       
       
