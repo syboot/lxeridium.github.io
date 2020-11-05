@@ -32,27 +32,26 @@
         </tags>
       
     </entry>
-    
-    
-    
+
+
     <entry>
-      <title>linux 常用软件介绍(一)(5-5)</title>
-      <link href="/posts/linux/software/e52e0295.html"/>
-      <url>/posts/linux/software/e52e0295.html</url>
+        <title>linux 常用软件介绍(一)(5-5)</title>
+        <link href="/posts/linux/software/e52e0295.html"/>
+        <url>/posts/linux/software/e52e0295.html</url>
 
         <content type="html">
-            <![CDATA[<h3 id="linux-常用软件介绍-一-5-5"><a href="#linux-常用软件介绍-一-5-5" class="headerlink" title="linux 常用软件介绍(一)(5-5)"></a>linux 常用软件介绍(一)(5-5)</h3><p>办公套件</p><h4 id="WPS-office"><a href="#WPS-office" class="headerlink" title="WPS office"></a>WPS office</h4><p>  WPS office- 中国流行的办公套件，功能完善。<br>  新一代办公解决方案，借助PDF，Cloud，OCR，文件修复和其他强大的工具，WPS Office迅速成为越来越多的人在办公软件中的首选。</p><pre><code>与Microsoft Office，Google文档，Adobe PDF高度兼容。超小安装包，超快速启动速度。PC支持WPS的8种语言，Android支持WPS的46种语言创建精彩的演示有效地创建和编辑文档所有电子表格功能PDF编辑，转换等</code></pre><p><a href="https://linux.wps.com/" target="_blank" rel="noopener">WPS office for linux 下载页面</a></p><h4 id="libreoffice"><a href="#libreoffice" class="headerlink" title="libreoffice"></a>libreoffice</h4><p>自由免费的全能办公套件，对个人和企业均免费，不用支付授权费用。</p><p>更简洁，更快，更智能<br>LibreOffice 是一款功能强大的办公软件，默认使用开放文档格式 (OpenDocument Format , ODF), 并支持 *.docx, *.xlsx, *.pptx 等其他格式。<br>它包含了 Writer, Calc, Impress, Draw, Base 以及 Math 等组件，可用于处理文本文档、电子表格、演示文稿、绘图以及公式编辑。<br>它可以运行于 Windows, GNU/Linux 以及 macOS 等操作系统上，并具有一致的用户体验。</p><p><a href="https://www.libreoffice.org/download/download/" target="_blank" rel="noopener">libreoffice 下载页面</a></p><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg" alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p><p><a href="https://item.taobao.com/item.htm?id=625058323217" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p><pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> linux </category>
-          
-          <category> software </category>
-          
-      </categories>
-      
-      
+            <![CDATA[<h3 id="linux-常用软件介绍-一-5-5"><a href="#linux-常用软件介绍-一-5-5" class="headerlink" title="linux 常用软件介绍(一)(5-5)"></a>linux 常用软件介绍(一)(5-5)</h3><p>办公套件   生产力</p><h4 id="WPS-office"><a href="#WPS-office" class="headerlink" title="WPS office"></a>WPS office</h4><p>  WPS office- 中国流行的办公套件，功能完善。<br>  新一代办公解决方案，借助PDF，Cloud，OCR，文件修复和其他强大的工具，WPS Office迅速成为越来越多的人在办公软件中的首选。</p><pre><code>与Microsoft Office，Google文档，Adobe PDF高度兼容。超小安装包，超快速启动速度。PC支持WPS的8种语言，Android支持WPS的46种语言创建精彩的演示有效地创建和编辑文档所有电子表格功能PDF编辑，转换等</code></pre><p><a href="https://linux.wps.com/" target="_blank" rel="noopener">WPS office for linux 下载页面</a></p><h4 id="libreoffice"><a href="#libreoffice" class="headerlink" title="libreoffice"></a>libreoffice</h4><p>自由免费的全能办公套件，对个人和企业均免费，不用支付授权费用。</p><p>更简洁，更快，更智能<br>LibreOffice 是一款功能强大的办公软件，默认使用开放文档格式 (OpenDocument Format , ODF), 并支持 *.docx, *.xlsx, *.pptx 等其他格式。<br>它包含了 Writer, Calc, Impress, Draw, Base 以及 Math 等组件，可用于处理文本文档、电子表格、演示文稿、绘图以及公式编辑。<br>它可以运行于 Windows, GNU/Linux 以及 macOS 等操作系统上，并具有一致的用户体验。</p><p><a href="https://www.libreoffice.org/download/download/" target="_blank" rel="noopener">libreoffice 下载页面</a></p><h3 id="生产力"><a href="#生产力" class="headerlink" title="生产力"></a>生产力</h3><h4 id="GitHub-Desktop"><a href="#GitHub-Desktop" class="headerlink" title="GitHub Desktop"></a>GitHub Desktop</h4><p>专注于重要的事情，而不是与Git战斗。无论您是Git的新手还是经验丰富的用户，GitHub Desktop都可以简化您的开发工作流程。</p><p>特点：</p><pre><code>扩展了图像差异支持轻松比较更改的图像。查看前后，在两者之间滑动或淡入淡出，或仅查看已更改的部分。广泛的编辑器与Shell集成从应用程序中打开您喜欢的编辑器或外壳程序，或者从您的外壳程序跳回到GitHub桌面。 GitHub Desktop是您工作的跳板。社区支持GitHub Desktop现在是开源的！查看我们的路线图，做出贡献，并帮助我们使协作更加轻松。启用新存储库的创建允许添加本地存储库大多数Git操作都可以从UI执行跟踪更改更容易</code></pre><p><a href="https://desktop.github.com/" target="_blank" rel="noopener">GitHub Desktop 下载页面</a></p><h4 id="SourceTree"><a href="#SourceTree" class="headerlink" title="SourceTree"></a>SourceTree</h4><p>有趣的GUI Git客户端之一是SourceTree。这是Atlassian开发的免费Git客户端。<br>该组织为Jira和Bitbucket提供了支持。它得到了Bitbucket和GitHub托管的存储库的大力支持。<br>对初学者来说很简单向命令行说再见-使用Git客户端简化分布式版本控制，并迅速使每个人都快上手。<br>功能强大的专家非常适合让高级用户提高生产力。复查变更集，存储，分支之间的选择。</p><p>特点：</p><pre><code>Git大文件支持Sourcetree支持Git LFS，使团队可以在一个地方跟踪大型资产。开箱即用的Git流使用Sourcetree和Git-flow的智能分支，可保持存储库清洁和高效开发。子模块在管理项目，它们的依存关系和其他项目分组时，子模块使工作变得更轻松。本地提交搜索直接在Sourcetree中搜索提交，文件更改和分支。互动基础使用Sourcetree的交互式变基工具获得清晰明了的提交。远程仓库管理器Sourcetree允许您在其简单的用户界面中搜索并克隆远程存储库。</code></pre><p><a href="https://www.sourcetreeapp.com/" target="_blank" rel="noopener">SourceTree 下载页面</a></p><h4 id="gitkraken"><a href="#gitkraken" class="headerlink" title="gitkraken"></a>gitkraken</h4><p>gitkraken 适用于Windows，Mac和Linux的传奇Git GUI客户端<br>就像Github桌面一样，GitKraken是另一个最好的GUI Git客户端，它具有出色的UI，功能和主题。与您今天可能会发现的任何其他GUI Git客户端相比，它看起来令人兴奋并且具有许多功能。</p><p><a href="">gitkraken 下载页面</a></p><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg" alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p><p><a href="https://item.taobao.com/item.htm?id=625058323217" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p><pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>]]></content>
+
+
+        <categories>
+
+            <category>linux</category>
+
+            <category>software</category>
+
+        </categories>
+
+
         <tags>
             
             <tag> software </tag>

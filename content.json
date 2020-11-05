@@ -135,13 +135,13 @@
       "title": "linux 常用软件介绍(一)(5-5)",
       "slug": "linux-常用软件介绍-一-5-5",
       "date": "2020-06-19T05:45:03.000Z",
-      "updated": "2020-11-04T17:35:43.696Z",
+      "updated": "2020-11-05T15:18:50.146Z",
       "comments": true,
       "path": "posts/linux/software/e52e0295.html",
       "link": "",
       "permalink": "http://lxeridium.github.io/posts/linux/software/e52e0295.html",
       "excerpt": "",
-      "text": "linux 常用软件介绍(一)(5-5)办公套件 WPS office WPS office- 中国流行的办公套件，功能完善。 新一代办公解决方案，借助PDF，Cloud，OCR，文件修复和其他强大的工具，WPS Office迅速成为越来越多的人在办公软件中的首选。 与Microsoft Office，Google文档，Adobe PDF高度兼容。 超小安装包，超快速启动速度。 PC支持WPS的8种语言，Android支持WPS的46种语言 创建精彩的演示 有效地创建和编辑文档 所有电子表格功能 PDF编辑，转换等WPS office for linux 下载页面 libreoffice自由免费的全能办公套件，对个人和企业均免费，不用支付授权费用。 更简洁，更快，更智能LibreOffice 是一款功能强大的办公软件，默认使用开放文档格式 (OpenDocument Format , ODF), 并支持 *.docx, *.xlsx, *.pptx 等其他格式。它包含了 Writer, Calc, Impress, Draw, Base 以及 Math 等组件，可用于处理文本文档、电子表格、演示文稿、绘图以及公式编辑。它可以运行于 Windows, GNU/Linux 以及 macOS 等操作系统上，并具有一致的用户体验。 libreoffice 下载页面 赞助广告 查看购买上图商品 淘宝店铺 品牌官网 感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com",
+      "text": "linux 常用软件介绍(一)(5-5)办公套件 生产力 WPS office WPS office- 中国流行的办公套件，功能完善。 新一代办公解决方案，借助PDF，Cloud，OCR，文件修复和其他强大的工具，WPS Office迅速成为越来越多的人在办公软件中的首选。 与Microsoft Office，Google文档，Adobe PDF高度兼容。 超小安装包，超快速启动速度。 PC支持WPS的8种语言，Android支持WPS的46种语言 创建精彩的演示 有效地创建和编辑文档 所有电子表格功能 PDF编辑，转换等WPS office for linux 下载页面 libreoffice自由免费的全能办公套件，对个人和企业均免费，不用支付授权费用。 更简洁，更快，更智能LibreOffice 是一款功能强大的办公软件，默认使用开放文档格式 (OpenDocument Format , ODF), 并支持 *.docx, *.xlsx, *.pptx 等其他格式。它包含了 Writer, Calc, Impress, Draw, Base 以及 Math 等组件，可用于处理文本文档、电子表格、演示文稿、绘图以及公式编辑。它可以运行于 Windows, GNU/Linux 以及 macOS 等操作系统上，并具有一致的用户体验。 libreoffice 下载页面 生产力GitHub Desktop专注于重要的事情，而不是与Git战斗。无论您是Git的新手还是经验丰富的用户，GitHub Desktop都可以简化您的开发工作流程。 特点： 扩展了图像差异支持 轻松比较更改的图像。查看前后，在两者之间滑动或淡入淡出，或仅查看已更改的部分。 广泛的编辑器与Shell集成 从应用程序中打开您喜欢的编辑器或外壳程序，或者从您的外壳程序跳回到GitHub桌面。 GitHub Desktop是您工作的跳板。 社区支持 GitHub Desktop现在是开源的！查看我们的路线图，做出贡献，并帮助我们使协作更加轻松。 启用新存储库的创建 允许添加本地存储库 大多数Git操作都可以从UI执行 跟踪更改更容易GitHub Desktop 下载页面 SourceTree有趣的GUI Git客户端之一是SourceTree。这是Atlassian开发的免费Git客户端。该组织为Jira和Bitbucket提供了支持。它得到了Bitbucket和GitHub托管的存储库的大力支持。对初学者来说很简单向命令行说再见-使用Git客户端简化分布式版本控制，并迅速使每个人都快上手。功能强大的专家非常适合让高级用户提高生产力。复查变更集，存储，分支之间的选择。 特点： Git大文件支持 Sourcetree支持Git LFS，使团队可以在一个地方跟踪大型资产。 开箱即用的Git流 使用Sourcetree和Git-flow的智能分支，可保持存储库清洁和高效开发。 子模块 在管理项目，它们的依存关系和其他项目分组时，子模块使工作变得更轻松。 本地提交搜索 直接在Sourcetree中搜索提交，文件更改和分支。 互动基础 使用Sourcetree的交互式变基工具获得清晰明了的提交。 远程仓库管理器 Sourcetree允许您在其简单的用户界面中搜索并克隆远程存储库。SourceTree 下载页面 gitkrakengitkraken 适用于Windows，Mac和Linux的传奇Git GUI客户端就像Github桌面一样，GitKraken是另一个最好的GUI Git客户端，它具有出色的UI，功能和主题。与您今天可能会发现的任何其他GUI Git客户端相比，它看起来令人兴奋并且具有许多功能。 gitkraken 下载页面 赞助广告 查看购买上图商品 淘宝店铺 品牌官网 感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com",
       "categories": [
         {
           "name": "linux",
