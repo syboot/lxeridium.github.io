@@ -15,9 +15,9 @@
 
     <!-- 页面元数据 -->
 
-    <title>SecureCRT ssh 工具的使用 - Syboot</title>
+    <title>linux-ssh免密码-快速登录配置 - Syboot</title>
 
-    <meta name="keywords" content="windows">
+    <meta name="keywords" content="configure">
 
 
     <!-- feed -->
@@ -372,8 +372,8 @@
 
 
                         <h1 class="title">
-                            <a href="/posts/windows/tools/558a0679.html">
-                                SecureCRT ssh 工具的使用
+                            <a href="/posts/linux/configure/1ff4d02b.html">
+                                linux-ssh免密码-快速登录配置
                             </a>
                         </h1>
 
@@ -390,9 +390,9 @@
 
 
                             <div class='new-meta-item category'>
-                                <a href='/categories/windows/tools/' rel="nofollow">
+                                <a href='/categories/linux/configure/' rel="nofollow">
                                     <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-                                    <p>windows/tools</p>
+                                    <p>linux/configure</p>
                                 </a>
                             </div>
 
@@ -417,26 +417,123 @@
                 <section class="article typo">
                     <div class="article-entry" itemprop="articleBody">
 
-                        <h2 id="SecureCRT-ssh-工具"><a href="#SecureCRT-ssh-工具" class="headerlink"
-                                                     title="SecureCRT  ssh 工具"></a>SecureCRT ssh 工具</h2>
-                        <p>适用于Windows，Mac和Linux的SecureCRT客户端为计算专业人士提供了坚如磐石的终端仿真，通过高级会话管理以及多种节省时间和简化重复任务的方式提高了生产率。<br>SecureCRT为组织中的每个人提供安全的远程访问，文件传输和数据隧道。
+                        <h3 id="linux-ssh免密码-快速登录配置"><a href="#linux-ssh免密码-快速登录配置" class="headerlink"
+                                                        title="linux ssh免密码+快速登录配置"></a>linux ssh免密码+快速登录配置</h3><h4
+                            id="管理主机生成秘钥"><a href="#管理主机生成秘钥" class="headerlink" title="管理主机生成秘钥"></a>管理主机生成秘钥</h4>
+                        <p>管理机生成密钥,只需要使用ssh-keygen命令.</p>
+                        <figure class="highlight bash">
+                            <table>
+                                <tr>
+                                    <td class="gutter">
+                                        <pre><span class="line">1</span><br></pre>
+                                    </td>
+                                    <td class="code">
+                                        <pre><span class="line">ssh-keygen</span><br></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                        <p>生成密钥过程中，建议采用默认值，只需要按三次回车之后.<br>就会再~/.ssh目录下生成密钥文件,其中id_rsa为私钥，id_rsa.pub为公钥。 </p>
+                        <figure class="highlight bash">
+                            <table>
+                                <tr>
+                                    <td class="gutter">
+                                        <pre><span class="line">1</span><br><span class="line">2</span><br><span
+                                                class="line">3</span><br></pre>
+                                    </td>
+                                    <td class="code">
+                                        <pre><span class="line">ls ~/.ssh</span><br><span class="line">id_rsa</span><br><span
+                                                class="line">id_rsa.pub</span><br></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+
+                        <h4 id="被管理的主机"><a href="#被管理的主机" class="headerlink" title="被管理的主机"></a>被管理的主机</h4>
+                        <p>被管理的主机的~/.ssh/authorized_keys文件，是保存管理机的公钥，没有可以创建，创建时注意权限,否则无法免密登录。</p>
+                        <figure class="highlight bash">
+                            <table>
+                                <tr>
+                                    <td class="gutter">
+                                        <pre><span class="line">1</span><br></pre>
+                                    </td>
+                                    <td class="code">
+                                        <pre><span class="line"><span class="variable">$chmod</span> 600 .ssh/authorized_keys</span><br></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+
+                        <p>只需把管理机生成密钥id_rsa.pub文件的内容拷贝到被管理的主机的~/.ssh/authorized_keys文件的末尾。</p>
+                        <p>可以用ssh-copy-id将公钥复制到远程机器中</p>
+                        <figure class="highlight bash">
+                            <table>
+                                <tr>
+                                    <td class="gutter">
+                                        <pre><span class="line">1</span><br></pre>
+                                    </td>
+                                    <td class="code">
+                                        <pre><span
+                                                class="line">$  ssh-copy-id -i .ssh/id_rsa.pub  用户名字@192.168.1.xxx</span><br></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                        <p>也可以手动，CP过去，添加到authorized_keys文件的末尾。</p>
+                        <figure class="highlight bash">
+                            <table>
+                                <tr>
+                                    <td class="gutter">
+                                        <pre><span class="line">1</span><br></pre>
+                                    </td>
+                                    <td class="code">
+                                        <pre><span
+                                                class="line">cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+
+                        <h4 id="管理主机快速登录配置"><a href="#管理主机快速登录配置" class="headerlink" title="管理主机快速登录配置"></a>管理主机快速登录配置
+                        </h4>
+                        <p>在管理主机配置机器登录参数<br>通过配置的~/.ssh/config 配置文件相关参数简化登录命令。</p>
+                        <p>config：<br>cat ~/.ssh/config 文件没有可以创建，注意权限是600. Host 别名 Hostname 被管理机的 IP或域名 端口 22 用户 syboot
                         </p>
-                        <p>特点：</p>
-                        <pre><code>选项卡组使用选项卡组在更短的时间内完成更多功能。
-在标签中组织的会话之间轻松切换。
-十六进制视图有助于调试串行通信。仅当配置串行会话时，会话选项对话框中显示有效的COM端口。
-命令窗口现在可以将命令发送到选定的选项卡组或可见会话。
-使用新的右键单击“添加关键字...”选项快速添加关键字。
-在智能卡（PIV / CAC）上选择一个用于公钥认证的特定证书。支持PKCS＃11证书。在所有平台上，可以直接从指定的证书中提取用户名。
-可以将证书用作原始密钥。公开密钥可以以Open SSH格式导出。
-可以添加到SSH代理。</code></pre>
-                        <p><a href="https://www.vandyke.com/cgi-bin/releases.php?product=securecrt#" target="_blank"
-                              rel="noopener">SecureCRT 下载软件页面</a></p>
+                        <figure class="highlight bash">
+                            <table>
+                                <tr>
+                                    <td class="gutter">
+                                        <pre><span class="line">1</span><br><span class="line">2</span><br><span
+                                                class="line">3</span><br><span class="line">4</span><br></pre>
+                                    </td>
+                                    <td class="code">
+                                        <pre><span class="line">Host 51server</span><br><span class="line">Hostname 192.168.1.51       </span><br><span
+                                                class="line">Port 22</span><br><span class="line">User syboot</span><br></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+
+                        <p>管理主机上登录 51机器可以简化为</p>
+                        <figure class="highlight bash">
+                            <table>
+                                <tr>
+                                    <td class="gutter">
+                                        <pre><span class="line">1</span><br></pre>
+                                    </td>
+                                    <td class="code">
+                                        <pre><span class="line">ssh 51server</span><br></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+
+
                         <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3>
                         <p>
-                            <img src="https://gd4.alicdn.com/imgextra/i2/2200652270622/O1CN01dxXGum1GSuylwcjrX_!!2200652270622.jpg"
-                                 alt="韩版宽松廓形大码棉服外套"></p>
-                        <p><a href="https://item.taobao.com/item.htm?id=629281929649" target="_blank" rel="noopener">查看购买上图商品</a>
+                            <img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg"
+                                 alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p>
+                        <p><a href="https://item.taobao.com/item.htm?id=625058323217" target="_blank" rel="noopener">查看购买上图商品</a>
                             <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a
                                     href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
                         <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
@@ -453,7 +550,8 @@
                                         <p>本博客所有文章转载请注明出处！</p>
 
 
-                                        <p>本文永久链接是：<a href=http://lxeridium.github.io/posts/windows/tools/558a0679.html>http://lxeridium.github.io/posts/windows/tools/558a0679.html</a>
+                                        <p>本文永久链接是：<a
+                                                href=http://lxeridium.github.io/posts/linux/configure/1ff4d02b.html>http://lxeridium.github.io/posts/linux/configure/1ff4d02b.html</a>
                                         </p>
 
 
@@ -496,17 +594,18 @@
                         <div class='new-meta-box'>
 
 
-                            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-03T15:34:00+08:00">
+                            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-17T09:51:26+08:00">
                                 <a class='notlink'>
                                     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-                                    <p>更新于：2020年11月3日</p>
+                                    <p>更新于：2020年11月17日</p>
                                 </a>
                             </div>
 
 
-                            <div class="new-meta-item meta-tags"><a class="tag" href="/tags/windows/" rel="nofollow"><i
-                                    class="fas fa-hashtag fa-fw" aria-hidden="true"></i>
-                                <p>windows</p></a></div>
+                            <div class="new-meta-item meta-tags"><a class="tag" href="/tags/configure/"
+                                                                    rel="nofollow"><i class="fas fa-hashtag fa-fw"
+                                                                                      aria-hidden="true"></i>
+                                <p>configure</p></a></div>
 
 
                             <div class="new-meta-item share -mob-share-list">
@@ -515,7 +614,7 @@
 
                                     <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
 
-                                       href="http://connect.qq.com/widget/shareqq/index.html?url=http://lxeridium.github.io/posts/windows/tools/558a0679.html&title=SecureCRT  ssh 工具的使用 - Syboot&summary="
+                                       href="http://connect.qq.com/widget/shareqq/index.html?url=http://lxeridium.github.io/posts/linux/configure/1ff4d02b.html&title=linux-ssh免密码-快速登录配置 - Syboot&summary="
 
                                     >
 
@@ -526,7 +625,7 @@
 
                                     <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
 
-                                       href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://lxeridium.github.io/posts/windows/tools/558a0679.html&title=SecureCRT  ssh 工具的使用 - Syboot&summary="
+                                       href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://lxeridium.github.io/posts/linux/configure/1ff4d02b.html&title=linux-ssh免密码-快速登录配置 - Syboot&summary="
 
                                     >
 
@@ -537,7 +636,7 @@
 
                                     <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
 
-                                       href="http://service.weibo.com/share/share.php?url=http://lxeridium.github.io/posts/windows/tools/558a0679.html&title=SecureCRT  ssh 工具的使用 - Syboot&summary="
+                                       href="http://service.weibo.com/share/share.php?url=http://lxeridium.github.io/posts/linux/configure/1ff4d02b.html&title=linux-ssh免密码-快速登录配置 - Syboot&summary="
 
                                     >
 
@@ -549,7 +648,7 @@
                                     <div class='hoverbox'>
                                         <a><img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/wechat.png"></a>
                                         <div class='target'>
-                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC9UlEQVR42u3aQW7DMAwEQP//0+0HGoRcykXojG4tHFkcXxakrh/rz3UhAAMGDBgwYNbAXOF6ufGL5979v7pP93fdesCAAQMGDBgw+2DKAaj5fPfAKfipesCAAQMGDBgwe2HeBqAwuFWDWjfQVfcrnxMMGDBgwIABA2bYmErBwYABAwYMGDBgpjDTwHZqEAcGDBgwYMCA+R6YtBE0bWSdGvR9zCQSDBgwYMCAAfNvMN01hbr777geMGDAgAEDBswamOlKA9W7htOp37XrAQMGDBgwYMCsgUkD0mmIU0DT84MBAwYMGDBgngvTHcClA7u0wOqFo3IHDwwYMGDAgAGzDiZtTJWD1PAiURekej4wYMCAAQMGzB6YdKA1vUh0d2MqbVyBAQMGDBgwYPbAVINWGty6AS89T/fcYMCAAQMGDJj9MKeCWzeopQ2muAGVJl8wYMCAAQMGzMfCTAdV08Kmjag4yHUnkWDAgAEDBgyYj4OZbtxddzemxoNEMGDAgAEDBsx6mFMXcU5dDJqeszz4AwMGDBgwYMCsgZkWlP49he42tMrwYMCAAQMGDJjHwaSBLh2QTcHj58GAAQMGDBgwj4WpvqC6/3RwdrqxBgYMGDBgwIDZB5NeJJoGvVMXg47tBwYMGDBgwIBZB3Pqwk83yE0DWxoYb59EggEDBgwYMGD+Dab74jRATQdn1QFc92IRGDBgwIABA+Y5MNVC0oZStdBpEG0PFsGAAQMGDBgwj4G5K8hV3zttmLUHimDAgAEDBgyYNTDTNQ1udw3e0g8NBgwYMGDAgNkDc4WrOxA7tW8VLB4oggEDBgwYMGDWwdwV6E4FsPTCUjtoggEDBgwYMGDWwtweoIbPpwGwCgQGDBgwYMCA+T6YauDqFpY+nw7swIABAwYMGDBgqhDdxlJacPlDgQEDBgwYMGDWwnQHbumBq++dfqD2hwMDBgwYMGDArIM5NbjqDri6H2h63vbADQwYMGDAgAHzsTAWGDBgwIABA2bZ+gUa4uUO9KoWGwAAAABJRU5ErkJggg==">
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADAklEQVR42u3aQXbjQAgFQN//0skBZvwEn1YinOpdYhk3pQ0PeH05/z0vBGDAgAEDBswamFd4/gn45vOr71fjTb9XzQcMGDBgwIABsw+mXABdPF/9/Aq6Gr8KVo4HBgwYMGDAgFkL0y2s0kKwm1gVcpwPGDBgwIABA+bPwXQbVt2EUlgwYMCAAQMGDJhTF0lBTgGDAQMGDBgwYD4XZjrw6i4UnRr0PW4SCQYMGDBgwID5MZjumTaO7v47zgcMGDBgwIABswZmeu5qZKUvZpwPGDBgwIABA2YNTFogVcFOJ1iNk94fDBgwYMCAAbMf5vQArNvoShPsLhy1N6rAgAEDBgwYMI+Hqf7/dJzuAlI78as4YMCAAQMGDJg1MOmgq1ropYXYtDEVN8zAgAEDBgwYMOtgqoXT9KLpC0gXirqFJhgwYMCAAQPmc2BOFYJpAZgWnGnDCgwYMGDAgAGzFyYtjE4tEKUJT+HAgAEDBgwYMPtguo2hr+aZXvzuhhYYMGDAgAEDZi/M6URPFWhXDaZu3GqjDAwYMGDAgAGzDya9YBdqGrf7vfYgDgwYMGDAgAGzBuauhs9lIRXCdRee2vHAgAEDBgwYMOtgugVVN+Fugdf9nW4j7O3zYMCAAQMGDJg1MNVGT7VASheP0t9PB33lxSEwYMCAAQMGzGNh0kHVtCE1Xfw5/eLAgAEDBgwYMHth7hrApQ2r7oubxgEDBgwYMGDAfB7MtAD76cS6DbO4wAMDBgwYMGDAPBYmXcBJB1/TRE/dBwwYMGDAgAGzB2Z6ugXcNOF0Ial8XzBgwIABAwbMGphXeOLFnGb89PluAQsGDBgwYMCA2QszTbT6/Cm4aYH39nkwYMCAAQMGzFqYaQGVLvqkg7gUsF3ggQEDBgwYMGA+HmZaiJ16Ph3YgQEDBgwYMGD+LkwadwrfXSj69UYVGDBgwIABA+Y4THfg1gXp/s604GvHAQMGDBgwYMCsg5kOrqqDt24hNwUYD9zAgAEDBgwYMI+FccCAAQMGDBgwy843GWzo0r/FSa8AAAAASUVORK5CYII=">
                                         </div>
                                     </div>
 
@@ -564,18 +663,19 @@
 
                     <div class="prev-next">
 
-                        <a class='prev' href='/posts/linux/configure/1ed9cfbf.html'>
-                            <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>linux-跳板机-ssh-agent保持运行
+                        <a class='prev' href='/posts/linuxsoftware/ansible/630074e3.html'>
+                            <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>linuxsoftware-ansible
                             </p>
-                            <p class='content'>linux-跳板机-ssh-agent保持运行
-                                ssh-agent命令是一种控制用来保存公钥身份验证所使用的私钥的程序。ssh-agent在X会话或登录会话之初启动，所有其他窗口或程序则以客户端...</p>
+                            <p class='content'>linux
+                                ansible在IT部门工作，您可能会一遍又一遍地执行相同的任务。如果您可以一次解决问题，然后自动化运行解决方案该多好。有了Ansible-简单而强大的IT自动化引擎，成千上万的公司...</p>
                         </a>
 
 
-                        <a class='next' href='/posts/windows/tools/def4c97f.html'>
-                            <p class='title'>Xshell ssh 工具的使用<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                            <p class='content'>Xshell ssh 工具Xshell是一个强大的安全终端模拟软件，它支持SSH1/SSH2以及Microsoft
-                                Windows平台的TELNET协议。Xshell可以在Windows界面...</p>
+                        <a class='next' href='/posts/linux/configure/1ed9cfbf.html'>
+                            <p class='title'>linux-跳板机-ssh-agent保持运行<i class="fas fa-chevron-right"
+                                                                       aria-hidden="true"></i></p>
+                            <p class='content'>linux-跳板机-ssh-agent保持运行
+                                ssh-agent命令是一种控制用来保存公钥身份验证所使用的私钥的程序。ssh-agent在X会话或登录会话之初启动，所有其他窗口或程序则以客户端...</p>
                         </a>
 
                     </div>
@@ -592,7 +692,7 @@
 
             <script>
                 window.subData = {
-                    title: 'SecureCRT  ssh 工具的使用',
+                    title: 'linux-ssh免密码-快速登录配置',
                     tools: true
                 }
             </script>
@@ -613,13 +713,19 @@
 
                 <div class='content'>
                     <ol class="toc">
-                        <li class="toc-item toc-level-2"><a class="toc-link" href="#SecureCRT-ssh-工具"><span
-                                class="toc-text">SecureCRT  ssh 工具</span></a>
+                        <li class="toc-item toc-level-3"><a class="toc-link" href="#linux-ssh免密码-快速登录配置"><span
+                                class="toc-text">linux ssh免密码+快速登录配置</span></a>
                             <ol class="toc-child">
-                                <li class="toc-item toc-level-3"><a class="toc-link" href="#赞助广告"><span
-                                        class="toc-text">赞助广告</span></a></li>
+                                <li class="toc-item toc-level-4"><a class="toc-link" href="#管理主机生成秘钥"><span
+                                        class="toc-text">管理主机生成秘钥</span></a></li>
+                                <li class="toc-item toc-level-4"><a class="toc-link" href="#被管理的主机"><span
+                                        class="toc-text">被管理的主机</span></a></li>
+                                <li class="toc-item toc-level-4"><a class="toc-link" href="#管理主机快速登录配置"><span
+                                        class="toc-text">管理主机快速登录配置</span></a></li>
                             </ol>
                         </li>
+                        <li class="toc-item toc-level-3"><a class="toc-link" href="#赞助广告"><span
+                                class="toc-text">赞助广告</span></a></li>
                     </ol>
                 </div>
             </section>

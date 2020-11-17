@@ -170,6 +170,87 @@
 
 
     <entry>
+        <title>linuxsoftware-ansible</title>
+        <link href="/posts/linuxsoftware/ansible/630074e3.html"/>
+        <url>/posts/linuxsoftware/ansible/630074e3.html</url>
+
+        <content type="html">
+            <![CDATA[<h3 id="linux-ansible"><a href="#linux-ansible" class="headerlink" title="linux ansible"></a>linux ansible</h3><p>在IT部门工作，您可能会一遍又一遍地执行相同的任务。如果您可以一次解决问题，然后自动化运行解决方案该多好。<br>有了Ansible-简单而强大的IT自动化引擎，成千上万的公司正在使用它来降低环境的复杂性并加快DevOps计划的实施。</p><h4 id="inatall-ansible-管理机"><a href="#inatall-ansible-管理机" class="headerlink" title="inatall ansible 管理机"></a>inatall ansible 管理机</h4><p>通过Yum/dnf安装RPMs适用于Fedora发行版.</p><p>托管节点的操作系统版本可以是更早的版本, 但必须安装 Python 2.4 或更高版本的Python.</p><p>Fedora 用户可直接安装Ansible, 但RHEL或CentOS用户,需要 配置 EPEL 源</p><figure class="highlight plain"><figcaption><span>js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># install the epel-release RPM if needed on CentOS, RHEL, or Scientific Linux</span><br><span class="line">$ sudo yum install ansible</span><br></pre></td></tr></table></figure><p>你也可以自己创建RPM软件包.在Ansible项目的checkout的根目录下,或是在一个tarball中,使用 make rpm 命令创建RPM软件包.<br>然后可分发这个软件包或是使用它来安装Ansible.在创建之前,先确定你已安装了 rpm-build, make, and python2-devel 基础包.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git://github.com/ansible/ansible.git</span><br><span class="line">$ <span class="built_in">cd</span> ./ansible</span><br><span class="line">$ make rpm</span><br><span class="line">$ sudo rpm -Uvh ~/rpmbuild/ansible-*.noarch.rpm</span><br></pre></td></tr></table></figure><p>其他安装方法不阐述，自行研究。</p><h4 id="ansible-前期配置"><a href="#ansible-前期配置" class="headerlink" title="ansible 前期配置"></a>ansible 前期配置</h4><p>在我们开始前要先理解Ansible是如何通过SSH与远程服务器连接是很重要的.</p><p>主机要授权于管理机的ssh 登录，并且配置免密码登录主机。你的public SSH key必须在这些主机系统的<code>authorized_keys</code>中才可以免密码。</p><p>Ansible需呀一个配置主机的列表文件,编辑(或创建)/etc/ansible/hosts 并在其中加入一个或多个远程主机.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/ansible/hosts</span><br><span class="line">192.168.1.50</span><br><span class="line">192.168.1.51</span><br><span class="line">192.168.1.52</span><br><span class="line">aserver.example.org</span><br><span class="line">bserver.example.org</span><br></pre></td></tr></table></figure><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg" alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p><p><a href="https://item.taobao.com/item.htm?id=625058323217" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p><pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>]]></content>
+
+
+        <categories>
+
+            <category>linuxsoftware</category>
+
+            <category>ansible</category>
+
+        </categories>
+
+
+        <tags>
+
+            <tag>ansible</tag>
+
+        </tags>
+
+    </entry>
+
+
+    <entry>
+        <title>linux-ssh免密码-快速登录配置</title>
+        <link href="/posts/linux/configure/1ff4d02b.html"/>
+        <url>/posts/linux/configure/1ff4d02b.html</url>
+
+        <content type="html">
+            <![CDATA[<h3 id="linux-ssh免密码-快速登录配置"><a href="#linux-ssh免密码-快速登录配置" class="headerlink" title="linux ssh免密码+快速登录配置"></a>linux ssh免密码+快速登录配置</h3><h4 id="管理主机生成秘钥"><a href="#管理主机生成秘钥" class="headerlink" title="管理主机生成秘钥"></a>管理主机生成秘钥</h4><p>管理机生成密钥,只需要使用ssh-keygen命令.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure><p>生成密钥过程中，建议采用默认值，只需要按三次回车之后.<br>就会再~/.ssh目录下生成密钥文件,其中id_rsa为私钥，id_rsa.pub为公钥。 </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls ~/.ssh</span><br><span class="line">id_rsa</span><br><span class="line">id_rsa.pub</span><br></pre></td></tr></table></figure><h4 id="被管理的主机"><a href="#被管理的主机" class="headerlink" title="被管理的主机"></a>被管理的主机</h4><p>被管理的主机的~/.ssh/authorized_keys文件，是保存管理机的公钥，没有可以创建，创建时注意权限,否则无法免密登录。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$chmod</span> 600 .ssh/authorized_keys</span><br></pre></td></tr></table></figure><p>只需把管理机生成密钥id_rsa.pub文件的内容拷贝到被管理的主机的~/.ssh/authorized_keys文件的末尾。</p><p>可以用ssh-copy-id将公钥复制到远程机器中</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  ssh-copy-id -i .ssh/id_rsa.pub  用户名字@192.168.1.xxx</span><br></pre></td></tr></table></figure><p>也可以手动，CP过去，添加到authorized_keys文件的末尾。</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure><h4 id="管理主机快速登录配置"><a href="#管理主机快速登录配置" class="headerlink" title="管理主机快速登录配置"></a>管理主机快速登录配置</h4><p>在管理主机配置机器登录参数<br>通过配置的~/.ssh/config 配置文件相关参数简化登录命令。</p><p>config：<br>cat ~/.ssh/config   文件没有可以创建，注意权限是600.  Host 别名   Hostname 被管理机的 IP或域名  端口 22  用户 syboot</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host 51server</span><br><span class="line">Hostname 192.168.1.51       </span><br><span class="line">Port 22</span><br><span class="line">User syboot</span><br></pre></td></tr></table></figure><p>管理主机上登录 51机器可以简化为</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 51server</span><br></pre></td></tr></table></figure><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg" alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p><p><a href="https://item.taobao.com/item.htm?id=625058323217" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p><pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>]]></content>
+
+
+        <categories>
+
+            <category>linux</category>
+
+            <category>configure</category>
+
+        </categories>
+
+
+        <tags>
+
+            <tag>configure</tag>
+
+        </tags>
+
+    </entry>
+
+
+    <entry>
+        <title>linux-跳板机-ssh-agent保持运行</title>
+        <link href="/posts/linux/configure/1ed9cfbf.html"/>
+        <url>/posts/linux/configure/1ed9cfbf.html</url>
+
+        <content type="html">
+            <![CDATA[<h3 id="linux-跳板机-ssh-agent保持运行"><a href="#linux-跳板机-ssh-agent保持运行" class="headerlink" title="linux-跳板机-ssh-agent保持运行"></a>linux-跳板机-ssh-agent保持运行</h3><p> ssh-agent命令是一种控制用来保存公钥身份验证所使用的私钥的程序。ssh-agent在X会话或登录会话之初启动，所有其他窗口或程序则以客户端程序的身份启动并加入到ssh-agent程序中。通过使用环境变量，可定位代理并在登录到其他使用ssh机器上时使用代理自动进行身份验证。</p><p>其实ssh-agent就是一个密钥管理器，运行ssh-agent以后，使用ssh-add将私钥交给ssh-agent保管，其他程序需要身份验证的时候可以将验证申请交给ssh-agent来完成整个认证过程。</p><h4 id="添加代码"><a href="#添加代码" class="headerlink" title="添加代码"></a>添加代码</h4><p>将下边代码添加到，bashrc 文件末尾。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">####ssh-agent start settings.</span></span><br><span class="line">SSH_ENV=<span class="string">"<span class="variable">$HOME</span>/.ssh/env"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> start_agent &#123;</span><br><span class="line">     <span class="built_in">echo</span> <span class="string">"Initialising new SSH agent..."</span></span><br><span class="line">     /usr/bin/ssh-agent | sed <span class="string">'s/^echo/#echo/'</span> &gt; <span class="string">"<span class="variable">$&#123;SSH_ENV&#125;</span>"</span></span><br><span class="line">     <span class="built_in">echo</span> succeeded</span><br><span class="line">     chmod 600 <span class="string">"<span class="variable">$&#123;SSH_ENV&#125;</span>"</span></span><br><span class="line">     . <span class="string">"<span class="variable">$&#123;SSH_ENV&#125;</span>"</span> &gt; /dev/null</span><br><span class="line">     /usr/bin/ssh-add;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Source SSH settings.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -f <span class="string">"<span class="variable">$&#123;SSH_ENV&#125;</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">     . <span class="string">"<span class="variable">$&#123;SSH_ENV&#125;</span>"</span> &gt; /dev/null</span><br><span class="line">     ps -ef | grep <span class="variable">$&#123;SSH_AGENT_PID&#125;</span> | grep ssh-agent$ &gt; /dev/null || &#123;</span><br><span class="line">        start_agent;&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">     start_agent;</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="comment">####ssh-agent start settings end.</span></span><br></pre></td></tr></table></figure><p>这样每次登录跳板机都会判断一下PID 在不在，不在会自动启动。</p><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg" alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p><p><a href="https://item.taobao.com/item.htm?id=625058323217" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p><pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>]]></content>
+
+
+        <categories>
+
+            <category>linux</category>
+
+            <category>configure</category>
+
+        </categories>
+
+
+        <tags>
+
+            <tag>configure</tag>
+
+        </tags>
+
+    </entry>
+
+
+    <entry>
         <title>SecureCRT ssh 工具的使用</title>
         <link href="/posts/windows/tools/558a0679.html"/>
         <url>/posts/windows/tools/558a0679.html</url>

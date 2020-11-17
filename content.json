@@ -228,7 +228,7 @@
       "title": "linux 常用软件介绍(一)(5-2)",
       "slug": "linux-常用软件介绍-一-5-2",
       "date": "2020-06-19T05:44:48.000Z",
-      "updated": "2020-11-06T20:02:29.190Z",
+      "updated": "2020-11-17T01:52:40.157Z",
       "comments": true,
       "path": "posts/linux/software/7b4a9736.html",
       "link": "",
@@ -259,7 +259,7 @@
       "title": "linux 常用软件介绍(一)(5-1)",
       "slug": "linux-常用软件介绍-一-5-1",
       "date": "2020-06-19T05:44:44.000Z",
-      "updated": "2020-11-03T06:30:52.929Z",
+      "updated": "2020-11-17T01:19:43.394Z",
       "comments": true,
       "path": "posts/linux/software/e243c68c.html",
       "link": "",
@@ -283,6 +283,99 @@
           "name": "software",
           "slug": "software",
           "permalink": "http://lxeridium.github.io/tags/software/"
+        }
+      ]
+    },
+    {
+      "title": "linuxsoftware-ansible",
+      "slug": "linuxsoftware-ansible",
+      "date": "2020-06-19T05:44:44.000Z",
+      "updated": "2020-11-17T02:07:19.669Z",
+      "comments": true,
+      "path": "posts/linuxsoftware/ansible/630074e3.html",
+      "link": "",
+      "permalink": "http://lxeridium.github.io/posts/linuxsoftware/ansible/630074e3.html",
+      "excerpt": "",
+      "text": "linux ansible在IT部门工作，您可能会一遍又一遍地执行相同的任务。如果您可以一次解决问题，然后自动化运行解决方案该多好。有了Ansible-简单而强大的IT自动化引擎，成千上万的公司正在使用它来降低环境的复杂性并加快DevOps计划的实施。 inatall ansible 管理机通过Yum/dnf安装RPMs适用于Fedora发行版. 托管节点的操作系统版本可以是更早的版本, 但必须安装 Python 2.4 或更高版本的Python. Fedora 用户可直接安装Ansible, 但RHEL或CentOS用户,需要 配置 EPEL 源 js12# install the epel-release RPM if needed on CentOS, RHEL, or Scientific Linux$ sudo yum install ansible 你也可以自己创建RPM软件包.在Ansible项目的checkout的根目录下,或是在一个tarball中,使用 make rpm 命令创建RPM软件包.然后可分发这个软件包或是使用它来安装Ansible.在创建之前,先确定你已安装了 rpm-build, make, and python2-devel 基础包. 1234$ git clone git://github.com/ansible/ansible.git$ cd ./ansible$ make rpm$ sudo rpm -Uvh ~/rpmbuild/ansible-*.noarch.rpm 其他安装方法不阐述，自行研究。 ansible 前期配置在我们开始前要先理解Ansible是如何通过SSH与远程服务器连接是很重要的. 主机要授权于管理机的ssh 登录，并且配置免密码登录主机。你的public SSH key必须在这些主机系统的authorized_keys中才可以免密码。 Ansible需呀一个配置主机的列表文件,编辑(或创建)/etc/ansible/hosts 并在其中加入一个或多个远程主机. 123456cat /etc/ansible/hosts192.168.1.50192.168.1.51192.168.1.52aserver.example.orgbserver.example.org 赞助广告 查看购买上图商品 淘宝店铺 品牌官网 感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com",
+      "categories": [
+        {
+          "name": "linuxsoftware",
+          "slug": "linuxsoftware",
+          "permalink": "http://lxeridium.github.io/categories/linuxsoftware/"
+        },
+        {
+          "name": "ansible",
+          "slug": "linuxsoftware/ansible",
+          "permalink": "http://lxeridium.github.io/categories/linuxsoftware/ansible/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "ansible",
+          "slug": "ansible",
+          "permalink": "http://lxeridium.github.io/tags/ansible/"
+        }
+      ]
+    },
+    {
+      "title": "linux-ssh免密码-快速登录配置",
+      "slug": "linux-ssh免密码-快速登录配置",
+      "date": "2020-06-19T05:44:44.000Z",
+      "updated": "2020-11-17T01:51:26.013Z",
+      "comments": true,
+      "path": "posts/linux/configure/1ff4d02b.html",
+      "link": "",
+      "permalink": "http://lxeridium.github.io/posts/linux/configure/1ff4d02b.html",
+      "excerpt": "",
+      "text": "linux ssh免密码+快速登录配置管理主机生成秘钥管理机生成密钥,只需要使用ssh-keygen命令. 1ssh-keygen 生成密钥过程中，建议采用默认值，只需要按三次回车之后.就会再~/.ssh目录下生成密钥文件,其中id_rsa为私钥，id_rsa.pub为公钥。 123ls ~/.sshid_rsaid_rsa.pub 被管理的主机被管理的主机的~/.ssh/authorized_keys文件，是保存管理机的公钥，没有可以创建，创建时注意权限,否则无法免密登录。 1$chmod 600 .ssh/authorized_keys 只需把管理机生成密钥id_rsa.pub文件的内容拷贝到被管理的主机的~/.ssh/authorized_keys文件的末尾。 可以用ssh-copy-id将公钥复制到远程机器中 1$ ssh-copy-id -i .ssh/id_rsa.pub 用户名字@192.168.1.xxx 也可以手动，CP过去，添加到authorized_keys文件的末尾。 1cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys 管理主机快速登录配置在管理主机配置机器登录参数通过配置的~/.ssh/config 配置文件相关参数简化登录命令。 config：cat ~/.ssh/config 文件没有可以创建，注意权限是600. Host 别名 Hostname 被管理机的 IP或域名 端口 22 用户 syboot 1234Host 51serverHostname 192.168.1.51 Port 22User syboot 管理主机上登录 51机器可以简化为 1ssh 51server 赞助广告 查看购买上图商品 淘宝店铺 品牌官网 感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com",
+      "categories": [
+        {
+          "name": "linux",
+          "slug": "linux",
+          "permalink": "http://lxeridium.github.io/categories/linux/"
+        },
+        {
+          "name": "configure",
+          "slug": "linux/configure",
+          "permalink": "http://lxeridium.github.io/categories/linux/configure/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "configure",
+          "slug": "configure",
+          "permalink": "http://lxeridium.github.io/tags/configure/"
+        }
+      ]
+    },
+    {
+      "title": "linux-跳板机-ssh-agent保持运行",
+      "slug": "linux-跳板机-ssh-agent保持运行",
+      "date": "2020-06-19T05:44:44.000Z",
+      "updated": "2020-11-17T08:04:03.750Z",
+      "comments": true,
+      "path": "posts/linux/configure/1ed9cfbf.html",
+      "link": "",
+      "permalink": "http://lxeridium.github.io/posts/linux/configure/1ed9cfbf.html",
+      "excerpt": "",
+      "text": "linux-跳板机-ssh-agent保持运行 ssh-agent命令是一种控制用来保存公钥身份验证所使用的私钥的程序。ssh-agent在X会话或登录会话之初启动，所有其他窗口或程序则以客户端程序的身份启动并加入到ssh-agent程序中。通过使用环境变量，可定位代理并在登录到其他使用ssh机器上时使用代理自动进行身份验证。 其实ssh-agent就是一个密钥管理器，运行ssh-agent以后，使用ssh-add将私钥交给ssh-agent保管，其他程序需要身份验证的时候可以将验证申请交给ssh-agent来完成整个认证过程。 添加代码将下边代码添加到，bashrc 文件末尾。 123456789101112131415161718192021####ssh-agent start settings.SSH_ENV=\"$HOME/.ssh/env\"function start_agent &#123; echo \"Initialising new SSH agent...\" /usr/bin/ssh-agent | sed 's/^echo/#echo/' &gt; \"$&#123;SSH_ENV&#125;\" echo succeeded chmod 600 \"$&#123;SSH_ENV&#125;\" . \"$&#123;SSH_ENV&#125;\" &gt; /dev/null /usr/bin/ssh-add;&#125;# Source SSH settings.if [ -f \"$&#123;SSH_ENV&#125;\" ]; then . \"$&#123;SSH_ENV&#125;\" &gt; /dev/null ps -ef | grep $&#123;SSH_AGENT_PID&#125; | grep ssh-agent$ &gt; /dev/null || &#123; start_agent;&#125;else start_agent;fi####ssh-agent start settings end. 这样每次登录跳板机都会判断一下PID 在不在，不在会自动启动。 赞助广告 查看购买上图商品 淘宝店铺 品牌官网 感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com",
+      "categories": [
+        {
+          "name": "linux",
+          "slug": "linux",
+          "permalink": "http://lxeridium.github.io/categories/linux/"
+        },
+        {
+          "name": "configure",
+          "slug": "linux/configure",
+          "permalink": "http://lxeridium.github.io/categories/linux/configure/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "configure",
+          "slug": "configure",
+          "permalink": "http://lxeridium.github.io/tags/configure/"
         }
       ]
     },
@@ -949,6 +1042,21 @@
       "permalink": "http://lxeridium.github.io/categories/linux/software/"
     },
     {
+      "name": "linuxsoftware",
+      "slug": "linuxsoftware",
+      "permalink": "http://lxeridium.github.io/categories/linuxsoftware/"
+    },
+    {
+      "name": "ansible",
+      "slug": "linuxsoftware/ansible",
+      "permalink": "http://lxeridium.github.io/categories/linuxsoftware/ansible/"
+    },
+    {
+      "name": "configure",
+      "slug": "linux/configure",
+      "permalink": "http://lxeridium.github.io/categories/linux/configure/"
+    },
+    {
       "name": "windows",
       "slug": "windows",
       "permalink": "http://lxeridium.github.io/categories/windows/"
@@ -1024,6 +1132,16 @@
       "name": "software",
       "slug": "software",
       "permalink": "http://lxeridium.github.io/tags/software/"
+    },
+    {
+      "name": "ansible",
+      "slug": "ansible",
+      "permalink": "http://lxeridium.github.io/tags/ansible/"
+    },
+    {
+      "name": "configure",
+      "slug": "configure",
+      "permalink": "http://lxeridium.github.io/tags/configure/"
     },
     {
       "name": "windows",

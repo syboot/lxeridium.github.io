@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
+        <loc>http://lxeridium.github.io/posts/linux/configure/1ed9cfbf.html</loc>
+
+        <lastmod>2020-11-17</lastmod>
+
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/posts/linuxsoftware/ansible/630074e3.html</loc>
+
+        <lastmod>2020-11-17</lastmod>
+
+    </url>
+
+    <url>
         <loc>http://lxeridium.github.io/posts/linux/software/7b4a9736.html</loc>
 
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
+
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/posts/linux/configure/1ff4d02b.html</loc>
+
+        <lastmod>2020-11-17</lastmod>
+
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/posts/linux/software/e243c68c.html</loc>
+
+        <lastmod>2020-11-17</lastmod>
 
     </url>
 
@@ -73,13 +101,6 @@
 
     <url>
         <loc>http://lxeridium.github.io/posts/windows/tools/def4c97f.html</loc>
-
-        <lastmod>2020-11-03</lastmod>
-
-    </url>
-
-    <url>
-        <loc>http://lxeridium.github.io/posts/linux/software/e243c68c.html</loc>
 
         <lastmod>2020-11-03</lastmod>
 
@@ -242,7 +263,7 @@
 
     <url>
         <loc>http://lxeridium.github.io/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
@@ -250,91 +271,105 @@
 
     <url>
         <loc>http://lxeridium.github.io/tags/centos/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/tags/Docker-Desktop/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/tags/Proxmox-ve/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/tags/ubuntu/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/tags/system/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/tags/windows/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/tags/VMware-player/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/tags/virtualbox/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/tags/linux/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/tags/opensuse/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/tags/yast2/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/tags/cmd/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/tags/software/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/tags/ansible/</loc>
+        <lastmod>2020-11-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/tags/configure/</loc>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
@@ -342,98 +377,119 @@
 
     <url>
         <loc>http://lxeridium.github.io/categories/linux/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/categories/linux/centos/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/categories/linux/system/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/categories/windows/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/categories/systools/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/categories/linux/ubuntu/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/categories/windows/tools/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/categories/linux/opensuse/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/categories/systools/Proxmox-ve/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/categories/linux/cmd/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/categories/systools/virtualbox/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/categories/linux/software/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/categories/systools/VMware-player/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
         <loc>http://lxeridium.github.io/categories/systools/Docker-Desktop/</loc>
-        <lastmod>2020-11-06</lastmod>
+        <lastmod>2020-11-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/categories/linuxsoftware/</loc>
+        <lastmod>2020-11-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/categories/linuxsoftware/ansible/</loc>
+        <lastmod>2020-11-17</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>http://lxeridium.github.io/categories/linux/configure/</loc>
+        <lastmod>2020-11-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>

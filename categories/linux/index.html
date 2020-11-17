@@ -1718,8 +1718,9 @@ HTTPS 升级*
                         <pre><code>-V, –version 显示wget的版本后退出
 -h, –help 打印语法帮助
 -b, –background 启动后转入后台执行
--e, –execute=COMMAND 执行`.wgetrc’格式的命令，wgetrc格式参见/etc/wgetrc或~/.wgetrc</code></pre><p>记录和输入文件参数：</p>
-<pre><code>-o, –output-file=FILE 把记录写到FILE文件中
+-e, –execute=COMMAND 执行`.wgetrc’格式的命令，wgetrc格式参见/etc/wgetrc或~/.wgetrc</code></pre>
+                        <p>记录和输入文件参数：</p>
+                        <pre><code>-o, –output-file=FILE 把记录写到FILE文件中
 -a, –append-output=FILE 把记录追加到FILE文件中
 -d, –debug 打印调试输出
 -q, –quiet 安静模式(没有输出)
@@ -1978,85 +1979,377 @@ UPnP和NAT-PMP
         
           <div class='post-wrapper'>
             <article class="post white-box shadow reveal ">
-  
 
 
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/posts/linux/centos/8455ae15.html">
-      CentOS8-openSUSE-Ubuntu-基本命令对照
-    </a>
-  </h2>
+                <section class='meta'>
 
 
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a href="http://lxeridium.github.io" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
-    <p>Syboot</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/linux/centos/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>linux/centos</p>
-    </a>
-  </div>
+                    <div class="meta" id="header-meta">
 
 
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年5月27日</p>
-  </a>
-</div>
+                        <h2 class="title">
+                            <a href="/posts/linux/configure/1ff4d02b.html">
+                                linux-ssh免密码-快速登录配置
+                            </a>
+                        </h2>
 
-            
-          
-            
-              
 
-            
-          
-            
-              
+                        <div class='new-meta-box'>
 
-            
-          
-        </div>
-        
-          <hr>
-        
+
+                            <div class='new-meta-item author'>
+                                <a href="http://lxeridium.github.io" rel="nofollow">
+                                    <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
+                                    <p>Syboot</p>
+                                </a>
+                            </div>
+
+
+                            <div class='new-meta-item category'>
+                                <a href='/categories/linux/configure/' rel="nofollow">
+                                    <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+                                    <p>linux/configure</p>
+                                </a>
+                            </div>
+
+
+                            <div class="new-meta-item date">
+                                <a class='notlink'>
+                                    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+                                    <p>发布于：2020年6月19日</p>
+                                </a>
+                            </div>
+
+
+                        </div>
+
+                        <hr>
+
+                    </div>
+
+                </section>
+
+
+                <section class="article typo">
+                    <div class="article-entry" itemprop="articleBody">
+
+                        <h3 id="linux-ssh免密码-快速登录配置"><a href="#linux-ssh免密码-快速登录配置" class="headerlink"
+                                                        title="linux ssh免密码+快速登录配置"></a>linux ssh免密码+快速登录配置</h3><h4
+                            id="管理主机生成秘钥"><a href="#管理主机生成秘钥" class="headerlink" title="管理主机生成秘钥"></a>管理主机生成秘钥</h4>
+                        <p>管理机生成密钥,只需要使用ssh-keygen命令.</p>
+                        <figure class="highlight bash">
+                            <table>
+                                <tr>
+                                    <td class="gutter">
+                                        <pre><span class="line">1</span><br></pre>
+                                    </td>
+                                    <td class="code">
+                                        <pre><span class="line">ssh-keygen</span><br></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                        <p>生成密钥过程中，建议采用默认值，只需要按三次回车之后.<br>就会再~/.ssh目录下生成密钥文件,其中id_rsa为私钥，id_rsa.pub为公钥。 </p>
+                        <figure class="highlight bash">
+                            <table>
+                                <tr>
+                                    <td class="gutter">
+                                        <pre><span class="line">1</span><br><span class="line">2</span><br><span
+                                                class="line">3</span><br></pre>
+                                    </td>
+                                    <td class="code">
+                                        <pre><span class="line">ls ~/.ssh</span><br><span class="line">id_rsa</span><br><span
+                                                class="line">id_rsa.pub</span><br></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+
+                        <h4 id="被管理的主机"><a href="#被管理的主机" class="headerlink" title="被管理的主机"></a>被管理的主机</h4>
+                        <p>被管理的主机的~/.ssh/authorized_keys文件，是保存管理机的公钥，没有可以创建，创建时注意权限,否则无法免密登录。</p>
+                        <figure class="highlight bash">
+                            <table>
+                                <tr>
+                                    <td class="gutter">
+                                        <pre><span class="line">1</span><br></pre>
+                                    </td>
+                                    <td class="code">
+                                        <pre><span class="line"><span class="variable">$chmod</span> 600 .ssh/authorized_keys</span><br></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+
+                        <p>只需把管理机生成密钥id_rsa.pub文件的内容拷贝到被管理的主机的~/.ssh/authorized_keys文件的末尾。</p>
+                        <p>可以用ssh-copy-id将公钥复制到远程机器中</p>
+                        <figure class="highlight bash">
+                            <table>
+                                <tr>
+                                    <td class="gutter">
+                                        <pre><span class="line">1</span><br></pre>
+                                    </td>
+                                    <td class="code">
+                                        <pre><span
+                                                class="line">$  ssh-copy-id -i .ssh/id_rsa.pub  用户名字@192.168.1.xxx</span><br></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+                        <p>也可以手动，CP过去，添加到authorized_keys文件的末尾。</p>
+                        <figure class="highlight bash">
+                            <table>
+                                <tr>
+                                    <td class="gutter">
+                                        <pre><span class="line">1</span><br></pre>
+                                    </td>
+                                    <td class="code">
+                                        <pre><span
+                                                class="line">cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+
+                        <h4 id="管理主机快速登录配置"><a href="#管理主机快速登录配置" class="headerlink" title="管理主机快速登录配置"></a>管理主机快速登录配置
+                        </h4>
+                        <p>在管理主机配置机器登录参数<br>通过配置的~/.ssh/config 配置文件相关参数简化登录命令。</p>
+                        <p>config：<br>cat ~/.ssh/config 文件没有可以创建，注意权限是600. Host 别名 Hostname 被管理机的 IP或域名 端口 22 用户 syboot
+                        </p>
+                        <figure class="highlight bash">
+                            <table>
+                                <tr>
+                                    <td class="gutter">
+                                        <pre><span class="line">1</span><br><span class="line">2</span><br><span
+                                                class="line">3</span><br><span class="line">4</span><br></pre>
+                                    </td>
+                                    <td class="code">
+                                        <pre><span class="line">Host 51server</span><br><span class="line">Hostname 192.168.1.51       </span><br><span
+                                                class="line">Port 22</span><br><span class="line">User syboot</span><br></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+
+                        <p>管理主机上登录 51机器可以简化为</p>
+                        <figure class="highlight bash">
+                            <table>
+                                <tr>
+                                    <td class="gutter">
+                                        <pre><span class="line">1</span><br></pre>
+                                    </td>
+                                    <td class="code">
+                                        <pre><span class="line">ssh 51server</span><br></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+
+
+                        <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3>
+                        <p>
+                            <img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg"
+                                 alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p>
+                        <p><a href="https://item.taobao.com/item.htm?id=625058323217" target="_blank" rel="noopener">查看购买上图商品</a>
+                            <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a
+                                    href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
+                        <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
+
+                    </div>
+
+
+                </section>
+            </article>
+
+          </div>
+
+
+      <div class='post-wrapper'>
+          <article class="post white-box shadow reveal ">
+
+
+              <section class='meta'>
+
+
+                  <div class="meta" id="header-meta">
+
+
+                      <h2 class="title">
+                          <a href="/posts/linux/configure/1ed9cfbf.html">
+                              linux-跳板机-ssh-agent保持运行
+                          </a>
+                      </h2>
+
+
+                      <div class='new-meta-box'>
+
+
+                          <div class='new-meta-item author'>
+                              <a href="http://lxeridium.github.io" rel="nofollow">
+                                  <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
+                                  <p>Syboot</p>
+                              </a>
+                          </div>
+
+
+                          <div class='new-meta-item category'>
+                              <a href='/categories/linux/configure/' rel="nofollow">
+                                  <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+                                  <p>linux/configure</p>
+                              </a>
+                          </div>
+
+
+                          <div class="new-meta-item date">
+                              <a class='notlink'>
+                                  <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+                                  <p>发布于：2020年6月19日</p>
+                              </a>
+                          </div>
+
+
+                      </div>
+
+                      <hr>
+
+                  </div>
+
+              </section>
+
+
+              <section class="article typo">
+                  <div class="article-entry" itemprop="articleBody">
+
+                      <h3 id="linux-跳板机-ssh-agent保持运行"><a href="#linux-跳板机-ssh-agent保持运行" class="headerlink"
+                                                          title="linux-跳板机-ssh-agent保持运行"></a>linux-跳板机-ssh-agent保持运行
+                      </h3>
+                      <p>
+                          ssh-agent命令是一种控制用来保存公钥身份验证所使用的私钥的程序。ssh-agent在X会话或登录会话之初启动，所有其他窗口或程序则以客户端程序的身份启动并加入到ssh-agent程序中。通过使用环境变量，可定位代理并在登录到其他使用ssh机器上时使用代理自动进行身份验证。</p>
+                      <p>
+                          其实ssh-agent就是一个密钥管理器，运行ssh-agent以后，使用ssh-add将私钥交给ssh-agent保管，其他程序需要身份验证的时候可以将验证申请交给ssh-agent来完成整个认证过程。</p>
+                      <h4 id="添加代码"><a href="#添加代码" class="headerlink" title="添加代码"></a>添加代码</h4>
+                      <p>将下边代码添加到，bashrc 文件末尾。</p>
+                      <figure class="highlight bash">
+                          <table>
+                              <tr>
+                                  <td class="gutter">
+                                      <pre><span class="line">1</span><br><span class="line">2</span><br><span
+                                              class="line">3</span><br><span class="line">4</span><br><span
+                                              class="line">5</span><br><span class="line">6</span><br><span
+                                              class="line">7</span><br><span class="line">8</span><br><span
+                                              class="line">9</span><br><span class="line">10</span><br><span
+                                              class="line">11</span><br><span class="line">12</span><br><span
+                                              class="line">13</span><br><span class="line">14</span><br><span
+                                              class="line">15</span><br><span class="line">16</span><br><span
+                                              class="line">17</span><br><span class="line">18</span><br><span
+                                              class="line">19</span><br><span class="line">20</span><br><span
+                                              class="line">21</span><br></pre>
+                                  </td>
+                                  <td class="code">
+                                      <pre><span class="line"><span class="comment">####ssh-agent start settings.</span></span><br><span
+                                              class="line">SSH_ENV=<span class="string">"<span
+                                              class="variable">$HOME</span>/.ssh/env"</span></span><br><span
+                                              class="line"></span><br><span class="line"><span
+                                              class="keyword">function</span> start_agent &#123;</span><br><span
+                                              class="line">     <span class="built_in">echo</span> <span class="string">"Initialising new SSH agent..."</span></span><br><span
+                                              class="line">     /usr/bin/ssh-agent | sed <span class="string">'s/^echo/#echo/'</span> &gt; <span
+                                              class="string">"<span class="variable">$&#123;SSH_ENV&#125;</span>"</span></span><br><span
+                                              class="line">     <span
+                                              class="built_in">echo</span> succeeded</span><br><span class="line">     chmod 600 <span
+                                              class="string">"<span class="variable">$&#123;SSH_ENV&#125;</span>"</span></span><br><span
+                                              class="line">     . <span class="string">"<span class="variable">$&#123;SSH_ENV&#125;</span>"</span> &gt; /dev/null</span><br><span
+                                              class="line">     /usr/bin/ssh-add;&#125;</span><br><span
+                                              class="line"></span><br><span class="line"><span class="comment"># Source SSH settings.</span></span><br><span
+                                              class="line"></span><br><span class="line"><span class="keyword">if</span> [ -f <span
+                                              class="string">"<span class="variable">$&#123;SSH_ENV&#125;</span>"</span> ]; <span
+                                              class="keyword">then</span></span><br><span class="line">     . <span
+                                              class="string">"<span class="variable">$&#123;SSH_ENV&#125;</span>"</span> &gt; /dev/null</span><br><span
+                                              class="line">     ps -ef | grep <span class="variable">$&#123;SSH_AGENT_PID&#125;</span> | grep ssh-agent$ &gt; /dev/null || &#123;</span><br><span
+                                              class="line">        start_agent;&#125;</span><br><span class="line"><span
+                                              class="keyword">else</span></span><br><span
+                                              class="line">     start_agent;</span><br><span class="line"><span
+                                              class="keyword">fi</span></span><br><span class="line"><span
+                                              class="comment">####ssh-agent start settings end.</span></span><br></pre>
+                                  </td>
+                              </tr>
+                          </table>
+                      </figure>
+
+                      <p>这样每次登录跳板机都会判断一下PID 在不在，不在会自动启动。</p>
+                      <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3>
+                      <p>
+                          <img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg"
+                               alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p>
+                      <p><a href="https://item.taobao.com/item.htm?id=625058323217" target="_blank" rel="noopener">查看购买上图商品</a>
+                          <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a
+                                  href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
+                      <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
+
+                  </div>
+
+
+              </section>
+          </article>
+
       </div>
-    
-  </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Linux-包管理基础命令"><a href="#Linux-包管理基础命令" class="headerlink" title="Linux 包管理基础命令"></a>Linux 包管理基础命令</h3><p>Linux 包管理基础命令：apt、yum、dnf 和 pkg zypper</p>
+      <div class='post-wrapper'>
+          <article class="post white-box shadow reveal ">
+
+
+              <section class='meta'>
+
+
+                  <div class="meta" id="header-meta">
+
+
+                      <h2 class="title">
+                          <a href="/posts/linux/centos/8455ae15.html">
+                              CentOS8-openSUSE-Ubuntu-基本命令对照
+                          </a>
+                      </h2>
+
+
+                      <div class='new-meta-box'>
+
+
+                          <div class='new-meta-item author'>
+                              <a href="http://lxeridium.github.io" rel="nofollow">
+                                  <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
+                                  <p>Syboot</p>
+                              </a>
+</div>
+
+
+                          <div class='new-meta-item category'>
+                              <a href='/categories/linux/centos/' rel="nofollow">
+                                  <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+                                  <p>linux/centos</p>
+                              </a>
+                          </div>
+
+
+                          <div class="new-meta-item date">
+                              <a class='notlink'>
+                                  <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+                                  <p>发布于：2020年5月27日</p>
+                              </a>
+</div>
+
+
+                      </div>
+
+                      <hr>
+
+                  </div>
+
+              </section>
+
+
+              <section class="article typo">
+                  <div class="article-entry" itemprop="articleBody">
+
+                      <h3 id="Linux-包管理基础命令"><a href="#Linux-包管理基础命令" class="headerlink" title="Linux 包管理基础命令"></a>Linux 包管理基础命令</h3><p>Linux 包管理基础命令：apt、yum、dnf 和 pkg zypper</p>
 <h3 id="对应关系"><a href="#对应关系" class="headerlink" title="对应关系"></a>对应关系</h3><table>
 <thead>
 <tr>
@@ -2291,15 +2584,14 @@ view_anymsg
 xen</code></pre><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i2/2200652270622/O1CN01A9LSoi1GSuyqYAlvI_!!2200652270622.jpg" alt="羊毛双面呢高腰小香风套装"></p>
 <p><a href="https://item.taobao.com/item.htm?id=629273346606" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
 <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
-      
-    </div>
-    
-      
-    
-  </section>
+
+                  </div>
+
+
+              </section>
 </article>
 
-          </div>
+      </div>
         
       
         
@@ -2395,404 +2687,6 @@ xen</code></pre><h3 id="赞助广告"><a href="#赞助广告" class="headerlink"
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/posts/linux/ubuntu/234b4f4a.html">
-      Ubuntu 20.04 LTS-新功能介绍
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a href="http://lxeridium.github.io" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
-    <p>Syboot</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/linux/ubuntu/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>linux/ubuntu</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年5月27日</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Ubuntu-20-04-LTS"><a href="#Ubuntu-20-04-LTS" class="headerlink" title="Ubuntu 20.04 LTS"></a>Ubuntu 20.04 LTS</h2><p>Ubuntu服务器的长期支持版本将包含OpenStack，同样地安全更新也将支持至2025年4月，仅限64位平台。</p>
-<p>此版本使用了全新的安装器———Subiquity。如你需要Subiquity安装器未包含的安装项，系统文件加密.</p>
-<h3 id="Ubuntu-20-04-LTS主要新功能介绍"><a href="#Ubuntu-20-04-LTS主要新功能介绍" class="headerlink" title="Ubuntu 20.04 LTS主要新功能介绍"></a>Ubuntu 20.04 LTS主要新功能介绍</h3><pre><code>Ubuntu 20.04 LTS主要新功能介绍
-GNOME 3.36 及性能提升
-Yaru 主题和新壁纸
-Linux 内核 5.4
-启动界面显示品牌厂商 LOGO
-改善 ZFS 支持
-更小的系统镜像文件
-GDM 支持多显示器
-预装机型将获得系统自动配置</code></pre><p><a href="https://cn.ubuntu.com/download" target="_blank" rel="noopener">查看下载链接 Ubuntu 20.04 LTS</a></p>
-<h3 id="版本更新简介"><a href="#版本更新简介" class="headerlink" title="版本更新简介"></a>版本更新简介</h3><h4 id="Updated-Packages"><a href="#Updated-Packages" class="headerlink" title="Updated Packages"></a>Updated Packages</h4><p>As with every Ubuntu release, Ubuntu 20.04 LTS comes with a selection of the latest and greatest software developed by the free software community.</p>
-<h5 id="Linux-Kernel"><a href="#Linux-Kernel" class="headerlink" title="Linux Kernel"></a>Linux Kernel</h5><p>Ubuntu 20.04 LTS is based on the long-term supported Linux release series 5.4. Notable features and enhancements in 5.4 since 5.3 include:</p>
-<pre><code>Support for new hardware including Intel Comet Lake CPUs and initial Tiger Lake platforms, AMD Navi 12 and 14 GPUs, Arcturus and Renoir APUs along with Navi 12 + Arcturus power features.
-Support has been added for the exFAT filesystem, virtio-fs for sharing filesystems with virtualized guests and fs-verity for detecting file modifications.
-
-Built in support for the WireGuard VPN.
-Enablement of lockdown in integrity mode. </code></pre><p>Other notable kernel updates to 5.4 since version 4.15 released in 18.04 LTS include:</p>
-<pre><code>Support for AMD Rome CPUs, Radeon RX Vega M and Navi GPUs, Intel Cannon Lake platforms.
-Support for raspberry pi (Pi 2B, Pi 3B, Pi 3A+, Pi 3B+, CM3, CM3+, Pi 4B)
-Significant power-saving improvements.
-Numerous USB 3.2 and Type-C improvements.
-A new mount API, the io_uring interface, KVM support for AMD Secure Encrypted Virtualization and pidfd support.
-Boot speed improvements through changing the default kernel compression algorithm to lz4 (in Ubuntu 19.10) on most architectures, and changing the default initramfs compression algorithm to lz4 on all architectures. </code></pre><h4 id="Toolchain-Upgrades-🛠️"><a href="#Toolchain-Upgrades-🛠️" class="headerlink" title="Toolchain Upgrades 🛠️"></a>Toolchain Upgrades 🛠️</h4><p>Ubuntu 20.04 LTS comes with refreshed state-of-the-art toolchain including new upstream releases of glibc 2.31, ☕ OpenJDK 11, rustc 1.41, GCC 9.3, 🐍 Python 3.8.2, 💎 ruby 2.7.0, php 7.4, 🐪 perl 5.30, golang 1.13.</p>
-<h5 id="Ubuntu-Desktop"><a href="#Ubuntu-Desktop" class="headerlink" title="Ubuntu Desktop"></a>Ubuntu Desktop</h5><pre><code>New graphical boot splash (integrates with the system BIOS logo).
-
-Refreshed Yaru theme 🎨
-Light/Dark theme switching 
-GNOME 3.36
-New lock screen design.
-New system menu design.
-New app folder design.
-Smoother performance, lower CPU usage for window and overview animations, 
-JavaScript execution, mouse movement and window movement (which also has lower latency now).
-10-bit deep colour support.
-X11 fractional scaling. 
-Mesa 20.0 OpenGL stack
-BlueZ 5.53
-PulseAudio 14.0 (prerelease)
-Firefox 75.0
-Thunderbird 68.7.0
-LibreOffice 6.4 </code></pre><h5 id="Network-configuration"><a href="#Network-configuration" class="headerlink" title="Network configuration"></a>Network configuration</h5><p>With this Ubuntu release, netplan.io has grown multiple new features, some of which are:</p>
-<pre><code>Basic support for configuring SR-IOV network devices. Starting with netplan.io 0.99,
-users can declare Virtual Functions for every SR-IOV Physical Function, 
-configure those as any other networking device and set hardware VLAN VF filtering on them.
-Support for GSM modems via the NetworkManager backend via the modems section.
-Adding WiFi flags for bssid/band/channel settings.
-Adding ability to set ipv6-address-generation for the NetworkManager backend and emit-lldp for networkd. </code></pre><h5 id="Storage-File-Systems"><a href="#Storage-File-Systems" class="headerlink" title="Storage/File Systems"></a>Storage/File Systems</h5><p>ZFS 0.8.3 Continuing with what started in the Eoan release, Ubuntu Focal ships zfs 0.8.3. Compared to what was<br> available in the previous LTS release, zfs 0.8 brings many new features. Highlights include:</p>
-<pre><code>Native Encryption (with hardware acceleration enabled in Focal)
-Device removal
-Pool TRIM
-Sequential scrub and resilver (performance) </code></pre><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd4.alicdn.com/imgextra/i2/2200652270622/O1CN01kASg6y1GSuz24roIC_!!2200652270622.jpg" alt="秋季中性风男女情侣同款羊毛大衣"></p>
-<p><a href="https://item.taobao.com/item.htm?id=629923885603" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
-<pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
-      
-    </div>
-    
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/posts/linux/system/3f185f.html">
-      Linux-系统-安装前须知
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a href="http://lxeridium.github.io" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
-    <p>Syboot</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/linux/system/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>linux/system</p>
-    </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年5月27日</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="安装前须知"><a href="#安装前须知" class="headerlink" title="安装前须知"></a>安装前须知</h2><p>安装介质和形式：了解安装介质，盘、光盘、硬盘等.<br>目标系统：Opensuse, Debian, Ubuntu, CentOS, RHEL, Deepin, Fedora, SLES, MX Linux,<br>Manjaro, Linux Mint, Elementary OS, Solus, Linx, Zorin, antiX, PClinuxOS, Arch,<br>ArcoLinux, ArchLabs, BackArch, Obarun, Artix Linux, Puppy Linux, Tails, Slax, Kali,<br>Mageia, Slackware, Q4OS, Archman, Gentoo, Pentoo, NixOS, Ubuntu Kylin…等，就说这么多吧~<br>空闲设备：一台空闲设备，或者一台有足够空间的设备。</p>
-<h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><p>光盘：DVD空白光盘若干，避免刻坏。<br>U盘：一个或2个U盘，8G或16G以上的空U盘。大多数系统，特别是上网本和轻薄便携机，根本就不配CD/DVD-ROM驱动器，从U盘引导是安装操作系统的标准方法。<br>烧盘工具：UItralSO，Nero…<br>U盘启动盘制作工具： Rufus,Ventoy,USB Image Tool,Win32DiskImager…等感觉哪个好用用那个，类似软件一大堆。</p>
-<h3 id="目标系统评测"><a href="#目标系统评测" class="headerlink" title="目标系统评测"></a>目标系统评测</h3><p>关于打分：对于初学者来说，前几次的打份没有多大意义，因为你不了解这些系统，如果你只是听别人说这个系统好，你就说好这样的自我欺骗就没意义了。你要都试过在回来打分才会产出你对这个事情的观点。否则你就是个鹦鹉。<br>Debian, Ubuntu, CentOS, RHEL, Deepin, Fedora, Linux Mint,Arch,Kali,Opensuse. 排名不分先后，适合你的就是好的。</p>
-<pre><code>系统评测标准（我自己的标准）：
-    1.稳定性.     ☆☆☆☆☆
-    2.社区人群广.     ☆☆☆☆☆
-    3.更新速度快.     ☆☆☆☆☆
-    4.目标使用功能完善.     ☆☆☆☆☆
-    5.后续维护方便程度.     ☆☆☆☆☆
-    6.你自己喜不喜欢.     ☆☆☆☆☆
-自己打分，分又高到低排序，在开始测试系统。 
-我目前用的是 Opensuse Tumbleweed kde plasma,也是自己一个一个测试过来的。 </code></pre><h3 id="图形系统选择"><a href="#图形系统选择" class="headerlink" title="图形系统选择"></a>图形系统选择</h3><p>关于打分：对于初学者来说，你就是个白鹦鹉，没有上色的鹦鹉，希望你可以成为一个彩色的鹦鹉，而不是单一颜色的黑鹦鹉。<br>gnome, KDE Plasma, xfce, Cinnamon, lxde, mate.排名不分先后，适合你的就是好的。</p>
-<pre><code>图形系统评测标准（我自己的标准）：
-1.稳定性.     ☆☆☆☆☆
-2.易用性.     ☆☆☆☆☆
-3.配置复杂度.     ☆☆☆☆☆
-4.自由度.     ☆☆☆☆☆
-5.后期DIY指数.     ☆☆☆☆☆</code></pre><p>自己打分，分又高到低排序，在开始测试桌面系统。<br>GNOME 3： An easy and elegant way to use your computer, GNOME is designed to put you in control and get things done.</p>
-<p>KDE Plasma： Featuring an emoji picker, a global edit mode, user feedback and much more.</p>
-<p>Xfce:lightweight desktop environment for UNIX-like operating systems. It aims to be fast and low on system resources, while still being visually appealing and user friendly.</p>
-<p>Cinnamon:A Linux desktop featuring a traditional layout, built from modern technology and introducing brand new innovative features. </p>
-<p>Lxde:LXDE - Lightweight X11 Desktop Environment. This project aimed to provide a new desktop environment which is useful enough and keep resource usage lower at the same time. </p>
-<p>mate:The MATE Desktop Environment is the continuation of GNOME 2. It provides an intuitive and attractive desktop environment using traditional metaphors for Linux and other Unix-like operating systems.</p>
-<p><a href="https://www.gnome.org/" target="_blank" rel="noopener">GNOME 3</a></p>
-<p><a href="https://kde.org/plasma-desktop" target="_blank" rel="noopener">KDE Plasma</a></p>
-<p><a href="https://xfce.org/" target="_blank" rel="noopener">Xfce</a></p>
-<p><a href="https://github.com/linuxmint/Cinnamon" target="_blank" rel="noopener">Cinnamon</a></p>
-<p><a href="https://mate-desktop.org/" target="_blank" rel="noopener">Mate</a></p>
-<p>下表格仅供参考：</p>
-<table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="center">Gnome</th>
-<th align="center">KDE Plasma</th>
-<th align="center">Cinnamon</th>
-<th align="center">MATE</th>
-<th align="center">Xfce</th>
-<th align="center">LXDE</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Desktop</td>
-<td align="center">3.20</td>
-<td align="center">5.6.4</td>
-<td align="center">3.0.1</td>
-<td align="center">1.14.0</td>
-<td align="center">4.12</td>
-<td align="center">~0.8.2</td>
-</tr>
-<tr>
-<td align="center">Office</td>
-<td align="center">LibreOffice</td>
-<td align="center">Calligra</td>
-<td align="center">LibreOffice</td>
-<td align="center">LibreOffice</td>
-<td align="center">Abiword <br> Gnumeric <br> Orage</td>
-<td align="center">Abiword <br> Gnumeric</td>
-</tr>
-<tr>
-<td align="center">Web Browser</td>
-<td align="center">Firefox</td>
-<td align="center">Konqueror <br> Firefox <br> QupZilla</td>
-<td align="center">Firefox</td>
-<td align="center">Firefox</td>
-<td align="center">Firefox</td>
-<td align="center">Midori</td>
-</tr>
-<tr>
-<td align="center">Mail</td>
-<td align="center">Evolution</td>
-<td align="center">Kmail</td>
-<td align="center">Thunderbird</td>
-<td align="center">Claws Mail</td>
-<td align="center">Claws <br> Mail</td>
-<td align="center">Sylpheed</td>
-</tr>
-<tr>
-<td align="center">Music Player</td>
-<td align="center">Rhythmbox</td>
-<td align="center">Amarok</td>
-<td align="center">—</td>
-<td align="center">Exaile</td>
-<td align="center">Pragha</td>
-<td align="center">LXMusic</td>
-</tr>
-<tr>
-<td align="center">Video Player</td>
-<td align="center">Totem</td>
-<td align="center">Dragon Player</td>
-<td align="center">Parole</td>
-<td align="center">Parole</td>
-<td align="center">Parole</td>
-<td align="center">—</td>
-</tr>
-<tr>
-<td align="center">Photo Manager</td>
-<td align="center">Shotwell</td>
-<td align="center">—</td>
-<td align="center">Shotwell</td>
-<td align="center">—</td>
-<td align="center">—</td>
-<td align="center">—</td>
-</tr>
-<tr>
-<td align="center">Image Viewer</td>
-<td align="center">Eye of Gnome</td>
-<td align="center">Gwenview</td>
-<td align="center">Eye of Gnome</td>
-<td align="center">Eye of MATE</td>
-<td align="center">Ristretto</td>
-<td align="center">gpicview</td>
-</tr>
-<tr>
-<td align="center">Document Viewer</td>
-<td align="center">Evince</td>
-<td align="center">Okular</td>
-<td align="center">Evince</td>
-<td align="center">Atril</td>
-<td align="center">Evince</td>
-<td align="center">—</td>
-</tr>
-<tr>
-<td align="center">Text Editor</td>
-<td align="center">gedit</td>
-<td align="center">kwrite</td>
-<td align="center">gedit</td>
-<td align="center">Pluma</td>
-<td align="center">Leafpad</td>
-<td align="center">Leafpad</td>
-</tr>
-<tr>
-    <td align="center">File Manager</td>
-    <td align="center">Nautilus</td>
-    <td align="center">Dolphin</td>
-    <td align="center">Nemo</td>
-    <td align="center">Caja</td>
-    <td align="center">Thunar</td>
-    <td align="center">PCManFM</td>
-</tr>
-</tbody>
-</table>
-        <h3 id="下载系统"><a href="#下载系统" class="headerlink" title="下载系统"></a>下载系统</h3>
-        <pre><code>Debian, Ubuntu, CentOS, Fedora, Linux Mint, Arch,Kali, Opensuse.
-选择国内镜像下载，环境限制自备装备。大多主流的阿里云都有镜像。可以从阿里云下载。 </code></pre>
-        <p><a href="https://www.debian.org/index.zh-cn.html" target="_blank" rel="noopener">Debian</a></p>
-        <p><a href="https://www.ubuntu.com/" target="_blank" rel="noopener">Ubuntu</a></p>
-        <p><a href="https://www.centos.org/" target="_blank" rel="noopener">CentOS</a></p>
-        <p><a href="https://getfedora.org/" target="_blank" rel="noopener">Fedora</a></p>
-        <p><a href="https://linuxmint.com/" target="_blank" rel="noopener">Linux Mint</a></p>
-        <p><a href="https://www.archlinux.org/" target="_blank" rel="noopener">Arch</a></p>
-        <p><a href="https://www.kali.org/" target="_blank" rel="noopener">Kali</a></p>
-        <p><a href="https://www.opensuse.org/" target="_blank" rel="noopener">Opensuse</a></p>
-        <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3>
-        <p><img src="https://gd4.alicdn.com/imgextra/i4/2200652270622/O1CN01ujyl0U1GSuypc2DvP_!!2200652270622.jpg"
-                alt="高端细羊毛小众设计圆领T恤针织衫"></p>
-        <p><a href="https://item.taobao.com/item.htm?id=628559657528" target="_blank" rel="noopener">查看购买上图商品</a> <a
-                href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a
-                href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
-        <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
-
-    </div>
-    
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
     
   </section>
   
@@ -2801,7 +2695,7 @@ Sequential scrub and resilver (performance) </code></pre><h3 id="赞助广告"><
       <div class="prev-next">
         
         <p class="current">
-          1 / 2
+            1 / 3
         </p>
         
           <a class="next" rel="next" href="/categories/linux/page/2/">
@@ -2856,14 +2750,13 @@ Sequential scrub and resilver (performance) </code></pre><h3 id="赞助广告"><
               target="_blank"
               rel="external nofollow noopener noreferrer">
             </a>
-          
-        
-          
-            <a href="https://github.com/lxeridium"
-               class="social fab fa-github flat-btn"
-               target="_blank"
-               rel="external nofollow noopener noreferrer">
-            </a>
+
+
+          <a href="https://github.com/lxeridium"
+             class="social fab fa-github flat-btn"
+             target="_blank"
+             rel="external nofollow noopener noreferrer">
+          </a>
 
 
       </div>
@@ -2889,7 +2782,7 @@ Sequential scrub and resilver (performance) </code></pre><h3 id="赞助广告"><
                        id="categorieslinux"
                 >
                     <div class='name'>linux</div>
-                    <div class='badge'>(19)</div>
+                    <div class='badge'>(21)</div>
                 </a></li>
 
                 <li><a class="flat-box child"
@@ -2906,6 +2799,14 @@ Sequential scrub and resilver (performance) </code></pre><h3 id="赞助广告"><
                 >
                     <div class='name'>cmd</div>
                     <div class='badge'>(5)</div>
+                </a></li>
+
+                <li><a class="flat-box child"
+                       title="/categories/linux/configure/" href="/categories/linux/configure/"
+                       id="categorieslinuxconfigure"
+                >
+                    <div class='name'>configure</div>
+                    <div class='badge'>(2)</div>
                 </a></li>
 
                 <li><a class="flat-box child"
@@ -2938,6 +2839,22 @@ Sequential scrub and resilver (performance) </code></pre><h3 id="赞助广告"><
                 >
                     <div class='name'>ubuntu</div>
                     <div class='badge'>(2)</div>
+                </a></li>
+
+                <li><a class="flat-box"
+                       title="/categories/linuxsoftware/" href="/categories/linuxsoftware/"
+                       id="categorieslinuxsoftware"
+                >
+                    <div class='name'>linuxsoftware</div>
+                    <div class='badge'>(1)</div>
+                </a></li>
+
+                <li><a class="flat-box child"
+                       title="/categories/linuxsoftware/ansible/" href="/categories/linuxsoftware/ansible/"
+                       id="categorieslinuxsoftwareansible"
+                >
+                    <div class='name'>ansible</div>
+                    <div class='badge'>(1)</div>
                 </a></li>
 
                 <li><a class="flat-box"
@@ -3014,8 +2931,10 @@ Sequential scrub and resilver (performance) </code></pre><h3 id="赞助广告"><
             <a href="/tags/Docker-Desktop/" style="font-size: 14px; color: #999">Docker-Desktop</a> <a
                 href="/tags/Proxmox-ve/" style="font-size: 14px; color: #999">Proxmox-ve</a> <a
                 href="/tags/VMware-player/" style="font-size: 14px; color: #999">VMware-player</a> <a
-                href="/tags/centos/" style="font-size: 19px; color: #777">centos</a> <a href="/tags/cmd/"
-                                                                                        style="font-size: 21.5px; color: #666">cmd</a>
+                href="/tags/ansible/" style="font-size: 14px; color: #999">ansible</a> <a href="/tags/centos/"
+                                                                                          style="font-size: 19px; color: #777">centos</a>
+            <a href="/tags/cmd/" style="font-size: 21.5px; color: #666">cmd</a> <a href="/tags/configure/"
+                                                                                   style="font-size: 16.5px; color: #888">configure</a>
             <a href="/tags/linux/" style="font-size: 24px; color: #555">linux</a> <a href="/tags/opensuse/"
                                                                                      style="font-size: 19px; color: #777">opensuse</a>
             <a href="/tags/software/" style="font-size: 21.5px; color: #666">software</a> <a href="/tags/system/"
