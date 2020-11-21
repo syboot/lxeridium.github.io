@@ -1978,187 +1978,188 @@ UPnP和NAT-PMP
       
         
           <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
+              <article class="post white-box shadow reveal ">
 
 
-                <section class='meta'>
+                  <section class='meta'>
 
 
-                    <div class="meta" id="header-meta">
+                      <div class="meta" id="header-meta">
 
 
-                        <h2 class="title">
-                            <a href="/posts/linux/configure/1ff4d02b.html">
-                                linux-ssh免密码-快速登录配置
-                            </a>
-                        </h2>
+                          <h2 class="title">
+                              <a href="/posts/linux/configure/1ff4d02b.html">
+                                  linux-ssh免密码-快速登录配置
+                              </a>
+                          </h2>
 
 
-                        <div class='new-meta-box'>
+                          <div class='new-meta-box'>
 
 
-                            <div class='new-meta-item author'>
-                                <a href="http://lxeridium.github.io" rel="nofollow">
-                                    <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
-                                    <p>Syboot</p>
-                                </a>
-                            </div>
+                              <div class='new-meta-item author'>
+                                  <a href="http://lxeridium.github.io" rel="nofollow">
+                                      <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
+                                      <p>Syboot</p>
+                                  </a>
+                              </div>
 
 
-                            <div class='new-meta-item category'>
-                                <a href='/categories/linux/configure/' rel="nofollow">
-                                    <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-                                    <p>linux/configure</p>
-                                </a>
-                            </div>
+                              <div class='new-meta-item category'>
+                                  <a href='/categories/linux/configure/' rel="nofollow">
+                                      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+                                      <p>linux/configure</p>
+                                  </a>
+                              </div>
 
 
-                            <div class="new-meta-item date">
-                                <a class='notlink'>
-                                    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-                                    <p>发布于：2020年6月19日</p>
-                                </a>
-                            </div>
+                              <div class="new-meta-item date">
+                                  <a class='notlink'>
+                                      <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+                                      <p>发布于：2020年6月19日</p>
+                                  </a>
+                              </div>
 
 
-                        </div>
+                          </div>
 
-                        <hr>
+                          <hr>
 
-                    </div>
+                      </div>
 
-                </section>
-
-
-                <section class="article typo">
-                    <div class="article-entry" itemprop="articleBody">
-
-                        <h3 id="linux-ssh免密码-快速登录配置"><a href="#linux-ssh免密码-快速登录配置" class="headerlink"
-                                                        title="linux ssh免密码+快速登录配置"></a>linux ssh免密码+快速登录配置</h3><h4
-                            id="管理主机生成秘钥"><a href="#管理主机生成秘钥" class="headerlink" title="管理主机生成秘钥"></a>管理主机生成秘钥</h4>
-                        <p>管理机生成密钥,只需要使用ssh-keygen命令.</p>
-                        <figure class="highlight bash">
-                            <table>
-                                <tr>
-                                    <td class="gutter">
-                                        <pre><span class="line">1</span><br></pre>
-                                    </td>
-                                    <td class="code">
-                                        <pre><span class="line">ssh-keygen</span><br></pre>
-                                    </td>
-                                </tr>
-                            </table>
-                        </figure>
-                        <p>生成密钥过程中，建议采用默认值，只需要按三次回车之后.<br>就会再~/.ssh目录下生成密钥文件,其中id_rsa为私钥，id_rsa.pub为公钥。 </p>
-                        <figure class="highlight bash">
-                            <table>
-                                <tr>
-                                    <td class="gutter">
-                                        <pre><span class="line">1</span><br><span class="line">2</span><br><span
-                                                class="line">3</span><br></pre>
-                                    </td>
-                                    <td class="code">
-                                        <pre><span class="line">ls ~/.ssh</span><br><span class="line">id_rsa</span><br><span
-                                                class="line">id_rsa.pub</span><br></pre>
-                                    </td>
-                                </tr>
-                            </table>
-                        </figure>
-
-                        <h4 id="被管理的主机"><a href="#被管理的主机" class="headerlink" title="被管理的主机"></a>被管理的主机</h4>
-                        <p>被管理的主机的~/.ssh/authorized_keys文件，是保存管理机的公钥，没有可以创建，创建时注意权限,否则无法免密登录。</p>
-                        <figure class="highlight bash">
-                            <table>
-                                <tr>
-                                    <td class="gutter">
-                                        <pre><span class="line">1</span><br></pre>
-                                    </td>
-                                    <td class="code">
-                                        <pre><span class="line"><span class="variable">$chmod</span> 600 .ssh/authorized_keys</span><br></pre>
-                                    </td>
-                                </tr>
-                            </table>
-                        </figure>
-
-                        <p>只需把管理机生成密钥id_rsa.pub文件的内容拷贝到被管理的主机的~/.ssh/authorized_keys文件的末尾。</p>
-                        <p>可以用ssh-copy-id将公钥复制到远程机器中</p>
-                        <figure class="highlight bash">
-                            <table>
-                                <tr>
-                                    <td class="gutter">
-                                        <pre><span class="line">1</span><br></pre>
-                                    </td>
-                                    <td class="code">
-                                        <pre><span
-                                                class="line">$  ssh-copy-id -i .ssh/id_rsa.pub  用户名字@192.168.1.xxx</span><br></pre>
-                                    </td>
-                                </tr>
-                            </table>
-                        </figure>
-                        <p>也可以手动，CP过去，添加到authorized_keys文件的末尾。</p>
-                        <figure class="highlight bash">
-                            <table>
-                                <tr>
-                                    <td class="gutter">
-                                        <pre><span class="line">1</span><br></pre>
-                                    </td>
-                                    <td class="code">
-                                        <pre><span
-                                                class="line">cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre>
-                                    </td>
-                                </tr>
-                            </table>
-                        </figure>
-
-                        <h4 id="管理主机快速登录配置"><a href="#管理主机快速登录配置" class="headerlink" title="管理主机快速登录配置"></a>管理主机快速登录配置
-                        </h4>
-                        <p>在管理主机配置机器登录参数<br>通过配置的~/.ssh/config 配置文件相关参数简化登录命令。</p>
-                        <p>config：<br>cat ~/.ssh/config 文件没有可以创建，注意权限是600. Host 别名 Hostname 被管理机的 IP或域名 端口 22 用户 syboot
-                        </p>
-                        <figure class="highlight bash">
-                            <table>
-                                <tr>
-                                    <td class="gutter">
-                                        <pre><span class="line">1</span><br><span class="line">2</span><br><span
-                                                class="line">3</span><br><span class="line">4</span><br></pre>
-                                    </td>
-                                    <td class="code">
-                                        <pre><span class="line">Host 51server</span><br><span class="line">Hostname 192.168.1.51       </span><br><span
-                                                class="line">Port 22</span><br><span class="line">User syboot</span><br></pre>
-                                    </td>
-                                </tr>
-                            </table>
-                        </figure>
-
-                        <p>管理主机上登录 51机器可以简化为</p>
-                        <figure class="highlight bash">
-                            <table>
-                                <tr>
-                                    <td class="gutter">
-                                        <pre><span class="line">1</span><br></pre>
-                                    </td>
-                                    <td class="code">
-                                        <pre><span class="line">ssh 51server</span><br></pre>
-                                    </td>
-                                </tr>
-                            </table>
-                        </figure>
+                  </section>
 
 
-                        <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3>
-                        <p>
-                            <img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg"
-                                 alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p>
-                        <p><a href="https://item.taobao.com/item.htm?id=625058323217" target="_blank" rel="noopener">查看购买上图商品</a>
-                            <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a
-                                    href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
-                        <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
+                  <section class="article typo">
+                      <div class="article-entry" itemprop="articleBody">
 
-                    </div>
+                          <h3 id="linux-ssh免密码-快速登录配置"><a href="#linux-ssh免密码-快速登录配置" class="headerlink"
+                                                          title="linux ssh免密码+快速登录配置"></a>linux ssh免密码+快速登录配置</h3><h4
+                              id="管理主机生成秘钥"><a href="#管理主机生成秘钥" class="headerlink" title="管理主机生成秘钥"></a>管理主机生成秘钥</h4>
+                          <p>管理机生成密钥,只需要使用ssh-keygen命令.</p>
+                          <figure class="highlight bash">
+                              <table>
+                                  <tr>
+                                      <td class="gutter">
+                                          <pre><span class="line">1</span><br></pre>
+                                      </td>
+                                      <td class="code">
+                                          <pre><span class="line">ssh-keygen</span><br></pre>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </figure>
+                          <p>生成密钥过程中，建议采用默认值，只需要按三次回车之后.<br>就会再~/.ssh目录下生成密钥文件,其中id_rsa为私钥，id_rsa.pub为公钥。 </p>
+                          <figure class="highlight bash">
+                              <table>
+                                  <tr>
+                                      <td class="gutter">
+                                          <pre><span class="line">1</span><br><span class="line">2</span><br><span
+                                                  class="line">3</span><br></pre>
+                                      </td>
+                                      <td class="code">
+                                          <pre><span class="line">ls ~/.ssh</span><br><span
+                                                  class="line">id_rsa</span><br><span class="line">id_rsa.pub</span><br></pre>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </figure>
+
+                          <h4 id="被管理的主机"><a href="#被管理的主机" class="headerlink" title="被管理的主机"></a>被管理的主机</h4>
+                          <p>被管理的主机的~/.ssh/authorized_keys文件，是保存管理机的公钥，没有可以创建，创建时注意权限,否则无法免密登录。</p>
+                          <figure class="highlight bash">
+                              <table>
+                                  <tr>
+                                      <td class="gutter">
+                                          <pre><span class="line">1</span><br></pre>
+                                      </td>
+                                      <td class="code">
+                                          <pre><span class="line"><span class="variable">$chmod</span> 600 .ssh/authorized_keys</span><br></pre>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </figure>
+
+                          <p>只需把管理机生成密钥id_rsa.pub文件的内容拷贝到被管理的主机的~/.ssh/authorized_keys文件的末尾。</p>
+                          <p>可以用ssh-copy-id将公钥复制到远程机器中</p>
+                          <figure class="highlight bash">
+                              <table>
+                                  <tr>
+                                      <td class="gutter">
+                                          <pre><span class="line">1</span><br></pre>
+                                      </td>
+                                      <td class="code">
+                                          <pre><span
+                                                  class="line">$  ssh-copy-id -i .ssh/id_rsa.pub  用户名字@192.168.1.xxx</span><br></pre>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </figure>
+                          <p>也可以手动，CP过去，添加到authorized_keys文件的末尾。</p>
+                          <figure class="highlight bash">
+                              <table>
+                                  <tr>
+                                      <td class="gutter">
+                                          <pre><span class="line">1</span><br></pre>
+                                      </td>
+                                      <td class="code">
+                                          <pre><span
+                                                  class="line">cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </figure>
+
+                          <h4 id="管理主机快速登录配置"><a href="#管理主机快速登录配置" class="headerlink" title="管理主机快速登录配置"></a>管理主机快速登录配置
+                          </h4>
+                          <p>在管理主机配置机器登录参数<br>通过配置的~/.ssh/config 配置文件相关参数简化登录命令。</p>
+                          <p>config：<br>cat ~/.ssh/config 文件没有可以创建，注意权限是600. Host 别名 Hostname 被管理机的 IP或域名 端口 22 用户
+                              syboot</p>
+                          <figure class="highlight bash">
+                              <table>
+                                  <tr>
+                                      <td class="gutter">
+                                          <pre><span class="line">1</span><br><span class="line">2</span><br><span
+                                                  class="line">3</span><br><span class="line">4</span><br></pre>
+                                      </td>
+                                      <td class="code">
+                                          <pre><span class="line">Host 51server</span><br><span class="line">Hostname 192.168.1.51       </span><br><span
+                                                  class="line">Port 22</span><br><span
+                                                  class="line">User syboot</span><br></pre>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </figure>
+
+                          <p>管理主机上登录 51机器可以简化为</p>
+                          <figure class="highlight bash">
+                              <table>
+                                  <tr>
+                                      <td class="gutter">
+                                          <pre><span class="line">1</span><br></pre>
+                                      </td>
+                                      <td class="code">
+                                          <pre><span class="line">ssh 51server</span><br></pre>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </figure>
 
 
-                </section>
-            </article>
+                          <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3>
+                          <p>
+                              <img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg"
+                                   alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p>
+                          <p><a href="https://item.taobao.com/item.htm?id=625058323217" target="_blank" rel="noopener">查看购买上图商品</a>
+                              <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a
+                                      href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
+                          <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
+
+                      </div>
+
+
+                  </section>
+              </article>
 
           </div>
 
@@ -2274,7 +2275,7 @@ UPnP和NAT-PMP
                           </table>
                       </figure>
 
-                      <p>这样每次登录跳板机都会判断一下PID 在不在，不在会自动启动。</p>
+                      <p>这样每次登录跳板机都会判断一下PID 在不在，不在会自动启动。<br>ssh-add命令是把专用密钥添加到ssh-agent的高速缓存中。</p>
                       <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3>
                       <p>
                           <img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg"
@@ -2318,7 +2319,7 @@ UPnP和NAT-PMP
                                   <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
                                   <p>Syboot</p>
                               </a>
-</div>
+                          </div>
 
 
                           <div class='new-meta-item category'>
@@ -2334,7 +2335,7 @@ UPnP和NAT-PMP
                                   <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
                                   <p>发布于：2020年5月27日</p>
                               </a>
-</div>
+                          </div>
 
 
                       </div>
@@ -2349,17 +2350,21 @@ UPnP和NAT-PMP
               <section class="article typo">
                   <div class="article-entry" itemprop="articleBody">
 
-                      <h3 id="Linux-包管理基础命令"><a href="#Linux-包管理基础命令" class="headerlink" title="Linux 包管理基础命令"></a>Linux 包管理基础命令</h3><p>Linux 包管理基础命令：apt、yum、dnf 和 pkg zypper</p>
-<h3 id="对应关系"><a href="#对应关系" class="headerlink" title="对应关系"></a>对应关系</h3><table>
-<thead>
-<tr>
-<th>操作系统</th>
-<th>格式</th>
-<th>工具</th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
+                      <h3 id="Linux-包管理基础命令"><a href="#Linux-包管理基础命令" class="headerlink" title="Linux 包管理基础命令"></a>Linux
+                          包管理基础命令</h3>
+                      <p>Linux 包管理基础命令：apt、yum、dnf 和 pkg zypper</p>
+                      <h3 id="对应关系"><a href="#对应关系" class="headerlink" title="对应关系"></a>对应关系</h3>
+                      <table>
+                          <thead>
+                          <tr>
+                              <th>操作系统</th>
+                              <th>格式</th>
+                              <th>工具</th>
+                              <th></th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
 <td>Debian</td>
 <td>.deb</td>
 <td>apt, apt-cache, apt-get, dpkg</td>
@@ -2581,15 +2586,21 @@ dsl
 firewall
 .....
 view_anymsg
-xen</code></pre><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i2/2200652270622/O1CN01A9LSoi1GSuyqYAlvI_!!2200652270622.jpg" alt="羊毛双面呢高腰小香风套装"></p>
-<p><a href="https://item.taobao.com/item.htm?id=629273346606" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
-<pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
+xen</code></pre>
+                      <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3>
+                      <p>
+                          <img src="https://gd3.alicdn.com/imgextra/i2/2200652270622/O1CN01A9LSoi1GSuyqYAlvI_!!2200652270622.jpg"
+                               alt="羊毛双面呢高腰小香风套装"></p>
+                      <p><a href="https://item.taobao.com/item.htm?id=629273346606" target="_blank" rel="noopener">查看购买上图商品</a>
+                          <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a
+                                  href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
+                      <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
 
                   </div>
 
 
               </section>
-</article>
+          </article>
 
       </div>
         
@@ -2738,18 +2749,17 @@ xen</code></pre><h3 id="赞助广告"><a href="#赞助广告" class="headerlink"
         
           
             <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+               class="social fas fa-rss flat-btn"
+               target="_blank"
+               rel="external nofollow noopener noreferrer">
             </a>
-          
-        
-          
-            <a href="mailto:atgf0127@gmail.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
+
+
+          <a href="mailto:atgf0127@gmail.com"
+             class="social fas fa-envelope flat-btn"
+             target="_blank"
+             rel="external nofollow noopener noreferrer">
+          </a>
 
 
           <a href="https://github.com/lxeridium"
