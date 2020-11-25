@@ -642,6 +642,45 @@ ansible web -m setup -a &apos;filter=&quot;*mem*&quot;&apos;    #查看内存</c
                             </table>
                         </figure>
 
+                        <h4 id="临时命令简介"><a href="#临时命令简介" class="headerlink" title="临时命令简介"></a>临时命令简介</h4>
+                        <p>Introduction To Ad-Hoc Commands （临时命令简介）</p>
+                        <p>所谓 ad-hoc 命令是什么呢?<br>如果我们敲入一些命令去比较快的完成一些事情,而不需要将这些执行的命令特别保存下来, 这样的命令就叫做 ad-hoc 命令.</p>
+                        <p>举一个例子</p>
+                        <p>这里我们要使用 Ansible 的命令行工具来重启 Atlanta 组中所有的 web 服务器,每次重启10个.</p>
+                        <p>我们先设置 SSH-agent,将私钥纳入其管理:</p>
+                        <p>$ ssh-agent bash<br>$ ssh-add ~/.ssh/id_rsa</p>
+                        <p>如果不想使用 ssh-agent, 想通过密码验证的方式使用 SSH,可以在执行ansible命令时使用 –ask-pass (-k)选项, 但这里建议使用 ssh-agent.</p>
+                        <p>现在执行如下命令,这个命令中,atlanta是一个组,这个组里面有很多服务器,”/sbin/reboot”命令会在atlanta组下 的所有机器上执行.<br>这里ssh-agent会fork出10个子进程(bash),以并行的方式执行reboot命令.如前所说“每次重启10个”
+                            即是以这种方式实现:</p>
+                        <figure class="highlight bash">
+                            <table>
+                                <tr>
+                                    <td class="gutter">
+                                        <pre><span class="line">1</span><br></pre>
+                                    </td>
+                                    <td class="code">
+                                        <pre><span class="line">$ ansible atlanta -a <span
+                                                class="string">"/sbin/reboot"</span> -f 10</span><br></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+
+                        <p>如果想通过 sudo 去执行命令,如下:</p>
+                        <figure class="highlight bash">
+                            <table>
+                                <tr>
+                                    <td class="gutter">
+                                        <pre><span class="line">1</span><br></pre>
+                                    </td>
+                                    <td class="code">
+                                        <pre><span class="line">$ ansible atlanta -a <span
+                                                class="string">"/usr/bin/foo"</span> -u username --sudo [--ask-sudo-pass]</span><br></pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </figure>
+
 
                         <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3>
                         <p>
@@ -708,10 +747,10 @@ ansible web -m setup -a &apos;filter=&quot;*mem*&quot;&apos;    #查看内存</c
                         <div class='new-meta-box'>
 
 
-                            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-22T00:53:24+08:00">
+                            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-26T00:33:15+08:00">
                                 <a class='notlink'>
                                     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-                                    <p>更新于：2020年11月22日</p>
+                                    <p>更新于：2020年11月26日</p>
                                 </a>
                             </div>
 
@@ -847,6 +886,8 @@ ansible web -m setup -a &apos;filter=&quot;*mem*&quot;&apos;    #查看内存</c
                                                 class="toc-text">主机与组的变量</span></a></li>
                                     </ol>
                                 </li>
+                                <li class="toc-item toc-level-4"><a class="toc-link" href="#临时命令简介"><span
+                                        class="toc-text">临时命令简介</span></a></li>
                             </ol>
                         </li>
                         <li class="toc-item toc-level-3"><a class="toc-link" href="#赞助广告"><span
