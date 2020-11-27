@@ -435,6 +435,571 @@
 
 
                       <h2 class="title">
+                          <a href="/posts/linuxsoftware/tomcat/e2199e29.html">
+                              linuxsoftware-tomcat
+                          </a>
+                      </h2>
+
+
+                      <div class='new-meta-box'>
+
+
+                          <div class='new-meta-item author'>
+                              <a href="http://lxeridium.github.io" rel="nofollow">
+                                  <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
+                                  <p>Syboot</p>
+                              </a>
+                          </div>
+
+
+                          <div class='new-meta-item category'>
+                              <a href='/categories/linuxsoftware/tomcat/' rel="nofollow">
+                                  <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+                                  <p>linuxsoftware/tomcat</p>
+                              </a>
+                          </div>
+
+
+                          <div class="new-meta-item date">
+                              <a class='notlink'>
+                                  <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+                                  <p>发布于：2020年6月29日</p>
+                              </a>
+                          </div>
+
+
+                      </div>
+
+                      <hr>
+
+                  </div>
+
+              </section>
+
+
+              <section class="article typo">
+                  <div class="article-entry" itemprop="articleBody">
+
+                      <h3 id="linux-apache-tomcat-9-0-40"><a href="#linux-apache-tomcat-9-0-40" class="headerlink"
+                                                             title="linux apache-tomcat-9.0.40"></a>linux
+                          apache-tomcat-9.0.40</h3>
+                      <p>Tomcat是Apache 软件基金会（Apache Software Foundation）的Jakarta 项目中的一个核心项目，由Apache、Sun
+                          和其他一些公司及个人共同开发而成。由于有了Sun 的参与和支持，最新的Servlet 和JSP 规范总是能在Tomcat 中得到体现，<br>因为Tomcat
+                          技术先进、性能稳定，而且免费，因而深受Java 爱好者的喜爱并得到了部分软件开发商的认可，成为目前比较流行的Web 应用服务器。</p>
+                      <h3 id="添加专用用户"><a href="#添加专用用户" class="headerlink" title="添加专用用户"></a>添加专用用户</h3>
+                      <p>添加一个新用户，用来跑tomcat, 为了后期好管理，形成良好的习惯。</p>
+                      <figure class="highlight bash">
+                          <table>
+                              <tr>
+                                  <td class="gutter">
+                                      <pre><span class="line">1</span><br><span class="line">2</span><br><span
+                                              class="line">3</span><br></pre>
+                                  </td>
+                                  <td class="code">
+                                      <pre><span class="line">useradd admin</span><br><span class="line"><span
+                                              class="built_in">echo</span> admin:新密码|chpasswd</span><br><span
+                                              class="line">chmod 755 /home/admin</span><br></pre>
+                                  </td>
+                              </tr>
+                          </table>
+                      </figure>
+                      <p>如果有跳板机需要修改文件/etc/security/access.conf<br>下边代码加在access.conf 文件尾部。</p>
+                      <figure class="highlight bash">
+                          <table>
+                              <tr>
+                                  <td class="gutter">
+                                      <pre><span class="line">1</span><br></pre>
+                                  </td>
+                                  <td class="code">
+                                      <pre><span class="line">+:admin:跳板机IP</span><br></pre>
+                                  </td>
+                              </tr>
+                          </table>
+                      </figure>
+
+                      <h3 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h3>
+                      <p>JDK 是一种用于构建在 Java 平台上发布的应用程序、Applet 和组件的开发环境，即编写 Java 程序必须使用 JDK，它提供了编译和运行 Java 程序的环境。</p>
+                      <p>我这里下载 gz 包方便后期 复制移植用。 包名 jdk-15.0.1_linux-x64_bin.tar.gz</p>
+                      <p>JAVA 安装目录 JAVAHOME=/usr/java 没有目录就创建。</p>
+                      <figure class="highlight bash">
+                          <table>
+                              <tr>
+                                  <td class="gutter">
+                                      <pre><span class="line">1</span><br><span class="line">2</span><br><span
+                                              class="line">3</span><br><span class="line">4</span><br><span
+                                              class="line">5</span><br><span class="line">6</span><br></pre>
+                                  </td>
+                                  <td class="code">
+                                      <pre><span
+                                              class="line">cp jdk-15.0.1_linux-x64_bin.tar.gz  /usr/java/</span><br><span
+                                              class="line"><span class="built_in">cd</span> /usr/java</span><br><span
+                                              class="line">tar zxf jdk-15.0.1_linux-x64_bin.tar.gz</span><br><span
+                                              class="line">rm -f  jdk-15.0.1_linux-x64_bin.tar.gz</span><br><span
+                                              class="line">chown root.root /usr/java/ -R</span><br><span class="line">/usr/java/jdk-15.0.1/bin/java -version  <span
+                                              class="comment">#查看版本</span></span><br></pre>
+                                  </td>
+                              </tr>
+                          </table>
+                      </figure>
+
+                      <p><a href="https://www.oracle.com/java/technologies/javase-jdk15-downloads.html" target="_blank"
+                            rel="noopener">JDK15 下载页面</a></p>
+                      <h3 id="添加和修改环境变量"><a href="#添加和修改环境变量" class="headerlink" title="添加和修改环境变量"></a>添加和修改环境变量</h3>
+                      <p>在admin 家目录下添加一个 .bash_profile 用来声明JDK变量 文件内容如下。</p>
+                      <figure class="highlight bash">
+                          <table>
+                              <tr>
+                                  <td class="gutter">
+                                      <pre><span class="line">1</span><br><span class="line">2</span><br><span
+                                              class="line">3</span><br><span class="line">4</span><br><span
+                                              class="line">5</span><br><span class="line">6</span><br><span
+                                              class="line">7</span><br><span class="line">8</span><br><span
+                                              class="line">9</span><br><span class="line">10</span><br><span
+                                              class="line">11</span><br><span class="line">12</span><br><span
+                                              class="line">13</span><br><span class="line">14</span><br><span
+                                              class="line">15</span><br><span class="line">16</span><br></pre>
+                                  </td>
+                                  <td class="code">
+                                      <pre><span class="line">cat  /home/admin/.bash_profile</span><br><span
+                                              class="line"></span><br><span class="line"><span class="comment"># .bash_profile</span></span><br><span
+                                              class="line"></span><br><span class="line"><span class="comment"># Get the aliases and functions</span></span><br><span
+                                              class="line"><span class="keyword">if</span> [ -f ~/.bashrc ]; <span
+                                              class="keyword">then</span></span><br><span class="line">        . ~/.bashrc</span><br><span
+                                              class="line"><span class="keyword">fi</span></span><br><span
+                                              class="line"></span><br><span class="line"><span class="comment"># User specific environment and startup programs</span></span><br><span
+                                              class="line">PATH=/usr/java/jdk-15.0.1/bin:<span
+                                              class="variable">$PATH</span>:<span
+                                              class="variable">$HOME</span>/bin</span><br><span class="line"><span
+                                              class="built_in">export</span> PATH</span><br><span class="line"><span
+                                              class="built_in">export</span> JAVA_HOME=/usr/java/jdk-15.0.1</span><br><span
+                                              class="line"><span class="built_in">export</span> CLASSPATH=.:<span
+                                              class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar:<span
+                                              class="variable">$CLASSPATH</span></span><br><span class="line">LANG=en_US.UTF-8</span><br><span
+                                              class="line"><span class="built_in">unset</span> USERNAME</span><br></pre>
+                                  </td>
+                              </tr>
+                          </table>
+                      </figure>
+
+                      <p>修改 limits.conf 内容如下。</p>
+                      <figure class="highlight bash">
+                          <table>
+                              <tr>
+                                  <td class="gutter">
+                                      <pre><span class="line">1</span><br><span class="line">2</span><br><span
+                                              class="line">3</span><br><span class="line">4</span><br><span
+                                              class="line">5</span><br><span class="line">6</span><br></pre>
+                                  </td>
+                                  <td class="code">
+                                      <pre><span
+                                              class="line">cat &gt;&gt;/etc/security/limits.conf&lt;&lt;EOF</span><br><span
+                                              class="line"><span class="variable">$USERS</span>       hard    nofile           1024000</span><br><span
+                                              class="line"><span class="variable">$USERS</span>       soft    nofile           1024000</span><br><span
+                                              class="line"><span class="variable">$USERS</span>       hard    nproc            102400</span><br><span
+                                              class="line"><span class="variable">$USERS</span>       soft    nproc            102400</span><br><span
+                                              class="line">EOF</span><br></pre>
+                                  </td>
+                              </tr>
+                          </table>
+                      </figure>
+
+                      <h3 id="安装apache-tomcat-9-0-40"><a href="#安装apache-tomcat-9-0-40" class="headerlink"
+                                                         title="安装apache-tomcat-9.0.40"></a>安装apache-tomcat-9.0.40</h3>
+                      <p>1.下载安装包 apache-tomcat-9.0.40.tar.gz 到 /home/admin/ 下。</p>
+                      <p><a href="https://tomcat.apache.org/download-90.cgi" target="_blank" rel="noopener">tomcat9.0
+                          下载页面</a></p>
+                      <p>解压 apache-tomcat-9.0.40.tar.gz 到当前目录。</p>
+                      <figure class="highlight bash">
+                          <table>
+                              <tr>
+                                  <td class="gutter">
+                                      <pre><span class="line">1</span><br><span class="line">2</span><br><span
+                                              class="line">3</span><br><span class="line">4</span><br><span
+                                              class="line">5</span><br></pre>
+                                  </td>
+                                  <td class="code">
+                                      <pre><span class="line">ls /home/admin/</span><br><span
+                                              class="line"></span><br><span class="line">apache-tomcat</span><br><span
+                                              class="line">apache-tomcat-9.0.40</span><br><span class="line">logs</span><br></pre>
+                                  </td>
+                              </tr>
+                          </table>
+                      </figure>
+
+                      <p>2.修改 apache-tomcat-9.0.40/bin/catalina.sh<br>在注释下方， 约125行处添加。以下代码。没有装APR的可以删除
+                          “-Djava.library.path=/usr/local/apr/lib” 这段。gc 选项是为了崩溃后排查用。</p>
+                      <pre><code>JAVA_OPTS=&apos;-server -Xms4096m -Xmx4096m -Xss256k -XX:+HeapDumpOnOutOfMemoryError -Djava.library.path=/usr/local/apr/lib -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -Xloggc:/home/admin/logs/gc.log&apos;</code></pre>
+                      <p>3.添加启动选项 init.d 下添加文件，内容如下。</p>
+                      <figure class="highlight bash">
+                          <table>
+                              <tr>
+                                  <td class="gutter">
+                                      <pre><span class="line">1</span><br><span class="line">2</span><br><span
+                                              class="line">3</span><br><span class="line">4</span><br><span
+                                              class="line">5</span><br><span class="line">6</span><br><span
+                                              class="line">7</span><br><span class="line">8</span><br><span
+                                              class="line">9</span><br><span class="line">10</span><br><span
+                                              class="line">11</span><br><span class="line">12</span><br><span
+                                              class="line">13</span><br><span class="line">14</span><br><span
+                                              class="line">15</span><br><span class="line">16</span><br><span
+                                              class="line">17</span><br><span class="line">18</span><br><span
+                                              class="line">19</span><br><span class="line">20</span><br><span
+                                              class="line">21</span><br><span class="line">22</span><br><span
+                                              class="line">23</span><br><span class="line">24</span><br><span
+                                              class="line">25</span><br><span class="line">26</span><br><span
+                                              class="line">27</span><br><span class="line">28</span><br><span
+                                              class="line">29</span><br><span class="line">30</span><br><span
+                                              class="line">31</span><br><span class="line">32</span><br><span
+                                              class="line">33</span><br><span class="line">34</span><br><span
+                                              class="line">35</span><br><span class="line">36</span><br><span
+                                              class="line">37</span><br><span class="line">38</span><br><span
+                                              class="line">39</span><br><span class="line">40</span><br><span
+                                              class="line">41</span><br><span class="line">42</span><br><span
+                                              class="line">43</span><br><span class="line">44</span><br><span
+                                              class="line">45</span><br><span class="line">46</span><br><span
+                                              class="line">47</span><br><span class="line">48</span><br><span
+                                              class="line">49</span><br><span class="line">50</span><br><span
+                                              class="line">51</span><br><span class="line">52</span><br><span
+                                              class="line">53</span><br><span class="line">54</span><br><span
+                                              class="line">55</span><br><span class="line">56</span><br><span
+                                              class="line">57</span><br><span class="line">58</span><br><span
+                                              class="line">59</span><br><span class="line">60</span><br><span
+                                              class="line">61</span><br><span class="line">62</span><br><span
+                                              class="line">63</span><br><span class="line">64</span><br><span
+                                              class="line">65</span><br><span class="line">66</span><br><span
+                                              class="line">67</span><br><span class="line">68</span><br><span
+                                              class="line">69</span><br><span class="line">70</span><br><span
+                                              class="line">71</span><br><span class="line">72</span><br><span
+                                              class="line">73</span><br><span class="line">74</span><br><span
+                                              class="line">75</span><br><span class="line">76</span><br><span
+                                              class="line">77</span><br><span class="line">78</span><br><span
+                                              class="line">79</span><br><span class="line">80</span><br><span
+                                              class="line">81</span><br><span class="line">82</span><br><span
+                                              class="line">83</span><br><span class="line">84</span><br><span
+                                              class="line">85</span><br><span class="line">86</span><br><span
+                                              class="line">87</span><br><span class="line">88</span><br><span
+                                              class="line">89</span><br><span class="line">90</span><br><span
+                                              class="line">91</span><br><span class="line">92</span><br><span
+                                              class="line">93</span><br><span class="line">94</span><br><span
+                                              class="line">95</span><br><span class="line">96</span><br><span
+                                              class="line">97</span><br><span class="line">98</span><br><span
+                                              class="line">99</span><br><span class="line">100</span><br><span
+                                              class="line">101</span><br><span class="line">102</span><br><span
+                                              class="line">103</span><br><span class="line">104</span><br><span
+                                              class="line">105</span><br><span class="line">106</span><br></pre>
+                                  </td>
+                                  <td class="code">
+                                      <pre><span class="line">cat /etc/init.d/tomcat_admin</span><br><span
+                                              class="line"></span><br><span class="line">    <span class="comment">#!/bin/bash</span></span><br><span
+                                              class="line">    <span class="comment">#</span></span><br><span
+                                              class="line">    <span
+                                              class="comment"># Startup script for the tomcat</span></span><br><span
+                                              class="line">    <span class="comment">#</span></span><br><span
+                                              class="line">    <span
+                                              class="comment"># chkconfig: 345 95 15</span></span><br><span
+                                              class="line">    <span class="comment"># description: tomcat service script</span></span><br><span
+                                              class="line">    <span class="comment">#</span></span><br><span
+                                              class="line">    <span
+                                              class="comment"># Source function library.</span></span><br><span
+                                              class="line">    . /etc/rc.d/init.d/<span
+                                              class="built_in">functions</span></span><br><span class="line">    </span><br><span
+                                              class="line">    TOMCAT_HOME=/home/admin/apache-tomcat</span><br><span
+                                              class="line">    USER=admin</span><br><span
+                                              class="line">    UIDS=`id -u <span
+                                              class="variable">$USER</span>`</span><br><span
+                                              class="line">    RETVAL=0</span><br><span
+                                              class="line">    PORT=8080</span><br><span
+                                              class="line">    PROG=tomcat</span><br><span class="line"></span><br><span
+                                              class="line">    <span class="function"><span
+                                              class="title">checkjava</span></span>()&#123;</span><br><span
+                                              class="line">        <span class="keyword">if</span> [ -z <span
+                                              class="string">"<span class="variable">$JAVA_HOME</span>"</span> ]; <span
+                                              class="keyword">then</span></span><br><span class="line">        <span
+                                              class="built_in">export</span> JAVA_HOME=/usr/java/jdk-15.0.1</span><br><span
+                                              class="line">        <span
+                                              class="built_in">export</span> CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span
+                                              class="variable">$JAVA_HOME</span>/lib/tools.jar:<span class="variable">$CLASSPATH</span></span><br><span
+                                              class="line">        <span class="keyword">fi</span></span><br><span
+                                              class="line">    &#125;</span><br><span class="line">    <span
+                                              class="function"><span class="title">checkrun</span></span>()&#123;</span><br><span
+                                              class="line">        ps aux --width=1000 | grep <span class="string">"[o]rg.apache.catalina.startup.Bootstrap start"</span> \</span><br><span
+                                              class="line">                           | egrep <span
+                                              class="string">"<span class="variable">$USER</span>"</span> | awk <span
+                                              class="string">'&#123;printf $2 " "&#125;'</span> \</span><br><span
+                                              class="line">                           | wc | awk <span class="string">'&#123;print $2&#125;'</span> &gt;/tmp/tomcat_process_count.txt</span><br><span
+                                              class="line">        <span class="built_in">read</span> line &lt; /tmp/tomcat_process_count.txt</span><br><span
+                                              class="line">        <span class="keyword">if</span> [ <span
+                                              class="variable">$line</span> -gt 0 ]; <span
+                                              class="keyword">then</span></span><br><span class="line">            RETVAL=1</span><br><span
+                                              class="line">                <span class="built_in">return</span> <span
+                                              class="variable">$RETVAL</span></span><br><span class="line">        <span
+                                              class="keyword">else</span></span><br><span class="line">            RETVAL=0</span><br><span
+                                              class="line">            <span class="built_in">return</span> <span
+                                              class="variable">$RETVAL</span></span><br><span class="line">        <span
+                                              class="keyword">fi</span></span><br><span
+                                              class="line">    &#125;</span><br><span class="line">    <span
+                                              class="function"><span
+                                              class="title">start</span></span>()&#123;</span><br><span class="line">        checkjava</span><br><span
+                                              class="line">        checkrun</span><br><span class="line">        <span
+                                              class="keyword">if</span> [ <span class="variable">$RETVAL</span> -eq 0 ]; <span
+                                              class="keyword">then</span></span><br><span class="line">            <span
+                                              class="built_in">echo</span> -n <span class="string">"Starting <span
+                                              class="variable">$PROG</span>"</span></span><br><span class="line">            su - <span
+                                              class="variable">$USER</span> -c <span class="string">"<span
+                                              class="variable">$TOMCAT_HOME</span>/bin/startup.sh"</span> &gt;/dev/null 2&gt;&amp;1</span><br><span
+                                              class="line">            RETVAL=$?</span><br><span class="line">                usleep 100000</span><br><span
+                                              class="line">                [ <span class="variable">$RETVAL</span> -ne 0 ] &amp;&amp; failure $<span
+                                              class="string">"<span class="variable">$PROG</span> startup"</span></span><br><span
+                                              class="line">                [ <span class="variable">$RETVAL</span> -eq 0 ] &amp;&amp; touch /var/lock/subsys/<span
+                                              class="variable">$PROG</span> &amp;&amp; success $<span
+                                              class="string">"<span class="variable">$PROG</span> startup"</span></span><br><span
+                                              class="line">                <span class="built_in">echo</span></span><br><span
+                                              class="line">            <span class="built_in">return</span> <span
+                                              class="variable">$RETVAL</span></span><br><span class="line">        <span
+                                              class="keyword">else</span></span><br><span class="line">            <span
+                                              class="built_in">echo</span> <span class="string">"<span class="variable">$PROG</span> already running"</span></span><br><span
+                                              class="line">        <span class="keyword">fi</span></span><br><span
+                                              class="line">    &#125;</span><br><span class="line">    <span
+                                              class="function"><span class="title">stop</span></span>()&#123;</span><br><span
+                                              class="line">        checkjava</span><br><span class="line">        checkrun</span><br><span
+                                              class="line">        <span class="keyword">if</span> [ <span
+                                              class="variable">$RETVAL</span> -eq 1 ]; <span class="keyword">then</span></span><br><span
+                                              class="line">            <span class="built_in">echo</span> -n <span
+                                              class="string">"Shutting down tomcat"</span></span><br><span class="line">            su - <span
+                                              class="variable">$USER</span> -c <span class="string">"<span
+                                              class="variable">$TOMCAT_HOME</span>/bin/shutdown.sh"</span> &gt;/dev/null 2&gt;&amp;1</span><br><span
+                                              class="line">            <span class="keyword">while</span> [ <span
+                                              class="variable">$RETVAL</span> -eq 1 ]; <span
+                                              class="keyword">do</span></span><br><span
+                                              class="line">            sleep 5</span><br><span class="line">                PIDS=$(ps aux --width=1000 | grep <span
+                                              class="string">"org.apache.catalina.startup.Bootstrap start"</span> \</span><br><span
+                                              class="line">                           | egrep <span
+                                              class="string">"<span class="variable">$USER</span>"</span> | awk <span
+                                              class="string">'&#123;printf $2 " "&#125;'</span>)</span><br><span
+                                              class="line">            <span class="built_in">kill</span> -9 <span
+                                              class="variable">$PIDS</span></span><br><span class="line">            checkrun</span><br><span
+                                              class="line">            <span class="keyword">done</span></span><br><span
+                                              class="line">            RETVAL=$?</span><br><span class="line">                usleep 100000</span><br><span
+                                              class="line">                [ <span class="variable">$RETVAL</span> -ne 0 ] &amp;&amp; failure $<span
+                                              class="string">"<span
+                                              class="variable">$PROG</span> stop"</span></span><br><span class="line">                [ <span
+                                              class="variable">$RETVAL</span> -eq 0 ] &amp;&amp; rm -f /var/lock/subsys/<span
+                                              class="variable">$PROG</span> &amp;&amp; success $<span
+                                              class="string">"<span
+                                              class="variable">$PROG</span> stop"</span></span><br><span class="line">                <span
+                                              class="built_in">echo</span></span><br><span class="line">        <span
+                                              class="keyword">else</span></span><br><span class="line">            <span
+                                              class="built_in">echo</span> <span class="string">"<span class="variable">$PROG</span> is not running"</span></span><br><span
+                                              class="line">        <span class="keyword">fi</span></span><br><span
+                                              class="line">    &#125;</span><br><span class="line">    <span
+                                              class="function"><span
+                                              class="title">status</span></span>()&#123;</span><br><span class="line">        checkrun</span><br><span
+                                              class="line">        <span class="keyword">if</span> [ <span
+                                              class="variable">$RETVAL</span> -eq 1 ]; <span class="keyword">then</span></span><br><span
+                                              class="line">        <span class="built_in">echo</span> -n <span
+                                              class="string">"Tomcat ( pid "</span></span><br><span class="line">        ps aux --width=1000 | grep <span
+                                              class="string">"org.apache.catalina.startup.Bootstrap start"</span> | egrep <span
+                                              class="string">"<span class="variable">$USER</span>"</span> | awk <span
+                                              class="string">'&#123;printf $2 " "&#125;'</span></span><br><span
+                                              class="line">        <span class="built_in">echo</span> -n <span
+                                              class="string">") is running..."</span></span><br><span class="line">        <span
+                                              class="built_in">echo</span></span><br><span class="line">        <span
+                                              class="keyword">else</span></span><br><span class="line">        <span
+                                              class="built_in">echo</span> <span
+                                              class="string">"Tomcat is stopped"</span></span><br><span class="line">        <span
+                                              class="keyword">fi</span></span><br><span class="line">        <span
+                                              class="built_in">echo</span> <span class="string">"---------------------------------------------"</span></span><br><span
+                                              class="line">    &#125;</span><br><span class="line">    <span
+                                              class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span
+                                              class="keyword">in</span></span><br><span
+                                              class="line">        start)</span><br><span
+                                              class="line">        start</span><br><span
+                                              class="line">        ;;</span><br><span
+                                              class="line">        stop)</span><br><span
+                                              class="line">        stop</span><br><span
+                                              class="line">        ;;</span><br><span
+                                              class="line">        restart)</span><br><span
+                                              class="line">        stop</span><br><span
+                                              class="line">        start</span><br><span
+                                              class="line">        ;;</span><br><span
+                                              class="line">        status)</span><br><span
+                                              class="line">        status</span><br><span class="line">        ;;</span><br><span
+                                              class="line">        *)</span><br><span class="line">        <span
+                                              class="built_in">echo</span> <span class="string">"Usage: <span
+                                              class="variable">$0</span> &#123;start|stop|restart|status&#125;"</span></span><br><span
+                                              class="line">    <span class="keyword">esac</span></span><br><span
+                                              class="line">    <span class="built_in">exit</span> 0</span><br></pre>
+                                  </td>
+                              </tr>
+                          </table>
+                      </figure>
+                      <p>然后修改权限</p>
+                      <figure class="highlight bash">
+                          <table>
+                              <tr>
+                                  <td class="gutter">
+                                      <pre><span class="line">1</span><br></pre>
+                                  </td>
+                                  <td class="code">
+                                      <pre><span class="line">chmod  +x  /etc/init.d/tomcat_admin</span><br></pre>
+                                  </td>
+                              </tr>
+                          </table>
+                      </figure>
+
+                      <p>4.修改 tomcat 主配置文件 server.xml</p>
+                      <p>将源文件里的2处内容替换为新的。<br>第一处源内容：</p>
+                      <pre><code>&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;
+           connectionTimeout=&quot;20000&quot;
+           redirectPort=&quot;8443&quot; /&gt;</code></pre>
+                      <p>替换内容：</p>
+                      <pre><code>APR 模式下的替换配置
+&lt;Connector executor=&quot;tomcatThreadPool&quot; port=&quot;8080&quot; protocol=&quot;org.apache.coyote.http11.Http11AprProtocol&quot; enableLookups=&quot;false&quot; maxThreads=&quot;800&quot; acceptCount=&quot;800&quot; acceptorThreadCount=&quot;2&quot; connectionTimeout=&quot;6000&quot; redirectPort=&quot;8443&quot; compression=&quot;on&quot; maxKeepAliveRequests=&quot;1&quot;/&gt;
+
+NIO 模式下的替换配置
+&lt;Connector executor=&quot;tomcatThreadPool&quot; port=&quot;8080&quot; protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot; enableLookups=&quot;false&quot; maxThreads=&quot;800&quot; acceptCount=&quot;800&quot; acceptorThreadCount=&quot;2&quot; connectionTimeout=&quot;6000&quot; redirectPort=&quot;8443&quot; compression=&quot;on&quot; maxKeepAliveRequests=&quot;1&quot;/&gt;</code></pre>
+                      <p>9.0以后的协议处理类：</p>
+                      <pre><code>org.apache.coyote.http11.Http11NioProtocol：对应非阻塞 IO
+org.apache.coyote.http11.Http11Nio2Protocol：对应异步 IO
+org.apache.coyote.http2.Http2Protocol：对应 http2 协议
+org.apache.coyote.http11.Http11AprProtocol 对应 APR 从操作系统级别来解决异步的IO问题,大幅度的提高性能。 </code></pre>
+                      <p>logs 格式的替换<br>第二处源内容：</p>
+                      <pre><code>&lt;Valve className=&quot;org.apache.catalina.valves.AccessLogValve&quot; directory=&quot;logs&quot;
+       prefix=&quot;localhost_access_log&quot; suffix=&quot;.txt&quot;
+       pattern=&quot;%h %l %u %t &amp;quot;%r&amp;quot; %s %b&quot; /&gt;</code></pre>
+                      <p>替换内容：</p>
+                      <pre><code>&lt;Valve className=&quot;org.apache.catalina.valves.AccessLogValve&quot; directory=&quot;${user.home}/logs&quot;
+   prefix=&quot;ip.access.log.&quot; suffix=&quot;&quot; buffered=&quot;false&quot;
+   pattern=&quot;%{X-Forwarded-For}i %{CLIENT_IP}i %l %u %t %T %r %s %b &apos;%{Referer}i&apos; %{User-Agent}i&quot; /&gt;</code></pre>
+                      <h3 id="APR-的安装"><a href="#APR-的安装" class="headerlink" title="APR 的安装"></a>APR 的安装</h3>
+                      <p>APR （Apache Portable Runtime (APR) based Native library for Tomcat）</p>
+                      <p>Tomcat可以使用Apache Portable Runtime提供出色的可伸缩性，性能以及与本机服务器技术的更好集成。<br>Apache可移植运行时是一个高度可移植的库，它是Apache
+                          HTTP Server 2.x的核心。<br>APR有许多用途，包括访问高级IO功能（例如sendfile，epoll和OpenSSL），操作系统级别的功能（生成随机数，系统状态等）和本机进程处理（共享内存，NT管道和Unix套接字）。<br>这些功能使Tomcat成为通用的Web服务器，可以更好地与其他本机Web技术集成，并且从总体上使Java作为完整的Web服务器平台而不是仅以后端为中心的技术更加可行。
+                      </p>
+                      <p>1.安装需要三个基础APR包。<br>分别为：</p>
+                      <pre><code>apr-x.x.x
+apr-util-x.x.x
+apr-iconv-x.x.x</code></pre>
+                      <p>三个包的版本需要匹配，否则安装失败。新手三个包建议 用yum apt dnf 这类工具来安装。</p>
+                      <p>编译安装:</p>
+                      <p>cd apr-x.x.x</p>
+                      <figure class="highlight bash">
+                          <table>
+                              <tr>
+                                  <td class="gutter">
+                                      <pre><span class="line">1</span><br><span class="line">2</span><br></pre>
+                                  </td>
+                                  <td class="code">
+                                      <pre><span class="line">./configure;make;make install</span><br><span
+                                              class="line"><span class="built_in">echo</span> <span class="string">"/usr/local/apr/lib"</span> &gt;&gt; /etc/ld.so.conf</span><br></pre>
+                                  </td>
+                              </tr>
+                          </table>
+                      </figure>
+                      <p>cd apr-util-x.x.x</p>
+                      <figure class="highlight bash">
+                          <table>
+                              <tr>
+                                  <td class="gutter">
+                                      <pre><span class="line">1</span><br></pre>
+                                  </td>
+                                  <td class="code">
+                                      <pre><span class="line">./configure --with-apr=/usr/<span
+                                              class="built_in">local</span>/apr;make;make install</span><br></pre>
+                                  </td>
+                              </tr>
+                          </table>
+                      </figure>
+                      <p>cd apr-iconv-x.x.x</p>
+                      <figure class="highlight bash">
+                          <table>
+                              <tr>
+                                  <td class="gutter">
+                                      <pre><span class="line">1</span><br></pre>
+                                  </td>
+                                  <td class="code">
+                                      <pre><span class="line">./configure --with-apr=/usr/<span
+                                              class="built_in">local</span>/apr;make;make install</span><br></pre>
+                                  </td>
+                              </tr>
+                          </table>
+                      </figure>
+                      <p>查看配置</p>
+                      <figure class="highlight bash">
+                          <table>
+                              <tr>
+                                  <td class="gutter">
+                                      <pre><span class="line">1</span><br></pre>
+                                  </td>
+                                  <td class="code">
+                                      <pre><span class="line">ldconfig</span><br></pre>
+                                  </td>
+                              </tr>
+                          </table>
+                      </figure>
+
+                      <p>2.apache-tomcat-9.0.40 中安装 tomcat-native组件</p>
+                      <p>cd /home/admin/apache-tomcat/bin/</p>
+                      <p>tar zvf tomcat-native.tar.gz</p>
+                      <p>cd tomcat-native-1.2.25-src </p>
+                      <figure class="highlight bash">
+                          <table>
+                              <tr>
+                                  <td class="gutter">
+                                      <pre><span class="line">1</span><br></pre>
+                                  </td>
+                                  <td class="code">
+                                      <pre><span class="line">./configure --with-apr=/usr/<span
+                                              class="built_in">local</span>/apr --with-java-home=/usr/java/jdk-15.0.1;make;make install</span><br></pre>
+                                  </td>
+                              </tr>
+                          </table>
+                      </figure>
+                      <p>装好了APR， server.xml 中才可以启用APR配置。</p>
+                      <h3 id="启动tomcat"><a href="#启动tomcat" class="headerlink" title="启动tomcat"></a>启动tomcat</h3>
+                      <figure class="highlight bash">
+                          <table>
+                              <tr>
+                                  <td class="gutter">
+                                      <pre><span class="line">1</span><br></pre>
+                                  </td>
+                                  <td class="code">
+                                      <pre><span class="line">service tomcat_admin start</span><br></pre>
+                                  </td>
+                              </tr>
+                          </table>
+                      </figure>
+
+
+                      <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3>
+                      <p>
+                          <img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg"
+                               alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p>
+                      <p><a href="https://item.taobao.com/item.htm?id=625058323217" target="_blank" rel="noopener">查看购买上图商品</a>
+                          <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a
+                                  href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
+                      <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
+
+                  </div>
+
+
+              </section>
+          </article>
+
+      </div>
+
+
+      <div class='post-wrapper'>
+          <article class="post white-box shadow reveal ">
+
+
+              <section class='meta'>
+
+
+                  <div class="meta" id="header-meta">
+
+
+                      <h2 class="title">
                           <a href="/posts/linux/opensuse/a3febc18.html">
                               linux opensuse yast2 使用
                           </a>
@@ -2599,97 +3164,6 @@ ansible web -m setup -a &apos;filter=&quot;*mem*&quot;&apos;    #查看内存</c
               </section>
           </article>
 
-      </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-
-
-      <div class="meta" id="header-meta">
-
-
-          <h2 class="title">
-              <a href="/posts/windows/tools/558a0679.html">
-                  SecureCRT ssh 工具的使用
-              </a>
-          </h2>
-
-
-          <div class='new-meta-box'>
-
-
-              <div class='new-meta-item author'>
-                  <a href="http://lxeridium.github.io" rel="nofollow">
-                      <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
-                      <p>Syboot</p>
-                  </a>
-              </div>
-
-
-              <div class='new-meta-item category'>
-                  <a href='/categories/windows/tools/' rel="nofollow">
-                      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-                      <p>windows/tools</p>
-                  </a>
-              </div>
-
-
-              <div class="new-meta-item date">
-                  <a class='notlink'>
-                      <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-                      <p>发布于：2020年6月19日</p>
-                  </a>
-              </div>
-
-
-          </div>
-
-          <hr>
-
-      </div>
-
-  </section>
-
-
-                <section class="article typo">
-                    <div class="article-entry" itemprop="articleBody">
-
-                        <h2 id="SecureCRT-ssh-工具"><a href="#SecureCRT-ssh-工具" class="headerlink"
-                                                     title="SecureCRT  ssh 工具"></a>SecureCRT ssh 工具</h2>
-                        <p>适用于Windows，Mac和Linux的SecureCRT客户端为计算专业人士提供了坚如磐石的终端仿真，通过高级会话管理以及多种节省时间和简化重复任务的方式提高了生产率。<br>SecureCRT为组织中的每个人提供安全的远程访问，文件传输和数据隧道。
-                        </p>
-                        <p>特点：</p>
-                        <pre><code>选项卡组使用选项卡组在更短的时间内完成更多功能。
-在标签中组织的会话之间轻松切换。
-十六进制视图有助于调试串行通信。仅当配置串行会话时，会话选项对话框中显示有效的COM端口。
-命令窗口现在可以将命令发送到选定的选项卡组或可见会话。
-使用新的右键单击“添加关键字...”选项快速添加关键字。
-在智能卡（PIV / CAC）上选择一个用于公钥认证的特定证书。支持PKCS＃11证书。在所有平台上，可以直接从指定的证书中提取用户名。
-可以将证书用作原始密钥。公开密钥可以以Open SSH格式导出。
-可以添加到SSH代理。</code></pre>
-                        <p><a href="https://www.vandyke.com/cgi-bin/releases.php?product=securecrt#" target="_blank"
-                              rel="noopener">SecureCRT 下载软件页面</a></p>
-                        <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3>
-                        <p>
-                            <img src="https://gd4.alicdn.com/imgextra/i2/2200652270622/O1CN01dxXGum1GSuylwcjrX_!!2200652270622.jpg"
-                                 alt="韩版宽松廓形大码棉服外套"></p>
-                        <p><a href="https://item.taobao.com/item.htm?id=629281929649" target="_blank" rel="noopener">查看购买上图商品</a>
-                            <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a
-                                    href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
-                        <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
-
-                    </div>
-
-
-                </section>
-            </article>
-
           </div>
         
       
@@ -2846,7 +3320,7 @@ ansible web -m setup -a &apos;filter=&quot;*mem*&quot;&apos;    #查看内存</c
                        id="categorieslinuxsoftware"
                 >
                     <div class='name'>linuxsoftware</div>
-                    <div class='badge'>(1)</div>
+                    <div class='badge'>(2)</div>
                 </a></li>
 
                 <li><a class="flat-box child"
@@ -2854,6 +3328,14 @@ ansible web -m setup -a &apos;filter=&quot;*mem*&quot;&apos;    #查看内存</c
                        id="categorieslinuxsoftwareansible"
                 >
                     <div class='name'>ansible</div>
+                    <div class='badge'>(1)</div>
+                </a></li>
+
+                <li><a class="flat-box child"
+                       title="/categories/linuxsoftware/tomcat/" href="/categories/linuxsoftware/tomcat/"
+                       id="categorieslinuxsoftwaretomcat"
+                >
+                    <div class='name'>tomcat</div>
                     <div class='badge'>(1)</div>
                 </a></li>
 
@@ -2939,10 +3421,11 @@ ansible web -m setup -a &apos;filter=&quot;*mem*&quot;&apos;    #查看内存</c
                                                                                      style="font-size: 19px; color: #777">opensuse</a>
             <a href="/tags/software/" style="font-size: 21.5px; color: #666">software</a> <a href="/tags/system/"
                                                                                              style="font-size: 14px; color: #999">system</a>
-            <a href="/tags/ubuntu/" style="font-size: 16.5px; color: #888">ubuntu</a> <a href="/tags/virtualbox/"
-                                                                                         style="font-size: 14px; color: #999">virtualbox</a>
-            <a href="/tags/windows/" style="font-size: 19px; color: #777">windows</a> <a href="/tags/yast2/"
-                                                                                         style="font-size: 14px; color: #999">yast2</a>
+            <a href="/tags/tomcat/" style="font-size: 14px; color: #999">tomcat</a> <a href="/tags/ubuntu/"
+                                                                                       style="font-size: 16.5px; color: #888">ubuntu</a>
+            <a href="/tags/virtualbox/" style="font-size: 14px; color: #999">virtualbox</a> <a href="/tags/windows/"
+                                                                                               style="font-size: 19px; color: #777">windows</a>
+            <a href="/tags/yast2/" style="font-size: 14px; color: #999">yast2</a>
         </div>
     </section>
 
