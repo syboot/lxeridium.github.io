@@ -377,6 +377,144 @@
 
 
                                 <h2 class="title">
+                                    <a href="/posts/linux/configure/1ed9cfbf.html">
+                                        linux-跳板机-ssh-agent保持运行
+                                    </a>
+                                </h2>
+
+
+                                <div class='new-meta-box'>
+
+
+                                    <div class='new-meta-item author'>
+                                        <a href="http://lxeridium.github.io" rel="nofollow">
+                                            <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
+                                            <p>Syboot</p>
+                                        </a>
+                                    </div>
+
+
+                                    <div class='new-meta-item category'>
+                                        <a href='/categories/linux/configure/' rel="nofollow">
+                                            <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+                                            <p>linux/configure</p>
+                                        </a>
+                                    </div>
+
+
+                                    <div class="new-meta-item date">
+                                        <a class='notlink'>
+                                            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+                                            <p>发布于：2020年6月19日</p>
+                                        </a>
+                                    </div>
+
+
+                                </div>
+
+                                <hr>
+
+                            </div>
+
+                        </section>
+
+
+                        <section class="article typo">
+                            <div class="article-entry" itemprop="articleBody">
+
+                                <h3 id="linux-跳板机-ssh-agent保持运行"><a href="#linux-跳板机-ssh-agent保持运行" class="headerlink"
+                                                                    title="linux-跳板机-ssh-agent保持运行"></a>linux-跳板机-ssh-agent保持运行
+                                </h3>
+                                <p>
+                                    ssh-agent命令是一种控制用来保存公钥身份验证所使用的私钥的程序。ssh-agent在X会话或登录会话之初启动，所有其他窗口或程序则以客户端程序的身份启动并加入到ssh-agent程序中。通过使用环境变量，可定位代理并在登录到其他使用ssh机器上时使用代理自动进行身份验证。</p>
+                                <p>
+                                    其实ssh-agent就是一个密钥管理器，运行ssh-agent以后，使用ssh-add将私钥交给ssh-agent保管，其他程序需要身份验证的时候可以将验证申请交给ssh-agent来完成整个认证过程。</p>
+                                <h4 id="添加代码"><a href="#添加代码" class="headerlink" title="添加代码"></a>添加代码</h4>
+                                <p>将下边代码添加到，bashrc 文件末尾。</p>
+                                <figure class="highlight bash">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><span class="line">1</span><br><span class="line">2</span><br><span
+                                                        class="line">3</span><br><span class="line">4</span><br><span
+                                                        class="line">5</span><br><span class="line">6</span><br><span
+                                                        class="line">7</span><br><span class="line">8</span><br><span
+                                                        class="line">9</span><br><span class="line">10</span><br><span
+                                                        class="line">11</span><br><span class="line">12</span><br><span
+                                                        class="line">13</span><br><span class="line">14</span><br><span
+                                                        class="line">15</span><br><span class="line">16</span><br><span
+                                                        class="line">17</span><br><span class="line">18</span><br><span
+                                                        class="line">19</span><br><span class="line">20</span><br><span
+                                                        class="line">21</span><br></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><span class="line"><span class="comment">####ssh-agent start settings.</span></span><br><span
+                                                        class="line">SSH_ENV=<span class="string">"<span
+                                                        class="variable">$HOME</span>/.ssh/env"</span></span><br><span
+                                                        class="line"></span><br><span class="line"><span
+                                                        class="keyword">function</span> start_agent &#123;</span><br><span
+                                                        class="line">     <span class="built_in">echo</span> <span
+                                                        class="string">"Initialising new SSH agent..."</span></span><br><span
+                                                        class="line">     /usr/bin/ssh-agent | sed <span class="string">'s/^echo/#echo/'</span> &gt; <span
+                                                        class="string">"<span
+                                                        class="variable">$&#123;SSH_ENV&#125;</span>"</span></span><br><span
+                                                        class="line">     <span
+                                                        class="built_in">echo</span> succeeded</span><br><span
+                                                        class="line">     chmod 600 <span class="string">"<span
+                                                        class="variable">$&#123;SSH_ENV&#125;</span>"</span></span><br><span
+                                                        class="line">     . <span class="string">"<span
+                                                        class="variable">$&#123;SSH_ENV&#125;</span>"</span> &gt; /dev/null</span><br><span
+                                                        class="line">     /usr/bin/ssh-add;&#125;</span><br><span
+                                                        class="line"></span><br><span class="line"><span
+                                                        class="comment"># Source SSH settings.</span></span><br><span
+                                                        class="line"></span><br><span class="line"><span
+                                                        class="keyword">if</span> [ -f <span class="string">"<span
+                                                        class="variable">$&#123;SSH_ENV&#125;</span>"</span> ]; <span
+                                                        class="keyword">then</span></span><br><span class="line">     . <span
+                                                        class="string">"<span
+                                                        class="variable">$&#123;SSH_ENV&#125;</span>"</span> &gt; /dev/null</span><br><span
+                                                        class="line">     ps -ef | grep <span class="variable">$&#123;SSH_AGENT_PID&#125;</span> | grep ssh-agent$ &gt; /dev/null || &#123;</span><br><span
+                                                        class="line">        start_agent;&#125;</span><br><span
+                                                        class="line"><span class="keyword">else</span></span><br><span
+                                                        class="line">     start_agent;</span><br><span
+                                                        class="line"><span class="keyword">fi</span></span><br><span
+                                                        class="line"><span class="comment">####ssh-agent start settings end.</span></span><br></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+
+                                <p>这样每次登录跳板机都会判断一下PID 在不在，不在会自动启动。<br>ssh-add命令是把专用密钥添加到ssh-agent的高速缓存中。</p>
+                                <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3>
+                                <p>
+                                    <img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg"
+                                         alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p>
+                                <p><a href="https://item.taobao.com/item.htm?id=625058323217" target="_blank"
+                                      rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/"
+                                                                     target="_blank" rel="noopener">淘宝店铺</a> <a
+                                        href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
+                                <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
+
+                            </div>
+
+
+                        </section>
+                    </article>
+
+                </div>
+
+
+                <div class='post-wrapper'>
+                    <article class="post white-box shadow reveal ">
+
+
+                        <section class='meta'>
+
+
+                            <div class="meta" id="header-meta">
+
+
+                                <h2 class="title">
                                     <a href="/posts/windows/tools/558a0679.html">
                                         SecureCRT ssh 工具的使用
                                     </a>
@@ -902,7 +1040,15 @@ Max. 360 seconds for Tftp, Nfs and Cron</code></pre>
                                id="categorieslinuxsoftware"
                         >
                             <div class='name'>linuxsoftware</div>
-                            <div class='badge'>(2)</div>
+                            <div class='badge'>(3)</div>
+                        </a></li>
+
+                        <li><a class="flat-box child"
+                               title="/categories/linuxsoftware/LVM/" href="/categories/linuxsoftware/LVM/"
+                               id="categorieslinuxsoftwareLVM"
+                        >
+                            <div class='name'>LVM</div>
+                            <div class='badge'>(1)</div>
                         </a></li>
 
                         <li><a class="flat-box child"
@@ -993,8 +1139,9 @@ Max. 360 seconds for Tftp, Nfs and Cron</code></pre>
 
                 <div class='content'>
                     <a href="/tags/Docker-Desktop/" style="font-size: 14px; color: #999">Docker-Desktop</a> <a
-                        href="/tags/Proxmox-ve/" style="font-size: 14px; color: #999">Proxmox-ve</a> <a
-                        href="/tags/VMware-player/" style="font-size: 14px; color: #999">VMware-player</a> <a
+                        href="/tags/LVM/" style="font-size: 14px; color: #999">LVM</a> <a href="/tags/Proxmox-ve/"
+                                                                                          style="font-size: 14px; color: #999">Proxmox-ve</a>
+                    <a href="/tags/VMware-player/" style="font-size: 14px; color: #999">VMware-player</a> <a
                         href="/tags/ansible/" style="font-size: 14px; color: #999">ansible</a> <a href="/tags/centos/"
                                                                                                   style="font-size: 19px; color: #777">centos</a>
                     <a href="/tags/cmd/" style="font-size: 21.5px; color: #666">cmd</a> <a href="/tags/configure/"
