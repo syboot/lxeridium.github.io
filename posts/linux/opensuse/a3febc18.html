@@ -24,7 +24,7 @@
 
   <!-- feed -->
   
-    <link rel="alternate" href="/atom.xml" title="Syboot">
+    <link rel="alternate" href="/atom.xml" title="Syboot" type="application/atom+xml">
   
 
   <!-- import meta -->
@@ -81,7 +81,6 @@
 
   
   
-<link rel="alternate" href="/atom.xml" title="Syboot" type="application/atom+xml">
 </head>
 
 <body>
@@ -489,15 +488,12 @@
 
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
-
-            <h3 id="opensuse-yast2-使用"><a href="#opensuse-yast2-使用" class="headerlink" title="opensuse yast2 使用"></a>opensuse
-                yast2 使用</h3>
-            <p>YaST (Yet another Setup Tool，SUSE特制的强大设置工具) 是系统管理配置的核心工具。</p>
-            <p><a href="https://imgchr.com/i/BrO0Fs" target="_blank" rel="noopener"><img
-                    src="https://s1.ax1x.com/2020/11/03/BrO0Fs.jpg" alt="BrO0Fs.jpg"></a></p>
-            <p>特点：</p>
-            <p>默认YaST模块<br>使用图形界面的各种强大的配置模块，Yast几乎可完成所有的系统任务，比如：</p>
-            <pre><code>安装和卸载软件（下章介绍）
+          
+          <h3 id="opensuse-yast2-使用"><a href="#opensuse-yast2-使用" class="headerlink" title="opensuse yast2 使用"></a>opensuse yast2 使用</h3><p>YaST (Yet another Setup Tool，SUSE特制的强大设置工具) 是系统管理配置的核心工具。</p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BrO0Fs"><img src="https://s1.ax1x.com/2020/11/03/BrO0Fs.jpg" alt="BrO0Fs.jpg"></a></p>
+<p>特点：</p>
+<p>默认YaST模块<br>使用图形界面的各种强大的配置模块，Yast几乎可完成所有的系统任务，比如：</p>
+<pre><code>安装和卸载软件（下章介绍）
 设置您的打印机
 配置防火墙
 开启和禁用系统服务
@@ -510,59 +506,60 @@
 网络设置
 用户和组管理（设置用户权限、添加删除用户）
 在线更新
-还有很多很多……</code></pre>
-            <p>附加YaST模块<br>除了默认安装的模块，还有很多其他的可用Yast模块（需要自己装，请阅读后面软件安装的章节）。默认未安装的一些著名的模块：（这些多是服务器用的）</p>
-            <pre><code>Apache网页服务器(包名：yast2-http-server)
+还有很多很多……</code></pre><p>附加YaST模块<br>除了默认安装的模块，还有很多其他的可用Yast模块（需要自己装，请阅读后面软件安装的章节）。默认未安装的一些著名的模块：（这些多是服务器用的）</p>
+<pre><code>Apache网页服务器(包名：yast2-http-server)
 SSH远程安全登录服务 (包名：yast2-sshd)
 FTP服务器(包名：yast2-ftp-server)
 NFS网络文件系统服务器 (包名：yast2-nfs-server)
-还有很多……</code></pre>
-            <h3 id="终端中的-YaST"><a href="#终端中的-YaST" class="headerlink" title="终端中的 YaST"></a>终端中的 YaST</h3>
-            <p>在终端中同样也可以使用 YaST（ncurses终端模式）—— 这对没有图形界面环境运行的服务很有用，比如用SSH远程登录或您的图形界面 环境坏掉了或压根没装图形界面。</p>
-            <figure class="highlight shell">
-                <table>
-                    <tr>
-                        <td class="gutter">
-                            <pre><span class="line">1</span><br><span class="line">2</span><br></pre>
-                        </td>
-                        <td class="code">
-                            <pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span
-                                    class="bash"> yast2</span></span><br></pre>
-                        </td>
-                    </tr>
-                </table>
-            </figure>
+还有很多……</code></pre><h3 id="终端中的-YaST"><a href="#终端中的-YaST" class="headerlink" title="终端中的 YaST"></a>终端中的 YaST</h3><p>在终端中同样也可以使用 YaST（ncurses终端模式）—— 这对没有图形界面环境运行的服务很有用，比如用SSH远程登录或您的图形界面 环境坏掉了或压根没装图形界面。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> yast2</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-            <p><a href="https://imgchr.com/i/BrO1JI" target="_blank" rel="noopener"><img
-                    src="https://s1.ax1x.com/2020/11/03/BrO1JI.jpg" alt="BrO1JI.jpg"></a></p>
-            <p>中文也支持的很好，在终端下可以配置 服务器的大多数功能。</p>
-            <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3>
-            <p><img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN0135F3Wl1GSuzGZ9E9r_!!2200652270622.jpg"
-                    alt="秋冬新款小众设计师套头针织衫"></p>
-            <p><a href="https://item.taobao.com/item.htm?id=631021890672" target="_blank" rel="noopener">查看购买上图商品</a> <a
-                    href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a
-                    href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
-            <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
-
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BrO1JI"><img src="https://s1.ax1x.com/2020/11/03/BrO1JI.jpg" alt="BrO1JI.jpg"></a></p>
+<p>中文也支持的很好，在终端下可以配置 服务器的大多数功能。</p>
+<h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN0135F3Wl1GSuzGZ9E9r_!!2200652270622.jpg" alt="秋冬新款小众设计师套头针织衫"></p>
+<p><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?id=631021890672">查看购买上图商品</a> <a target="_blank" rel="noopener" href="https://shop252294542.taobao.com/">淘宝店铺</a> <a target="_blank" rel="noopener" href="http://www.lxeridium.com/">品牌官网</a></p>
+<pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
+          
             <div class='article_footer'>
+              
+                
+  
+    
+    
 
 
-                <section class="widget copyright  desktop mobile">
-                    <div class='content'>
 
-                        <blockquote>
+  
 
-
-                            <p>本博客所有文章转载请注明出处！</p>
-
-
-                            <p>本文永久链接是：<a href=http://lxeridium.github.io/posts/linux/opensuse/a3febc18.html>http://lxeridium.github.io/posts/linux/opensuse/a3febc18.html</a>
-                            </p>
+  
+    
+    
 
 
-                        </blockquote>
 
-                    </div>
+  
+
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>本博客所有文章转载请注明出处！</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=http://lxeridium.github.io/posts/linux/opensuse/a3febc18.html>http://lxeridium.github.io/posts/linux/opensuse/a3febc18.html</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
 </section>
 
   
@@ -588,109 +585,127 @@ NFS网络文件系统服务器 (包名：yast2-nfs-server)
         
           height='150px'
         ></div>
-
-
+      
+    
   </div>
 </section>
 
+  
 
+
+              
             </div>
-
+          
         </div>
+        
+          
 
 
-          <section class='meta' id="footer-meta">
-              <div class='new-meta-box'>
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-03T14:25:46+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年11月3日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/linux/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>linux</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/opensuse/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>opensuse</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/yast2/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>yast2</p></a></div>
 
 
-                  <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-03T14:25:46+08:00">
-                      <a class='notlink'>
-                          <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-                          <p>更新于：2020年11月3日</p>
-                      </a>
-                  </div>
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lxeridium.github.io/posts/linux/opensuse/a3febc18.html&title=linux opensuse yast2 使用 - Syboot&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://lxeridium.github.io/posts/linux/opensuse/a3febc18.html&title=linux opensuse yast2 使用 - Syboot&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://lxeridium.github.io/posts/linux/opensuse/a3febc18.html&title=linux opensuse yast2 使用 - Syboot&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a><img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADAElEQVR42u3aS3ICMQwFQO5/6eQACWX9GBDT3kHiwerZvJL8+LH+XQ8EYMCAAQMGzBqYR3H9eeCT75/9zmnf6Xez+6L1gAEDBgwYMGD2wYQDUPBAUaAs/AmoWw8YMGDAgAEDZi9MNlid9qcPNgRfrgcMGDBgwIABczuY8aDVbIiBAQMGDBgwYMC8K+Cdfj8KBwYMGDBgwIC5D0y3kKkCp6DfNokEAwYMGDBgwFwGk13ZwHf153I9YMCAAQMGDJg1MN01PQA7Bbzs/nQ9YMCAAQMGDJg1MNWAFG0oZfdXG2VTkGDAgAEDBgyYPTBTg64s0FSjKQqcvjgEBgwYMGDAgFkLMzXAiga9buOpCl/u4IEBAwYMGDBg3g5TPfDpc7bBlH0x3b+Xb1SBAQMGDBgwYD4Gpjowu6qRNRXkwi8cDBgwYMCAAbMeptuAyhZaDXbTDSswYMCAAQMGzD6YbMHdhlV6EFYMoNkLUWDAgAEDBgyYPTDTg7AsaLUxln0B4X1gwIABAwYMmK+DeVXAqwbIKvzxQhMYMGDAgAEDZg1MtMBo8IsGw6nC2xeFwIABAwYMGDBfA5M90PjFnWbB7QAKBgwYMGDAgFkDUz1wt5BXD/jKjTEwYMCAAQMGzBqYaEHRQVa2oRU9cDZQZgdvYMCAAQMGDJh9MFOFVi/wdPdVAY4DNzBgwIABAwbMGphoQ6q6sheIssFz6jlgwIABAwYMmL0w1YtA2TUd+KoNMTBgwIABAwbM98FkLxRVLxp1obsBM9yoAgMGDBgwYMB8HEx3TYNNXWCKvmAwYMCAAQMGzF6YqwZo0edVn1Pdf2xUgQEDBgwYMGA+HqY6KMsCTO3vBryn/w8GDBgwYMCAWQszFaCmG15TkMeGGRgwYMCAAQPm9jDVwVk2uEUHfuGBIBgwYMCAAQPmtjCnRlH2+6mCw0ETDBgwYMCAAbMWJjtw6+6LPq96znRwBAMGDBgwYMCsg5kaXE0HvmyDqhpUwYABAwYMGDD7YCwwYMCAAQMGzLL1CwtJZn/2ojTFAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
+    
+  </div>
+</div>
 
 
-                  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/linux/" rel="nofollow"><i
-                          class="fas fa-hashtag fa-fw" aria-hidden="true"></i>
-                      <p>linux</p></a></div>
-                  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/opensuse/" rel="nofollow"><i
-                          class="fas fa-hashtag fa-fw" aria-hidden="true"></i>
-                      <p>opensuse</p></a></div>
-                  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/yast2/" rel="nofollow"><i
-                          class="fas fa-hashtag fa-fw" aria-hidden="true"></i>
-                      <p>yast2</p></a></div>
 
-
-                  <div class="new-meta-item share -mob-share-list">
-                      <div class="-mob-share-list share-body">
-
-
-                          <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
-
-                             href="http://connect.qq.com/widget/shareqq/index.html?url=http://lxeridium.github.io/posts/linux/opensuse/a3febc18.html&title=linux opensuse yast2 使用 - Syboot&summary="
-
-                          >
-
-                              <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/qq.png">
-
-                          </a>
-
-
-                          <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
-
-                             href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://lxeridium.github.io/posts/linux/opensuse/a3febc18.html&title=linux opensuse yast2 使用 - Syboot&summary="
-
-                          >
-
-                              <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/qzone.png">
-
-                          </a>
-
-
-                          <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
-
-                             href="http://service.weibo.com/share/share.php?url=http://lxeridium.github.io/posts/linux/opensuse/a3febc18.html&title=linux opensuse yast2 使用 - Syboot&summary="
-
-                          >
-
-                              <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/weibo.png">
-
-                          </a>
-
-
-                          <div class='hoverbox'>
-                              <a><img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/wechat.png"></a>
-                              <div class='target'>
-                                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADAElEQVR42u3aS3ICMQwFQO5/6eQACWX9GBDT3kHiwerZvJL8+LH+XQ8EYMCAAQMGzBqYR3H9eeCT75/9zmnf6Xez+6L1gAEDBgwYMGD2wYQDUPBAUaAs/AmoWw8YMGDAgAEDZi9MNlid9qcPNgRfrgcMGDBgwIABczuY8aDVbIiBAQMGDBgwYMC8K+Cdfj8KBwYMGDBgwIC5D0y3kKkCp6DfNokEAwYMGDBgwFwGk13ZwHf153I9YMCAAQMGDJg1MN01PQA7Bbzs/nQ9YMCAAQMGDJg1MNWAFG0oZfdXG2VTkGDAgAEDBgyYPTBTg64s0FSjKQqcvjgEBgwYMGDAgFkLMzXAiga9buOpCl/u4IEBAwYMGDBg3g5TPfDpc7bBlH0x3b+Xb1SBAQMGDBgwYD4Gpjowu6qRNRXkwi8cDBgwYMCAAbMeptuAyhZaDXbTDSswYMCAAQMGzD6YbMHdhlV6EFYMoNkLUWDAgAEDBgyYPTDTg7AsaLUxln0B4X1gwIABAwYMmK+DeVXAqwbIKvzxQhMYMGDAgAEDZg1MtMBo8IsGw6nC2xeFwIABAwYMGDBfA5M90PjFnWbB7QAKBgwYMGDAgFkDUz1wt5BXD/jKjTEwYMCAAQMGzBqYaEHRQVa2oRU9cDZQZgdvYMCAAQMGDJh9MFOFVi/wdPdVAY4DNzBgwIABAwbMGphoQ6q6sheIssFz6jlgwIABAwYMmL0w1YtA2TUd+KoNMTBgwIABAwbM98FkLxRVLxp1obsBM9yoAgMGDBgwYMB8HEx3TYNNXWCKvmAwYMCAAQMGzF6YqwZo0edVn1Pdf2xUgQEDBgwYMGA+HqY6KMsCTO3vBryn/w8GDBgwYMCAWQszFaCmG15TkMeGGRgwYMCAAQPm9jDVwVk2uEUHfuGBIBgwYMCAAQPmtjCnRlH2+6mCw0ETDBgwYMCAAbMWJjtw6+6LPq96znRwBAMGDBgwYMCsg5kaXE0HvmyDqhpUwYABAwYMGDD7YCwwYMCAAQMGzLL1CwtJZn/2ojTFAAAAAElFTkSuQmCC">
-                              </div>
-                          </div>
-
-
-                      </div>
-                  </div>
-
-
-              </div>
+        
+      
+    </div>
   </section>
 
 
+        
+        
           <div class="prev-next">
-
+            
               <a class='prev' href='/posts/linuxsoftware/tomcat/e2199e29.html'>
-                  <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>linuxsoftware-tomcat</p>
-                  <p class='content'>linux apache-tomcat-9.0.40Tomcat是Apache 软件基金会（Apache Software Foundation）的Jakarta
-                      项目中的一个核心项目，由Apa...</p>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>linuxsoftware-tomcat</p>
+                <p class='content'>linux apache-tomcat-9.0.40Tomcat是Apache 软件基金会（Apache Software Foundation）的Jakarta 项目中的一个核心项目，由Apa...</p>
               </a>
-
-
+            
+            
               <a class='next' href='/posts/linux/software/e52e0295.html'>
-                  <p class='title'>linux 常用软件介绍(一)(5-5)<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                  <p class='content'>linux 常用软件介绍(一)(5-5)办公套件 生产力
-                      WPS office
-                      WPS office- 中国流行的办公套件，功能完善。 新一代办公解决方案，借助PDF，Cloud，OC...</p>
+                <p class='title'>linux 常用软件介绍(一)(5-5)<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>linux 常用软件介绍(一)(5-5)办公套件   生产力
+WPS office
+  WPS office- 中国流行的办公套件，功能完善。  新一代办公解决方案，借助PDF，Cloud，OC...</p>
               </a>
-
+            
           </div>
         
       </section>
@@ -723,32 +738,34 @@ NFS网络文件系统服务器 (包名：yast2-nfs-server)
 
 
 </div>
-        <aside class='l_side'>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
 
 
-            <section class="widget toc-wrapper shadow desktop mobile">
-
-                <header>
-
-                    <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>directory</span>
-
-                </header>
-
-
-                <div class='content'>
-                    <ol class="toc">
-                        <li class="toc-item toc-level-3"><a class="toc-link" href="#opensuse-yast2-使用"><span
-                                class="toc-text">opensuse yast2 使用</span></a></li>
-                        <li class="toc-item toc-level-3"><a class="toc-link" href="#终端中的-YaST"><span class="toc-text">终端中的 YaST</span></a>
-                        </li>
-                        <li class="toc-item toc-level-3"><a class="toc-link" href="#赞助广告"><span
-                                class="toc-text">赞助广告</span></a></li>
-                    </ol>
-                </div>
-            </section>
+  <section class="widget toc-wrapper shadow desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>directory</span>
+    
+  </header>
 
 
-        </aside>
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#opensuse-yast2-%E4%BD%BF%E7%94%A8"><span class="toc-text">opensuse yast2 使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF%E4%B8%AD%E7%9A%84-YaST"><span class="toc-text">终端中的 YaST</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%9E%E5%8A%A9%E5%B9%BF%E5%91%8A"><span class="toc-text">赞助广告</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
 
 
   

@@ -1,430 +1,498 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <!-- SEO相关 -->
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-
-    <!-- 渲染优化 -->
-    <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- 页面元数据 -->
-
-    <title>Xshell ssh 工具的使用 - Syboot</title>
-
+  <!-- 页面元数据 -->
+  
+    <title>Xshell   ssh 工具的使用 - Syboot</title>
+  
     <meta name="keywords" content="windows">
+  
+  
 
-
-    <!-- feed -->
-
-    <link rel="alternate" href="/atom.xml" title="Syboot">
-
-
-    <!-- import meta -->
-
-
-    <meta name='theme-color' content='#FFFFFF'>
-
-    <meta name='msapplication-TileColor' content='#1BC3FB'>
-
-    <meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/lxeridium/cdn/xml/browserconfig.xml'>
-
-
-    <!-- link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lxeridium/cdn/css/all.min.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lxeridium/cdn/css/jquery.fancybox.min.css">
-
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lxeridium/cdn/css/waves.min.css">
-
-
-    <!-- import link -->
-
-
-    <link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/favicon.ico'>
-    <link rel='icon' type='image/x-icon' sizes='32x32'
-          href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/favicon.png'>
-    <link rel='apple-touch-icon' type='image/png' sizes='180x180'
-          href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/apple-touch-icon.png'>
-    <link rel='mask-icon' color='#1BC3FB'
-          href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/safari-pinned-tab.svg'>
-    <link rel='manifest' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/site.webmanifest'>
-
-
-    <link rel="stylesheet" href="/css/style.css">
-
-
-    <script>
-        function setLoadingBarProgress(num) {
-            document.getElementById('loading-bar').style.width = num + "%";
-        }
-    </script>
-
-
+  <!-- feed -->
+  
     <link rel="alternate" href="/atom.xml" title="Syboot" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+    
+      <meta name='theme-color' content='#FFFFFF'>
+    
+      <meta name='msapplication-TileColor' content='#1BC3FB'>
+    
+      <meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/lxeridium/cdn/xml/browserconfig.xml'>
+    
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lxeridium/cdn/css/all.min.css">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lxeridium/cdn/css/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lxeridium/cdn/css/waves.min.css">
+
+  
+
+  
+
+  
+
+  
+
+  <!-- import link -->
+  
+  
+  <link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/favicon.ico'>
+  <link rel='icon' type='image/x-icon' sizes='32x32' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/favicon.png'>
+  <link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/apple-touch-icon.png'>
+  <link rel='mask-icon' color='#1BC3FB' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/safari-pinned-tab.svg'>
+  <link rel='manifest' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/site.webmanifest'>
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
 </head>
 
 <body>
-
-<div class="cover-wrapper">
-
-    <cover class='cover post half'>
+  
+  <div class="cover-wrapper">
+    
+      <cover class='cover post half'>
         <div class='cover-body'>
-            <div class='a'>
-
-                <img class='logo' src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/syboot_logo.png'/>
-
-
-                <p class="title">syboot</p>
-
-
-                <p class="subtitle">分享Linux相关工具，书籍，文章，技术，以及日常使用的问题。感谢关注 @思鸢</p>
-
-            </div>
-            <div class='b'>
-
-                <div class="m_search">
-                    <form name="searchform" class="form u-search-form">
-                        <input type="text" class="input u-search-input" placeholder="search ......"/>
-                        <i class="icon fas fa-search fa-fw"></i>
-                    </form>
-                </div>
-
-                <div class='menu navigation'>
-                    <ul class='cover-list-h'>
-
-
-                        <li>
-                            <a class="nav home"
-                               href="/docstarted/"
-
-
-                               id="docstarted">
-                                <i class='fas fa-book fa-fw'></i>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="nav home"
-                               href="/archives/"
-
-
-                               id="archives">
-                                <i class='fas fa-rss fa-fw'></i>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="nav home"
-                               href="/examples/"
-
-
-                               id="examples">
-                                <i class='fas fa-play-circle fa-fw'></i>
-                            </a>
-                        </li>
-
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-    </cover>
-
-    <div id="loading-bar-wrapper">
-        <div id="loading-bar"></div>
+  <div class='a'>
+    
+      <img class='logo' src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/syboot_logo.png'/>
+    
+    
+      <p class="title">syboot</p>
+    
+    
+      <p class="subtitle">分享Linux相关工具，书籍，文章，技术，以及日常使用的问题。感谢关注 @思鸢</p>
+    
+  </div>
+  <div class='b'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="search ......" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <ul class='cover-list-h'>
+        
+          
+            <li>
+              <a class="nav home"
+                href="/docstarted/"
+                
+                
+                id="docstarted">
+                <i class='fas fa-book fa-fw'></i>
+              </a>
+            </li>
+          
+            <li>
+              <a class="nav home"
+                href="/archives/"
+                
+                
+                id="archives">
+                <i class='fas fa-rss fa-fw'></i>
+              </a>
+            </li>
+          
+            <li>
+              <a class="nav home"
+                href="/examples/"
+                
+                
+                id="examples">
+                <i class='fas fa-play-circle fa-fw'></i>
+              </a>
+            </li>
+          
+        
+      </ul>
     </div>
-    <header class="l_header shadow floatable blur">
-        <div class='container'>
-            <div class='wrapper'>
-                <div class='nav-sub'>
-                    <p class="title"></p>
-                    <ul class='switcher nav-list-h'>
-                        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a>
-                        </li>
-
-                        <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
-
-                    </ul>
-                </div>
-                <div class="nav-main">
-
-
-                    <a class="title flat-box" target="_self" href='/'>
-
-
-                        SYBOOT <b><sup style='color:#3AA757'>’</sup></b>
-
-                    </a>
-
-
-                    <div class='menu navigation'>
-                        <ul class='nav-list-h'>
-
-
-                            <li>
-                                <a class="flat-box" href=/
-
-
-                                   id="home"
-                                >
-                                    home
-                                </a>
-
-                            </li>
-
-
-                            <li>
-                                <a class="flat-box" href=/categories/
-
-
-
-                                   id="categories"
-                                >
-                                    category
-                                </a>
-
-                            </li>
-
-
-                            <li>
-                                <a class="flat-box" href=/tags/
-
-
-
-                                   id="tags"
-                                >
-                                    tags
-                                </a>
-
-                            </li>
-
-
-                            <li>
-                                <a class="flat-box" href=/archives/
-
-
-
-                                   id="archives"
-                                >
-                                    archives
-                                </a>
-
-                            </li>
-
-
-                            <li>
-                                <a class="flat-box" href=/friends/
-
-
-
-                                   id="friends"
-                                >
-                                    link
-                                </a>
-
-                            </li>
-
-
-                            <li>
-                                <a class="flat-box" href=/about/
-
-
-
-                                   id="about"
-                                >
-                                    about
-                                </a>
-
-                            </li>
-
-
-                        </ul>
-                    </div>
-
-                    <div class="m_search">
-                        <form name="searchform" class="form u-search-form">
-                            <i class="icon fas fa-search fa-fw"></i>
-                            <input type="text" class="input u-search-input" placeholder="Search..."/>
-                        </form>
-                    </div>
-
-                    <ul class='switcher nav-list-h'>
-
-                        <li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
-
-                        <li>
-                            <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
-                            <ul class="menu-phone list-v navigation white-box">
-
-
-                                <li>
-                                    <a class="flat-box" href=/
-
-
-                                       id="home"
-                                    >
-                                        home
-                                    </a>
-
-                                </li>
-
-
-                                <li>
-                                    <a class="flat-box" href=/categories/
-
-
-
-                                       id="categories"
-                                    >
-                                        category
-                                    </a>
-
-                                </li>
-
-
-                                <li>
-                                    <a class="flat-box" href=/tags/
-
-
-
-                                       id="tags"
-                                    >
-                                        tags
-                                    </a>
-
-                                </li>
-
-
-                                <li>
-                                    <a class="flat-box" href=/archives/
-
-
-
-                                       id="archives"
-                                    >
-                                        archives
-                                    </a>
-
-                                </li>
-
-
-                                <li>
-                                    <a class="flat-box" href=/friends/
-
-
-
-                                       id="friends"
-                                    >
-                                        link
-                                    </a>
-
-                                </li>
-
-
-                                <li>
-                                    <a class="flat-box" href=/about/
-
-
-
-                                       id="about"
-                                    >
-                                        about
-                                    </a>
-
-                                </li>
-
-
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <script>setLoadingBarProgress(40);</script>
-
+  </div>
 </div>
 
+      </cover>
+    
+    <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow floatable blur">
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h'>
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+          
+            SYBOOT <b><sup style='color:#3AA757'>’</sup></b>
+          
+        </a>
+      
 
-<div class="l_body">
+			<div class='menu navigation'>
+				<ul class='nav-list-h'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  home
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  category
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  tags
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  archives
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  link
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  about
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  home
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  category
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  tags
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  archives
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  link
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  about
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+<script>setLoadingBarProgress(40);</script>
+
+  </div>
+
+
+  <div class="l_body">
     <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+      
 
 
-        <div class='l_main'>
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  <h1 class="title">
+    <a href="/posts/windows/tools/def4c97f.html">
+      Xshell   ssh 工具的使用
+    </a>
+  </h1>
 
 
-            <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a href="http://lxeridium.github.io" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
+    <p>Syboot</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/windows/tools/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>windows/tools</p>
+    </a>
+  </div>
 
 
-                <section class='meta'>
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年6月19日</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
 
 
-                    <div class="meta" id="header-meta">
-
-
-                        <h1 class="title">
-                            <a href="/posts/windows/tools/def4c97f.html">
-                                Xshell ssh 工具的使用
-                            </a>
-                        </h1>
-
-
-                        <div class='new-meta-box'>
-
-
-                            <div class='new-meta-item author'>
-                                <a href="http://lxeridium.github.io" rel="nofollow">
-                                    <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
-                                    <p>Syboot</p>
-                                </a>
-                            </div>
-
-
-                            <div class='new-meta-item category'>
-                                <a href='/categories/windows/tools/' rel="nofollow">
-                                    <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-                                    <p>windows/tools</p>
-                                </a>
-                            </div>
-
-
-                            <div class="new-meta-item date">
-                                <a class='notlink'>
-                                    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-                                    <p>发布于：2020年6月19日</p>
-                                </a>
-                            </div>
-
-
-                        </div>
-
-                        <hr>
-
-                    </div>
-
-                </section>
-
-
-                <section class="article typo">
-                    <div class="article-entry" itemprop="articleBody">
-
-                        <h3 id="Xshell-ssh-工具"><a href="#Xshell-ssh-工具" class="headerlink" title="Xshell   ssh 工具"></a>Xshell
-                            ssh 工具</h3>
-                        <p>Xshell是一个强大的安全终端模拟软件，它支持SSH1/SSH2以及Microsoft Windows平台的TELNET协议。<br>Xshell可以在Windows界面下用来访问远端不同系统下的服务器
-                        </p>
-                        <p>功能强大，免费享用<br>Xshell和Xftp免费许可的性能在性能和特性集上是无与伦比的<br>管理个人服务器或在家提高您的管理技能。我们的免费授权您的任何个人非商业用途。<br>免费许可涵盖任何认证教育机构的学生、教师和员工。使用Xshell和Xftp进行教学、学习和管理。
-                        </p>
-                        <p>支持：</p>
-                        <pre><code>支持SSH1, SSH2, SFTP, TELNET, RLOGIN和串行协议
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <h3 id="Xshell-ssh-工具"><a href="#Xshell-ssh-工具" class="headerlink" title="Xshell   ssh 工具"></a>Xshell   ssh 工具</h3><p>Xshell是一个强大的安全终端模拟软件，它支持SSH1/SSH2以及Microsoft Windows平台的TELNET协议。<br>Xshell可以在Windows界面下用来访问远端不同系统下的服务器</p>
+<p>功能强大，免费享用<br>Xshell和Xftp免费许可的性能在性能和特性集上是无与伦比的<br>管理个人服务器或在家提高您的管理技能。我们的免费授权您的任何个人非商业用途。<br>免费许可涵盖任何认证教育机构的学生、教师和员工。使用Xshell和Xftp进行教学、学习和管理。</p>
+<p>支持：</p>
+<pre><code>支持SSH1, SSH2, SFTP, TELNET, RLOGIN和串行协议
 支持Windows Vista/7/8/10，服务器2008/2012/2016
 支持OpenSSH和ssh.com服务器
 支持在一个窗口中有多个选项卡
@@ -451,15 +519,11 @@ SSH / Telnet追踪
 可与Xagent程序互操作，用于代理身份验证和转发
 可与Xftp程序互操作文件传输
 在记事本中编辑滚动缓冲区
-通过菜单命令顺序选择Xshell窗口</code></pre>
-                        <h4 id="免费版本申请"><a href="#免费版本申请" class="headerlink" title="免费版本申请"></a>免费版本申请</h4>
-                        <p><a href="https://imgchr.com/i/BsvHr6" target="_blank" rel="noopener"><img
-                                src="https://s1.ax1x.com/2020/11/03/BsvHr6.jpg" alt="BsvHr6.jpg"></a></p>
-                        <p>有两个工具可以，免费使用 “Xshell” “Xftp” 可以都勾选。</p>
-                        <p><a href="https://www.netsarang.com/en/free-for-home-school/" target="_blank" rel="noopener">免费版本申请页面</a>
-                        </p>
-                        <p>特点：</p>
-                        <pre><code>会话管理器
+通过菜单命令顺序选择Xshell窗口</code></pre><h4 id="免费版本申请"><a href="#免费版本申请" class="headerlink" title="免费版本申请"></a>免费版本申请</h4><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BsvHr6"><img src="https://s1.ax1x.com/2020/11/03/BsvHr6.jpg" alt="BsvHr6.jpg"></a></p>
+<p>有两个工具可以，免费使用 “Xshell”  “Xftp” 可以都勾选。</p>
+<p><a target="_blank" rel="noopener" href="https://www.netsarang.com/en/free-for-home-school/">免费版本申请页面</a></p>
+<p>特点：</p>
+<pre><code>会话管理器     
 强调集    
 选项卡式的环境
 组成窗格
@@ -476,464 +540,550 @@ X11 转发
 预警功能
 脚本
 终端锁
-用户定义文本编辑器</code></pre>
-                        <p><a href="https://www.netsarang.com/zh/free-for-home-school/" target="_blank" rel="noopener">Xshell
-                            下载软件页面</a></p>
-                        <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3>
-                        <p>
-                            <img src="https://gd4.alicdn.com/imgextra/i2/2200652270622/O1CN01dxXGum1GSuylwcjrX_!!2200652270622.jpg"
-                                 alt="韩版宽松廓形大码棉服外套"></p>
-                        <p><a href="https://item.taobao.com/item.htm?id=629281929649" target="_blank" rel="noopener">查看购买上图商品</a>
-                            <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a
-                                    href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
-                        <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
-
-                        <div class='article_footer'>
-
-
-                            <section class="widget copyright  desktop mobile">
-                                <div class='content'>
-
-                                    <blockquote>
-
-
-                                        <p>本博客所有文章转载请注明出处！</p>
-
-
-                                        <p>本文永久链接是：<a href=http://lxeridium.github.io/posts/windows/tools/def4c97f.html>http://lxeridium.github.io/posts/windows/tools/def4c97f.html</a>
-                                        </p>
-
-
-                                    </blockquote>
-
-                                </div>
-                            </section>
-
-
-                            <section class="widget qrcode  desktop mobile">
-
-
-                                <div class='content article-entry'>
-
-
-                                    <div class='fancybox'><img
-                                            src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/qrcode/sy_wx.png'
-
-                                            height='150px'
-                                    ></div>
-
-
-                                    <div class='fancybox'><img
-                                            src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/qrcode/sy_zf.png'
-
-                                            height='150px'
-                                    ></div>
-
-
-                                </div>
-                            </section>
-
-
-                        </div>
-
-                    </div>
-
-
-                    <section class='meta' id="footer-meta">
-                        <div class='new-meta-box'>
-
-
-                            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-03T15:33:33+08:00">
-                                <a class='notlink'>
-                                    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-                                    <p>更新于：2020年11月3日</p>
-                                </a>
-                            </div>
-
-
-                            <div class="new-meta-item meta-tags"><a class="tag" href="/tags/windows/" rel="nofollow"><i
-                                    class="fas fa-hashtag fa-fw" aria-hidden="true"></i>
-                                <p>windows</p></a></div>
-
-
-                            <div class="new-meta-item share -mob-share-list">
-                                <div class="-mob-share-list share-body">
-
-
-                                    <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
-
-                                       href="http://connect.qq.com/widget/shareqq/index.html?url=http://lxeridium.github.io/posts/windows/tools/def4c97f.html&title=Xshell   ssh 工具的使用 - Syboot&summary="
-
-                                    >
-
-                                        <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/qq.png">
-
-                                    </a>
-
-
-                                    <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
-
-                                       href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://lxeridium.github.io/posts/windows/tools/def4c97f.html&title=Xshell   ssh 工具的使用 - Syboot&summary="
-
-                                    >
-
-                                        <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/qzone.png">
-
-                                    </a>
-
-
-                                    <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
-
-                                       href="http://service.weibo.com/share/share.php?url=http://lxeridium.github.io/posts/windows/tools/def4c97f.html&title=Xshell   ssh 工具的使用 - Syboot&summary="
-
-                                    >
-
-                                        <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/weibo.png">
-
-                                    </a>
-
-
-                                    <div class='hoverbox'>
-                                        <a><img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/wechat.png"></a>
-                                        <div class='target'>
-                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADAElEQVR42u3aQXIbQQgF0Ln/pZ194tTAp6UapNc723ILXm8o4Ppxfj0XAjBgwIABA2YNzBWefy68+dyp3//992oc1XzAgAEDBgwYMPtgygVQM9BqwN2E//f5aT5gwIABAwYMmL0w3cCnAVcTST/XzgcMGDBgwIAB83Uw00IwLQC7DwcGDBgwYMCAAXNqMJY2xKr3ggEDBgwYMGC+ByZtBHUhuo2n0w0tMGDAgAEDBsznwMQLww/9Oc4HDBgwYMCAAbMGZnq6Dae7wKb/N84HDBgwYMCAAbMGJi2Qug2mdDBXvfdU/GDAgAEDBgyYz4E5PUg73WiqAscdPDBgwIABAwbMY2HSi7uF16lFojTuch5gwIABAwYMmDUw0wWh6WLPqxpTaeMKDBgwYMCAAbMHZroI9K4GV1pQVsHAgAEDBgwYMHthpo2ieMDVLMjiBlRa4IEBAwYMGDBgHguTDqqqhWDaQJoO/OLCEwwYMGDAgAGzBiaF6BZi04Fd92HiBwUDBgwYMGDAfBxMuohzajHo1IPc5g0GDBgwYMCAWQ9TTWi6CJQ2xKYFKRgwYMCAAQNmP8x0gNZN4BRA9QHanwcDBgwYMGDArIE5/QWvCvxqnvRBwYABAwYMGDCfA3OF53Tip+67bZyBAQMGDBgwYNbApAFNF4C63999yHhwCAYMGDBgwIBZB9O9KC2gpg2tasEXLySBAQMGDBgwYNbCdAdp04Wf6YAsfdByowoMGDBgwIABsxYmHlwVE08LzSnk7eIQGDBgwIABA+bxMNPTLfxOJZgO5m7vBQMGDBgwYMCsgbnCMx2kpYVYd0Gp3WADAwYMGDBgwKyDOV3QnQr8VQVee+AGBgwYMGDAgHk8zLSAmhZ604dJC0EwYMCAAQMGzPfCVIFetfiT5nE7cAMDBgwYMGDAfA1MN6FuYXiqgfW2RhUYMGDAgAED5m0w3UZRN+G0MTV9oPKADgwYMGDAgAGzDubU4GrasOpCTRtdYMCAAQMGDJi9MA4YMGDAgAEDZtn5Awlz5Q5oEHK9AAAAAElFTkSuQmCC">
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </section>
-
-
-                    <div class="prev-next">
-
-                        <a class='prev' href='/posts/windows/tools/558a0679.html'>
-                            <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>SecureCRT ssh 工具的使用
-                            </p>
-                            <p class='content'>SecureCRT ssh
-                                工具适用于Windows，Mac和Linux的SecureCRT客户端为计算专业人士提供了坚如磐石的终端仿真，通过高级会话管理以及多种节省时间和简化重复任务的方式提...</p>
-                        </a>
-
-
-                        <a class='next' href='/posts/windows/tools/65bd21fb.html'>
-                            <p class='title'>mobaxterm ssh 工具的使用<i class="fas fa-chevron-right" aria-hidden="true"></i>
-                            </p>
-                            <p class='content'>MobaXterm ssh 工具MobaXterm X服务器和SSH客户端
-                                Key featuresEmbedded X server
-                                Fully configured Xserver base...</p>
-                        </a>
-
-                    </div>
-
-                </section>
-            </article>
-
-
-            <!-- 显示推荐文章和评论 -->
-
-
-            <!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
-
-
-            <script>
-                window.subData = {
-                    title: 'Xshell   ssh 工具的使用',
-                    tools: true
-                }
-            </script>
-
-
+用户定义文本编辑器</code></pre><p><a target="_blank" rel="noopener" href="https://www.netsarang.com/zh/free-for-home-school/">Xshell 下载软件页面</a></p>
+<h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd4.alicdn.com/imgextra/i2/2200652270622/O1CN01dxXGum1GSuylwcjrX_!!2200652270622.jpg" alt="韩版宽松廓形大码棉服外套"></p>
+<p><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?id=629281929649">查看购买上图商品</a> <a target="_blank" rel="noopener" href="https://shop252294542.taobao.com/">淘宝店铺</a> <a target="_blank" rel="noopener" href="http://www.lxeridium.com/">品牌官网</a></p>
+<pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
+          
+            <div class='article_footer'>
+              
+                
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>本博客所有文章转载请注明出处！</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=http://lxeridium.github.io/posts/windows/tools/def4c97f.html>http://lxeridium.github.io/posts/windows/tools/def4c97f.html</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/qrcode/sy_wx.png'
+        
+          height='150px'
+        ></div>
+      
+    
+      
+        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/qrcode/sy_zf.png'
+        
+          height='150px'
+        ></div>
+      
+    
+  </div>
+</section>
+
+  
+
+
+              
+            </div>
+          
         </div>
-        <aside class='l_side'>
+        
+          
 
 
-            <section class="widget toc-wrapper shadow desktop mobile">
-
-                <header>
-
-                    <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>directory</span>
-
-                </header>
-
-
-                <div class='content'>
-                    <ol class="toc">
-                        <li class="toc-item toc-level-3"><a class="toc-link" href="#Xshell-ssh-工具"><span
-                                class="toc-text">Xshell   ssh 工具</span></a>
-                            <ol class="toc-child">
-                                <li class="toc-item toc-level-4"><a class="toc-link" href="#免费版本申请"><span
-                                        class="toc-text">免费版本申请</span></a></li>
-                            </ol>
-                        </li>
-                        <li class="toc-item toc-level-3"><a class="toc-link" href="#赞助广告"><span
-                                class="toc-text">赞助广告</span></a></li>
-                    </ol>
-                </div>
-            </section>
-
-
-        </aside>
-
-
-        <footer class="clearfix">
-            <!--    <br><br>-->
-
-
-            <!--        <br>-->
-            <div class="social-wrapper">
-
-
-                <a href="/atom.xml"
-                   class="social fas fa-rss flat-btn"
-                   target="_blank"
-                   rel="external nofollow noopener noreferrer">
-                </a>
-
-
-                <a href="mailto:atgf0127@gmail.com"
-                   class="social fas fa-envelope flat-btn"
-                   target="_blank"
-                   rel="external nofollow noopener noreferrer">
-                </a>
-
-
-                <a href="https://github.com/lxeridium"
-                   class="social fab fa-github flat-btn"
-                   target="_blank"
-                   rel="external nofollow noopener noreferrer">
-                </a>
-
-
-            </div>
-
-
-            <div><p>本博客所有文章转载请注明出处！</p>
-            </div>
-            <!--
-
-                  -->
-            <!--        footer.use-->
-            <!--        <a href="/" target="_blank" class="codename">Syboot</a>-->
-            <!--        footer.theme-->
-            <!--          -->
-            <!--
-
-                  -->
-            <div class='copyright'>
-                <p><a href="https://lxeridium.github.io">Copyright © 2017-2020 lxeridium</a></p>
-
-            </div>
-
-
-        </footer>
-
-        <script>setLoadingBarProgress(80);</script>
-
-
-        <script>setLoadingBarProgress(60);</script>
-    </div>
-    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-03T15:33:33+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年11月3日</p>
+  </a>
 </div>
 
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/windows/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>windows</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lxeridium.github.io/posts/windows/tools/def4c97f.html&title=Xshell   ssh 工具的使用 - Syboot&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://lxeridium.github.io/posts/windows/tools/def4c97f.html&title=Xshell   ssh 工具的使用 - Syboot&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://lxeridium.github.io/posts/windows/tools/def4c97f.html&title=Xshell   ssh 工具的使用 - Syboot&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a><img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADAElEQVR42u3aQXIbQQgF0Ln/pZ194tTAp6UapNc723ILXm8o4Ppxfj0XAjBgwIABA2YNzBWefy68+dyp3//992oc1XzAgAEDBgwYMPtgygVQM9BqwN2E//f5aT5gwIABAwYMmL0w3cCnAVcTST/XzgcMGDBgwIAB83Uw00IwLQC7DwcGDBgwYMCAAXNqMJY2xKr3ggEDBgwYMGC+ByZtBHUhuo2n0w0tMGDAgAEDBsznwMQLww/9Oc4HDBgwYMCAAbMGZnq6Dae7wKb/N84HDBgwYMCAAbMGJi2Qug2mdDBXvfdU/GDAgAEDBgyYz4E5PUg73WiqAscdPDBgwIABAwbMY2HSi7uF16lFojTuch5gwIABAwYMmDUw0wWh6WLPqxpTaeMKDBgwYMCAAbMHZroI9K4GV1pQVsHAgAEDBgwYMHthpo2ieMDVLMjiBlRa4IEBAwYMGDBgHguTDqqqhWDaQJoO/OLCEwwYMGDAgAGzBiaF6BZi04Fd92HiBwUDBgwYMGDAfBxMuohzajHo1IPc5g0GDBgwYMCAWQ9TTWi6CJQ2xKYFKRgwYMCAAQNmP8x0gNZN4BRA9QHanwcDBgwYMGDArIE5/QWvCvxqnvRBwYABAwYMGDCfA3OF53Tip+67bZyBAQMGDBgwYNbApAFNF4C63999yHhwCAYMGDBgwIBZB9O9KC2gpg2tasEXLySBAQMGDBgwYNbCdAdp04Wf6YAsfdByowoMGDBgwIABsxYmHlwVE08LzSnk7eIQGDBgwIABA+bxMNPTLfxOJZgO5m7vBQMGDBgwYMCsgbnCMx2kpYVYd0Gp3WADAwYMGDBgwKyDOV3QnQr8VQVee+AGBgwYMGDAgHk8zLSAmhZ604dJC0EwYMCAAQMGzPfCVIFetfiT5nE7cAMDBgwYMGDAfA1MN6FuYXiqgfW2RhUYMGDAgAED5m0w3UZRN+G0MTV9oPKADgwYMGDAgAGzDubU4GrasOpCTRtdYMCAAQMGDJi9MA4YMGDAgAEDZtn5Awlz5Q5oEHK9AAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/posts/windows/tools/558a0679.html'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>SecureCRT  ssh 工具的使用</p>
+                <p class='content'>SecureCRT  ssh 工具适用于Windows，Mac和Linux的SecureCRT客户端为计算专业人士提供了坚如磐石的终端仿真，通过高级会话管理以及多种节省时间和简化重复任务的方式提...</p>
+              </a>
+            
+            
+              <a class='next' href='/posts/windows/tools/65bd21fb.html'>
+                <p class='title'>mobaxterm ssh 工具的使用<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>MobaXterm ssh 工具MobaXterm X服务器和SSH客户端
+Key featuresEmbedded X server
+Fully configured Xserver base...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'Xshell   ssh 工具的使用',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+  <section class="widget toc-wrapper shadow desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>directory</span>
+    
+  </header>
+
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Xshell-ssh-%E5%B7%A5%E5%85%B7"><span class="toc-text">Xshell   ssh 工具</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%8D%E8%B4%B9%E7%89%88%E6%9C%AC%E7%94%B3%E8%AF%B7"><span class="toc-text">免费版本申请</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%9E%E5%8A%A9%E5%B9%BF%E5%91%8A"><span class="toc-text">赞助广告</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix">
+<!--    <br><br>-->
+    
+      
+<!--        <br>-->
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="mailto:atgf0127@gmail.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/lxeridium"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>本博客所有文章转载请注明出处！</p>
+</div>
+<!--      
+    
+      -->
+<!--        footer.use-->
+<!--        <a href="/" target="_blank" class="codename">Syboot</a>-->
+<!--        footer.theme-->
+<!--          -->
+<!--      
+    
+      -->
+        <div class='copyright'>
+        <p><a href="https://lxeridium.github.io">Copyright © 2017-2020 lxeridium</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/jquery.min.js"></script>
 
 
-<script>
-
+  <script>
+    
     var SEARCH_SERVICE = "hexo" || "hexo";
     var ROOT = "/" || "/";
     if (!ROOT.endsWith('/')) ROOT += '/';
-</script>
+  </script>
 
 
-<script async src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/instant_page.js" type="module" defer
-        integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <script async src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 
 
-<script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/scrollreveal.min.js"></script>
-<script type="text/javascript">
-    $(function () {
-        ScrollReveal().reveal('.l_main .reveal', {
-            distance: '8px',
-            duration: '800',
-            interval: '100',
-            scale: '1'
-        });
+  <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      ScrollReveal().reveal('.l_main .reveal', {
+        distance: '8px',
+        duration: '800',
+        interval: '100',
+        scale: '1'
+      });
     });
-</script>
+  </script>
 
 
+  
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/waves.min.js"></script>
 
-<script type="text/javascript">
-    $(function () {
-        Waves.attach('.flat-btn', ['waves-button']);
-        Waves.attach('.float-btn', ['waves-button', 'waves-float']);
-        Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
-        Waves.attach('.flat-box', ['waves-block']);
-        Waves.attach('.float-box', ['waves-block', 'waves-float']);
-        Waves.attach('.waves-image');
-        Waves.init();
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
     });
-</script>
+  </script>
 
 
+
+
+  
+  
+  
+    
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/jquery.backstretch.min.js"></script>
 
-<script type="text/javascript">
-    $(function () {
-        var imgs = ["https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/aradfghj-ixwFncpyi-65.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/uihjgv-ixwFncpyi-5432.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/rtyuihj-ixwFncpyi-275.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/rtghhgy-ixwFncpyi-3523.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/iuhgr-ixwFncpyi-24487.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/ertfghj-ixwFncpyi-121.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/wszoihji-xwFncpyi-dfghtr-784.jpg"];
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/aradfghj-ixwFncpyi-65.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/uihjgv-ixwFncpyi-5432.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/rtyuihj-ixwFncpyi-275.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/rtghhgy-ixwFncpyi-3523.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/iuhgr-ixwFncpyi-24487.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/ertfghj-ixwFncpyi-121.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/wszoihji-xwFncpyi-dfghtr-784.jpg"];
         if ('true' == 'true') {
-            function shuffle(arr) {
-                /*From countercurrent-time*/
-                var n = arr.length;
-                while (n--) {
-                    var index = Math.floor(Math.random() * n);
-                    var temp = arr[index];
-                    arr[index] = arr[n];
-                    arr[n] = temp;
-                }
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
             }
-
-            shuffle(imgs);
+          }
+          shuffle(imgs);
         }
         if ('.cover') {
-            $('.cover').backstretch(
-                imgs,
-                {
-                    duration: "20000",
-                    fade: "1500"
-                });
+          $('.cover').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
         } else {
-            $.backstretch(
-                imgs,
-                {
-                    duration: "20000",
-                    fade: "1500"
-                });
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
         }
-    });
-</script>
+      });
+    </script>
+  
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 <script src="/js/app.js"></script>
 
 
+
+  
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/search.js"></script>
 
 
+
+  
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/comment_typing.js"></script>
+
+
+
+
 
 
 <!-- 复制 -->
 
-<script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/clipboard.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/clipboard.min.js"></script>
 <script>
-    function wait(callback, seconds) {
-        var timelag = null;
-        timelag = window.setTimeout(callback, seconds);
-    }
-
-    !function (e, t, a) {
-        var initCopyCode = function () {
-            var copyHtml = '';
-            copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-            copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
-            copyHtml += '</button>';
-            $(".highlight .code pre").before(copyHtml);
-            $(".article pre code").before(copyHtml);
-            var clipboard = new ClipboardJS('.btn-copy', {
-                target: function (trigger) {
-                    return trigger.nextElementSibling;
-                }
-            });
-            clipboard.on('success', function (e) {
-                let $btn = $(e.trigger);
-                $btn.addClass('copied');
-                let $icon = $($btn.find('i'));
-                $icon.removeClass('fa-copy');
-                $icon.addClass('fa-check-circle');
-                let $span = $($btn.find('span'));
-                $span[0].innerText = 'COPIED';
-
-                wait(function () { // 等待两秒钟后恢复
-                    $icon.removeClass('fa-check-circle');
-                    $icon.addClass('fa-copy');
-                    $span[0].innerText = 'COPY';
-                }, 2000);
-            });
-            clipboard.on('error', function (e) {
-                e.clearSelection();
-                let $btn = $(e.trigger);
-                $btn.addClass('copy-failed');
-                let $icon = $($btn.find('i'));
-                $icon.removeClass('fa-copy');
-                $icon.addClass('fa-times-circle');
-                let $span = $($btn.find('span'));
-                $span[0].innerText = 'COPY FAILED';
-
-                wait(function () { // 等待两秒钟后恢复
-                    $icon.removeClass('fa-times-circle');
-                    $icon.addClass('fa-copy');
-                    $span[0].innerText = 'COPY';
-                }, 2000);
-            });
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
         }
-        initCopyCode();
-    }(window, document);
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-check-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-check-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-times-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-times-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
 </script>
+
+
 
 
 <!-- fancybox -->
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/jquery.fancybox.min.js"></script>
 <script>
-    function pjax_fancybox() {
-        $(".article-entry").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
-            var element = document.createElement("a"); // a 标签
-            $(element).attr("pjax-fancybox", "");  // 过滤 pjax
-            $(element).attr("href", $(this).attr("src"));
-            if ($(this).attr("data-original")) {
-                $(element).attr("href", $(this).attr("data-original"));
-            }
-            $(element).attr("data-fancybox", "images");
-            var caption = "";   // 描述信息
-            if ($(this).attr('alt')) {  // 标准 markdown 描述信息
-                $(element).attr('data-caption', $(this).attr('alt'));
-                caption = $(this).attr('alt');
-            }
-            var div = document.createElement("div");
-            $(div).addClass("fancybox");
-            $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
-            var span = document.createElement("span");
-            $(span).addClass("image-caption");
-            $(span).text(caption); // 加描述
-            $(this).after(span);  // 再套一层描述
-            $(this).wrap(element);  // 最后套 a 标签
-        })
-        $(".article-entry").find("img").fancybox({
-            selector: '[data-fancybox="images"]',
-            hash: false,
-            loop: false,
-            closeClick: true,
-            helpers: {
-                overlay: {closeClick: true}
-            },
-            buttons: [
-                "zoom",
-                "close"
-            ]
-        });
-    };
-    $(function () {
-        pjax_fancybox();
+  function pjax_fancybox() {
+    $(".article-entry").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 标准 markdown 描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".article-entry").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
     });
+  };
+  $(function () {
+    pjax_fancybox();
+  });
 </script>
 
 
-<script>setLoadingBarProgress(100);</script>
+
+
+
+  <script>setLoadingBarProgress(100);</script>
 </body>
 </html>

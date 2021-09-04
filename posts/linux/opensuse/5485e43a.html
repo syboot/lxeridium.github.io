@@ -24,7 +24,7 @@
 
   <!-- feed -->
   
-    <link rel="alternate" href="/atom.xml" title="Syboot">
+    <link rel="alternate" href="/atom.xml" title="Syboot" type="application/atom+xml">
   
 
   <!-- import meta -->
@@ -81,7 +81,6 @@
 
   
   
-<link rel="alternate" href="/atom.xml" title="Syboot" type="application/atom+xml">
 </head>
 
 <body>
@@ -493,28 +492,28 @@
           <h2 id="安装-openSUSE-Tumbleweed"><a href="#安装-openSUSE-Tumbleweed" class="headerlink" title="安装 openSUSE  Tumbleweed"></a>安装 openSUSE  Tumbleweed</h2><h3 id="下载工具-和-系统"><a href="#下载工具-和-系统" class="headerlink" title="下载工具 和 系统"></a>下载工具 和 系统</h3><p>安装 openSUSE Tumbleweed 可以通过下载并执行安装媒体介质以从头开始安装或者从稳定发行版本升级安装。</p>
 <p>从下面下载最新的 Tumbleweed ISO 镜像，使用 ImageWriter 工具将它写入 DVD 或者 U 盘后，在重启要安装的设备开始安装从U盘或DVD开始安装。</p>
 <p>ISO 镜像——推荐使用它来进行安装或者升级</p>
-<p><a href="http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Current.iso" target="_blank" rel="noopener">DVD 安装镜像 - x86_64</a></p>
-<p><a href="http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-i586-Current.iso" target="_blank" rel="noopener">DVD 安装镜像 - i586</a>     </p>
+<p><a target="_blank" rel="noopener" href="http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Current.iso">DVD 安装镜像 - x86_64</a></p>
+<p><a target="_blank" rel="noopener" href="http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-i586-Current.iso">DVD 安装镜像 - i586</a>     </p>
 <h3 id="准备环境-和-制作-U盘"><a href="#准备环境-和-制作-U盘" class="headerlink" title="准备环境 和 制作 U盘"></a>准备环境 和 制作 U盘</h3><pre><code>ImageWriter 工具下载和安装，
     Install ImageWriter for openSUSE （win 版本链接在下边）
     # sudo zypper install imagewriter
 Tumbleweed 最新镜像下载备用
-用ImageWriter 工具将 Tumbleweed 最新镜像  写入到U盘中。</code></pre><p>U盘烧制工具：<br><a href="https://github.com/downloads/openSUSE/kiwi/ImageWriter.exe" target="_blank" rel="noopener">ImageWriter for windows 下载</a><br><a href="https://github.com/pbatard/rufus/releases/download/v3.12/rufus-3.12.exe" target="_blank" rel="noopener">Rufus for windows 下载</a></p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><a href="https://imgchr.com/i/BKL7Md" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKL7Md.jpg" alt="BKL7Md.jpg"></a></p>
-<pre><code>F2 选择语言 ， 在点击“安装” </code></pre><p><a href="https://imgchr.com/i/BKLOdP" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKLOdP.jpg" alt="BKLOdP.jpg"></a></p>
-<pre><code>左侧在列表 一个一个都对号了就可以了。</code></pre><p><a href="https://imgchr.com/i/BKOCss" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKOCss.jpg" alt="BKOCss.jpg"></a></p>
-<pre><code>如果联网了可以点击是，这样可以自动安装为最新的版本。</code></pre><p><a href="https://imgchr.com/i/BKOFZq" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKOFZq.jpg" alt="BKOFZq.jpg"></a></p>
-<pre><code>选择更新用的软件源，点击下一步。</code></pre><p><a href="https://imgchr.com/i/BKOZJU" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKOZJU.jpg" alt="BKOZJU.jpg"></a></p>
-<pre><code>喜欢那个桌面可以选择， 我是KDE，灵活方便自定义。</code></pre><p><a href="https://imgchr.com/i/BKOuQJ" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKOuQJ.jpg" alt="BKOuQJ.jpg"></a></p>
-<pre><code>要注意的就是这个Disk 分区部分， 个人件就用LVM 后期使用方便。  点击 ”引导性配置“  选择 ”LVM卷组模式“</code></pre><p><a href="https://imgchr.com/i/BKOKy9" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKOKy9.jpg" alt="BKOKy9.jpg"></a></p>
-<pre><code>LVM 上层的文件系统都选择 EXT4. 这个后期分区扩缩容方便。  装docker 不要选 btrfs,要不快照会有问题。</code></pre><p><a href="https://imgchr.com/i/BKOGFK" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKOGFK.jpg" alt="BKOGFK.jpg"></a></p>
-<pre><code>时区选择 ”北京时间 或 上海时间“， 图上选择的是上海。</code></pre><p><a href="https://imgchr.com/i/BKOYWD" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKOYWD.jpg" alt="BKOYWD.jpg"></a></p>
+用ImageWriter 工具将 Tumbleweed 最新镜像  写入到U盘中。</code></pre><p>U盘烧制工具：<br><a target="_blank" rel="noopener" href="https://github.com/downloads/openSUSE/kiwi/ImageWriter.exe">ImageWriter for windows 下载</a><br><a target="_blank" rel="noopener" href="https://github.com/pbatard/rufus/releases/download/v3.12/rufus-3.12.exe">Rufus for windows 下载</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKL7Md"><img src="https://s1.ax1x.com/2020/10/27/BKL7Md.jpg" alt="BKL7Md.jpg"></a></p>
+<pre><code>F2 选择语言 ， 在点击“安装” </code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKLOdP"><img src="https://s1.ax1x.com/2020/10/27/BKLOdP.jpg" alt="BKLOdP.jpg"></a></p>
+<pre><code>左侧在列表 一个一个都对号了就可以了。</code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKOCss"><img src="https://s1.ax1x.com/2020/10/27/BKOCss.jpg" alt="BKOCss.jpg"></a></p>
+<pre><code>如果联网了可以点击是，这样可以自动安装为最新的版本。</code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKOFZq"><img src="https://s1.ax1x.com/2020/10/27/BKOFZq.jpg" alt="BKOFZq.jpg"></a></p>
+<pre><code>选择更新用的软件源，点击下一步。</code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKOZJU"><img src="https://s1.ax1x.com/2020/10/27/BKOZJU.jpg" alt="BKOZJU.jpg"></a></p>
+<pre><code>喜欢那个桌面可以选择， 我是KDE，灵活方便自定义。</code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKOuQJ"><img src="https://s1.ax1x.com/2020/10/27/BKOuQJ.jpg" alt="BKOuQJ.jpg"></a></p>
+<pre><code>要注意的就是这个Disk 分区部分， 个人件就用LVM 后期使用方便。  点击 ”引导性配置“  选择 ”LVM卷组模式“</code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKOKy9"><img src="https://s1.ax1x.com/2020/10/27/BKOKy9.jpg" alt="BKOKy9.jpg"></a></p>
+<pre><code>LVM 上层的文件系统都选择 EXT4. 这个后期分区扩缩容方便。  装docker 不要选 btrfs,要不快照会有问题。</code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKOGFK"><img src="https://s1.ax1x.com/2020/10/27/BKOGFK.jpg" alt="BKOGFK.jpg"></a></p>
+<pre><code>时区选择 ”北京时间 或 上海时间“， 图上选择的是上海。</code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKOYWD"><img src="https://s1.ax1x.com/2020/10/27/BKOYWD.jpg" alt="BKOYWD.jpg"></a></p>
 <pre><code>安装过程中 创建一个 用户方便后期使用。
-安装配置阅览，这时可以看到安装配置列表中的全部配置，检查好没有问题就可以安装了。</code></pre><p><a href="https://imgchr.com/i/BKONSe" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKONSe.jpg" alt="BKONSe.jpg"></a><br><a href="https://imgchr.com/i/BMS6f0" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BMS6f0.jpg" alt="BMS6f0.jpg"></a></p>
+安装配置阅览，这时可以看到安装配置列表中的全部配置，检查好没有问题就可以安装了。</code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKONSe"><img src="https://s1.ax1x.com/2020/10/27/BKONSe.jpg" alt="BKONSe.jpg"></a><br><a target="_blank" rel="noopener" href="https://imgchr.com/i/BMS6f0"><img src="https://s1.ax1x.com/2020/10/27/BMS6f0.jpg" alt="BMS6f0.jpg"></a></p>
 <pre><code>开始安装中。。。。。。。</code></pre><p>Language 语言建议装2种。 一个中文，一个英文。 后期可以随时切换。</p>
 <p>老的本子装的就是这个系统+KDE5， 用了好久没有出过问题， 是老本子跑不动win 的那种。</p>
 <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd4.alicdn.com/imgextra/i3/2200652270622/O1CN01x5fKfj1GSuvBw6rjZ_!!2200652270622.jpg" alt="羊毛羊绒针织裤"></p>
-<p><a href="https://item.taobao.com/item.htm?id=606745032545" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
+<p><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?id=606745032545">查看购买上图商品</a> <a target="_blank" rel="noopener" href="https://shop252294542.taobao.com/">淘宝店铺</a> <a target="_blank" rel="noopener" href="http://www.lxeridium.com/">品牌官网</a></p>
 <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
           
             <div class='article_footer'>
@@ -630,9 +629,9 @@ Tumbleweed 最新镜像下载备用
   <div class="-mob-share-list share-body">
     
       
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=http://lxeridium.github.io/posts/linux/opensuse/5485e43a.html&title=openSUSE Tumbleweed install 安装 - Syboot&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lxeridium.github.io/posts/linux/opensuse/5485e43a.html&title=openSUSE Tumbleweed install 安装 - Syboot&summary="
           
           >
           
@@ -642,9 +641,9 @@ Tumbleweed 最新镜像下载备用
       
     
       
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://lxeridium.github.io/posts/linux/opensuse/5485e43a.html&title=openSUSE Tumbleweed install 安装 - Syboot&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://lxeridium.github.io/posts/linux/opensuse/5485e43a.html&title=openSUSE Tumbleweed install 安装 - Syboot&summary="
           
           >
           
@@ -654,9 +653,9 @@ Tumbleweed 最新镜像下载备用
       
     
       
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          href="http://service.weibo.com/share/share.php?url=http://lxeridium.github.io/posts/linux/opensuse/5485e43a.html&title=openSUSE Tumbleweed install 安装 - Syboot&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://lxeridium.github.io/posts/linux/opensuse/5485e43a.html&title=openSUSE Tumbleweed install 安装 - Syboot&summary="
           
           >
           
@@ -755,7 +754,7 @@ Downloading CentOS 8 ISO Installation Image下载Ce...</p>
 
 
     <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-openSUSE-Tumbleweed"><span class="toc-text">安装 openSUSE  Tumbleweed</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载工具-和-系统"><span class="toc-text">下载工具 和 系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#准备环境-和-制作-U盘"><span class="toc-text">准备环境 和 制作 U盘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#赞助广告"><span class="toc-text">赞助广告</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-openSUSE-Tumbleweed"><span class="toc-text">安装 openSUSE  Tumbleweed</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7-%E5%92%8C-%E7%B3%BB%E7%BB%9F"><span class="toc-text">下载工具 和 系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E7%8E%AF%E5%A2%83-%E5%92%8C-%E5%88%B6%E4%BD%9C-U%E7%9B%98"><span class="toc-text">准备环境 和 制作 U盘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%9E%E5%8A%A9%E5%B9%BF%E5%91%8A"><span class="toc-text">赞助广告</span></a></li></ol></li></ol>
     </div>
   </section>
 

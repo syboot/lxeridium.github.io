@@ -24,7 +24,7 @@
 
   <!-- feed -->
   
-    <link rel="alternate" href="/atom.xml" title="Syboot">
+    <link rel="alternate" href="/atom.xml" title="Syboot" type="application/atom+xml">
   
 
   <!-- import meta -->
@@ -81,7 +81,6 @@
 
   
   
-<link rel="alternate" href="/atom.xml" title="Syboot" type="application/atom+xml">
 </head>
 
 <body>
@@ -511,15 +510,12 @@
 
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
-
-        <h3 id="opensuse-yast2-使用"><a href="#opensuse-yast2-使用" class="headerlink" title="opensuse yast2 使用"></a>opensuse
-            yast2 使用</h3>
-        <p>YaST (Yet another Setup Tool，SUSE特制的强大设置工具) 是系统管理配置的核心工具。</p>
-        <p><a href="https://imgchr.com/i/BrO0Fs" target="_blank" rel="noopener"><img
-                src="https://s1.ax1x.com/2020/11/03/BrO0Fs.jpg" alt="BrO0Fs.jpg"></a></p>
-        <p>特点：</p>
-        <p>默认YaST模块<br>使用图形界面的各种强大的配置模块，Yast几乎可完成所有的系统任务，比如：</p>
-        <pre><code>安装和卸载软件（下章介绍）
+      
+        <h3 id="opensuse-yast2-使用"><a href="#opensuse-yast2-使用" class="headerlink" title="opensuse yast2 使用"></a>opensuse yast2 使用</h3><p>YaST (Yet another Setup Tool，SUSE特制的强大设置工具) 是系统管理配置的核心工具。</p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BrO0Fs"><img src="https://s1.ax1x.com/2020/11/03/BrO0Fs.jpg" alt="BrO0Fs.jpg"></a></p>
+<p>特点：</p>
+<p>默认YaST模块<br>使用图形界面的各种强大的配置模块，Yast几乎可完成所有的系统任务，比如：</p>
+<pre><code>安装和卸载软件（下章介绍）
 设置您的打印机
 配置防火墙
 开启和禁用系统服务
@@ -532,40 +528,20 @@
 网络设置
 用户和组管理（设置用户权限、添加删除用户）
 在线更新
-还有很多很多……</code></pre>
-        <p>附加YaST模块<br>除了默认安装的模块，还有很多其他的可用Yast模块（需要自己装，请阅读后面软件安装的章节）。默认未安装的一些著名的模块：（这些多是服务器用的）</p>
-        <pre><code>Apache网页服务器(包名：yast2-http-server)
+还有很多很多……</code></pre><p>附加YaST模块<br>除了默认安装的模块，还有很多其他的可用Yast模块（需要自己装，请阅读后面软件安装的章节）。默认未安装的一些著名的模块：（这些多是服务器用的）</p>
+<pre><code>Apache网页服务器(包名：yast2-http-server)
 SSH远程安全登录服务 (包名：yast2-sshd)
 FTP服务器(包名：yast2-ftp-server)
 NFS网络文件系统服务器 (包名：yast2-nfs-server)
-还有很多……</code></pre>
-        <h3 id="终端中的-YaST"><a href="#终端中的-YaST" class="headerlink" title="终端中的 YaST"></a>终端中的 YaST</h3>
-        <p>在终端中同样也可以使用 YaST（ncurses终端模式）—— 这对没有图形界面环境运行的服务很有用，比如用SSH远程登录或您的图形界面 环境坏掉了或压根没装图形界面。</p>
-        <figure class="highlight shell">
-            <table>
-                <tr>
-                    <td class="gutter">
-                        <pre><span class="line">1</span><br><span class="line">2</span><br></pre>
-                    </td>
-                    <td class="code">
-                        <pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span
-                                class="bash"> yast2</span></span><br></pre>
-                    </td>
-                </tr>
-            </table>
-        </figure>
+还有很多……</code></pre><h3 id="终端中的-YaST"><a href="#终端中的-YaST" class="headerlink" title="终端中的 YaST"></a>终端中的 YaST</h3><p>在终端中同样也可以使用 YaST（ncurses终端模式）—— 这对没有图形界面环境运行的服务很有用，比如用SSH远程登录或您的图形界面 环境坏掉了或压根没装图形界面。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> yast2</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-        <p><a href="https://imgchr.com/i/BrO1JI" target="_blank" rel="noopener"><img
-                src="https://s1.ax1x.com/2020/11/03/BrO1JI.jpg" alt="BrO1JI.jpg"></a></p>
-        <p>中文也支持的很好，在终端下可以配置 服务器的大多数功能。</p>
-        <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3>
-        <p><img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN0135F3Wl1GSuzGZ9E9r_!!2200652270622.jpg"
-                alt="秋冬新款小众设计师套头针织衫"></p>
-        <p><a href="https://item.taobao.com/item.htm?id=631021890672" target="_blank" rel="noopener">查看购买上图商品</a> <a
-                href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a
-                href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
-        <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
-
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BrO1JI"><img src="https://s1.ax1x.com/2020/11/03/BrO1JI.jpg" alt="BrO1JI.jpg"></a></p>
+<p>中文也支持的很好，在终端下可以配置 服务器的大多数功能。</p>
+<h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN0135F3Wl1GSuzGZ9E9r_!!2200652270622.jpg" alt="秋冬新款小众设计师套头针织衫"></p>
+<p><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?id=631021890672">查看购买上图商品</a> <a target="_blank" rel="noopener" href="https://shop252294542.taobao.com/">淘宝店铺</a> <a target="_blank" rel="noopener" href="http://www.lxeridium.com/">品牌官网</a></p>
+<pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
+      
     </div>
     
       
@@ -669,7 +645,7 @@ NetworkManager 1.26.4、
 openSSL 1.1.1h、
 KDE Plasma 5.20.1 
 cURL 7.73.0 等。。。。</code></pre><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i2/2200652270622/O1CN01A9LSoi1GSuyqYAlvI_!!2200652270622.jpg" alt="羊毛双面呢高腰小香风套装"></p>
-<p><a href="https://item.taobao.com/item.htm?id=629273346606" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
+<p><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?id=629273346606">查看购买上图商品</a> <a target="_blank" rel="noopener" href="https://shop252294542.taobao.com/">淘宝店铺</a> <a target="_blank" rel="noopener" href="http://www.lxeridium.com/">品牌官网</a></p>
 <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
       
     </div>
@@ -766,28 +742,28 @@ cURL 7.73.0 等。。。。</code></pre><h3 id="赞助广告"><a href="#赞助�
         <h2 id="安装-openSUSE-Tumbleweed"><a href="#安装-openSUSE-Tumbleweed" class="headerlink" title="安装 openSUSE  Tumbleweed"></a>安装 openSUSE  Tumbleweed</h2><h3 id="下载工具-和-系统"><a href="#下载工具-和-系统" class="headerlink" title="下载工具 和 系统"></a>下载工具 和 系统</h3><p>安装 openSUSE Tumbleweed 可以通过下载并执行安装媒体介质以从头开始安装或者从稳定发行版本升级安装。</p>
 <p>从下面下载最新的 Tumbleweed ISO 镜像，使用 ImageWriter 工具将它写入 DVD 或者 U 盘后，在重启要安装的设备开始安装从U盘或DVD开始安装。</p>
 <p>ISO 镜像——推荐使用它来进行安装或者升级</p>
-<p><a href="http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Current.iso" target="_blank" rel="noopener">DVD 安装镜像 - x86_64</a></p>
-<p><a href="http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-i586-Current.iso" target="_blank" rel="noopener">DVD 安装镜像 - i586</a>     </p>
+<p><a target="_blank" rel="noopener" href="http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Current.iso">DVD 安装镜像 - x86_64</a></p>
+<p><a target="_blank" rel="noopener" href="http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-i586-Current.iso">DVD 安装镜像 - i586</a>     </p>
 <h3 id="准备环境-和-制作-U盘"><a href="#准备环境-和-制作-U盘" class="headerlink" title="准备环境 和 制作 U盘"></a>准备环境 和 制作 U盘</h3><pre><code>ImageWriter 工具下载和安装，
     Install ImageWriter for openSUSE （win 版本链接在下边）
     # sudo zypper install imagewriter
 Tumbleweed 最新镜像下载备用
-用ImageWriter 工具将 Tumbleweed 最新镜像  写入到U盘中。</code></pre><p>U盘烧制工具：<br><a href="https://github.com/downloads/openSUSE/kiwi/ImageWriter.exe" target="_blank" rel="noopener">ImageWriter for windows 下载</a><br><a href="https://github.com/pbatard/rufus/releases/download/v3.12/rufus-3.12.exe" target="_blank" rel="noopener">Rufus for windows 下载</a></p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><a href="https://imgchr.com/i/BKL7Md" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKL7Md.jpg" alt="BKL7Md.jpg"></a></p>
-<pre><code>F2 选择语言 ， 在点击“安装” </code></pre><p><a href="https://imgchr.com/i/BKLOdP" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKLOdP.jpg" alt="BKLOdP.jpg"></a></p>
-<pre><code>左侧在列表 一个一个都对号了就可以了。</code></pre><p><a href="https://imgchr.com/i/BKOCss" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKOCss.jpg" alt="BKOCss.jpg"></a></p>
-<pre><code>如果联网了可以点击是，这样可以自动安装为最新的版本。</code></pre><p><a href="https://imgchr.com/i/BKOFZq" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKOFZq.jpg" alt="BKOFZq.jpg"></a></p>
-<pre><code>选择更新用的软件源，点击下一步。</code></pre><p><a href="https://imgchr.com/i/BKOZJU" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKOZJU.jpg" alt="BKOZJU.jpg"></a></p>
-<pre><code>喜欢那个桌面可以选择， 我是KDE，灵活方便自定义。</code></pre><p><a href="https://imgchr.com/i/BKOuQJ" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKOuQJ.jpg" alt="BKOuQJ.jpg"></a></p>
-<pre><code>要注意的就是这个Disk 分区部分， 个人件就用LVM 后期使用方便。  点击 ”引导性配置“  选择 ”LVM卷组模式“</code></pre><p><a href="https://imgchr.com/i/BKOKy9" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKOKy9.jpg" alt="BKOKy9.jpg"></a></p>
-<pre><code>LVM 上层的文件系统都选择 EXT4. 这个后期分区扩缩容方便。  装docker 不要选 btrfs,要不快照会有问题。</code></pre><p><a href="https://imgchr.com/i/BKOGFK" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKOGFK.jpg" alt="BKOGFK.jpg"></a></p>
-<pre><code>时区选择 ”北京时间 或 上海时间“， 图上选择的是上海。</code></pre><p><a href="https://imgchr.com/i/BKOYWD" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKOYWD.jpg" alt="BKOYWD.jpg"></a></p>
+用ImageWriter 工具将 Tumbleweed 最新镜像  写入到U盘中。</code></pre><p>U盘烧制工具：<br><a target="_blank" rel="noopener" href="https://github.com/downloads/openSUSE/kiwi/ImageWriter.exe">ImageWriter for windows 下载</a><br><a target="_blank" rel="noopener" href="https://github.com/pbatard/rufus/releases/download/v3.12/rufus-3.12.exe">Rufus for windows 下载</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKL7Md"><img src="https://s1.ax1x.com/2020/10/27/BKL7Md.jpg" alt="BKL7Md.jpg"></a></p>
+<pre><code>F2 选择语言 ， 在点击“安装” </code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKLOdP"><img src="https://s1.ax1x.com/2020/10/27/BKLOdP.jpg" alt="BKLOdP.jpg"></a></p>
+<pre><code>左侧在列表 一个一个都对号了就可以了。</code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKOCss"><img src="https://s1.ax1x.com/2020/10/27/BKOCss.jpg" alt="BKOCss.jpg"></a></p>
+<pre><code>如果联网了可以点击是，这样可以自动安装为最新的版本。</code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKOFZq"><img src="https://s1.ax1x.com/2020/10/27/BKOFZq.jpg" alt="BKOFZq.jpg"></a></p>
+<pre><code>选择更新用的软件源，点击下一步。</code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKOZJU"><img src="https://s1.ax1x.com/2020/10/27/BKOZJU.jpg" alt="BKOZJU.jpg"></a></p>
+<pre><code>喜欢那个桌面可以选择， 我是KDE，灵活方便自定义。</code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKOuQJ"><img src="https://s1.ax1x.com/2020/10/27/BKOuQJ.jpg" alt="BKOuQJ.jpg"></a></p>
+<pre><code>要注意的就是这个Disk 分区部分， 个人件就用LVM 后期使用方便。  点击 ”引导性配置“  选择 ”LVM卷组模式“</code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKOKy9"><img src="https://s1.ax1x.com/2020/10/27/BKOKy9.jpg" alt="BKOKy9.jpg"></a></p>
+<pre><code>LVM 上层的文件系统都选择 EXT4. 这个后期分区扩缩容方便。  装docker 不要选 btrfs,要不快照会有问题。</code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKOGFK"><img src="https://s1.ax1x.com/2020/10/27/BKOGFK.jpg" alt="BKOGFK.jpg"></a></p>
+<pre><code>时区选择 ”北京时间 或 上海时间“， 图上选择的是上海。</code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKOYWD"><img src="https://s1.ax1x.com/2020/10/27/BKOYWD.jpg" alt="BKOYWD.jpg"></a></p>
 <pre><code>安装过程中 创建一个 用户方便后期使用。
-安装配置阅览，这时可以看到安装配置列表中的全部配置，检查好没有问题就可以安装了。</code></pre><p><a href="https://imgchr.com/i/BKONSe" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BKONSe.jpg" alt="BKONSe.jpg"></a><br><a href="https://imgchr.com/i/BMS6f0" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/27/BMS6f0.jpg" alt="BMS6f0.jpg"></a></p>
+安装配置阅览，这时可以看到安装配置列表中的全部配置，检查好没有问题就可以安装了。</code></pre><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BKONSe"><img src="https://s1.ax1x.com/2020/10/27/BKONSe.jpg" alt="BKONSe.jpg"></a><br><a target="_blank" rel="noopener" href="https://imgchr.com/i/BMS6f0"><img src="https://s1.ax1x.com/2020/10/27/BMS6f0.jpg" alt="BMS6f0.jpg"></a></p>
 <pre><code>开始安装中。。。。。。。</code></pre><p>Language 语言建议装2种。 一个中文，一个英文。 后期可以随时切换。</p>
 <p>老的本子装的就是这个系统+KDE5， 用了好久没有出过问题， 是老本子跑不动win 的那种。</p>
 <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd4.alicdn.com/imgextra/i3/2200652270622/O1CN01x5fKfj1GSuvBw6rjZ_!!2200652270622.jpg" alt="羊毛羊绒针织裤"></p>
-<p><a href="https://item.taobao.com/item.htm?id=606745032545" target="_blank" rel="noopener">查看购买上图商品</a> <a href="https://shop252294542.taobao.com/" target="_blank" rel="noopener">淘宝店铺</a> <a href="http://www.lxeridium.com/" target="_blank" rel="noopener">品牌官网</a></p>
+<p><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?id=606745032545">查看购买上图商品</a> <a target="_blank" rel="noopener" href="https://shop252294542.taobao.com/">淘宝店铺</a> <a target="_blank" rel="noopener" href="http://www.lxeridium.com/">品牌官网</a></p>
 <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
       
     </div>
@@ -852,216 +828,166 @@ Tumbleweed 最新镜像下载备用
         
           
             <a href="https://github.com/lxeridium"
-               class="social fab fa-github flat-btn"
-               target="_blank"
-               rel="external nofollow noopener noreferrer">
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
             </a>
-
-
+          
+        
       </div>
-
+    
   </div>
 </section>
 
+  
 
-    <section class="widget category shadow desktop mobile">
+  
+    
+    
+  
 
-        <header>
-
-            <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>category</span></a>
-
-        </header>
-
-
-        <div class='content'>
-            <ul class="entry navigation">
-
-                <li><a class="flat-box"
-                       title="/categories/linux/" href="/categories/linux/"
-                       id="categorieslinux"
-                >
-                    <div class='name'>linux</div>
-                    <div class='badge'>(21)</div>
-                </a></li>
-
-                <li><a class="flat-box child"
-                       title="/categories/linux/centos/" href="/categories/linux/centos/"
-                       id="categorieslinuxcentos"
-                >
-                    <div class='name'>centos</div>
-                    <div class='badge'>(3)</div>
-                </a></li>
-
-                <li><a class="flat-box child"
-                       title="/categories/linux/cmd/" href="/categories/linux/cmd/"
-                       id="categorieslinuxcmd"
-                >
-                    <div class='name'>cmd</div>
-                    <div class='badge'>(5)</div>
-                </a></li>
-
-                <li><a class="flat-box child"
-                       title="/categories/linux/configure/" href="/categories/linux/configure/"
-                       id="categorieslinuxconfigure"
-                >
-                    <div class='name'>configure</div>
-                    <div class='badge'>(2)</div>
-                </a></li>
-
-                <li><a class="flat-box child"
-                       title="/categories/linux/opensuse/" href="/categories/linux/opensuse/"
-                       id="categorieslinuxopensuse"
-                >
-                    <div class='name'>opensuse</div>
-                    <div class='badge'>(3)</div>
-                </a></li>
-
-                <li><a class="flat-box child"
-                       title="/categories/linux/software/" href="/categories/linux/software/"
-                       id="categorieslinuxsoftware"
-                >
-                    <div class='name'>software</div>
-                    <div class='badge'>(5)</div>
-                </a></li>
-
-                <li><a class="flat-box child"
-                       title="/categories/linux/system/" href="/categories/linux/system/"
-                       id="categorieslinuxsystem"
-                >
-                    <div class='name'>system</div>
-                    <div class='badge'>(1)</div>
-                </a></li>
-
-                <li><a class="flat-box child"
-                       title="/categories/linux/ubuntu/" href="/categories/linux/ubuntu/"
-                       id="categorieslinuxubuntu"
-                >
-                    <div class='name'>ubuntu</div>
-                    <div class='badge'>(2)</div>
-                </a></li>
-
-                <li><a class="flat-box"
-                       title="/categories/linuxsoftware/" href="/categories/linuxsoftware/"
-                       id="categorieslinuxsoftware"
-                >
-                    <div class='name'>linuxsoftware</div>
-                    <div class='badge'>(3)</div>
-                </a></li>
-
-                <li><a class="flat-box child"
-                       title="/categories/linuxsoftware/LVM/" href="/categories/linuxsoftware/LVM/"
-                       id="categorieslinuxsoftwareLVM"
-                >
-                    <div class='name'>LVM</div>
-                    <div class='badge'>(1)</div>
-                </a></li>
-
-                <li><a class="flat-box child"
-                       title="/categories/linuxsoftware/ansible/" href="/categories/linuxsoftware/ansible/"
-                       id="categorieslinuxsoftwareansible"
-                >
-                    <div class='name'>ansible</div>
-                    <div class='badge'>(1)</div>
-                </a></li>
-
-                <li><a class="flat-box child"
-                       title="/categories/linuxsoftware/tomcat/" href="/categories/linuxsoftware/tomcat/"
-                       id="categorieslinuxsoftwaretomcat"
-                >
-                    <div class='name'>tomcat</div>
-                    <div class='badge'>(1)</div>
-                </a></li>
-
-                <li><a class="flat-box"
-                       title="/categories/systools/" href="/categories/systools/"
-                       id="categoriessystools"
-                >
-                    <div class='name'>systools</div>
-                    <div class='badge'>(4)</div>
-                </a></li>
-
-                <li><a class="flat-box child"
-                       title="/categories/systools/Docker-Desktop/" href="/categories/systools/Docker-Desktop/"
-                       id="categoriessystoolsDocker-Desktop"
-                >
-                    <div class='name'>Docker-Desktop</div>
-                    <div class='badge'>(1)</div>
-                </a></li>
-
-                <li><a class="flat-box child"
-                       title="/categories/systools/Proxmox-ve/" href="/categories/systools/Proxmox-ve/"
-                       id="categoriessystoolsProxmox-ve"
-                >
-                    <div class='name'>Proxmox-ve</div>
-                    <div class='badge'>(1)</div>
-                </a></li>
-
-                <li><a class="flat-box child"
-                       title="/categories/systools/VMware-player/" href="/categories/systools/VMware-player/"
-                       id="categoriessystoolsVMware-player"
-                >
-                    <div class='name'>VMware-player</div>
-                    <div class='badge'>(1)</div>
-                </a></li>
-
-                <li><a class="flat-box child"
-                       title="/categories/systools/virtualbox/" href="/categories/systools/virtualbox/"
-                       id="categoriessystoolsvirtualbox"
-                >
-                    <div class='name'>virtualbox</div>
-                    <div class='badge'>(1)</div>
-                </a></li>
-
-                <li><a class="flat-box"
-                       title="/categories/windows/" href="/categories/windows/"
-                       id="categorieswindows"
-                >
-                    <div class='name'>windows</div>
-                    <div class='badge'>(3)</div>
-                </a></li>
-
-                <li><a class="flat-box child"
-                       title="/categories/windows/tools/" href="/categories/windows/tools/"
-                       id="categorieswindowstools"
-                >
-                    <div class='name'>tools</div>
-                    <div class='badge'>(3)</div>
-                </a></li>
-
-            </ul>
-        </div>
-    </section>
+  <section class="widget category shadow desktop mobile">
+    
+  <header>
+    
+      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>category</span></a>
+    
+  </header>
 
 
-    <section class="widget tagcloud shadow desktop mobile">
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/linux/" href="/categories/linux/"
+            id="categorieslinux"
+            ><div class='name'>linux</div><div class='badge'>(21)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/linux/centos/" href="/categories/linux/centos/"
+            id="categorieslinuxcentos"
+            ><div class='name'>centos</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/linux/cmd/" href="/categories/linux/cmd/"
+            id="categorieslinuxcmd"
+            ><div class='name'>cmd</div><div class='badge'>(5)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/linux/configure/" href="/categories/linux/configure/"
+            id="categorieslinuxconfigure"
+            ><div class='name'>configure</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/linux/opensuse/" href="/categories/linux/opensuse/"
+            id="categorieslinuxopensuse"
+            ><div class='name'>opensuse</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/linux/software/" href="/categories/linux/software/"
+            id="categorieslinuxsoftware"
+            ><div class='name'>software</div><div class='badge'>(5)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/linux/system/" href="/categories/linux/system/"
+            id="categorieslinuxsystem"
+            ><div class='name'>system</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/linux/ubuntu/" href="/categories/linux/ubuntu/"
+            id="categorieslinuxubuntu"
+            ><div class='name'>ubuntu</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/linuxsoftware/" href="/categories/linuxsoftware/"
+            id="categorieslinuxsoftware"
+            ><div class='name'>linuxsoftware</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/linuxsoftware/AppImage/" href="/categories/linuxsoftware/AppImage/"
+            id="categorieslinuxsoftwareAppImage"
+            ><div class='name'>AppImage</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/linuxsoftware/LVM/" href="/categories/linuxsoftware/LVM/"
+            id="categorieslinuxsoftwareLVM"
+            ><div class='name'>LVM</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/linuxsoftware/ansible/" href="/categories/linuxsoftware/ansible/"
+            id="categorieslinuxsoftwareansible"
+            ><div class='name'>ansible</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/linuxsoftware/tomcat/" href="/categories/linuxsoftware/tomcat/"
+            id="categorieslinuxsoftwaretomcat"
+            ><div class='name'>tomcat</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/systools/" href="/categories/systools/"
+            id="categoriessystools"
+            ><div class='name'>systools</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/systools/Docker-Desktop/" href="/categories/systools/Docker-Desktop/"
+            id="categoriessystoolsDocker-Desktop"
+            ><div class='name'>Docker-Desktop</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/systools/Proxmox-ve/" href="/categories/systools/Proxmox-ve/"
+            id="categoriessystoolsProxmox-ve"
+            ><div class='name'>Proxmox-ve</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/systools/VMware-player/" href="/categories/systools/VMware-player/"
+            id="categoriessystoolsVMware-player"
+            ><div class='name'>VMware-player</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/systools/virtualbox/" href="/categories/systools/virtualbox/"
+            id="categoriessystoolsvirtualbox"
+            ><div class='name'>virtualbox</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/windows/" href="/categories/windows/"
+            id="categorieswindows"
+            ><div class='name'>windows</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/windows/tools/" href="/categories/windows/tools/"
+            id="categorieswindowstools"
+            ><div class='name'>tools</div><div class='badge'>(3)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
 
-        <header>
 
-            <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>tags</span></a>
+  
 
-        </header>
+  
+    
+    
+  
+
+  <section class="widget tagcloud shadow desktop mobile">
+    
+  <header>
+    
+      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>tags</span></a>
+    
+  </header>
 
 
-        <div class='content'>
-            <a href="/tags/Docker-Desktop/" style="font-size: 14px; color: #999">Docker-Desktop</a> <a href="/tags/LVM/"
-                                                                                                       style="font-size: 14px; color: #999">LVM</a>
-            <a href="/tags/Proxmox-ve/" style="font-size: 14px; color: #999">Proxmox-ve</a> <a
-                href="/tags/VMware-player/" style="font-size: 14px; color: #999">VMware-player</a> <a
-                href="/tags/ansible/" style="font-size: 14px; color: #999">ansible</a> <a href="/tags/centos/"
-                                                                                          style="font-size: 19px; color: #777">centos</a>
-            <a href="/tags/cmd/" style="font-size: 21.5px; color: #666">cmd</a> <a href="/tags/configure/"
-                                                                                   style="font-size: 16.5px; color: #888">configure</a>
-            <a href="/tags/linux/" style="font-size: 24px; color: #555">linux</a> <a href="/tags/opensuse/"
-                                                                                     style="font-size: 19px; color: #777">opensuse</a>
-            <a href="/tags/software/" style="font-size: 21.5px; color: #666">software</a> <a href="/tags/system/"
-                                                                                             style="font-size: 14px; color: #999">system</a>
-            <a href="/tags/tomcat/" style="font-size: 14px; color: #999">tomcat</a> <a href="/tags/ubuntu/"
-                                                                                       style="font-size: 16.5px; color: #888">ubuntu</a>
-            <a href="/tags/virtualbox/" style="font-size: 14px; color: #999">virtualbox</a> <a href="/tags/windows/"
-                                                                                               style="font-size: 19px; color: #777">windows</a>
-            <a href="/tags/yast2/" style="font-size: 14px; color: #999">yast2</a>
-        </div>
-    </section>
+    <div class='content'>
+      <a href="/tags/AppImage/" style="font-size: 14px; color: #999">AppImage</a> <a href="/tags/Docker-Desktop/" style="font-size: 14px; color: #999">Docker-Desktop</a> <a href="/tags/LVM/" style="font-size: 14px; color: #999">LVM</a> <a href="/tags/Proxmox-ve/" style="font-size: 14px; color: #999">Proxmox-ve</a> <a href="/tags/VMware-player/" style="font-size: 14px; color: #999">VMware-player</a> <a href="/tags/ansible/" style="font-size: 14px; color: #999">ansible</a> <a href="/tags/centos/" style="font-size: 19px; color: #777">centos</a> <a href="/tags/cmd/" style="font-size: 21.5px; color: #666">cmd</a> <a href="/tags/configure/" style="font-size: 16.5px; color: #888">configure</a> <a href="/tags/linux/" style="font-size: 24px; color: #555">linux</a> <a href="/tags/opensuse/" style="font-size: 19px; color: #777">opensuse</a> <a href="/tags/software/" style="font-size: 21.5px; color: #666">software</a> <a href="/tags/system/" style="font-size: 14px; color: #999">system</a> <a href="/tags/tomcat/" style="font-size: 14px; color: #999">tomcat</a> <a href="/tags/ubuntu/" style="font-size: 16.5px; color: #888">ubuntu</a> <a href="/tags/virtualbox/" style="font-size: 14px; color: #999">virtualbox</a> <a href="/tags/windows/" style="font-size: 19px; color: #777">windows</a> <a href="/tags/yast2/" style="font-size: 14px; color: #999">yast2</a>
+    </div>
+  </section>
+
+
+  
+
+  
 
 
 </aside>
