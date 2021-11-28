@@ -1,496 +1,534 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <!-- SEO相关 -->
-  
+    <meta charset="utf-8">
+    <!-- SEO相关 -->
     
-  
-  <!-- 渲染优化 -->
-  <meta name="renderer" content="webkit">
-  <meta name="force-rendering" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="HandheldFriendly" content="True" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+    
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- 页面元数据 -->
-  
-    <title>linux 常用命令 5-2讲 - Syboot</title>
-  
-    <meta name="keywords" content="linux,cmd">
-  
-  
+    <!-- 页面元数据 -->
+    
+    <title>
+        linux 常用命令 5-2讲 -
+        
+        Syboot</title>
+    
+        <meta name="keywords" content="linux,cmd">
+    
+    
 
-  <!-- feed -->
-  
-    <link rel="alternate" href="/atom.xml" title="Syboot" type="application/atom+xml">
-  
+    <!-- feed -->
+    
+        <link rel="alternate" href="/atom.xml" title="Syboot" type="application/atom+xml">
+    
 
-  <!-- import meta -->
-  
+    <!-- import meta -->
     
-      <meta name='theme-color' content='#FFFFFF'>
+        
+            <meta name='theme-color' content='#FFFFFF'>
+        
+            <meta name='msapplication-TileColor' content='#1BC3FB'>
+        
+            <meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/lxeridium/cdn/xml/browserconfig.xml'>
+        
     
-      <meta name='msapplication-TileColor' content='#1BC3FB'>
-    
-      <meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/lxeridium/cdn/xml/browserconfig.xml'>
-    
-  
 
-  <!-- link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lxeridium/cdn/css/all.min.css">
-  
+    <!-- link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lxeridium/cdn/css/all.min.css">
+    
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lxeridium/cdn/css/jquery.fancybox.min.css">
 
-  
-  
+
     
+        
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lxeridium/cdn/css/waves.min.css">
 
-  
-
-  
-
-  
-
-  
-
-  <!-- import link -->
-  
-  
-  <link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/favicon.ico'>
-  <link rel='icon' type='image/x-icon' sizes='32x32' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/favicon.png'>
-  <link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/apple-touch-icon.png'>
-  <link rel='mask-icon' color='#1BC3FB' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/safari-pinned-tab.svg'>
-  <link rel='manifest' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/site.webmanifest'>
-  
-
-  
-  
     
+
+    
+
+    
+
+    
+
+    <!-- import link -->
+    
+        
+            <link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/favicon.ico'>
+            <link rel='icon' type='image/x-icon' sizes='32x32' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/favicon.png'>
+            <link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/apple-touch-icon.png'>
+            <link rel='mask-icon' color='#1BC3FB' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/safari-pinned-tab.svg'>
+            <link rel='manifest' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/site.webmanifest'>
+    
+
+    
+    
+        
 <link rel="stylesheet" href="/css/style.css">
 
-  
+    
 
-  <script>
-    function setLoadingBarProgress(num) {
-      document.getElementById('loading-bar').style.width=num+"%";
-    }
-  </script>
+    <script>
+        function setLoadingBarProgress(num) {
+            document.getElementById('loading-bar').style.width = num + "%";
+        }
+    </script>
 
-  
-  
+    
+    
 </head>
 
 <body>
-  
-  <div class="cover-wrapper">
-    
-      <cover class='cover post half'>
-        <div class='cover-body'>
-  <div class='a'>
-    
-      <img class='logo' src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/syboot_logo.png'/>
-    
-    
-      <p class="title">syboot</p>
-    
-    
-      <p class="subtitle">分享Linux相关工具，书籍，文章，技术，以及日常使用的问题。感谢关注 @思鸢</p>
-    
-  </div>
-  <div class='b'>
-    
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="search ......" />
-          <i class="icon fas fa-search fa-fw"></i>
-        </form>
-      </div>
-    
-    <div class='menu navigation'>
-      <ul class='cover-list-h'>
+
+    <div class="cover-wrapper">
         
-          
-            <li>
-              <a class="nav home"
-                href="/docstarted/"
-                
-                
-                id="docstarted">
-                <i class='fas fa-book fa-fw'></i>
-              </a>
-            </li>
-          
-            <li>
-              <a class="nav home"
-                href="/archives/"
-                
-                
-                id="archives">
-                <i class='fas fa-rss fa-fw'></i>
-              </a>
-            </li>
-          
-            <li>
-              <a class="nav home"
-                href="/examples/"
-                
-                
-                id="examples">
-                <i class='fas fa-play-circle fa-fw'></i>
-              </a>
-            </li>
-          
+            <cover class='cover post half'>
+                <div class='cover-body'>
+    <div class='a'>
         
-      </ul>
+            <img class='logo' src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/syboot_logo.png'/>
+        
+        
+            <p class="title">syboot</p>
+        
+        
+            <p class="subtitle">分享网洛资源代找资源，工具，书籍，文章，技术，以及日常的问题。感谢关注 @syboot  +Vx syboot </p>
+        
     </div>
-  </div>
+    <div class='b'>
+        
+            <div class="m_search">
+                <form name="searchform" class="form u-search-form">
+                    <input type="text" class="input u-search-input"
+                           placeholder="search ......"/>
+                    <i class="icon fas fa-search fa-fw"></i>
+                </form>
+            </div>
+        
+        <div class='menu navigation'>
+            <ul class='cover-list-h'>
+                
+                    
+                        <li>
+                            <a class="nav home"
+                               href="/docstarted/"
+                            
+                            
+                               id="docstarted">
+                                <i class='fas fa-book fa-fw'></i>
+                                
+                                
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="nav home"
+                               href="/archives/"
+                            
+                            
+                               id="archives">
+                                <i class='fas fa-rss fa-fw'></i>
+                                
+                                
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="nav home"
+                               href="/examples/"
+                            
+                            
+                               id="examples">
+                                <i class='fas fa-play-circle fa-fw'></i>
+                                
+                                
+                            </a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
 </div>
 
-      </cover>
-    
-    <div id="loading-bar-wrapper">
-  <div id="loading-bar"></div>
+            </cover>
+        
+        <div id="loading-bar-wrapper">
+    <div id="loading-bar"></div>
 </div>
 <header class="l_header shadow floatable blur">
-  <div class='container'>
-  <div class='wrapper'>
-    <div class='nav-sub'>
-      <p class="title"></p>
-      <ul class='switcher nav-list-h'>
-        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
-        
-          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
-        
-      </ul>
+    <div class='container'>
+        <div class='wrapper'>
+            <div class='nav-sub'>
+                <p class="title"></p>
+                <ul class='switcher nav-list-h'>
+                    <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+                    
+                        <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+                    
+                </ul>
+            </div>
+            <div class="nav-main">
+                
+                    
+                    <a class="title flat-box" target="_self" href='/'>
+                        
+                        
+                        
+                        
+                            SYBOOT <b><sup
+                                        style='color:#3AA757'>’</sup></b>
+                        
+                    </a>
+                
+
+                <div class='menu navigation'>
+                    <ul class='nav-list-h'>
+                        
+                        
+                        
+                            
+                            
+                                <li>
+                                    <a class="flat-box" href=/
+                                    
+                                    
+                                    
+                                       id="home"
+                                            
+                                    >
+                                        
+                                        home
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                        
+                            
+                            
+                                <li>
+                                    <a class="flat-box" href=/categories/
+                                    
+                                    
+                                    
+                                       id="categories"
+                                            
+                                    >
+                                        
+                                        category
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                        
+                            
+                            
+                                <li>
+                                    <a class="flat-box" href=/tags/
+                                    
+                                    
+                                    
+                                       id="tags"
+                                            
+                                    >
+                                        
+                                        tags
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                        
+                            
+                            
+                                <li>
+                                    <a class="flat-box" href=/archives/
+                                    
+                                    
+                                    
+                                       id="archives"
+                                            
+                                    >
+                                        
+                                        archives
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                        
+                            
+                            
+                                <li>
+                                    <a class="flat-box" href=/friends/
+                                    
+                                    
+                                    
+                                       id="friends"
+                                            
+                                    >
+                                        
+                                        link
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                        
+                            
+                            
+                                <li>
+                                    <a class="flat-box" href=/about/
+                                    
+                                    
+                                    
+                                       id="about"
+                                            
+                                    >
+                                        
+                                        about
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                        
+                    </ul>
+                </div>
+
+                <div class="m_search">
+                    <form name="searchform" class="form u-search-form">
+                        <i class="icon fas fa-search fa-fw"></i>
+                        <input type="text" class="input u-search-input"
+                               placeholder="Search..."/>
+                    </form>
+                </div>
+
+                <ul class='switcher nav-list-h'>
+                    
+                        <li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+                    
+                    <li>
+                        <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+                        <ul class="menu-phone list-v navigation white-box">
+                            
+                                
+                            
+                                <li>
+                                    <a class="flat-box" href=/
+                                    
+                                    
+                                    
+                                       id="home"
+                                            
+                                    >
+                                        
+                                        home
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                            
+                                
+                            
+                                <li>
+                                    <a class="flat-box" href=/categories/
+                                    
+                                    
+                                    
+                                       id="categories"
+                                            
+                                    >
+                                        
+                                        category
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                            
+                                
+                            
+                                <li>
+                                    <a class="flat-box" href=/tags/
+                                    
+                                    
+                                    
+                                       id="tags"
+                                            
+                                    >
+                                        
+                                        tags
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                            
+                                
+                            
+                                <li>
+                                    <a class="flat-box" href=/archives/
+                                    
+                                    
+                                    
+                                       id="archives"
+                                            
+                                    >
+                                        
+                                        archives
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                            
+                                
+                            
+                                <li>
+                                    <a class="flat-box" href=/friends/
+                                    
+                                    
+                                    
+                                       id="friends"
+                                            
+                                    >
+                                        
+                                        link
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                            
+                                
+                            
+                                <li>
+                                    <a class="flat-box" href=/about/
+                                    
+                                    
+                                    
+                                       id="about"
+                                            
+                                    >
+                                        
+                                        about
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-		<div class="nav-main">
-      
-        
-        <a class="title flat-box" target="_self" href='/'>
-          
-          
-          
-          
-            SYBOOT <b><sup style='color:#3AA757'>’</sup></b>
-          
-        </a>
-      
-
-			<div class='menu navigation'>
-				<ul class='nav-list-h'>
-          
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/
-                  
-                  
-                  
-                    id="home"
-                  >
-                  home
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/categories/
-                  
-                  
-                  
-                    id="categories"
-                  >
-                  category
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/tags/
-                  
-                  
-                  
-                    id="tags"
-                  >
-                  tags
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/archives/
-                  
-                  
-                  
-                    id="archives"
-                  >
-                  archives
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/friends/
-                  
-                  
-                  
-                    id="friends"
-                  >
-                  link
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/about/
-                  
-                  
-                  
-                    id="about"
-                  >
-                  about
-                </a>
-                
-              </li>
-            
-          
-          
-				</ul>
-			</div>
-
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <i class="icon fas fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search..." />
-        </form>
-      </div>
-
-			<ul class='switcher nav-list-h'>
-				
-					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
-				
-				<li>
-          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
-          <ul class="menu-phone list-v navigation white-box">
-            
-              
-            
-              <li>
-                <a class="flat-box" href=/
-                  
-                  
-                  
-                    id="home"
-                  >
-                  home
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="flat-box" href=/categories/
-                  
-                  
-                  
-                    id="categories"
-                  >
-                  category
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="flat-box" href=/tags/
-                  
-                  
-                  
-                    id="tags"
-                  >
-                  tags
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="flat-box" href=/archives/
-                  
-                  
-                  
-                    id="archives"
-                  >
-                  archives
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="flat-box" href=/friends/
-                  
-                  
-                  
-                    id="friends"
-                  >
-                  link
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="flat-box" href=/about/
-                  
-                  
-                  
-                    id="about"
-                  >
-                  about
-                </a>
-                
-              </li>
-            
-          
-            
-          </ul>
-        </li>
-			</ul>
-		</div>
-	</div>
-  </div>
 </header>
 
 <script>setLoadingBarProgress(40);</script>
 
-  </div>
+    </div>
 
 
-  <div class="l_body">
+<div class="l_body">
     <div class='body-wrapper'>
-      
+        
 
 <div class='l_main'>
-  
-
-  
-    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
-      
-
-
-  <section class='meta'>
     
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h1 class="title">
-    <a href="/posts/linux/cmd/71557959.html">
-      linux 常用命令 5-2讲
-    </a>
-  </h1>
+
+    
+        <article id="post"
+                 class="post white-box reveal shadow article-type-post"
+                 itemscope itemprop="blogPost">
+            
 
 
+    <section class='meta'>
         
-        <div class='new-meta-box'>
-          
             
-          
             
-              
+            <div class="meta" id="header-meta">
+                
+                    
+    <h1 class="title">
+        <a href="/posts/linux/cmd/71557959.html">
+            linux 常用命令 5-2讲
+        </a>
+    </h1>
+
+
+                
+                <div class='new-meta-box'>
+                    
+                        
+                    
+                        
+                            
 <div class='new-meta-item author'>
-  <a href="http://lxeridium.github.io" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
-    <p>Syboot</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/linux/cmd/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>linux/cmd</p>
+    <a href="http://lxeridium.github.io" rel="nofollow">
+        <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
+        <p>Syboot</p>
     </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年5月27日</p>
-  </a>
 </div>
 
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
+                        
+                    
+                        
+                            
     
-  </section>
+    <div class='new-meta-item category'>
+        <a href='/categories/linux/cmd/' rel="nofollow">
+            <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+            <p>linux/cmd</p>
+        </a>
+    </div>
 
 
-      <section class="article typo">
-        <div class="article-entry" itemprop="articleBody">
-          
-          <h2 id="文件传输"><a href="#文件传输" class="headerlink" title="文件传输"></a>文件传输</h2><h3 id="Linux-tftp命令"><a href="#Linux-tftp命令" class="headerlink" title="Linux tftp命令"></a>Linux tftp命令</h3><p>Linux tftp命令用于传输文件。</p>
-<p>FTP让用户得以下载存放于远端主机的文件，也能将文件上传到远端主机放置。tftp是简单的文字模式ftp程序，它所使用的指令和FTP类似。<br>语法</p>
+                        
+                    
+                        
+                            <div class="new-meta-item date">
+    <a class='notlink'>
+        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+        <p>发布于：2020年5月27日</p>
+    </a>
+</div>
+
+                        
+                    
+                        
+                            
+
+                        
+                    
+                </div>
+                
+                    <hr>
+                
+            </div>
+        
+    </section>
+
+
+            <section class="article typo">
+                <div class="article-entry" itemprop="articleBody">
+                    
+                    <h2 id="文件传输"><a href="#文件传输" class="headerlink" title="文件传输"></a>文件传输</h2><h3 id="Linux-tftp命令"><a href="#Linux-tftp命令" class="headerlink" title="Linux tftp命令"></a>Linux tftp命令</h3><p>Linux tftp命令用于传输文件。</p>
+<p>FTP让用户得以下载存放于远端主机的文件，也能将文件上传到远端主机放置。tftp是简单的文字模式ftp程序，它所使用的指令和FTP类似。 语法</p>
 <p>tftp [主机名称或IP地址]</p>
 <p>操作说明：</p>
 <pre><code>connect：连接到远程tftp服务器
@@ -507,15 +545,15 @@ rexmt：设置包传输的超时时间
 timeout：设置重传的超时时间
 help：帮助信息
 ? ：帮助信息</code></pre><h3 id="Linux-ftp命令"><a href="#Linux-ftp命令" class="headerlink" title="Linux ftp命令"></a>Linux ftp命令</h3><p>Linux ftp命令设置文件系统相关功能。</p>
-<p>FTP是ARPANet的标准文件传输协议，该网络就是现今Internet的前身。<br>语法</p>
+<p>FTP是ARPANet的标准文件传输协议，该网络就是现今Internet的前身。 语法</p>
 <p>ftp [-dignv][主机名称或IP地址]</p>
 <p>参数：</p>
 <pre><code>-d 详细显示指令执行过程，便于排错或分析程序执行的情形。
 -i 关闭互动模式，不询问任何问题。
 -g 关闭本地主机文件名称支持特殊字符的扩充特性。
 -n 不使用自动登陆。
--v 显示指令执行过程。</code></pre><h2 id="磁盘管理"><a href="#磁盘管理" class="headerlink" title="磁盘管理"></a>磁盘管理</h2><h3 id="Linux-ls（英文全拼：list-files）"><a href="#Linux-ls（英文全拼：list-files）" class="headerlink" title="Linux ls（英文全拼：list files）"></a>Linux ls（英文全拼：list files）</h3><p>Linux ls 命令用于显示指定工作目录下之内容（列出目前工作目录所含之文件及子目录)。<br>语法</p>
-<p> ls [-alrtAFR] [name…]</p>
+-v 显示指令执行过程。</code></pre><h2 id="磁盘管理"><a href="#磁盘管理" class="headerlink" title="磁盘管理"></a>磁盘管理</h2><h3 id="Linux-ls（英文全拼：list-files）"><a href="#Linux-ls（英文全拼：list-files）" class="headerlink" title="Linux ls（英文全拼：list files）"></a>Linux ls（英文全拼：list files）</h3><p>Linux ls 命令用于显示指定工作目录下之内容（列出目前工作目录所含之文件及子目录)。 语法</p>
+<p>ls [-alrtAFR] [name…]</p>
 <p>参数 :</p>
 <pre><code>-a 显示所有文件及目录 (. 开头的隐藏文件不会列出)
 -l 除文件名称外，亦将文件型态、权限、拥有者、文件大小等资讯详细列出
@@ -525,10 +563,10 @@ help：帮助信息
 -F 在列出的文件名称后加一符号；例如可执行档则加 &quot;*&quot;, 目录则加 &quot;/&quot;
 -R 若目录下有文件，则以下之文件亦皆依序列出</code></pre><h3 id="Linux-cd（英文全拼：change-directory）"><a href="#Linux-cd（英文全拼：change-directory）" class="headerlink" title="Linux cd（英文全拼：change directory）"></a>Linux cd（英文全拼：change directory）</h3><p>Linux cd 命令用于切换当前工作目录。</p>
 <p>其中 dirName 表示法可为绝对路径或相对路径。若目录名称省略，则变换至使用者的 home 目录 (也就是刚 login 时所在的目录)。</p>
-<p>另外，~ 也表示为 home 目录 的意思， . 则是表示目前所在的目录， .. 则表示目前目录位置的上一层目录。<br>语法</p>
+<p>另外，~ 也表示为 home 目录 的意思， . 则是表示目前所在的目录， .. 则表示目前目录位置的上一层目录。 语法</p>
 <p>cd [dirName]</p>
-<pre><code>dirName：要切换的目标目录。</code></pre><h3 id="Linux-df（英文全拼：disk-free）"><a href="#Linux-df（英文全拼：disk-free）" class="headerlink" title="Linux df（英文全拼：disk free）"></a>Linux df（英文全拼：disk free）</h3><p> Linux df 命令用于显示目前在 Linux 系统上的文件系统磁盘使用情况统计。<br> 语法</p>
-<p> df [选项]… [FILE]…</p>
+<pre><code>dirName：要切换的目标目录。</code></pre><h3 id="Linux-df（英文全拼：disk-free）"><a href="#Linux-df（英文全拼：disk-free）" class="headerlink" title="Linux df（英文全拼：disk free）"></a>Linux df（英文全拼：disk free）</h3><p>Linux df 命令用于显示目前在 Linux 系统上的文件系统磁盘使用情况统计。 语法</p>
+<p>df [选项]… [FILE]…</p>
 <pre><code>文件-a, --all 包含所有的具有 0 Blocks 的文件系统
 文件--block-size=&#123;SIZE&#125; 使用 &#123;SIZE&#125; 大小的 Blocks
 文件-h, --human-readable 使用人类可读的格式(预设值是不加这个选项的...)
@@ -546,12 +584,12 @@ help：帮助信息
 文件-v (忽略)
 文件--help 显示这个帮手并且离开
 文件--version 输出版本资讯并且离开</code></pre><h3 id="Linux-pwd（英文全拼：print-work-directory）"><a href="#Linux-pwd（英文全拼：print-work-directory）" class="headerlink" title="Linux pwd（英文全拼：print work directory）"></a>Linux pwd（英文全拼：print work directory）</h3><p>Linux pwd 命令用于显示工作目录。</p>
-<p>执行 pwd 指令可立刻得知您目前所在的工作目录的绝对路径名称。<br>语法</p>
+<p>执行 pwd 指令可立刻得知您目前所在的工作目录的绝对路径名称。 语法</p>
 <p>pwd [–help][–version]</p>
 <p>参数说明:</p>
 <pre><code>--help 在线帮助。
 --version 显示版本信息。</code></pre><h3 id="Linux-tree命令"><a href="#Linux-tree命令" class="headerlink" title="Linux tree命令"></a>Linux tree命令</h3><p>Linux tree命令用于以树状图列出目录的内容。</p>
-<p>执行tree指令，它会列出指定目录下的所有文件，包括子目录里的文件。<br>语法</p>
+<p>执行tree指令，它会列出指定目录下的所有文件，包括子目录里的文件。 语法</p>
 <p>tree [-aACdDfFgilnNpqstux][-I &lt;范本样式&gt;][-P &lt;范本样式&gt;][目录…]</p>
 <p>参数说明：</p>
 <pre><code>-a 显示所有文件和目录。
@@ -573,9 +611,9 @@ help：帮助信息
 -s 列出文件或目录大小。
 -t 用文件和目录的更改时间排序。
 -u 列出文件或目录的拥有者名称，没有对应的名称时，则显示用户识别码。
--x 将范围局限在现行的文件系统中，若指定目录下的某些子目录，其存放于另一个文件系统上，则将该子目录予以排除在寻找范围外。</code></pre><h3 id="Linux-mount命令"><a href="#Linux-mount命令" class="headerlink" title="Linux mount命令"></a>Linux mount命令</h3><p> Linux mount命令是经常会使用到的命令，它用于挂载Linux系统外的文件。<br> 语法</p>
-<p> mount [-hV]<br> mount -a [-fFnrsvw] [-t vfstype]<br> mount [-fnrsvw] [-o options [,…]] device | dir<br> mount [-fnrsvw] [-t vfstype] [-o options] device dir</p>
-<p> 参数说明：</p>
+-x 将范围局限在现行的文件系统中，若指定目录下的某些子目录，其存放于另一个文件系统上，则将该子目录予以排除在寻找范围外。</code></pre><h3 id="Linux-mount命令"><a href="#Linux-mount命令" class="headerlink" title="Linux mount命令"></a>Linux mount命令</h3><p>Linux mount命令是经常会使用到的命令，它用于挂载Linux系统外的文件。 语法</p>
+<p>mount [-hV]<br>mount -a [-fFnrsvw] [-t vfstype]<br>mount [-fnrsvw] [-o options [,…]] device | dir mount [-fnrsvw] [-t vfstype] [-o options] device dir</p>
+<p>参数说明：</p>
 <pre><code>-V：显示程序版本
 -h：显示辅助讯息
 -v：显示较讯息，通常和 -f 用来除错。
@@ -600,219 +638,225 @@ help：帮助信息
 -o remount：将一个已经挂下的档案系统重新用不同的方式挂上。例如原先是唯读的系统，现在用可读写的模式重新挂上。
 -o ro：用唯读模式挂上。
 -o rw：用可读写模式挂上。
--o loop=：使用 loop 模式用来将一个档案当成硬盘分割挂上系统。</code></pre><h3 id="Linux-mkdir（英文全拼：make-directory）"><a href="#Linux-mkdir（英文全拼：make-directory）" class="headerlink" title="Linux mkdir（英文全拼：make directory）"></a>Linux mkdir（英文全拼：make directory）</h3><p>Linux mkdir 命令用于创建目录。<br>语法</p>
+-o loop=：使用 loop 模式用来将一个档案当成硬盘分割挂上系统。</code></pre><h3 id="Linux-mkdir（英文全拼：make-directory）"><a href="#Linux-mkdir（英文全拼：make-directory）" class="headerlink" title="Linux mkdir（英文全拼：make directory）"></a>Linux mkdir（英文全拼：make directory）</h3><p>Linux mkdir 命令用于创建目录。 语法</p>
 <p>mkdir [-p] dirName</p>
 <p>参数说明：</p>
-<pre><code>-p 确保目录名称存在，不存在的就建一个。</code></pre><h3 id="Linux-rmdir（英文全拼：remove-directory）"><a href="#Linux-rmdir（英文全拼：remove-directory）" class="headerlink" title="Linux rmdir（英文全拼：remove directory）"></a>Linux rmdir（英文全拼：remove directory）</h3><p>Linux rmdir 命令删除空的目录。<br>语法</p>
+<pre><code>-p 确保目录名称存在，不存在的就建一个。</code></pre><h3 id="Linux-rmdir（英文全拼：remove-directory）"><a href="#Linux-rmdir（英文全拼：remove-directory）" class="headerlink" title="Linux rmdir（英文全拼：remove directory）"></a>Linux rmdir（英文全拼：remove directory）</h3><p>Linux rmdir 命令删除空的目录。 语法</p>
 <p>rmdir [-p] dirName</p>
 <p>参数：</p>
 <pre><code>-p 是当子目录被删除后使它也成为空目录的话，则顺便一并删除。</code></pre><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i3/2200652270622/O1CN01LJ6A1s1GSuwym6en3_!!2200652270622.jpg" alt="秋冬款高档小香风珍珠针织二件套装"></p>
 <p><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?id=617158065194">查看购买上图商品</a> <a target="_blank" rel="noopener" href="https://shop252294542.taobao.com/">淘宝店铺</a> <a target="_blank" rel="noopener" href="http://www.lxeridium.com/">品牌官网</a></p>
 <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
-          
-            <div class='article_footer'>
-              
-                
-  
+                    
+                        <div class='article_footer'>
+                            
+                                
     
-    
+        
+        
 
 
 
-  
-
-  
-    
     
 
-
-
-  
-
-  
     
+        
+        
+
+
+
     
+
+    
+        
+        
 
 <section class="widget copyright  desktop mobile">
-  <div class='content'>
-    
-      <blockquote>
+    <div class='content'>
         
-          
-            <p>本博客所有文章转载请注明出处！</p>
+            <blockquote>
+                
+                    
+                        <p>本博客所有文章转载请注明出处！</p>
 
-          
+                    
+                
+                    
+                        <p>本文永久链接是：<a href=http://lxeridium.github.io/posts/linux/cmd/71557959.html>http://lxeridium.github.io/posts/linux/cmd/71557959.html</a></p>
+                    
+                
+            </blockquote>
         
-          
-            <p>本文永久链接是：<a href=http://lxeridium.github.io/posts/linux/cmd/71557959.html>http://lxeridium.github.io/posts/linux/cmd/71557959.html</a></p>
-          
-        
-      </blockquote>
-    
-  </div>
+    </div>
 </section>
 
-  
+    
 
-  
     
-    
+        
+        
 
 <section class="widget qrcode  desktop mobile">
-  
+    
 
-  <div class='content article-entry'>
-    
-      
-        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/qrcode/sy_wx.png'
+    <div class='content article-entry'>
         
-          height='150px'
-        ></div>
-      
-    
-      
-        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/qrcode/sy_zf.png'
+            
+                <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/qrcode/sy_wx.png'
+                    
+                                           height='150px'
+                            
+                    ></div>
+            
         
-          height='150px'
-        ></div>
-      
-    
-  </div>
+            
+                <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/qrcode/sy_zf.png'
+                    
+                                           height='150px'
+                            
+                    ></div>
+            
+        
+    </div>
 </section>
 
-  
+    
 
 
-              
-            </div>
-          
-        </div>
-        
-          
+                            
+                        </div>
+                    
+                </div>
+                
+                    
 
 
-  <section class='meta' id="footer-meta">
-    <div class='new-meta-box'>
-      
-        
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-23T14:44:33+08:00">
-  <a class='notlink'>
-    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年10月23日</p>
-  </a>
+    <section class='meta' id="footer-meta">
+        <div class='new-meta-box'>
+            
+                
+                    <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-09-05T22:09:24+08:00">
+    <a class='notlink'>
+        <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+        <p>更新于：2021年9月5日</p>
+    </a>
 </div>
 
-        
-      
-        
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/linux/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>linux</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/cmd/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>cmd</p></a></div>
-
-
-        
-      
-        
-          
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
+                
+            
+                
+                    
     
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lxeridium.github.io/posts/linux/cmd/71557959.html&title=linux 常用命令 5-2讲 - Syboot&summary="
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://lxeridium.github.io/posts/linux/cmd/71557959.html&title=linux 常用命令 5-2讲 - Syboot&summary="
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://lxeridium.github.io/posts/linux/cmd/71557959.html&title=linux 常用命令 5-2讲 - Syboot&summary="
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/weibo.png">
-          
-        </a>
-      
-    
-      
+    <div class="new-meta-item meta-tags"><a class="tag" href="/tags/linux/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>linux</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/cmd/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>cmd</p></a></div>
+
+
+                
+            
+                
+                    
+
+                
+            
+                
+                    
+    <div class="new-meta-item share -mob-share-list">
+    <div class="-mob-share-list share-body">
         
-        <div class='hoverbox'>
-          <a><img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADAklEQVR42u3aUVLDMAwE0N7/0nABOtFKTkDl+Y/SuNHzj0br15f143ohAAMGDBgwYNbAvJrr7cbh89XP3/2/+/tv9wUDBgwYMGDArIMpN0DF71cLTQuu/k63HjBgwIABAwbMXpj0xdPvdQtLG8x2PWDAgAEDBgyYfwtzVUAXtt2wgQEDBgwYMGDAFBuyLlC1oTt1cGDAgAEDBgyYz4O5q4Gqfn466Pu1JBIMGDBgwIAB8xhMutKG7+m/2/WAAQMGDBgwYNbATNd0cJTumzaGcT1gwIABAwYMmDUw3QapGpCdCvJON3hgwIABAwYMmP0w0wCs2qjdNWiqBm7xxSEwYMCAAQMGzFqYaeDWLaB7EKcGZWDAgAEDBgyYPTDVDdPCrvZNB1HV/aaDKzBgwIABAwbMPpjpi6WA6T6ngrfLgwMDBgwYMGDAfBzMV7imF4jSRu3UwAoMGDBgwIABswcmBegGcd1ALQ3wusEcGDBgwIABA2YfzPSizTRoq4JWC08PEAwYMGDAgAGzFya90JO+WLfguwZWl+8JBgwYMGDAgFkDkxbcLSi94JMOwo4FcWDAgAEDBgyYNTB3FT4NvtKCp40mGDBgwIABA+bzYKqDpulFpFMH1W0gwYABAwYMGDD7YaoDoe4AanrRaBoUXh4AGDBgwIABA2YNTLcRO3UxaAqZDqIu6wIDBgwYMGDArIVJA6wu3F0Q4yAQDBgwYMCAAbMeJm3Ius+fGnilgV08qAIDBgwYMGDArIOpft4NwroDpupBpA0rGDBgwIABA2YPzHSduriTFtgu/GpfMGDAgAEDBswamFdzpQV2B09xYWHQdzmoAgMGDBgwYMD8eZi0obtr0HXXQVXrBQMGDBgwYMDshZk2UKcCtHIhTcC4wQMDBgwYMGDAfDzMXQFb9bnuwAwMGDBgwIAB839h0oHRqUFY930eG1SBAQMGDBgwYB6DSV+8eyFoCnZqYAUGDBgwYMCA2Q8zDa5OB3RPDarAgAEDBgwYMHthLDBgwIABAwbMsvUNofRncKUwdiUAAAAASUVORK5CYII=">
-          </div>
-        </div>
-      
-    
-  </div>
-</div>
-
-
-
+            
+                <a class="-mob-share-qq" title=""
+                   rel="external nofollow noopener noreferrer noopener"
+                
+                   target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lxeridium.github.io/posts/linux/cmd/71557959.html&title=linux 常用命令 5-2讲 - Syboot&summary="
+                
+                >
+                    
+                        <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/qq.png">
+                    
+                </a>
+            
         
-      
+            
+                <a class="-mob-share-qzone" title=""
+                   rel="external nofollow noopener noreferrer noopener"
+                
+                   target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://lxeridium.github.io/posts/linux/cmd/71557959.html&title=linux 常用命令 5-2讲 - Syboot&summary="
+                
+                >
+                    
+                        <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/qzone.png">
+                    
+                </a>
+            
+        
+            
+                <a class="-mob-share-weibo" title=""
+                   rel="external nofollow noopener noreferrer noopener"
+                
+                   target="_blank" href="http://service.weibo.com/share/share.php?url=http://lxeridium.github.io/posts/linux/cmd/71557959.html&title=linux 常用命令 5-2讲 - Syboot&summary="
+                
+                >
+                    
+                        <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/weibo.png">
+                    
+                </a>
+            
+        
+            
+                
+                <div class='hoverbox'>
+                    <a><img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/wechat.png"></a>
+                    <div class='target'>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADAklEQVR42u3aUVLDMAwE0N7/0nABOtFKTkDl+Y/SuNHzj0br15f143ohAAMGDBgwYNbAvJrr7cbh89XP3/2/+/tv9wUDBgwYMGDArIMpN0DF71cLTQuu/k63HjBgwIABAwbMXpj0xdPvdQtLG8x2PWDAgAEDBgyYfwtzVUAXtt2wgQEDBgwYMGDAFBuyLlC1oTt1cGDAgAEDBgyYz4O5q4Gqfn466Pu1JBIMGDBgwIAB8xhMutKG7+m/2/WAAQMGDBgwYNbATNd0cJTumzaGcT1gwIABAwYMmDUw3QapGpCdCvJON3hgwIABAwYMmP0w0wCs2qjdNWiqBm7xxSEwYMCAAQMGzFqYaeDWLaB7EKcGZWDAgAEDBgyYPTDVDdPCrvZNB1HV/aaDKzBgwIABAwbMPpjpi6WA6T6ngrfLgwMDBgwYMGDAfBzMV7imF4jSRu3UwAoMGDBgwIABswcmBegGcd1ALQ3wusEcGDBgwIABA2YfzPSizTRoq4JWC08PEAwYMGDAgAGzFya90JO+WLfguwZWl+8JBgwYMGDAgFkDkxbcLSi94JMOwo4FcWDAgAEDBgyYNTB3FT4NvtKCp40mGDBgwIABA+bzYKqDpulFpFMH1W0gwYABAwYMGDD7YaoDoe4AanrRaBoUXh4AGDBgwIABA2YNTLcRO3UxaAqZDqIu6wIDBgwYMGDArIVJA6wu3F0Q4yAQDBgwYMCAAbMeJm3Ius+fGnilgV08qAIDBgwYMGDArIOpft4NwroDpupBpA0rGDBgwIABA2YPzHSduriTFtgu/GpfMGDAgAEDBswamFdzpQV2B09xYWHQdzmoAgMGDBgwYMD8eZi0obtr0HXXQVXrBQMGDBgwYMDshZk2UKcCtHIhTcC4wQMDBgwYMGDAfDzMXQFb9bnuwAwMGDBgwIAB839h0oHRqUFY930eG1SBAQMGDBgwYB6DSV+8eyFoCnZqYAUGDBgwYMCA2Q8zDa5OB3RPDarAgAEDBgwYMHthLDBgwIABAwbMsvUNofRncKUwdiUAAAAASUVORK5CYII=">
+                    </div>
+                </div>
+            
+        
     </div>
-  </section>
+</div>
 
 
-        
-        
-          <div class="prev-next">
+
+                
             
-              <a class='prev' href='/posts/linux/cmd/c9e91e3c.html'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>linux 常用命令 5-3讲</p>
-                <p class='content'>磁盘维护Linux sync命令Linux sync命令用于数据同步,sync命令是在关闭Linux系统时使用的。
+        </div>
+    </section>
+
+
+                
+                
+                    <div class="prev-next">
+                        
+                            <a class='prev' href='/posts/linux/cmd/c9e91e3c.html'>
+                                <p class='title'><i class="fas fa-chevron-left"
+                                                    aria-hidden="true"></i>linux 常用命令 5-3讲</p>
+                                <p class='content'>磁盘维护Linux sync命令Linux sync命令用于数据同步,sync命令是在关闭Linux系统时使用的。
 Linux 系统中欲写入硬盘的资料有的时候为了效率起见，会写到 filesys...</p>
-              </a>
-            
-            
-              <a class='next' href='/posts/linux/cmd/63e0d6b7.html'>
-                <p class='title'>linux 常用命令 5-1讲<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                <p class='content'>文件管理类cat（英文全拼：concatenate）cat命令用于连接文件并打印到标准输出设备上。
+                            </a>
+                        
+                        
+                            <a class='next' href='/posts/linux/cmd/63e0d6b7.html'>
+                                <p class='title'>linux 常用命令 5-1讲<i class="fas fa-chevron-right"
+                                                                                aria-hidden="true"></i></p>
+                                <p class='content'>文件管理类cat（英文全拼：concatenate）cat命令用于连接文件并打印到标准输出设备上。
 语法格式
 cat [-AbeEnstTuv] [–help] [–version] fileN...</p>
-              </a>
-            
-          </div>
-        
-      </section>
-    </article>
-  
+                            </a>
+                        
+                    </div>
+                
+            </section>
+        </article>
+    
 
-  
-    <!-- 显示推荐文章和评论 -->
-
-
-
-  
+    
+        <!-- 显示推荐文章和评论 -->
 
 
-  
 
+    
+
+
+    
 
 
 
@@ -820,194 +864,197 @@ cat [-AbeEnstTuv] [–help] [–version] fileN...</p>
 
 
 
-  <script>
-    window.subData = {
-      title: 'linux 常用命令 5-2讲',
-      tools: true
-    }
-  </script>
+    <script>
+        window.subData = {
+            title: 'linux 常用命令 5-2讲',
+            tools: true
+        }
+    </script>
 
 
 </div>
 <aside class='l_side'>
-  
-  
-
-  
     
     
 
-
-  <section class="widget toc-wrapper shadow desktop mobile">
     
-  <header>
+        
+        
+
+
+    <section class="widget toc-wrapper shadow desktop mobile">
+        
+    <header>
+        
+            <i class="fas fa-list fa-fw" aria-hidden="true"></i><span
+                    class='name'>directory</span>
+        
+    </header>
+
+
+        <div class='content'>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93"><span class="toc-text">文件传输</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-tftp%E5%91%BD%E4%BB%A4"><span class="toc-text">Linux tftp命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-ftp%E5%91%BD%E4%BB%A4"><span class="toc-text">Linux ftp命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86"><span class="toc-text">磁盘管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-ls%EF%BC%88%E8%8B%B1%E6%96%87%E5%85%A8%E6%8B%BC%EF%BC%9Alist-files%EF%BC%89"><span class="toc-text">Linux ls（英文全拼：list files）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-cd%EF%BC%88%E8%8B%B1%E6%96%87%E5%85%A8%E6%8B%BC%EF%BC%9Achange-directory%EF%BC%89"><span class="toc-text">Linux cd（英文全拼：change directory）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-df%EF%BC%88%E8%8B%B1%E6%96%87%E5%85%A8%E6%8B%BC%EF%BC%9Adisk-free%EF%BC%89"><span class="toc-text">Linux df（英文全拼：disk free）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-pwd%EF%BC%88%E8%8B%B1%E6%96%87%E5%85%A8%E6%8B%BC%EF%BC%9Aprint-work-directory%EF%BC%89"><span class="toc-text">Linux pwd（英文全拼：print work directory）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-tree%E5%91%BD%E4%BB%A4"><span class="toc-text">Linux tree命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-mount%E5%91%BD%E4%BB%A4"><span class="toc-text">Linux mount命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-mkdir%EF%BC%88%E8%8B%B1%E6%96%87%E5%85%A8%E6%8B%BC%EF%BC%9Amake-directory%EF%BC%89"><span class="toc-text">Linux mkdir（英文全拼：make directory）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-rmdir%EF%BC%88%E8%8B%B1%E6%96%87%E5%85%A8%E6%8B%BC%EF%BC%9Aremove-directory%EF%BC%89"><span class="toc-text">Linux rmdir（英文全拼：remove directory）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%9E%E5%8A%A9%E5%B9%BF%E5%91%8A"><span class="toc-text">赞助广告</span></a></li></ol></li></ol>
+        </div>
+    </section>
+
+
     
-      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>directory</span>
-    
-  </header>
-
-
-    <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93"><span class="toc-text">文件传输</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-tftp%E5%91%BD%E4%BB%A4"><span class="toc-text">Linux tftp命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-ftp%E5%91%BD%E4%BB%A4"><span class="toc-text">Linux ftp命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86"><span class="toc-text">磁盘管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-ls%EF%BC%88%E8%8B%B1%E6%96%87%E5%85%A8%E6%8B%BC%EF%BC%9Alist-files%EF%BC%89"><span class="toc-text">Linux ls（英文全拼：list files）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-cd%EF%BC%88%E8%8B%B1%E6%96%87%E5%85%A8%E6%8B%BC%EF%BC%9Achange-directory%EF%BC%89"><span class="toc-text">Linux cd（英文全拼：change directory）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-df%EF%BC%88%E8%8B%B1%E6%96%87%E5%85%A8%E6%8B%BC%EF%BC%9Adisk-free%EF%BC%89"><span class="toc-text">Linux df（英文全拼：disk free）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-pwd%EF%BC%88%E8%8B%B1%E6%96%87%E5%85%A8%E6%8B%BC%EF%BC%9Aprint-work-directory%EF%BC%89"><span class="toc-text">Linux pwd（英文全拼：print work directory）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-tree%E5%91%BD%E4%BB%A4"><span class="toc-text">Linux tree命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-mount%E5%91%BD%E4%BB%A4"><span class="toc-text">Linux mount命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-mkdir%EF%BC%88%E8%8B%B1%E6%96%87%E5%85%A8%E6%8B%BC%EF%BC%9Amake-directory%EF%BC%89"><span class="toc-text">Linux mkdir（英文全拼：make directory）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-rmdir%EF%BC%88%E8%8B%B1%E6%96%87%E5%85%A8%E6%8B%BC%EF%BC%9Aremove-directory%EF%BC%89"><span class="toc-text">Linux rmdir（英文全拼：remove directory）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%9E%E5%8A%A9%E5%B9%BF%E5%91%8A"><span class="toc-text">赞助广告</span></a></li></ol></li></ol>
-    </div>
-  </section>
-
-
-  
 
 
 </aside>
 
 
-  
-  <footer class="clearfix">
-<!--    <br><br>-->
     
-      
-<!--        <br>-->
-        <div class="social-wrapper">
-          
+    <footer class="clearfix">
+        <!--    <br><br>-->
+        
             
-              <a href="/atom.xml"
-                class="social fas fa-rss flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
+                <!--        <br>-->
+                <div class="social-wrapper">
+                    
+                        
+                            <a href="/atom.xml"
+                               class="social fas fa-rss flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                            </a>
+                        
+                    
+                        
+                            <a href="mailto:atgf0127@gmail.com"
+                               class="social fas fa-envelope flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                            </a>
+                        
+                    
+                        
+                            <a href="https://github.com/lxeridium"
+                               class="social fab fa-github flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                            </a>
+                        
+                    
+                </div>
             
-          
+        
             
-              <a href="mailto:atgf0127@gmail.com"
-                class="social fas fa-envelope flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-            
-              <a href="https://github.com/lxeridium"
-                class="social fab fa-github flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-        </div>
-      
-    
-      
-        <div><p>本博客所有文章转载请注明出处！</p>
+                <div><p>本博客所有文章转载请注明出处！</p>
 </div>
-<!--      
-    
-      -->
-<!--        footer.use-->
-<!--        <a href="/" target="_blank" class="codename">Syboot</a>-->
-<!--        footer.theme-->
-<!--          -->
-<!--      
-    
-      -->
-        <div class='copyright'>
-        <p><a href="https://lxeridium.github.io">Copyright © 2017-2020 lxeridium</a></p>
+            <!--      
+        
+            -->
+            <!--        footer.use-->
+            <!--        <a href="/" target="_blank" class="codename">Syboot</a>-->
+            <!--        footer.theme-->
+            <!--          -->
+            <!--      
+        
+            -->
+            <div class='copyright'>
+                <p><a href="https://lxeridium.github.io">Copyright © 2017-2020 lxeridium</a></p>
 
-        </div>
-      
-    
-  </footer>
+            </div>
+            
+        
+    </footer>
 
 <script>setLoadingBarProgress(80);</script>
 
 
-      <script>setLoadingBarProgress(60);</script>
+        <script>setLoadingBarProgress(60);</script>
     </div>
     <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
-  </div>
-  
+</div>
+
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/jquery.min.js"></script>
 
 
-  <script>
+    <script>
+        
+        var SEARCH_SERVICE = "hexo" || "hexo";
+        var ROOT = "/" || "/";
+        if (!ROOT.endsWith('/')) ROOT += '/';
+    </script>
+
+
+    <script async src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/instant_page.js" type="module" defer
+            integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/scrollreveal.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            ScrollReveal().reveal('.l_main .reveal', {
+                distance: '8px',
+                duration: '800',
+                interval: '100',
+                scale: '1'
+            });
+        });
+    </script>
+
+
     
-    var SEARCH_SERVICE = "hexo" || "hexo";
-    var ROOT = "/" || "/";
-    if (!ROOT.endsWith('/')) ROOT += '/';
-  </script>
-
-
-  <script async src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
-
-
-  <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/scrollreveal.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      ScrollReveal().reveal('.l_main .reveal', {
-        distance: '8px',
-        duration: '800',
-        interval: '100',
-        scale: '1'
-      });
-    });
-  </script>
-
-
-  
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/waves.min.js"></script>
 
-  <script type="text/javascript">
-    $(function() {
-      Waves.attach('.flat-btn', ['waves-button']);
-      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
-      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
-      Waves.attach('.flat-box', ['waves-block']);
-      Waves.attach('.float-box', ['waves-block', 'waves-float']);
-      Waves.attach('.waves-image');
-      Waves.init();
-    });
-  </script>
+    <script type="text/javascript">
+        $(function () {
+            Waves.attach('.flat-btn', ['waves-button']);
+            Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+            Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+            Waves.attach('.flat-box', ['waves-block']);
+            Waves.attach('.float-box', ['waves-block', 'waves-float']);
+            Waves.attach('.waves-image');
+            Waves.init();
+        });
+    </script>
 
 
 
 
-  
-  
-  
     
+    
+    
+        
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/jquery.backstretch.min.js"></script>
 
-    <script type="text/javascript">
-      $(function(){
-        var imgs=["https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/aradfghj-ixwFncpyi-65.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/uihjgv-ixwFncpyi-5432.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/rtyuihj-ixwFncpyi-275.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/rtghhgy-ixwFncpyi-3523.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/iuhgr-ixwFncpyi-24487.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/ertfghj-ixwFncpyi-121.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/wszoihji-xwFncpyi-dfghtr-784.jpg"];
-        if ('true' == 'true') {
-          function shuffle(arr){
-            /*From countercurrent-time*/
-            var n = arr.length;
-            while(n--) {
-              var index = Math.floor(Math.random() * n);
-              var temp = arr[index];
-              arr[index] = arr[n];
-              arr[n] = temp;
-            }
-          }
-          shuffle(imgs);
-        }
-        if ('.cover') {
-          $('.cover').backstretch(
-            imgs,
-          {
-            duration: "20000",
-            fade: "1500"
-          });
-        } else {
-          $.backstretch(
-            imgs,
-          {
-            duration: "20000",
-            fade: "1500"
-          });
-        }
-      });
-    </script>
-  
+        <script type="text/javascript">
+            $(function () {
+                var imgs =["https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/aradfghj-ixwFncpyi-65.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/uihjgv-ixwFncpyi-5432.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/rtyuihj-ixwFncpyi-275.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/rtghhgy-ixwFncpyi-3523.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/iuhgr-ixwFncpyi-24487.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/ertfghj-ixwFncpyi-121.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/wszoihji-xwFncpyi-dfghtr-784.jpg"];
+                if ('true' == 'true') {
+                    function shuffle(arr) {
+                        /*From countercurrent-time*/
+                        var n = arr.length;
+                        while (n--) {
+                            var index = Math.floor(Math.random() * n);
+                            var temp = arr[index];
+                            arr[index] = arr[n];
+                            arr[n] = temp;
+                        }
+                    }
+
+                    shuffle(imgs);
+                }
+                if ('.cover') {
+                    $('.cover').backstretch(
+                        imgs,
+                        {
+                            duration: "20000",
+                            fade: "1500"
+                        });
+                } else {
+                    $.backstretch(
+                        imgs,
+                        {
+                            duration: "20000",
+                            fade: "1500"
+                        });
+                }
+            });
+        </script>
+    
 
 
 
@@ -1022,18 +1069,17 @@ cat [-AbeEnstTuv] [–help] [–version] fileN...</p>
 
 
 
-
-  
+    
 <script src="/js/app.js"></script>
 
 
 
-  
+    
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/search.js"></script>
 
 
 
-  
+    
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/comment_typing.js"></script>
 
 
@@ -1043,59 +1089,60 @@ cat [-AbeEnstTuv] [–help] [–version] fileN...</p>
 
 <!-- 复制 -->
 
-  <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/clipboard.min.js"></script>
 <script>
-  function wait(callback, seconds) {
-    var timelag = null;
-    timelag = window.setTimeout(callback, seconds);
-  }
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      $(".article pre code").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
-        }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copied');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('fa-copy');
-        $icon.addClass('fa-check-circle');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPIED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('fa-check-circle');
-          $icon.addClass('fa-copy');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('fa-copy');
-        $icon.addClass('fa-times-circle');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('fa-times-circle');
-          $icon.addClass('fa-copy');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds);
     }
-    initCopyCode();
-  }(window, document);
+
+    !function (e, t, a) {
+        var initCopyCode = function () {
+            var copyHtml = '';
+            copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+            copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+            copyHtml += '</button>';
+            $(".highlight .code pre").before(copyHtml);
+            $(".article pre code").before(copyHtml);
+            var clipboard = new ClipboardJS('.btn-copy', {
+                target: function (trigger) {
+                    return trigger.nextElementSibling;
+                }
+            });
+            clipboard.on('success', function (e) {
+                let $btn = $(e.trigger);
+                $btn.addClass('copied');
+                let $icon = $($btn.find('i'));
+                $icon.removeClass('fa-copy');
+                $icon.addClass('fa-check-circle');
+                let $span = $($btn.find('span'));
+                $span[0].innerText = 'COPIED';
+
+                wait(function () { // 等待两秒钟后恢复
+                    $icon.removeClass('fa-check-circle');
+                    $icon.addClass('fa-copy');
+                    $span[0].innerText = 'COPY';
+                }, 2000);
+            });
+            clipboard.on('error', function (e) {
+                e.clearSelection();
+                let $btn = $(e.trigger);
+                $btn.addClass('copy-failed');
+                let $icon = $($btn.find('i'));
+                $icon.removeClass('fa-copy');
+                $icon.addClass('fa-times-circle');
+                let $span = $($btn.find('span'));
+                $span[0].innerText = 'COPY FAILED';
+
+                wait(function () { // 等待两秒钟后恢复
+                    $icon.removeClass('fa-times-circle');
+                    $icon.addClass('fa-copy');
+                    $span[0].innerText = 'COPY';
+                }, 2000);
+            });
+        }
+        initCopyCode();
+    }(window, document);
 </script>
 
 
@@ -1104,52 +1151,52 @@ cat [-AbeEnstTuv] [–help] [–version] fileN...</p>
 <!-- fancybox -->
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/jquery.fancybox.min.js"></script>
 <script>
-  function pjax_fancybox() {
-    $(".article-entry").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
-      var element = document.createElement("a"); // a 标签
-      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
-      $(element).attr("href", $(this).attr("src"));
-      if ($(this).attr("data-original")) {
-        $(element).attr("href", $(this).attr("data-original"));
-      }
-      $(element).attr("data-fancybox", "images");
-      var caption = "";   // 描述信息
-      if ($(this).attr('alt')) {  // 标准 markdown 描述信息
-        $(element).attr('data-caption', $(this).attr('alt'));
-        caption = $(this).attr('alt');
-      }
-      var div = document.createElement("div");
-      $(div).addClass("fancybox");
-      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
-      var span = document.createElement("span");
-      $(span).addClass("image-caption");
-      $(span).text(caption); // 加描述
-      $(this).after(span);  // 再套一层描述
-      $(this).wrap(element);  // 最后套 a 标签
-    })
-    $(".article-entry").find("img").fancybox({
-      selector: '[data-fancybox="images"]',
-      hash: false,
-      loop: false,
-      closeClick: true,
-      helpers: {
-        overlay: {closeClick: true}
-      },
-      buttons: [
-        "zoom",
-        "close"
-      ]
+    function pjax_fancybox() {
+        $(".article-entry").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+            var element = document.createElement("a"); // a 标签
+            $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+            $(element).attr("href", $(this).attr("src"));
+            if ($(this).attr("data-original")) {
+                $(element).attr("href", $(this).attr("data-original"));
+            }
+            $(element).attr("data-fancybox", "images");
+            var caption = "";   // 描述信息
+            if ($(this).attr('alt')) {  // 标准 markdown 描述信息
+                $(element).attr('data-caption', $(this).attr('alt'));
+                caption = $(this).attr('alt');
+            }
+            var div = document.createElement("div");
+            $(div).addClass("fancybox");
+            $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+            var span = document.createElement("span");
+            $(span).addClass("image-caption");
+            $(span).text(caption); // 加描述
+            $(this).after(span);  // 再套一层描述
+            $(this).wrap(element);  // 最后套 a 标签
+        })
+        $(".article-entry").find("img").fancybox({
+            selector: '[data-fancybox="images"]',
+            hash: false,
+            loop: false,
+            closeClick: true,
+            helpers: {
+                overlay: {closeClick: true}
+            },
+            buttons: [
+                "zoom",
+                "close"
+            ]
+        });
+    };
+    $(function () {
+        pjax_fancybox();
     });
-  };
-  $(function () {
-    pjax_fancybox();
-  });
 </script>
 
 
 
 
 
-  <script>setLoadingBarProgress(100);</script>
+<script>setLoadingBarProgress(100);</script>
 </body>
 </html>

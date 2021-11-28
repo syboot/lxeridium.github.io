@@ -1,525 +1,565 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <!-- SEO相关 -->
-  
+    <meta charset="utf-8">
+    <!-- SEO相关 -->
     
-  
-  <!-- 渲染优化 -->
-  <meta name="renderer" content="webkit">
-  <meta name="force-rendering" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="HandheldFriendly" content="True" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+    
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- 页面元数据 -->
-  
-    <title>linuxsoftware-tomcat - Syboot</title>
-  
-    <meta name="keywords" content="tomcat">
-  
-  
+    <!-- 页面元数据 -->
+    
+    <title>
+        linuxsoftware-tomcat -
+        
+        Syboot</title>
+    
+        <meta name="keywords" content="tomcat">
+    
+    
 
-  <!-- feed -->
-  
-    <link rel="alternate" href="/atom.xml" title="Syboot" type="application/atom+xml">
-  
+    <!-- feed -->
+    
+        <link rel="alternate" href="/atom.xml" title="Syboot" type="application/atom+xml">
+    
 
-  <!-- import meta -->
-  
+    <!-- import meta -->
     
-      <meta name='theme-color' content='#FFFFFF'>
+        
+            <meta name='theme-color' content='#FFFFFF'>
+        
+            <meta name='msapplication-TileColor' content='#1BC3FB'>
+        
+            <meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/lxeridium/cdn/xml/browserconfig.xml'>
+        
     
-      <meta name='msapplication-TileColor' content='#1BC3FB'>
-    
-      <meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/lxeridium/cdn/xml/browserconfig.xml'>
-    
-  
 
-  <!-- link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lxeridium/cdn/css/all.min.css">
-  
+    <!-- link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lxeridium/cdn/css/all.min.css">
+    
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lxeridium/cdn/css/jquery.fancybox.min.css">
 
-  
-  
+
     
+        
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lxeridium/cdn/css/waves.min.css">
 
-  
-
-  
-
-  
-
-  
-
-  <!-- import link -->
-  
-  
-  <link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/favicon.ico'>
-  <link rel='icon' type='image/x-icon' sizes='32x32' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/favicon.png'>
-  <link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/apple-touch-icon.png'>
-  <link rel='mask-icon' color='#1BC3FB' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/safari-pinned-tab.svg'>
-  <link rel='manifest' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/site.webmanifest'>
-  
-
-  
-  
     
+
+    
+
+    
+
+    
+
+    <!-- import link -->
+    
+        
+            <link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/favicon.ico'>
+            <link rel='icon' type='image/x-icon' sizes='32x32' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/favicon.png'>
+            <link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/apple-touch-icon.png'>
+            <link rel='mask-icon' color='#1BC3FB' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/safari-pinned-tab.svg'>
+            <link rel='manifest' href='https://cdn.jsdelivr.net/gh/lxeridium/cdn/site.webmanifest'>
+    
+
+    
+    
+        
 <link rel="stylesheet" href="/css/style.css">
 
-  
+    
 
-  <script>
-    function setLoadingBarProgress(num) {
-      document.getElementById('loading-bar').style.width=num+"%";
-    }
-  </script>
+    <script>
+        function setLoadingBarProgress(num) {
+            document.getElementById('loading-bar').style.width = num + "%";
+        }
+    </script>
 
-  
-  
+    
+    
 </head>
 
 <body>
-  
-  <div class="cover-wrapper">
-    
-      <cover class='cover post half'>
-        <div class='cover-body'>
-  <div class='a'>
-    
-      <img class='logo' src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/syboot_logo.png'/>
-    
-    
-      <p class="title">syboot</p>
-    
-    
-      <p class="subtitle">分享Linux相关工具，书籍，文章，技术，以及日常使用的问题。感谢关注 @思鸢</p>
-    
-  </div>
-  <div class='b'>
-    
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="search ......" />
-          <i class="icon fas fa-search fa-fw"></i>
-        </form>
-      </div>
-    
-    <div class='menu navigation'>
-      <ul class='cover-list-h'>
+
+    <div class="cover-wrapper">
         
-          
-            <li>
-              <a class="nav home"
-                href="/docstarted/"
-                
-                
-                id="docstarted">
-                <i class='fas fa-book fa-fw'></i>
-              </a>
-            </li>
-          
-            <li>
-              <a class="nav home"
-                href="/archives/"
-                
-                
-                id="archives">
-                <i class='fas fa-rss fa-fw'></i>
-              </a>
-            </li>
-          
-            <li>
-              <a class="nav home"
-                href="/examples/"
-                
-                
-                id="examples">
-                <i class='fas fa-play-circle fa-fw'></i>
-              </a>
-            </li>
-          
+            <cover class='cover post half'>
+                <div class='cover-body'>
+    <div class='a'>
         
-      </ul>
+            <img class='logo' src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/syboot_logo.png'/>
+        
+        
+            <p class="title">syboot</p>
+        
+        
+            <p class="subtitle">分享网洛资源代找资源，工具，书籍，文章，技术，以及日常的问题。感谢关注 @syboot  +Vx syboot </p>
+        
     </div>
-  </div>
+    <div class='b'>
+        
+            <div class="m_search">
+                <form name="searchform" class="form u-search-form">
+                    <input type="text" class="input u-search-input"
+                           placeholder="search ......"/>
+                    <i class="icon fas fa-search fa-fw"></i>
+                </form>
+            </div>
+        
+        <div class='menu navigation'>
+            <ul class='cover-list-h'>
+                
+                    
+                        <li>
+                            <a class="nav home"
+                               href="/docstarted/"
+                            
+                            
+                               id="docstarted">
+                                <i class='fas fa-book fa-fw'></i>
+                                
+                                
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="nav home"
+                               href="/archives/"
+                            
+                            
+                               id="archives">
+                                <i class='fas fa-rss fa-fw'></i>
+                                
+                                
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="nav home"
+                               href="/examples/"
+                            
+                            
+                               id="examples">
+                                <i class='fas fa-play-circle fa-fw'></i>
+                                
+                                
+                            </a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
 </div>
 
-      </cover>
-    
-    <div id="loading-bar-wrapper">
-  <div id="loading-bar"></div>
+            </cover>
+        
+        <div id="loading-bar-wrapper">
+    <div id="loading-bar"></div>
 </div>
 <header class="l_header shadow floatable blur">
-  <div class='container'>
-  <div class='wrapper'>
-    <div class='nav-sub'>
-      <p class="title"></p>
-      <ul class='switcher nav-list-h'>
-        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
-        
-          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
-        
-      </ul>
+    <div class='container'>
+        <div class='wrapper'>
+            <div class='nav-sub'>
+                <p class="title"></p>
+                <ul class='switcher nav-list-h'>
+                    <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+                    
+                        <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+                    
+                </ul>
+            </div>
+            <div class="nav-main">
+                
+                    
+                    <a class="title flat-box" target="_self" href='/'>
+                        
+                        
+                        
+                        
+                            SYBOOT <b><sup
+                                        style='color:#3AA757'>’</sup></b>
+                        
+                    </a>
+                
+
+                <div class='menu navigation'>
+                    <ul class='nav-list-h'>
+                        
+                        
+                        
+                            
+                            
+                                <li>
+                                    <a class="flat-box" href=/
+                                    
+                                    
+                                    
+                                       id="home"
+                                            
+                                    >
+                                        
+                                        home
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                        
+                            
+                            
+                                <li>
+                                    <a class="flat-box" href=/categories/
+                                    
+                                    
+                                    
+                                       id="categories"
+                                            
+                                    >
+                                        
+                                        category
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                        
+                            
+                            
+                                <li>
+                                    <a class="flat-box" href=/tags/
+                                    
+                                    
+                                    
+                                       id="tags"
+                                            
+                                    >
+                                        
+                                        tags
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                        
+                            
+                            
+                                <li>
+                                    <a class="flat-box" href=/archives/
+                                    
+                                    
+                                    
+                                       id="archives"
+                                            
+                                    >
+                                        
+                                        archives
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                        
+                            
+                            
+                                <li>
+                                    <a class="flat-box" href=/friends/
+                                    
+                                    
+                                    
+                                       id="friends"
+                                            
+                                    >
+                                        
+                                        link
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                        
+                            
+                            
+                                <li>
+                                    <a class="flat-box" href=/about/
+                                    
+                                    
+                                    
+                                       id="about"
+                                            
+                                    >
+                                        
+                                        about
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                        
+                    </ul>
+                </div>
+
+                <div class="m_search">
+                    <form name="searchform" class="form u-search-form">
+                        <i class="icon fas fa-search fa-fw"></i>
+                        <input type="text" class="input u-search-input"
+                               placeholder="Search..."/>
+                    </form>
+                </div>
+
+                <ul class='switcher nav-list-h'>
+                    
+                        <li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+                    
+                    <li>
+                        <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+                        <ul class="menu-phone list-v navigation white-box">
+                            
+                                
+                            
+                                <li>
+                                    <a class="flat-box" href=/
+                                    
+                                    
+                                    
+                                       id="home"
+                                            
+                                    >
+                                        
+                                        home
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                            
+                                
+                            
+                                <li>
+                                    <a class="flat-box" href=/categories/
+                                    
+                                    
+                                    
+                                       id="categories"
+                                            
+                                    >
+                                        
+                                        category
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                            
+                                
+                            
+                                <li>
+                                    <a class="flat-box" href=/tags/
+                                    
+                                    
+                                    
+                                       id="tags"
+                                            
+                                    >
+                                        
+                                        tags
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                            
+                                
+                            
+                                <li>
+                                    <a class="flat-box" href=/archives/
+                                    
+                                    
+                                    
+                                       id="archives"
+                                            
+                                    >
+                                        
+                                        archives
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                            
+                                
+                            
+                                <li>
+                                    <a class="flat-box" href=/friends/
+                                    
+                                    
+                                    
+                                       id="friends"
+                                            
+                                    >
+                                        
+                                        link
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                            
+                                
+                            
+                                <li>
+                                    <a class="flat-box" href=/about/
+                                    
+                                    
+                                    
+                                       id="about"
+                                            
+                                    >
+                                        
+                                        about
+                                    </a>
+                                    
+                                </li>
+                            
+                        
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-		<div class="nav-main">
-      
-        
-        <a class="title flat-box" target="_self" href='/'>
-          
-          
-          
-          
-            SYBOOT <b><sup style='color:#3AA757'>’</sup></b>
-          
-        </a>
-      
-
-			<div class='menu navigation'>
-				<ul class='nav-list-h'>
-          
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/
-                  
-                  
-                  
-                    id="home"
-                  >
-                  home
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/categories/
-                  
-                  
-                  
-                    id="categories"
-                  >
-                  category
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/tags/
-                  
-                  
-                  
-                    id="tags"
-                  >
-                  tags
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/archives/
-                  
-                  
-                  
-                    id="archives"
-                  >
-                  archives
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/friends/
-                  
-                  
-                  
-                    id="friends"
-                  >
-                  link
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/about/
-                  
-                  
-                  
-                    id="about"
-                  >
-                  about
-                </a>
-                
-              </li>
-            
-          
-          
-				</ul>
-			</div>
-
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <i class="icon fas fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search..." />
-        </form>
-      </div>
-
-			<ul class='switcher nav-list-h'>
-				
-					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
-				
-				<li>
-          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
-          <ul class="menu-phone list-v navigation white-box">
-            
-              
-            
-              <li>
-                <a class="flat-box" href=/
-                  
-                  
-                  
-                    id="home"
-                  >
-                  home
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="flat-box" href=/categories/
-                  
-                  
-                  
-                    id="categories"
-                  >
-                  category
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="flat-box" href=/tags/
-                  
-                  
-                  
-                    id="tags"
-                  >
-                  tags
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="flat-box" href=/archives/
-                  
-                  
-                  
-                    id="archives"
-                  >
-                  archives
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="flat-box" href=/friends/
-                  
-                  
-                  
-                    id="friends"
-                  >
-                  link
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="flat-box" href=/about/
-                  
-                  
-                  
-                    id="about"
-                  >
-                  about
-                </a>
-                
-              </li>
-            
-          
-            
-          </ul>
-        </li>
-			</ul>
-		</div>
-	</div>
-  </div>
 </header>
 
 <script>setLoadingBarProgress(40);</script>
 
-  </div>
+    </div>
 
 
-  <div class="l_body">
+<div class="l_body">
     <div class='body-wrapper'>
-      
+        
 
 <div class='l_main'>
-  
-
-  
-    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
-      
-
-
-  <section class='meta'>
     
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h1 class="title">
-    <a href="/posts/linuxsoftware/tomcat/e2199e29.html">
-      linuxsoftware-tomcat
-    </a>
-  </h1>
+
+    
+        <article id="post"
+                 class="post white-box reveal shadow article-type-post"
+                 itemscope itemprop="blogPost">
+            
 
 
+    <section class='meta'>
         
-        <div class='new-meta-box'>
-          
             
-          
             
-              
+            <div class="meta" id="header-meta">
+                
+                    
+    <h1 class="title">
+        <a href="/posts/linuxsoftware/tomcat/e2199e29.html">
+            linuxsoftware-tomcat
+        </a>
+    </h1>
+
+
+                
+                <div class='new-meta-box'>
+                    
+                        
+                    
+                        
+                            
 <div class='new-meta-item author'>
-  <a href="http://lxeridium.github.io" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
-    <p>Syboot</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/linuxsoftware/tomcat/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>linuxsoftware/tomcat</p>
+    <a href="http://lxeridium.github.io" rel="nofollow">
+        <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/logo/sy512.png">
+        <p>Syboot</p>
     </a>
-  </div>
-
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年6月29日</p>
-  </a>
 </div>
 
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
+                        
+                    
+                        
+                            
     
-  </section>
+    <div class='new-meta-item category'>
+        <a href='/categories/linuxsoftware/tomcat/' rel="nofollow">
+            <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+            <p>linuxsoftware/tomcat</p>
+        </a>
+    </div>
 
 
-      <section class="article typo">
-        <div class="article-entry" itemprop="articleBody">
-          
-          <h3 id="linux-apache-tomcat-9-0-40"><a href="#linux-apache-tomcat-9-0-40" class="headerlink" title="linux apache-tomcat-9.0.40"></a>linux apache-tomcat-9.0.40</h3><p>Tomcat是Apache 软件基金会（Apache Software Foundation）的Jakarta 项目中的一个核心项目，由Apache、Sun 和其他一些公司及个人共同开发而成。由于有了Sun 的参与和支持，最新的Servlet 和JSP 规范总是能在Tomcat 中得到体现，<br>因为Tomcat 技术先进、性能稳定，而且免费，因而深受Java 爱好者的喜爱并得到了部分软件开发商的认可，成为目前比较流行的Web 应用服务器。</p>
+                        
+                    
+                        
+                            <div class="new-meta-item date">
+    <a class='notlink'>
+        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+        <p>发布于：2020年6月29日</p>
+    </a>
+</div>
+
+                        
+                    
+                        
+                            
+
+                        
+                    
+                </div>
+                
+                    <hr>
+                
+            </div>
+        
+    </section>
+
+
+            <section class="article typo">
+                <div class="article-entry" itemprop="articleBody">
+                    
+                    <h3 id="linux-apache-tomcat-9-0-40"><a href="#linux-apache-tomcat-9-0-40" class="headerlink" title="linux apache-tomcat-9.0.40"></a>linux apache-tomcat-9.0.40</h3><p>Tomcat是Apache 软件基金会（Apache Software Foundation）的Jakarta 项目中的一个核心项目，由Apache、Sun 和其他一些公司及个人共同开发而成。由于有了Sun<br>的参与和支持，最新的Servlet 和JSP 规范总是能在Tomcat 中得到体现， 因为Tomcat 技术先进、性能稳定，而且免费，因而深受Java 爱好者的喜爱并得到了部分软件开发商的认可，成为目前比较流行的Web 应用服务器。</p>
 <h3 id="添加专用用户"><a href="#添加专用用户" class="headerlink" title="添加专用用户"></a>添加专用用户</h3><p>添加一个新用户，用来跑tomcat, 为了后期好管理，形成良好的习惯。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">useradd admin</span><br><span class="line"><span class="built_in">echo</span> admin:新密码|chpasswd</span><br><span class="line">chmod 755 /home/admin</span><br></pre></td></tr></table></figure>
-<p>如果有跳板机需要修改文件/etc/security/access.conf<br>下边代码加在access.conf 文件尾部。</p>
+
+<p>如果有跳板机需要修改文件/etc/security/access.conf 下边代码加在access.conf 文件尾部。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+:admin:跳板机IP</span><br></pre></td></tr></table></figure>
 
 <h3 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h3><p>JDK 是一种用于构建在 Java 平台上发布的应用程序、Applet 和组件的开发环境，即编写 Java 程序必须使用 JDK，它提供了编译和运行 Java 程序的环境。</p>
-<p>我这里下载 gz 包方便后期 复制移植用。  包名 jdk-15.0.1_linux-x64_bin.tar.gz</p>
-<p>JAVA 安装目录 JAVAHOME=/usr/java  没有目录就创建。</p>
+<p>我这里下载 gz 包方便后期 复制移植用。 包名 jdk-15.0.1_linux-x64_bin.tar.gz</p>
+<p>JAVA 安装目录 JAVAHOME=/usr/java 没有目录就创建。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cp jdk-15.0.1_linux-x64_bin.tar.gz  /usr/java/</span><br><span class="line"><span class="built_in">cd</span> /usr/java</span><br><span class="line">tar zxf jdk-15.0.1_linux-x64_bin.tar.gz</span><br><span class="line">rm -f  jdk-15.0.1_linux-x64_bin.tar.gz</span><br><span class="line">chown root.root /usr/java/ -R</span><br><span class="line">/usr/java/jdk-15.0.1/bin/java -version  <span class="comment">#查看版本</span></span><br></pre></td></tr></table></figure>
 
 <p><a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase-jdk15-downloads.html">JDK15 下载页面</a></p>
-<h3 id="添加和修改环境变量"><a href="#添加和修改环境变量" class="headerlink" title="添加和修改环境变量"></a>添加和修改环境变量</h3><p>在admin 家目录下添加一个 .bash_profile  用来声明JDK变量 文件内容如下。</p>
+<h3 id="添加和修改环境变量"><a href="#添加和修改环境变量" class="headerlink" title="添加和修改环境变量"></a>添加和修改环境变量</h3><p>在admin 家目录下添加一个 .bash_profile 用来声明JDK变量 文件内容如下。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">cat  /home/admin/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># .bash_profile</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Get the aliases and functions</span></span><br><span class="line"><span class="keyword">if</span> [ -f ~/.bashrc ]; <span class="keyword">then</span></span><br><span class="line">        . ~/.bashrc</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># User specific environment and startup programs</span></span><br><span class="line">PATH=/usr/java/jdk-15.0.1/bin:<span class="variable">$PATH</span>:<span class="variable">$HOME</span>/bin</span><br><span class="line"><span class="built_in">export</span> PATH</span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/usr/java/jdk-15.0.1</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar:<span class="variable">$CLASSPATH</span></span><br><span class="line">LANG=en_US.UTF-8</span><br><span class="line"><span class="built_in">unset</span> USERNAME</span><br></pre></td></tr></table></figure>
 
 <p>修改 limits.conf 内容如下。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cat &gt;&gt;/etc/security/limits.conf&lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">$USERS       hard    nofile           1024000</span></span><br><span class="line"><span class="string">$USERS       soft    nofile           1024000</span></span><br><span class="line"><span class="string">$USERS       hard    nproc            102400</span></span><br><span class="line"><span class="string">$USERS       soft    nproc            102400</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="安装apache-tomcat-9-0-40"><a href="#安装apache-tomcat-9-0-40" class="headerlink" title="安装apache-tomcat-9.0.40"></a>安装apache-tomcat-9.0.40</h3><p>1.下载安装包 apache-tomcat-9.0.40.tar.gz  到 /home/admin/ 下。</p>
+<h3 id="安装apache-tomcat-9-0-40"><a href="#安装apache-tomcat-9-0-40" class="headerlink" title="安装apache-tomcat-9.0.40"></a>安装apache-tomcat-9.0.40</h3><p>1.下载安装包 apache-tomcat-9.0.40.tar.gz 到 /home/admin/ 下。</p>
 <p><a target="_blank" rel="noopener" href="https://tomcat.apache.org/download-90.cgi">tomcat9.0 下载页面</a></p>
-<p>解压 apache-tomcat-9.0.40.tar.gz  到当前目录。</p>
+<p>解压 apache-tomcat-9.0.40.tar.gz 到当前目录。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> ln -s apache-tomcat-9.0.40  apache-tomcat</span><br><span class="line">ls /home/admin/</span><br><span class="line"></span><br><span class="line">apache-tomcat</span><br><span class="line">apache-tomcat-9.0.40</span><br><span class="line">logs</span><br></pre></td></tr></table></figure>
 
-<p>2.修改 apache-tomcat-9.0.40/bin/catalina.sh<br>在注释下方， 约125行处添加。以下代码。没有装APR的可以删除 “-Djava.library.path=/usr/local/apr/lib” 这段。gc 选项是为了崩溃后排查用。</p>
-<pre><code>JAVA_OPTS=&apos;-server -Xms4096m -Xmx4096m -Xss256k -XX:+HeapDumpOnOutOfMemoryError -Djava.library.path=/usr/local/apr/lib -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -Xloggc:/home/admin/logs/gc.log&apos;</code></pre><p>3.添加启动选项 init.d  下添加文件，内容如下。</p>
+<p>2.修改 apache-tomcat-9.0.40/bin/catalina.sh 在注释下方， 约125行处添加。以下代码。没有装APR的可以删除 “-D java.library.path=/usr/local/apr/lib”<br>这段。gc 选项是为了崩溃后排查用。</p>
+<pre><code>JAVA_OPTS=&apos;-server -Xms4096m -Xmx4096m -Xss256k -XX:+HeapDumpOnOutOfMemoryError -Djava.library.path=/usr/local/apr/lib -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -Xloggc:/home/admin/logs/gc.log&apos;</code></pre><p>3.添加启动选项 init.d 下添加文件，内容如下。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/init.d/tomcat_admin</span><br><span class="line"></span><br><span class="line">    <span class="comment">#!/bin/bash</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment"># Startup script for the tomcat</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment"># chkconfig: 345 95 15</span></span><br><span class="line">    <span class="comment"># description: tomcat service script</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment"># Source function library.</span></span><br><span class="line">    . /etc/rc.d/init.d/<span class="built_in">functions</span></span><br><span class="line">    </span><br><span class="line">    TOMCAT_HOME=/home/admin/apache-tomcat</span><br><span class="line">    USER=admin</span><br><span class="line">    UIDS=`id -u <span class="variable">$USER</span>`</span><br><span class="line">    RETVAL=0</span><br><span class="line">    PORT=8080</span><br><span class="line">    PROG=tomcat</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">checkjava</span></span>()&#123;</span><br><span class="line">        <span class="keyword">if</span> [ -z <span class="string">&quot;<span class="variable">$JAVA_HOME</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="built_in">export</span> JAVA_HOME=/usr/java/jdk-15.0.1</span><br><span class="line">        <span class="built_in">export</span> CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar:<span class="variable">$CLASSPATH</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">checkrun</span></span>()&#123;</span><br><span class="line">        ps aux --width=1000 | grep <span class="string">&quot;[o]rg.apache.catalina.startup.Bootstrap start&quot;</span> \</span><br><span class="line">                           | egrep <span class="string">&quot;<span class="variable">$USER</span>&quot;</span> | awk <span class="string">&#x27;&#123;printf $2 &quot; &quot;&#125;&#x27;</span> \</span><br><span class="line">                           | wc | awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span> &gt;/tmp/tomcat_process_count.txt</span><br><span class="line">        <span class="built_in">read</span> line &lt; /tmp/tomcat_process_count.txt</span><br><span class="line">        <span class="keyword">if</span> [ <span class="variable">$line</span> -gt 0 ]; <span class="keyword">then</span></span><br><span class="line">            RETVAL=1</span><br><span class="line">                <span class="built_in">return</span> <span class="variable">$RETVAL</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            RETVAL=0</span><br><span class="line">            <span class="built_in">return</span> <span class="variable">$RETVAL</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">start</span></span>()&#123;</span><br><span class="line">        checkjava</span><br><span class="line">        checkrun</span><br><span class="line">        <span class="keyword">if</span> [ <span class="variable">$RETVAL</span> -eq 0 ]; <span class="keyword">then</span></span><br><span class="line">            <span class="built_in">echo</span> -n <span class="string">&quot;Starting <span class="variable">$PROG</span>&quot;</span></span><br><span class="line">            su - <span class="variable">$USER</span> -c <span class="string">&quot;<span class="variable">$TOMCAT_HOME</span>/bin/startup.sh&quot;</span> &gt;/dev/null 2&gt;&amp;1</span><br><span class="line">            RETVAL=$?</span><br><span class="line">                usleep 100000</span><br><span class="line">                [ <span class="variable">$RETVAL</span> -ne 0 ] &amp;&amp; failure $<span class="string">&quot;<span class="variable">$PROG</span> startup&quot;</span></span><br><span class="line">                [ <span class="variable">$RETVAL</span> -eq 0 ] &amp;&amp; touch /var/lock/subsys/<span class="variable">$PROG</span> &amp;&amp; success $<span class="string">&quot;<span class="variable">$PROG</span> startup&quot;</span></span><br><span class="line">                <span class="built_in">echo</span></span><br><span class="line">            <span class="built_in">return</span> <span class="variable">$RETVAL</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$PROG</span> already running&quot;</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">stop</span></span>()&#123;</span><br><span class="line">        checkjava</span><br><span class="line">        checkrun</span><br><span class="line">        <span class="keyword">if</span> [ <span class="variable">$RETVAL</span> -eq 1 ]; <span class="keyword">then</span></span><br><span class="line">            <span class="built_in">echo</span> -n <span class="string">&quot;Shutting down tomcat&quot;</span></span><br><span class="line">            su - <span class="variable">$USER</span> -c <span class="string">&quot;<span class="variable">$TOMCAT_HOME</span>/bin/shutdown.sh&quot;</span> &gt;/dev/null 2&gt;&amp;1</span><br><span class="line">            <span class="keyword">while</span> [ <span class="variable">$RETVAL</span> -eq 1 ]; <span class="keyword">do</span></span><br><span class="line">            sleep 5</span><br><span class="line">                PIDS=$(ps aux --width=1000 | grep <span class="string">&quot;org.apache.catalina.startup.Bootstrap start&quot;</span> \</span><br><span class="line">                           | egrep <span class="string">&quot;<span class="variable">$USER</span>&quot;</span> | awk <span class="string">&#x27;&#123;printf $2 &quot; &quot;&#125;&#x27;</span>)</span><br><span class="line">            <span class="built_in">kill</span> -9 <span class="variable">$PIDS</span></span><br><span class="line">            checkrun</span><br><span class="line">            <span class="keyword">done</span></span><br><span class="line">            RETVAL=$?</span><br><span class="line">                usleep 100000</span><br><span class="line">                [ <span class="variable">$RETVAL</span> -ne 0 ] &amp;&amp; failure $<span class="string">&quot;<span class="variable">$PROG</span> stop&quot;</span></span><br><span class="line">                [ <span class="variable">$RETVAL</span> -eq 0 ] &amp;&amp; rm -f /var/lock/subsys/<span class="variable">$PROG</span> &amp;&amp; success $<span class="string">&quot;<span class="variable">$PROG</span> stop&quot;</span></span><br><span class="line">                <span class="built_in">echo</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$PROG</span> is not running&quot;</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">status</span></span>()&#123;</span><br><span class="line">        checkrun</span><br><span class="line">        <span class="keyword">if</span> [ <span class="variable">$RETVAL</span> -eq 1 ]; <span class="keyword">then</span></span><br><span class="line">        <span class="built_in">echo</span> -n <span class="string">&quot;Tomcat ( pid &quot;</span></span><br><span class="line">        ps aux --width=1000 | grep <span class="string">&quot;org.apache.catalina.startup.Bootstrap start&quot;</span> | egrep <span class="string">&quot;<span class="variable">$USER</span>&quot;</span> | awk <span class="string">&#x27;&#123;printf $2 &quot; &quot;&#125;&#x27;</span></span><br><span class="line">        <span class="built_in">echo</span> -n <span class="string">&quot;) is running...&quot;</span></span><br><span class="line">        <span class="built_in">echo</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;Tomcat is stopped&quot;</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;---------------------------------------------&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;<span class="variable">$1</span>&quot;</span> <span class="keyword">in</span></span><br><span class="line">        start)</span><br><span class="line">        start</span><br><span class="line">        ;;</span><br><span class="line">        stop)</span><br><span class="line">        stop</span><br><span class="line">        ;;</span><br><span class="line">        restart)</span><br><span class="line">        stop</span><br><span class="line">        start</span><br><span class="line">        ;;</span><br><span class="line">        status)</span><br><span class="line">        status</span><br><span class="line">        ;;</span><br><span class="line">        *)</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;Usage: <span class="variable">$0</span> &#123;start|stop|restart|status&#125;&quot;</span></span><br><span class="line">    <span class="keyword">esac</span></span><br><span class="line">    <span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>
+
 <p>然后修改权限</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod  +x  /etc/init.d/tomcat_admin</span><br></pre></td></tr></table></figure>
 
 <p>4.修改 tomcat 主配置文件 server.xml</p>
-<p>将源文件里的2处内容替换为新的。<br>第一处源内容：</p>
+<p>将源文件里的2处内容替换为新的。 第一处源内容：</p>
 <pre><code>&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;
            connectionTimeout=&quot;20000&quot;
            redirectPort=&quot;8443&quot; /&gt;</code></pre><p>替换内容：</p>
@@ -531,248 +571,253 @@ NIO 模式下的替换配置
 <pre><code>org.apache.coyote.http11.Http11NioProtocol：对应非阻塞 IO
 org.apache.coyote.http11.Http11Nio2Protocol：对应异步 IO
 org.apache.coyote.http2.Http2Protocol：对应 http2 协议
-org.apache.coyote.http11.Http11AprProtocol 对应 APR 从操作系统级别来解决异步的IO问题,大幅度的提高性能。 </code></pre><p>logs 格式的替换<br>第二处源内容：</p>
+org.apache.coyote.http11.Http11AprProtocol 对应 APR 从操作系统级别来解决异步的IO问题,大幅度的提高性能。 </code></pre><p>logs 格式的替换 第二处源内容：</p>
 <pre><code>&lt;Valve className=&quot;org.apache.catalina.valves.AccessLogValve&quot; directory=&quot;logs&quot;
        prefix=&quot;localhost_access_log&quot; suffix=&quot;.txt&quot;
        pattern=&quot;%h %l %u %t &amp;quot;%r&amp;quot; %s %b&quot; /&gt;</code></pre><p>替换内容：</p>
 <pre><code>&lt;Valve className=&quot;org.apache.catalina.valves.AccessLogValve&quot; directory=&quot;$&#123;user.home&#125;/logs&quot;
    prefix=&quot;ip.access.log.&quot; suffix=&quot;&quot; buffered=&quot;false&quot;
-   pattern=&quot;%&#123;X-Forwarded-For&#125;i %&#123;CLIENT_IP&#125;i %l %u %t %T %r %s %b &apos;%&#123;Referer&#125;i&apos; %&#123;User-Agent&#125;i&quot; /&gt;</code></pre><h3 id="APR-的安装"><a href="#APR-的安装" class="headerlink" title="APR 的安装"></a>APR 的安装</h3><p>APR  （Apache Portable Runtime (APR) based Native library for Tomcat）</p>
-<p>Tomcat可以使用Apache Portable Runtime提供出色的可伸缩性，性能以及与本机服务器技术的更好集成。<br>Apache可移植运行时是一个高度可移植的库，它是Apache HTTP Server 2.x的核心。<br>APR有许多用途，包括访问高级IO功能（例如sendfile，epoll和OpenSSL），操作系统级别的功能（生成随机数，系统状态等）和本机进程处理（共享内存，NT管道和Unix套接字）。<br>这些功能使Tomcat成为通用的Web服务器，可以更好地与其他本机Web技术集成，并且从总体上使Java作为完整的Web服务器平台而不是仅以后端为中心的技术更加可行。</p>
-<p>1.安装需要三个基础APR包。<br>分别为：</p>
+   pattern=&quot;%&#123;X-Forwarded-For&#125;i %&#123;CLIENT_IP&#125;i %l %u %t %T %r %s %b &apos;%&#123;Referer&#125;i&apos; %&#123;User-Agent&#125;i&quot; /&gt;</code></pre><h3 id="APR-的安装"><a href="#APR-的安装" class="headerlink" title="APR 的安装"></a>APR 的安装</h3><p>APR （Apache Portable Runtime (APR) based Native library for Tomcat）</p>
+<p>Tomcat可以使用Apache Portable Runtime提供出色的可伸缩性，性能以及与本机服务器技术的更好集成。 Apache可移植运行时是一个高度可移植的库，它是Apache HTTP Server 2.x的核心。<br>APR有许多用途，包括访问高级IO功能（例如sendfile，epoll和OpenSSL），操作系统级别的功能（生成随机数，系统状态等）和本机进程处理（共享内存，NT管道和Unix套接字）。<br>这些功能使Tomcat成为通用的Web服务器，可以更好地与其他本机Web技术集成，并且从总体上使Java作为完整的Web服务器平台而不是仅以后端为中心的技术更加可行。</p>
+<p>1.安装需要三个基础APR包。 分别为：</p>
 <pre><code>apr-x.x.x
 apr-util-x.x.x
 apr-iconv-x.x.x</code></pre><p>三个包的版本需要匹配，否则安装失败。新手三个包建议 用yum apt dnf 这类工具来安装。</p>
 <p>编译安装:</p>
 <p>cd apr-x.x.x</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure;make;make install</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;/usr/local/apr/lib&quot;</span> &gt;&gt; /etc/ld.so.conf</span><br></pre></td></tr></table></figure>
+
 <p>cd apr-util-x.x.x</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --with-apr=/usr/<span class="built_in">local</span>/apr;make;make install</span><br></pre></td></tr></table></figure>
+
 <p>cd apr-iconv-x.x.x</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --with-apr=/usr/<span class="built_in">local</span>/apr;make;make install</span><br></pre></td></tr></table></figure>
+
 <p>查看配置</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ldconfig</span><br></pre></td></tr></table></figure>
 
 <p>2.apache-tomcat-9.0.40 中安装 tomcat-native组件</p>
 <p>cd /home/admin/apache-tomcat/bin/</p>
 <p>tar zvf tomcat-native.tar.gz</p>
-<p>cd  tomcat-native-1.2.25-src </p>
+<p>cd tomcat-native-1.2.25-src</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --with-apr=/usr/<span class="built_in">local</span>/apr --with-java-home=/usr/java/jdk-15.0.1;make;make install</span><br></pre></td></tr></table></figure>
+
 <p>装好了APR， server.xml 中才可以启用APR配置。</p>
 <h3 id="启动tomcat"><a href="#启动tomcat" class="headerlink" title="启动tomcat"></a>启动tomcat</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service tomcat_admin start</span><br></pre></td></tr></table></figure>
-
-
-
-
-
 
 <h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg" alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p>
 <p><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?id=625058323217">查看购买上图商品</a> <a target="_blank" rel="noopener" href="https://shop252294542.taobao.com/">淘宝店铺</a> <a target="_blank" rel="noopener" href="http://www.lxeridium.com/">品牌官网</a></p>
 <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
-          
-            <div class='article_footer'>
-              
-                
-  
+                    
+                        <div class='article_footer'>
+                            
+                                
     
-    
+        
+        
 
 
 
-  
-
-  
-    
     
 
-
-
-  
-
-  
     
+        
+        
+
+
+
     
+
+    
+        
+        
 
 <section class="widget copyright  desktop mobile">
-  <div class='content'>
-    
-      <blockquote>
+    <div class='content'>
         
-          
-            <p>本博客所有文章转载请注明出处！</p>
+            <blockquote>
+                
+                    
+                        <p>本博客所有文章转载请注明出处！</p>
 
-          
+                    
+                
+                    
+                        <p>本文永久链接是：<a href=http://lxeridium.github.io/posts/linuxsoftware/tomcat/e2199e29.html>http://lxeridium.github.io/posts/linuxsoftware/tomcat/e2199e29.html</a></p>
+                    
+                
+            </blockquote>
         
-          
-            <p>本文永久链接是：<a href=http://lxeridium.github.io/posts/linuxsoftware/tomcat/e2199e29.html>http://lxeridium.github.io/posts/linuxsoftware/tomcat/e2199e29.html</a></p>
-          
-        
-      </blockquote>
-    
-  </div>
+    </div>
 </section>
 
-  
+    
 
-  
     
-    
+        
+        
 
 <section class="widget qrcode  desktop mobile">
-  
+    
 
-  <div class='content article-entry'>
-    
-      
-        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/qrcode/sy_wx.png'
+    <div class='content article-entry'>
         
-          height='150px'
-        ></div>
-      
-    
-      
-        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/qrcode/sy_zf.png'
+            
+                <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/qrcode/sy_wx.png'
+                    
+                                           height='150px'
+                            
+                    ></div>
+            
         
-          height='150px'
-        ></div>
-      
-    
-  </div>
+            
+                <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/qrcode/sy_zf.png'
+                    
+                                           height='150px'
+                            
+                    ></div>
+            
+        
+    </div>
 </section>
 
-  
+    
 
 
-              
-            </div>
-          
-        </div>
-        
-          
+                            
+                        </div>
+                    
+                </div>
+                
+                    
 
 
-  <section class='meta' id="footer-meta">
-    <div class='new-meta-box'>
-      
-        
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-28T02:08:12+08:00">
-  <a class='notlink'>
-    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年11月28日</p>
-  </a>
+    <section class='meta' id="footer-meta">
+        <div class='new-meta-box'>
+            
+                
+                    <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-09-05T23:45:24+08:00">
+    <a class='notlink'>
+        <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+        <p>更新于：2021年9月5日</p>
+    </a>
 </div>
 
-        
-      
-        
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/tomcat/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>tomcat</p></a></div>
-
-
-        
-      
-        
-          
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
+                
+            
+                
+                    
     
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lxeridium.github.io/posts/linuxsoftware/tomcat/e2199e29.html&title=linuxsoftware-tomcat - Syboot&summary="
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://lxeridium.github.io/posts/linuxsoftware/tomcat/e2199e29.html&title=linuxsoftware-tomcat - Syboot&summary="
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://lxeridium.github.io/posts/linuxsoftware/tomcat/e2199e29.html&title=linuxsoftware-tomcat - Syboot&summary="
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/weibo.png">
-          
-        </a>
-      
-    
-      
+    <div class="new-meta-item meta-tags"><a class="tag" href="/tags/tomcat/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>tomcat</p></a></div>
+
+
+                
+            
+                
+                    
+
+                
+            
+                
+                    
+    <div class="new-meta-item share -mob-share-list">
+    <div class="-mob-share-list share-body">
         
-        <div class='hoverbox'>
-          <a><img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADqklEQVR42u3aSVYDMQwFwNz/0nAAXp41dbcSyruEHqwyi4/E68cqrRcCcODAgbPAgVsC9yqu0/3Z57+7/s/GD/e/u36sXnDgwIEDBw4cuGVw4QAYLLR63el9J8jofsv1ggMHDhw4cODALYWLBtRuAI4Wlg26V+0fHDhw4MCBAwfu2+C6900fCDhw4MCBAwcOHLhaYK02ELOD5mhDExw4cODAgQMH7r/AZQe0VbBsYK02OLP7v22SDw4cOHDgwIEDNwQ33Rjc/rlcLzhw4MCBAwcO3BK46XUKplPBtdpQbdcHDhw4cODAgQO3BK7aaKw2IKsgU99H3x/+ywEcOHDgwIEDB+4huGpgzIJXg2r1oKpB/HgfOHDgwIEDBw7ch8BVg+5UIdmCqwcYvg4cOHDgwIEDB24ZXDoINgfE0eungnr24MKNTHDgwIEDBw4cuCVw3QCaBZgKutnGaPV7cODAgQMHDhy4bXDZArpBNztozgbW6cYoOHDgwIEDBw7cNrhuA7IbbLsD7anBd7qRCQ4cOHDgwIEDtwTuqgCZHWh3AS4/KHDgwIEDBw4cuCVw6YFscgPV54wF1mDAD9cHDhw4cODAgQO3BC76oOj33YF2NkhnC+++Bxw4cODAgQMHbhtcNIBOB8woRPVAsvs9fgYHDhw4cODAgVsCV31ht7GZhao2XKv7AAcOHDhw4MCB+xS46iD57oZjdWDe/QdKcODAgQMHDhy47XDVDUZhwoPfYsN06hcAHDhw4MCBAwfu0+CmBtDZjU8H8C5suZEJDhw4cODAgQN3M1x6MNscMHcH3tXBcvagjgEYHDhw4MCBAwfuIbhsYdlA3G14Tjcyq4NzcODAgQMHDhy47XBXB93sfdPPjR5cOgCDAwcOHDhw4MA9BBcNoNlgOQVX3ddUAxUcOHDgwIEDB24r3PRAeTqgdgN6tlH7tm5w4MCBAwcOHLilcK+hFW1IdgueqiMc6MGBAwcOHDhw4JbATReSLSA6KC43HoeCODhw4MCBAwcO3Da4qYB7FdxUoI0+97gPcODAgQMHDhy4ZXDTgfcUUKMFVAuvHhA4cODAgQMHDtynwl0VKK8OwNGD6g7SwYEDBw4cOHDgvhVuOhhPPS8LfXsABgcOHDhw4MCBuxmu+303mE4dSHsgDQ4cOHDgwIED9zBcdiBd3XA3sHZX+eDAgQMHDhw4cOCWwU0H0mrgrAJUf55uyIIDBw4cOHDgwC2Bs5IHhQAcOHDgLHDgnl2/kzyAl9ujdnsAAAAASUVORK5CYII=">
-          </div>
-        </div>
-      
-    
-  </div>
-</div>
-
-
-
+            
+                <a class="-mob-share-qq" title=""
+                   rel="external nofollow noopener noreferrer noopener"
+                
+                   target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lxeridium.github.io/posts/linuxsoftware/tomcat/e2199e29.html&title=linuxsoftware-tomcat - Syboot&summary="
+                
+                >
+                    
+                        <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/qq.png">
+                    
+                </a>
+            
         
-      
+            
+                <a class="-mob-share-qzone" title=""
+                   rel="external nofollow noopener noreferrer noopener"
+                
+                   target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://lxeridium.github.io/posts/linuxsoftware/tomcat/e2199e29.html&title=linuxsoftware-tomcat - Syboot&summary="
+                
+                >
+                    
+                        <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/qzone.png">
+                    
+                </a>
+            
+        
+            
+                <a class="-mob-share-weibo" title=""
+                   rel="external nofollow noopener noreferrer noopener"
+                
+                   target="_blank" href="http://service.weibo.com/share/share.php?url=http://lxeridium.github.io/posts/linuxsoftware/tomcat/e2199e29.html&title=linuxsoftware-tomcat - Syboot&summary="
+                
+                >
+                    
+                        <img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/weibo.png">
+                    
+                </a>
+            
+        
+            
+                
+                <div class='hoverbox'>
+                    <a><img src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/ico/wechat.png"></a>
+                    <div class='target'>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADqklEQVR42u3aSVYDMQwFwNz/0nAAXp41dbcSyruEHqwyi4/E68cqrRcCcODAgbPAgVsC9yqu0/3Z57+7/s/GD/e/u36sXnDgwIEDBw4cuGVw4QAYLLR63el9J8jofsv1ggMHDhw4cODALYWLBtRuAI4Wlg26V+0fHDhw4MCBAwfu2+C6900fCDhw4MCBAwcOHLhaYK02ELOD5mhDExw4cODAgQMH7r/AZQe0VbBsYK02OLP7v22SDw4cOHDgwIEDNwQ33Rjc/rlcLzhw4MCBAwcO3BK46XUKplPBtdpQbdcHDhw4cODAgQO3BK7aaKw2IKsgU99H3x/+ywEcOHDgwIEDB+4huGpgzIJXg2r1oKpB/HgfOHDgwIEDBw7ch8BVg+5UIdmCqwcYvg4cOHDgwIEDB24ZXDoINgfE0eungnr24MKNTHDgwIEDBw4cuCVw3QCaBZgKutnGaPV7cODAgQMHDhy4bXDZArpBNztozgbW6cYoOHDgwIEDBw7cNrhuA7IbbLsD7anBd7qRCQ4cOHDgwIEDtwTuqgCZHWh3AS4/KHDgwIEDBw4cuCVw6YFscgPV54wF1mDAD9cHDhw4cODAgQO3BC76oOj33YF2NkhnC+++Bxw4cODAgQMHbhtcNIBOB8woRPVAsvs9fgYHDhw4cODAgVsCV31ht7GZhao2XKv7AAcOHDhw4MCB+xS46iD57oZjdWDe/QdKcODAgQMHDhy47XDVDUZhwoPfYsN06hcAHDhw4MCBAwfu0+CmBtDZjU8H8C5suZEJDhw4cODAgQN3M1x6MNscMHcH3tXBcvagjgEYHDhw4MCBAwfuIbhsYdlA3G14Tjcyq4NzcODAgQMHDhy47XBXB93sfdPPjR5cOgCDAwcOHDhw4MA9BBcNoNlgOQVX3ddUAxUcOHDgwIEDB24r3PRAeTqgdgN6tlH7tm5w4MCBAwcOHLilcK+hFW1IdgueqiMc6MGBAwcOHDhw4JbATReSLSA6KC43HoeCODhw4MCBAwcO3Da4qYB7FdxUoI0+97gPcODAgQMHDhy4ZXDTgfcUUKMFVAuvHhA4cODAgQMHDtynwl0VKK8OwNGD6g7SwYEDBw4cOHDgvhVuOhhPPS8LfXsABgcOHDhw4MCBuxmu+303mE4dSHsgDQ4cOHDgwIED9zBcdiBd3XA3sHZX+eDAgQMHDhw4cOCWwU0H0mrgrAJUf55uyIIDBw4cOHDgwC2Bs5IHhQAcOHDgLHDgnl2/kzyAl9ujdnsAAAAASUVORK5CYII=">
+                    </div>
+                </div>
+            
+        
     </div>
-  </section>
+</div>
 
 
-        
-        
-          <div class="prev-next">
+
+                
             
-              <a class='prev' href='/posts/linuxsoftware/LVM/5828fa6f.html'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>linuxsoftware-LVM</p>
-                <p class='content'>linux LVM 逻辑卷LVM是一个磁盘管理子系统，它允许根据文件系统或原始数据的特定大小来分配磁盘空间。LVM文件系统能够超出单盘的大小限制，这个特点被称之为跨磁盘。就是因为单个的文件系统能...</p>
-              </a>
-            
-            
-              <a class='next' href='/posts/linux/opensuse/a3febc18.html'>
-                <p class='title'>linux opensuse yast2 使用<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                <p class='content'>opensuse yast2 使用YaST (Yet another Setup Tool，SUSE特制的强大设置工具) 是系统管理配置的核心工具。
+        </div>
+    </section>
+
+
+                
+                
+                    <div class="prev-next">
+                        
+                            <a class='prev' href='/posts/linuxsoftware/LVM/5828fa6f.html'>
+                                <p class='title'><i class="fas fa-chevron-left"
+                                                    aria-hidden="true"></i>linuxsoftware-LVM</p>
+                                <p class='content'>linux LVM 逻辑卷LVM是一个磁盘管理子系统，它允许根据文件系统或原始数据的特定大小来分配磁盘空间。 LVM文件系统能够超出单盘的大小限制，这个特点被称之为跨磁盘。就是因为单个的文件系统...</p>
+                            </a>
+                        
+                        
+                            <a class='next' href='/posts/linux/opensuse/a3febc18.html'>
+                                <p class='title'>linux opensuse yast2 使用<i class="fas fa-chevron-right"
+                                                                                aria-hidden="true"></i></p>
+                                <p class='content'>opensuse yast2 使用YaST (Yet another Setup Tool，SUSE特制的强大设置工具) 是系统管理配置的核心工具。
 
 特点：
-默认YaST模块使用图形界面的各种...</p>
-              </a>
-            
-          </div>
-        
-      </section>
-    </article>
-  
+默认YaST模块 使用图形界面的各...</p>
+                            </a>
+                        
+                    </div>
+                
+            </section>
+        </article>
+    
 
-  
-    <!-- 显示推荐文章和评论 -->
-
-
-
-  
+    
+        <!-- 显示推荐文章和评论 -->
 
 
-  
 
+    
+
+
+    
 
 
 
@@ -780,194 +825,197 @@ apr-iconv-x.x.x</code></pre><p>三个包的版本需要匹配，否则安装失�
 
 
 
-  <script>
-    window.subData = {
-      title: 'linuxsoftware-tomcat',
-      tools: true
-    }
-  </script>
+    <script>
+        window.subData = {
+            title: 'linuxsoftware-tomcat',
+            tools: true
+        }
+    </script>
 
 
 </div>
 <aside class='l_side'>
-  
-  
-
-  
     
     
 
-
-  <section class="widget toc-wrapper shadow desktop mobile">
     
-  <header>
+        
+        
+
+
+    <section class="widget toc-wrapper shadow desktop mobile">
+        
+    <header>
+        
+            <i class="fas fa-list fa-fw" aria-hidden="true"></i><span
+                    class='name'>directory</span>
+        
+    </header>
+
+
+        <div class='content'>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#linux-apache-tomcat-9-0-40"><span class="toc-text">linux apache-tomcat-9.0.40</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E4%B8%93%E7%94%A8%E7%94%A8%E6%88%B7"><span class="toc-text">添加专用用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85JDK"><span class="toc-text">安装JDK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%92%8C%E4%BF%AE%E6%94%B9%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">添加和修改环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85apache-tomcat-9-0-40"><span class="toc-text">安装apache-tomcat-9.0.40</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#APR-%E7%9A%84%E5%AE%89%E8%A3%85"><span class="toc-text">APR 的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8tomcat"><span class="toc-text">启动tomcat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%9E%E5%8A%A9%E5%B9%BF%E5%91%8A"><span class="toc-text">赞助广告</span></a></li></ol>
+        </div>
+    </section>
+
+
     
-      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>directory</span>
-    
-  </header>
-
-
-    <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#linux-apache-tomcat-9-0-40"><span class="toc-text">linux apache-tomcat-9.0.40</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E4%B8%93%E7%94%A8%E7%94%A8%E6%88%B7"><span class="toc-text">添加专用用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85JDK"><span class="toc-text">安装JDK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%92%8C%E4%BF%AE%E6%94%B9%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">添加和修改环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85apache-tomcat-9-0-40"><span class="toc-text">安装apache-tomcat-9.0.40</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#APR-%E7%9A%84%E5%AE%89%E8%A3%85"><span class="toc-text">APR 的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8tomcat"><span class="toc-text">启动tomcat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%9E%E5%8A%A9%E5%B9%BF%E5%91%8A"><span class="toc-text">赞助广告</span></a></li></ol>
-    </div>
-  </section>
-
-
-  
 
 
 </aside>
 
 
-  
-  <footer class="clearfix">
-<!--    <br><br>-->
     
-      
-<!--        <br>-->
-        <div class="social-wrapper">
-          
+    <footer class="clearfix">
+        <!--    <br><br>-->
+        
             
-              <a href="/atom.xml"
-                class="social fas fa-rss flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
+                <!--        <br>-->
+                <div class="social-wrapper">
+                    
+                        
+                            <a href="/atom.xml"
+                               class="social fas fa-rss flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                            </a>
+                        
+                    
+                        
+                            <a href="mailto:atgf0127@gmail.com"
+                               class="social fas fa-envelope flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                            </a>
+                        
+                    
+                        
+                            <a href="https://github.com/lxeridium"
+                               class="social fab fa-github flat-btn"
+                               target="_blank"
+                               rel="external nofollow noopener noreferrer">
+                            </a>
+                        
+                    
+                </div>
             
-          
+        
             
-              <a href="mailto:atgf0127@gmail.com"
-                class="social fas fa-envelope flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-            
-              <a href="https://github.com/lxeridium"
-                class="social fab fa-github flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-        </div>
-      
-    
-      
-        <div><p>本博客所有文章转载请注明出处！</p>
+                <div><p>本博客所有文章转载请注明出处！</p>
 </div>
-<!--      
-    
-      -->
-<!--        footer.use-->
-<!--        <a href="/" target="_blank" class="codename">Syboot</a>-->
-<!--        footer.theme-->
-<!--          -->
-<!--      
-    
-      -->
-        <div class='copyright'>
-        <p><a href="https://lxeridium.github.io">Copyright © 2017-2020 lxeridium</a></p>
+            <!--      
+        
+            -->
+            <!--        footer.use-->
+            <!--        <a href="/" target="_blank" class="codename">Syboot</a>-->
+            <!--        footer.theme-->
+            <!--          -->
+            <!--      
+        
+            -->
+            <div class='copyright'>
+                <p><a href="https://lxeridium.github.io">Copyright © 2017-2020 lxeridium</a></p>
 
-        </div>
-      
-    
-  </footer>
+            </div>
+            
+        
+    </footer>
 
 <script>setLoadingBarProgress(80);</script>
 
 
-      <script>setLoadingBarProgress(60);</script>
+        <script>setLoadingBarProgress(60);</script>
     </div>
     <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
-  </div>
-  
+</div>
+
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/jquery.min.js"></script>
 
 
-  <script>
+    <script>
+        
+        var SEARCH_SERVICE = "hexo" || "hexo";
+        var ROOT = "/" || "/";
+        if (!ROOT.endsWith('/')) ROOT += '/';
+    </script>
+
+
+    <script async src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/instant_page.js" type="module" defer
+            integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/scrollreveal.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            ScrollReveal().reveal('.l_main .reveal', {
+                distance: '8px',
+                duration: '800',
+                interval: '100',
+                scale: '1'
+            });
+        });
+    </script>
+
+
     
-    var SEARCH_SERVICE = "hexo" || "hexo";
-    var ROOT = "/" || "/";
-    if (!ROOT.endsWith('/')) ROOT += '/';
-  </script>
-
-
-  <script async src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
-
-
-  <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/scrollreveal.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      ScrollReveal().reveal('.l_main .reveal', {
-        distance: '8px',
-        duration: '800',
-        interval: '100',
-        scale: '1'
-      });
-    });
-  </script>
-
-
-  
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/waves.min.js"></script>
 
-  <script type="text/javascript">
-    $(function() {
-      Waves.attach('.flat-btn', ['waves-button']);
-      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
-      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
-      Waves.attach('.flat-box', ['waves-block']);
-      Waves.attach('.float-box', ['waves-block', 'waves-float']);
-      Waves.attach('.waves-image');
-      Waves.init();
-    });
-  </script>
+    <script type="text/javascript">
+        $(function () {
+            Waves.attach('.flat-btn', ['waves-button']);
+            Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+            Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+            Waves.attach('.flat-box', ['waves-block']);
+            Waves.attach('.float-box', ['waves-block', 'waves-float']);
+            Waves.attach('.waves-image');
+            Waves.init();
+        });
+    </script>
 
 
 
 
-  
-  
-  
     
+    
+    
+        
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/jquery.backstretch.min.js"></script>
 
-    <script type="text/javascript">
-      $(function(){
-        var imgs=["https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/aradfghj-ixwFncpyi-65.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/uihjgv-ixwFncpyi-5432.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/rtyuihj-ixwFncpyi-275.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/rtghhgy-ixwFncpyi-3523.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/iuhgr-ixwFncpyi-24487.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/ertfghj-ixwFncpyi-121.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/wszoihji-xwFncpyi-dfghtr-784.jpg"];
-        if ('true' == 'true') {
-          function shuffle(arr){
-            /*From countercurrent-time*/
-            var n = arr.length;
-            while(n--) {
-              var index = Math.floor(Math.random() * n);
-              var temp = arr[index];
-              arr[index] = arr[n];
-              arr[n] = temp;
-            }
-          }
-          shuffle(imgs);
-        }
-        if ('.cover') {
-          $('.cover').backstretch(
-            imgs,
-          {
-            duration: "20000",
-            fade: "1500"
-          });
-        } else {
-          $.backstretch(
-            imgs,
-          {
-            duration: "20000",
-            fade: "1500"
-          });
-        }
-      });
-    </script>
-  
+        <script type="text/javascript">
+            $(function () {
+                var imgs =["https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/aradfghj-ixwFncpyi-65.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/uihjgv-ixwFncpyi-5432.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/rtyuihj-ixwFncpyi-275.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/rtghhgy-ixwFncpyi-3523.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/iuhgr-ixwFncpyi-24487.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/ertfghj-ixwFncpyi-121.jpg", "https://cdn.jsdelivr.net/gh/lxeridium/cdn/img/wallpaper/wszoihji-xwFncpyi-dfghtr-784.jpg"];
+                if ('true' == 'true') {
+                    function shuffle(arr) {
+                        /*From countercurrent-time*/
+                        var n = arr.length;
+                        while (n--) {
+                            var index = Math.floor(Math.random() * n);
+                            var temp = arr[index];
+                            arr[index] = arr[n];
+                            arr[n] = temp;
+                        }
+                    }
+
+                    shuffle(imgs);
+                }
+                if ('.cover') {
+                    $('.cover').backstretch(
+                        imgs,
+                        {
+                            duration: "20000",
+                            fade: "1500"
+                        });
+                } else {
+                    $.backstretch(
+                        imgs,
+                        {
+                            duration: "20000",
+                            fade: "1500"
+                        });
+                }
+            });
+        </script>
+    
 
 
 
@@ -982,18 +1030,17 @@ apr-iconv-x.x.x</code></pre><p>三个包的版本需要匹配，否则安装失�
 
 
 
-
-  
+    
 <script src="/js/app.js"></script>
 
 
 
-  
+    
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/search.js"></script>
 
 
 
-  
+    
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/comment_typing.js"></script>
 
 
@@ -1003,59 +1050,60 @@ apr-iconv-x.x.x</code></pre><p>三个包的版本需要匹配，否则安装失�
 
 <!-- 复制 -->
 
-  <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/clipboard.min.js"></script>
 <script>
-  function wait(callback, seconds) {
-    var timelag = null;
-    timelag = window.setTimeout(callback, seconds);
-  }
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      $(".article pre code").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
-        }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copied');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('fa-copy');
-        $icon.addClass('fa-check-circle');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPIED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('fa-check-circle');
-          $icon.addClass('fa-copy');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('fa-copy');
-        $icon.addClass('fa-times-circle');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('fa-times-circle');
-          $icon.addClass('fa-copy');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds);
     }
-    initCopyCode();
-  }(window, document);
+
+    !function (e, t, a) {
+        var initCopyCode = function () {
+            var copyHtml = '';
+            copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+            copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+            copyHtml += '</button>';
+            $(".highlight .code pre").before(copyHtml);
+            $(".article pre code").before(copyHtml);
+            var clipboard = new ClipboardJS('.btn-copy', {
+                target: function (trigger) {
+                    return trigger.nextElementSibling;
+                }
+            });
+            clipboard.on('success', function (e) {
+                let $btn = $(e.trigger);
+                $btn.addClass('copied');
+                let $icon = $($btn.find('i'));
+                $icon.removeClass('fa-copy');
+                $icon.addClass('fa-check-circle');
+                let $span = $($btn.find('span'));
+                $span[0].innerText = 'COPIED';
+
+                wait(function () { // 等待两秒钟后恢复
+                    $icon.removeClass('fa-check-circle');
+                    $icon.addClass('fa-copy');
+                    $span[0].innerText = 'COPY';
+                }, 2000);
+            });
+            clipboard.on('error', function (e) {
+                e.clearSelection();
+                let $btn = $(e.trigger);
+                $btn.addClass('copy-failed');
+                let $icon = $($btn.find('i'));
+                $icon.removeClass('fa-copy');
+                $icon.addClass('fa-times-circle');
+                let $span = $($btn.find('span'));
+                $span[0].innerText = 'COPY FAILED';
+
+                wait(function () { // 等待两秒钟后恢复
+                    $icon.removeClass('fa-times-circle');
+                    $icon.addClass('fa-copy');
+                    $span[0].innerText = 'COPY';
+                }, 2000);
+            });
+        }
+        initCopyCode();
+    }(window, document);
 </script>
 
 
@@ -1064,52 +1112,52 @@ apr-iconv-x.x.x</code></pre><p>三个包的版本需要匹配，否则安装失�
 <!-- fancybox -->
 <script src="https://cdn.jsdelivr.net/gh/lxeridium/cdn/js/jquery.fancybox.min.js"></script>
 <script>
-  function pjax_fancybox() {
-    $(".article-entry").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
-      var element = document.createElement("a"); // a 标签
-      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
-      $(element).attr("href", $(this).attr("src"));
-      if ($(this).attr("data-original")) {
-        $(element).attr("href", $(this).attr("data-original"));
-      }
-      $(element).attr("data-fancybox", "images");
-      var caption = "";   // 描述信息
-      if ($(this).attr('alt')) {  // 标准 markdown 描述信息
-        $(element).attr('data-caption', $(this).attr('alt'));
-        caption = $(this).attr('alt');
-      }
-      var div = document.createElement("div");
-      $(div).addClass("fancybox");
-      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
-      var span = document.createElement("span");
-      $(span).addClass("image-caption");
-      $(span).text(caption); // 加描述
-      $(this).after(span);  // 再套一层描述
-      $(this).wrap(element);  // 最后套 a 标签
-    })
-    $(".article-entry").find("img").fancybox({
-      selector: '[data-fancybox="images"]',
-      hash: false,
-      loop: false,
-      closeClick: true,
-      helpers: {
-        overlay: {closeClick: true}
-      },
-      buttons: [
-        "zoom",
-        "close"
-      ]
+    function pjax_fancybox() {
+        $(".article-entry").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+            var element = document.createElement("a"); // a 标签
+            $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+            $(element).attr("href", $(this).attr("src"));
+            if ($(this).attr("data-original")) {
+                $(element).attr("href", $(this).attr("data-original"));
+            }
+            $(element).attr("data-fancybox", "images");
+            var caption = "";   // 描述信息
+            if ($(this).attr('alt')) {  // 标准 markdown 描述信息
+                $(element).attr('data-caption', $(this).attr('alt'));
+                caption = $(this).attr('alt');
+            }
+            var div = document.createElement("div");
+            $(div).addClass("fancybox");
+            $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+            var span = document.createElement("span");
+            $(span).addClass("image-caption");
+            $(span).text(caption); // 加描述
+            $(this).after(span);  // 再套一层描述
+            $(this).wrap(element);  // 最后套 a 标签
+        })
+        $(".article-entry").find("img").fancybox({
+            selector: '[data-fancybox="images"]',
+            hash: false,
+            loop: false,
+            closeClick: true,
+            helpers: {
+                overlay: {closeClick: true}
+            },
+            buttons: [
+                "zoom",
+                "close"
+            ]
+        });
+    };
+    $(function () {
+        pjax_fancybox();
     });
-  };
-  $(function () {
-    pjax_fancybox();
-  });
 </script>
 
 
 
 
 
-  <script>setLoadingBarProgress(100);</script>
+<script>setLoadingBarProgress(100);</script>
 </body>
 </html>
