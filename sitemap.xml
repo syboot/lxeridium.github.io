@@ -135,6 +135,13 @@
   </url>
   
   <url>
+    <loc>http://lxeridium.github.io/cn/Proxmox-ve-%E8%99%9A%E6%8B%9F%E5%8C%96%E5%B7%A5%E5%85%B7-%E5%AE%89%E8%A3%85/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://lxeridium.github.io/cn/VirtualBox-%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B7%A5%E5%85%B7-%E5%AE%89%E8%A3%85/</loc>
     
     <lastmod>2020-05-27</lastmod>
@@ -143,13 +150,6 @@
   
   <url>
     <loc>http://lxeridium.github.io/cn/VMwareWorkstationPlayer-%E8%99%9A%E6%8B%9F%E5%8C%96%E5%B7%A5%E5%85%B7-%E5%AE%89%E8%A3%85/</loc>
-    
-    <lastmod>2020-05-27</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/cn/Proxmox-ve-%E8%99%9A%E6%8B%9F%E5%8C%96%E5%B7%A5%E5%85%B7-%E5%AE%89%E8%A3%85/</loc>
     
     <lastmod>2020-05-27</lastmod>
     
@@ -298,13 +298,6 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/tags/windows/</loc>
-    <lastmod>2022-07-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://lxeridium.github.io/tags/%E8%87%AA%E7%84%B6%E6%8B%BC%E8%AF%BB%E6%B3%95/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
@@ -312,14 +305,28 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/tags/ubuntu/</loc>
+    <loc>http://lxeridium.github.io/tags/system/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/tags/system/</loc>
+    <loc>http://lxeridium.github.io/tags/Proxmox-ve/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/windows/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/ubuntu/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -340,13 +347,6 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/tags/Proxmox-ve/</loc>
-    <lastmod>2022-07-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://lxeridium.github.io/tags/%E6%BC%AB%E7%94%BB%E5%8D%81%E4%B8%87%E4%B8%AA%E4%B8%BA%E4%BB%80%E4%B9%88/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
@@ -354,14 +354,14 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/tags/opensuse/</loc>
+    <loc>http://lxeridium.github.io/tags/configure/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/tags/configure/</loc>
+    <loc>http://lxeridium.github.io/tags/opensuse/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -389,14 +389,14 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/tags/ansible/</loc>
+    <loc>http://lxeridium.github.io/tags/LVM/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/tags/LVM/</loc>
+    <loc>http://lxeridium.github.io/tags/ansible/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -433,13 +433,6 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/categories/windows/</loc>
-    <lastmod>2022-07-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://lxeridium.github.io/categories/English/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
@@ -447,7 +440,7 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/categories/systools/VMware-player/</loc>
+    <loc>http://lxeridium.github.io/categories/windows/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -461,7 +454,14 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/categories/systools/Proxmox-ve/</loc>
+    <loc>http://lxeridium.github.io/categories/systools/virtualbox/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/systools/VMware-player/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -475,20 +475,6 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/categories/linux/</loc>
-    <lastmod>2022-07-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/categories/windows/tools/</loc>
-    <lastmod>2022-07-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://lxeridium.github.io/categories/English/%E8%87%AA%E7%84%B6%E6%8B%BC%E8%AF%BB%E6%B3%95/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
@@ -496,7 +482,21 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/categories/systools/virtualbox/</loc>
+    <loc>http://lxeridium.github.io/categories/linux/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/systools/Proxmox-ve/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/windows/tools/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -545,14 +545,14 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/categories/linuxsoftware/ansible/</loc>
+    <loc>http://lxeridium.github.io/categories/linuxsoftware/LVM/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/categories/linuxsoftware/LVM/</loc>
+    <loc>http://lxeridium.github.io/categories/linuxsoftware/ansible/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
