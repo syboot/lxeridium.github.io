@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/index.html</loc>
+    
+    <lastmod>2022-07-10</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/index.html</loc>
+    
+    <lastmod>2022-07-10</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/404.html</loc>
+    
+    <lastmod>2022-07-10</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/linuxsoftware-AppImage/</loc>
+    
+    <lastmod>2020-07-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/linuxsoftware-LVM/</loc>
+    
+    <lastmod>2020-06-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/linuxsoftware-tomcat/</loc>
+    
+    <lastmod>2020-06-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/linux-opensuse-yast2-%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2020-06-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/linux-%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E4%BB%8B%E7%BB%8D-%E4%B8%80-5-5/</loc>
+    
+    <lastmod>2020-06-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/linux-%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E4%BB%8B%E7%BB%8D-%E4%B8%80-5-4/</loc>
+    
+    <lastmod>2020-06-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/linux-%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E4%BB%8B%E7%BB%8D-%E4%B8%80-5-3/</loc>
+    
+    <lastmod>2020-06-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/linux-%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E4%BB%8B%E7%BB%8D-%E4%B8%80-5-2/</loc>
+    
+    <lastmod>2020-06-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/linux-ssh%E5%85%8D%E5%AF%86%E7%A0%81-%E5%BF%AB%E9%80%9F%E7%99%BB%E5%BD%95%E9%85%8D%E7%BD%AE/</loc>
+    
+    <lastmod>2020-06-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/linux-%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E4%BB%8B%E7%BB%8D-%E4%B8%80-5-1/</loc>
+    
+    <lastmod>2020-06-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/linux-%E8%B7%B3%E6%9D%BF%E6%9C%BA-ssh-agent%E4%BF%9D%E6%8C%81%E8%BF%90%E8%A1%8C/</loc>
+    
+    <lastmod>2020-06-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/linuxsoftware-ansible/</loc>
+    
+    <lastmod>2020-06-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/Xshell-%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2020-06-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/SecureCRT-%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2020-06-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/mobaxterm-%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2020-06-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/Docker-Desktop-%E8%99%9A%E6%8B%9F%E5%8C%96%E5%B7%A5%E5%85%B7-%E5%AE%89%E8%A3%85/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/Proxmox-ve-%E8%99%9A%E6%8B%9F%E5%8C%96%E5%B7%A5%E5%85%B7-%E5%AE%89%E8%A3%85/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/VMwareWorkstationPlayer-%E8%99%9A%E6%8B%9F%E5%8C%96%E5%B7%A5%E5%85%B7-%E5%AE%89%E8%A3%85/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/VirtualBox-%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B7%A5%E5%85%B7-%E5%AE%89%E8%A3%85/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/CentOS8-openSUSE-Ubuntu-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E5%AF%B9%E7%85%A7/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/Ubuntu-20-04-LTS-install-%E5%AE%89%E8%A3%85/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/Ubuntu-20-04-LTS-%E6%96%B0%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/Linux-%E7%B3%BB%E7%BB%9F-%E5%AE%89%E8%A3%85%E5%89%8D%E9%A1%BB%E7%9F%A5/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/openSUSE-Tumbleweed-%E6%96%B0%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/CentOS8-install-%E5%AE%89%E8%A3%85/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/English(%E8%8B%B1%E8%AF%AD)-%E8%87%AA%E7%84%B6%E6%8B%BC%E8%AF%BB%E6%B3%95/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/e-book(%E7%94%B5%E5%AD%90%E4%B9%A6)-%E6%BC%AB%E7%94%BB%E5%8D%81%E4%B8%87%E4%B8%AA%E4%B8%BA%E4%BB%80%E4%B9%886%E9%83%A813%E6%9C%AC/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-5-5%E8%AE%B2/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-5-4%E8%AE%B2/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-5-3%E8%AE%B2/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-5-2%E8%AE%B2/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-5-1%E8%AE%B2/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/openSUSE-Tumbleweed-install-%E5%AE%89%E8%A3%85/</loc>
+    
+    <lastmod>2020-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/CentOS8-%E6%96%B0%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D/</loc>
+    
+    <lastmod>2020-05-14</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/en/Hexo-Theme-LiveMyLife/</loc>
+    
+    <lastmod>2020-04-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/cn/Hexo-Theme-LiveMyLife/</loc>
+    
+    <lastmod>2020-04-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/archive/index.html</loc>
+    
+    <lastmod>2017-03-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/about/index.html</loc>
+    
+    <lastmod>2016-04-20</lastmod>
+    
+  </url>
+  
+
+  <url>
+    <loc>http://lxeridium.github.io/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/centos/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/%E8%87%AA%E7%84%B6%E6%8B%BC%E8%AF%BB%E6%B3%95/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/Hexo-Theme-LiveMyLife/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/Docker-Desktop/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/system/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/Proxmox-ve/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/ubuntu/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/VMware-player/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/virtualbox/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/windows/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/%E6%BC%AB%E7%94%BB%E5%8D%81%E4%B8%87%E4%B8%AA%E4%B8%BA%E4%BB%80%E4%B9%88/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/opensuse/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/configure/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/software/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/AppImage/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/LVM/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/ansible/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/tomcat/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/cli/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/Linux/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/English/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/Hexo-Theme-LiveMyLife/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/Linux/centos/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/English/%E8%87%AA%E7%84%B6%E6%8B%BC%E8%AF%BB%E6%B3%95/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/e-book/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/e-book/%E6%BC%AB%E7%94%BB%E5%8D%81%E4%B8%87%E4%B8%AA%E4%B8%BA%E4%BB%80%E4%B9%88/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/systools/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/systools/Docker-Desktop/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/systools/Proxmox-ve/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/systools/virtualbox/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/systools/VMware-player/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/windows/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/windows/tools/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/linuxsoftware/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/linuxsoftware/AppImage/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/linuxsoftware/ansible/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/linuxsoftware/LVM/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/linuxsoftware/tomcat/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/linux/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/linux/opensuse/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/linux/software/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/categories/linux/cli/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+</urlset>
