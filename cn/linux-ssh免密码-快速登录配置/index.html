@@ -35,7 +35,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="description" content="SYboot一个博客,分享一些学习资料,提升路径和新的特性,分享生活的领悟,探索眼睛无法看见事物"/>
   <meta name="keyword" content="SYboot,linux,linux操作系统,linux命令,linux学习方法,linux教程,思维提升觉醒,生活技巧"/>
-  <link rel="shortcut icon" href="/img/avatar/syboot_logo.png"/>
+  <link rel="shortcut icon" href="/img/avatar/fatpeople.png"/>
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
@@ -116,7 +116,7 @@
       linux-ssh免密码-快速登录配置 - SYboot_linux_linux操作系统_linux命令_linux学习方法_linux教程_思维提升觉醒_生活技巧
     
   </title>
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -219,9 +219,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
+              归档
               
               
             </a>
@@ -230,9 +230,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -312,14 +312,14 @@
   <style type="text/css">
     .body--light {
       /* intro-header */
-      --intro-header-background-image-url-home: url('/img/header_img/uihjgv-ixwFncpyi-5432.jpg');
+      --intro-header-background-image-url-home: url('/img/header_img/home_bg.jpg');
       --intro-header-background-image-url-post: url('');
-      --intro-header-background-image-url-page: url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: url('/img/header_img/archive_bg.jpg');
     }
     .body--dark {
-      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/uihjgv-ixwFncpyi-5432.jpg');
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/home_bg.jpg');
       --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg.jpg');
     }
 
     header.intro-header {
@@ -331,7 +331,7 @@
 
     
       #signature {/*signature*/
-        background-image: url('/img/signature/vincent-white.png');
+        background-image: url('/img/signature/syboot-white.png');
       }
     
   </style>
@@ -374,12 +374,6 @@
             <div class="blank_box"></div>
             <!-- WordCount end -->
             
-            
-            <!-- 不蒜子统计 start -->
-            <span class="meta" id="busuanzi_container_page_pv">
-              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
-            </span>
-            <!-- 不蒜子统计 end -->
             
 
 
@@ -436,7 +430,7 @@
 <p>管理机生成密钥,只需要使用ssh-keygen命令.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen </span><br></pre></td></tr></table></figure>
 <p>生成密钥过程中，建议采用默认值，只需要按三次回车之后. 就会再~/.ssh目录下生成密钥文件,其中id_rsa为私钥，id_rsa.pub为公钥。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls ~/.ssh</span><br><span class="line">id_rsa</span><br><span class="line">id_rsa.pub</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> ~/.ssh</span><br><span class="line">id_rsa</span><br><span class="line">id_rsa.pub</span><br></pre></td></tr></table></figure>
 <h4 id="被管理的主机">被管理的主机</h4>
 <p>被管理的主机的~/.ssh/authorized_keys文件，是保存管理机的公钥，没有可以创建，创建时注意权限,否则无法免密登录。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$chmod</span> 600 .ssh/authorized_keys</span><br></pre></td></tr></table></figure>
@@ -444,17 +438,18 @@
 <p>可以用ssh-copy-id将公钥复制到远程机器中</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  ssh-copy-id -i .ssh/id_rsa.pub  用户名字@192.168.1.xxx</span><br></pre></td></tr></table></figure>
 <p>也可以手动，CP过去，添加到authorized_keys文件的末尾。</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
 <h4 id="管理主机快速登录配置">管理主机快速登录配置</h4>
 <p>在管理主机配置机器登录参数 通过配置的~/.ssh/config 配置文件相关参数简化登录命令。</p>
 <p>config： cat ~/.ssh/config 文件没有可以创建，注意权限是600. Host 别名 Hostname 被管理机的 IP或域名 端口 22 用户 syboot</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host 51server</span><br><span class="line">Hostname 192.168.1.51       </span><br><span class="line">Port 22</span><br><span class="line">User syboot</span><br></pre></td></tr></table></figure>
 <p>管理主机上登录 51机器可以简化为</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 51server</span><br></pre></td></tr></table></figure>
-<h3 id="赞助广告">赞助广告</h3>
+<h3 id="赞助广告-13">赞助广告</h3>
 <p><img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg" alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p>
 <p><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?id=625058323217">查看购买上图商品</a> <a target="_blank" rel="noopener" href="https://shop252294542.taobao.com/">淘宝店铺</a> <a target="_blank" rel="noopener" href="http://www.lxeridium.com/">品牌官网</a></p>
-<pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com </code></pre>
+<pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com 
+</code></pre>
 
 
         <hr>
@@ -714,9 +709,6 @@
   <!-- totop(rocket) -->
   <script async="true" type="text/javascript" src="/js/totop.js"></script>
 
-  
-    <!-- Busuanzi JavaScript -->
-    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   
 
   

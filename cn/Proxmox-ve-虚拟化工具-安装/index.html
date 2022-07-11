@@ -35,7 +35,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="description" content="SYboot一个博客,分享一些学习资料,提升路径和新的特性,分享生活的领悟,探索眼睛无法看见事物"/>
   <meta name="keyword" content="SYboot,linux,linux操作系统,linux命令,linux学习方法,linux教程,思维提升觉醒,生活技巧"/>
-  <link rel="shortcut icon" href="/img/avatar/syboot_logo.png"/>
+  <link rel="shortcut icon" href="/img/avatar/fatpeople.png"/>
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
@@ -116,7 +116,7 @@
       Proxmox-ve-虚拟化工具-安装 - SYboot_linux_linux操作系统_linux命令_linux学习方法_linux教程_思维提升觉醒_生活技巧
     
   </title>
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -219,9 +219,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
+              归档
               
               
             </a>
@@ -230,9 +230,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -312,26 +312,26 @@
   <style type="text/css">
     .body--light {
       /* intro-header */
-      --intro-header-background-image-url-home: url('/img/header_img/uihjgv-ixwFncpyi-5432.jpg');
-      --intro-header-background-image-url-post: url('/img/header_img/lml_bg.jpg');
-      --intro-header-background-image-url-page: url('//img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-home: url('/img/header_img/home_bg.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/post_bg.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/post_bg.jpg');
     }
     .body--dark {
-      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/uihjgv-ixwFncpyi-5432.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/home_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/post_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/post_bg.jpg');
     }
 
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url('/img/header_img/lml_bg.jpg'); */
+        /* background-image: url('/img/header_img/post_bg.jpg'); */
       
     }
 
     
       #signature {/*signature*/
-        background-image: url('/img/signature/vincent-white.png');
+        background-image: url('/img/signature/syboot-white.png');
       }
     
   </style>
@@ -374,12 +374,6 @@
             <div class="blank_box"></div>
             <!-- WordCount end -->
             
-            
-            <!-- 不蒜子统计 start -->
-            <span class="meta" id="busuanzi_container_page_pv">
-              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
-            </span>
-            <!-- 不蒜子统计 end -->
             
 
 
@@ -440,23 +434,23 @@ ProxmoxVE的一个重要设计目标就是尽可能简化管理员的工作。�
 <p><a target="_blank" rel="noopener" href="https://www.proxmox.com/en/downloads">proxmox下载地址页</a><br>
 <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1iAyCC0T0JuU2v2XPgZltrA">Proxmox6.0手册.pdf 下载 提取码: 4p2q</a><br>
 <a target="_blank" rel="noopener" href="https://www.proxmox.com/en/downloads/item/proxmox-ve-6-2-iso-installer">Proxmox VE 6.2 ISO Installer 下载</a></p>
-<h2 id="安装流程">安装流程</h2>
-<h3 id="1，准备环境">1，准备环境</h3>
+<h2 id="安装流程-2">安装流程</h2>
+<h3 id="1，准备环境-2">1，准备环境</h3>
 <pre><code> 下载 Proxmox VE 6.2 ISO ，用U盘或光盘安装。
  安装盘制作工具。
 </code></pre>
-<h3 id="2，安装">2，安装</h3>
+<h3 id="2，安装-2">2，安装</h3>
 <pre><code>安装过程中都是常规问题，没有别的复杂情况。安装完之后会重启，
 使用 SSH 登录，或是用 https://&lt;ipaddress&gt;:8006/ 访问网页管理页面。
 </code></pre>
-<h3 id="3，注释事项">3，注释事项</h3>
+<h3 id="3，注释事项-2">3，注释事项</h3>
 <pre><code>密码和时区需要注意一下。
 </code></pre>
-<h3 id="4，配置测试">4，配置测试</h3>
+<h3 id="4，配置测试-2">4，配置测试</h3>
 <pre><code>测试ssh 是否可以登录。
 网页管理端 是否可以登录。
 </code></pre>
-<h3 id="赞助广告">赞助广告</h3>
+<h3 id="赞助广告-7">赞助广告</h3>
 <p><img src="https://gd4.alicdn.com/imgextra/i4/2200652270622/O1CN01oo7QKu1GSuyWmRu4C_!!2200652270622.jpg" alt="双面呢羊毛两件套"></p>
 <p><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?id=626507248943">查看购买上图商品</a> <a target="_blank" rel="noopener" href="https://shop252294542.taobao.com/">淘宝店铺</a> <a target="_blank" rel="noopener" href="http://www.lxeridium.com/">品牌官网</a></p>
 <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com 
@@ -473,7 +467,7 @@ ProxmoxVE的一个重要设计目标就是尽可能简化管理员的工作。�
           
           
           <li class="next">
-            <a href="/cn/VMwareWorkstationPlayer-虚拟化工具-安装/" data-toggle="tooltip" data-placement="top" title="VMware-Workstation-16-Player-虚拟化工具-安装">Next Post &rarr;</a>
+            <a href="/cn/VirtualBox-虚拟机工具-安装/" data-toggle="tooltip" data-placement="top" title="VirtualBox-虚拟机工具 安装">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -720,9 +714,6 @@ ProxmoxVE的一个重要设计目标就是尽可能简化管理员的工作。�
   <!-- totop(rocket) -->
   <script async="true" type="text/javascript" src="/js/totop.js"></script>
 
-  
-    <!-- Busuanzi JavaScript -->
-    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   
 
   
