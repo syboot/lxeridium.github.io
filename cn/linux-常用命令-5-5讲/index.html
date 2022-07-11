@@ -208,9 +208,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              关于
+              归档
               
               
             </a>
@@ -219,9 +219,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              归档
+              关于
               
               
             </a>
@@ -425,9 +425,11 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="备份压缩"><a href="#备份压缩" class="headerlink" title="备份压缩"></a>备份压缩</h2><h3 id="Linux-tar（英文全拼：tape-archive-）"><a href="#Linux-tar（英文全拼：tape-archive-）" class="headerlink" title="Linux tar（英文全拼：tape archive ）"></a>Linux tar（英文全拼：tape archive ）</h3><p>Linux tar 命令用于备份文件。</p>
+        <h2 id="备份压缩">备份压缩</h2>
+<h3 id="Linux-tar（英文全拼：tape-archive-）">Linux tar（英文全拼：tape archive ）</h3>
+<p>Linux tar 命令用于备份文件。</p>
 <p>tar 是用来建立，还原备份文件的工具程序，它可以加入，解开备份文件内的文件。 语法</p>
-<p>tar [-ABcdgGhiklmMoOpPrRsStuUvwWxzZ][-b &lt;区块数目&gt;][-C &lt;目的目录&gt;][-f &lt;备份文件&gt;][-F <Script文件>][-K &lt;文件&gt;][-L &lt;媒体容量&gt;][-N &lt;日期时间&gt;][-T &lt;范本文件&gt;][-V &lt;卷册名称&gt;][-X &lt;范本文件&gt;][-&lt;设备编号&gt;&lt;存储密度&gt;][—after-date=&lt;日期时间&gt;][—atime-preserve][—backuup=&lt;备份方式&gt;][—checkpoint][—concatenate][—confirmation][—delete][—exclude=&lt;范本样式&gt;][—force-local][—group=&lt;群组名称&gt;][—help][—ignore-failed-read][—new-volume-script=<Script文件>][—newer-mtime][—no-recursion][—null][—numeric-owner][—owner=&lt;用户名称&gt;][—posix][—erve][—preserve-order][—preserve-permissions][—record-size=&lt;区块数目&gt;][—recursive-unlink][—remove-files][—rsh-command=&lt;执行指令&gt;][—same-owner][—suffix=&lt;备份字尾字符串&gt;][—totals][—use-compress-program=&lt;执行指令&gt;][—version][—volno-file=&lt;编号文件&gt;][文件或目录…]</p>
+<p>tar [-ABcdgGhiklmMoOpPrRsStuUvwWxzZ][-b &lt;区块数目&gt;][-C &lt;目的目录&gt;][-f &lt;备份文件&gt;][-F &lt;Script文件&gt;][-K &lt;文件&gt;][-L &lt;媒体容量&gt;][-N &lt;日期时间&gt;][-T &lt;范本文件&gt;][-V &lt;卷册名称&gt;][-X &lt;范本文件&gt;][-&lt;设备编号&gt;&lt;存储密度&gt;][–after-date=&lt;日期时间&gt;][–atime-preserve][–backuup=&lt;备份方式&gt;][–checkpoint][–concatenate][–confirmation][–delete][–exclude=&lt;范本样式&gt;][–force-local][–group=&lt;群组名称&gt;][–help][–ignore-failed-read][–new-volume-script=&lt;Script文件&gt;][–newer-mtime][–no-recursion][–null][–numeric-owner][–owner=&lt;用户名称&gt;][–posix][–erve][–preserve-order][–preserve-permissions][–record-size=&lt;区块数目&gt;][–recursive-unlink][–remove-files][–rsh-command=&lt;执行指令&gt;][–same-owner][–suffix=&lt;备份字尾字符串&gt;][–totals][–use-compress-program=&lt;执行指令&gt;][–version][–volno-file=&lt;编号文件&gt;][文件或目录…]</p>
 <p>参数：</p>
 <pre><code>-A或--catenate 新增文件到已存在的备份文件。
 -b&lt;区块数目&gt;或--blocking-factor=&lt;区块数目&gt; 设置每笔记录的区块数目，每个区块大小为12Bytes。
@@ -500,7 +502,9 @@
 --use-compress-program=&lt;执行指令&gt; 通过指定的指令处理备份文件。
 --version 显示版本信息。
 --volno-file=&lt;编号文件&gt; 使用指定文件内的编号取代预设的卷册编号。
-</code></pre><h3 id="Linux-unzip命令"><a href="#Linux-unzip命令" class="headerlink" title="Linux unzip命令"></a>Linux unzip命令</h3><p>Linux unzip命令用于解压缩zip文件</p>
+</code></pre>
+<h3 id="Linux-unzip命令">Linux unzip命令</h3>
+<p>Linux unzip命令用于解压缩zip文件</p>
 <p>unzip为.zip压缩文件的解压缩程序。 语法</p>
 <p>unzip [-cflptuvz][-agCjLMnoqsVX][-P &lt;密码&gt;][.zip文件][文件][-d &lt;目录&gt;][-x &lt;文件&gt;] 或 unzip [-Z]</p>
 <p>参数：</p>
@@ -530,9 +534,12 @@
 -d&lt;目录&gt; 指定文件解压缩后所要存储的目录。
 -x&lt;文件&gt; 指定不要处理.zip压缩文件中的哪些文件。
 -Z unzip -Z等于执行zipinfo指令。
-</code></pre><h3 id="Linux-gzip命令"><a href="#Linux-gzip命令" class="headerlink" title="Linux gzip命令"></a>Linux gzip命令</h3><p>Linux gzip命令用于压缩文件。</p>
-<p>gzip是个使用广泛的压缩程序，文件经它压缩过后，其名称后面会多出”.gz”的扩展名。 语法</p>
-<p>gzip [-acdfhlLnNqrtvV][-S &lt;压缩字尾字符串&gt;][-&lt;压缩效率&gt;][—best/fast][文件…] 或<br>gzip [-acdfhlLnNqrtvV][-S &lt;压缩字尾字符串&gt;][-&lt;压缩效率&gt;][—best/fast][目录]</p>
+</code></pre>
+<h3 id="Linux-gzip命令">Linux gzip命令</h3>
+<p>Linux gzip命令用于压缩文件。</p>
+<p>gzip是个使用广泛的压缩程序，文件经它压缩过后，其名称后面会多出&quot;.gz&quot;的扩展名。 语法</p>
+<p>gzip [-acdfhlLnNqrtvV][-S &lt;压缩字尾字符串&gt;][-&lt;压缩效率&gt;][–best/fast][文件…] 或<br>
+gzip [-acdfhlLnNqrtvV][-S &lt;压缩字尾字符串&gt;][-&lt;压缩效率&gt;][–best/fast][目录]</p>
 <p>参数：</p>
 <pre><code>-a或--ascii 　使用ASCII文字模式。
 -c或--stdout或--to-stdout 　把压缩后的文件输出到标准输出设备，不去更动原始文件。
@@ -552,9 +559,14 @@
 -&lt;压缩效率&gt; 　压缩效率是一个介于1－9的数值，预设值为&quot;6&quot;，指定愈大的数值，压缩效率就会愈高。
 --best 　此参数的效果和指定&quot;-9&quot;参数相同。
 --fast 　此参数的效果和指定&quot;-1&quot;参数相同。
-</code></pre><h3 id="Linux-cpio命令"><a href="#Linux-cpio命令" class="headerlink" title="Linux cpio命令"></a>Linux cpio命令</h3><p>Linux cpio命令用于备份文件。</p>
+</code></pre>
+<h3 id="Linux-cpio命令">Linux cpio命令</h3>
+<p>Linux cpio命令用于备份文件。</p>
 <p>cpio 是用来建立，还原备份档的工具程序，它可以加入，解开 cpio 或 tar 备份档内的文件。 语法</p>
-<p>cpio [-0aABckLovV][-C &lt;输入/输出大小&gt;][-F &lt;备份档&gt;][-H &lt;备份格式&gt;][-O &lt;备份档&gt;][—block-size=&lt;区块大小&gt;][—force-local][—help][—quiet][—version]<br>或<br>cpio [-bBcdfikmnrsStuvV][-C &lt;输入/输出大小&gt;][-E &lt;范本文件&gt;][-F &lt;备份档&gt;][-H &lt;备份格式&gt;][-I &lt;备份档&gt;][-M &lt;回传信息&gt;][-R &lt;拥有者&gt;&lt;:/.&gt;&lt;所属群组&gt;][—block-size=&lt;区块大小&gt;][—force-local][—help][—no-absolute-filenames][—no-preserve-owner][—only-verify-crc][—quiet][—sparse][—version][范本样式…]<br>或 cpio [-0adkiLmpuvV][-R &lt;拥有者&gt;&lt;:/.&gt;&lt;所属群组&gt;][—help][—no-preserve-owner][—quiet][—sparse][—version][目的目]</p>
+<p>cpio [-0aABckLovV][-C &lt;输入/输出大小&gt;][-F &lt;备份档&gt;][-H &lt;备份格式&gt;][-O &lt;备份档&gt;][–block-size=&lt;区块大小&gt;][–force-local][–help][–quiet][–version]<br>
+或<br>
+cpio [-bBcdfikmnrsStuvV][-C &lt;输入/输出大小&gt;][-E &lt;范本文件&gt;][-F &lt;备份档&gt;][-H &lt;备份格式&gt;][-I &lt;备份档&gt;][-M &lt;回传信息&gt;][-R &lt;拥有者&gt;&lt;:/.&gt;&lt;所属群组&gt;][–block-size=&lt;区块大小&gt;][–force-local][–help][–no-absolute-filenames][–no-preserve-owner][–only-verify-crc][–quiet][–sparse][–version][范本样式…]<br>
+或 cpio [-0adkiLmpuvV][-R &lt;拥有者&gt;&lt;:/.&gt;&lt;所属群组&gt;][–help][–no-preserve-owner][–quiet][–sparse][–version][目的目]</p>
 <p>参数：</p>
 <pre><code>-0或--null 　接受新增列控制字符，通常配合find指令的&quot;-print0&quot;参数使用。
 -a或--reset-access-time 　重新设置文件的存取时间。
@@ -597,8 +609,10 @@
 --quiet 　不显示复制了多少区块。
 --sparse 　倘若一个文件内含大量的连续0字节，则将此文件存成稀疏文件。
 --version 　显示版本信息。
-</code></pre><h3 id="Linux-gunzip命令"><a href="#Linux-gunzip命令" class="headerlink" title="Linux gunzip命令"></a>Linux gunzip命令</h3><p>Linux gunzip命令用于解压文件。</p>
-<p>gunzip是个使用广泛的解压缩程序，它用于解开被gzip压缩过的文件，这些压缩文件预设最后的扩展名为”.gz”。事实上gunzip就是gzip的硬连接，因此不论是压缩或解压缩，都可通过gzip指令单独完成。 语法</p>
+</code></pre>
+<h3 id="Linux-gunzip命令">Linux gunzip命令</h3>
+<p>Linux gunzip命令用于解压文件。</p>
+<p>gunzip是个使用广泛的解压缩程序，它用于解开被gzip压缩过的文件，这些压缩文件预设最后的扩展名为&quot;.gz&quot;。事实上gunzip就是gzip的硬连接，因此不论是压缩或解压缩，都可通过gzip指令单独完成。 语法</p>
 <p>参数：</p>
 <p>gunzip [-acfhlLnNqrtvV][-s &lt;压缩字尾字符串&gt;][文件…] 或 gunzip [-acfhlLnNqrtvV][-s &lt;压缩字尾字符串&gt;][目录]</p>
 <pre><code>-a或--ascii 　使用ASCII文字模式。
@@ -615,9 +629,13 @@
 -t或--test 　测试压缩文件是否正确无误。
 -v或--verbose 　显示指令执行过程。
 -V或--version 显示版本信息。
-</code></pre><h2 id="设备管理"><a href="#设备管理" class="headerlink" title="设备管理"></a>设备管理</h2><h3 id="Linux-MAKEDEV命令"><a href="#Linux-MAKEDEV命令" class="headerlink" title="Linux MAKEDEV命令"></a>Linux MAKEDEV命令</h3><p>Linux MAKEDEV命令用于新增 /dev/ 下的装置档案，多数分区已经将所有的档案都产生，故一般而言不太会需要用到这个命令。 语法</p>
+</code></pre>
+<h2 id="设备管理">设备管理</h2>
+<h3 id="Linux-MAKEDEV命令">Linux MAKEDEV命令</h3>
+<p>Linux MAKEDEV命令用于新增 /dev/ 下的装置档案，多数分区已经将所有的档案都产生，故一般而言不太会需要用到这个命令。 语法</p>
 <p>MAKEDEV -V MAKEDEV [ -n ] [ -v ] update MAKEDEV [ -n ] [ -v ] [ -d ] device …</p>
-<h3 id="poweroff-命令"><a href="#poweroff-命令" class="headerlink" title="poweroff 命令"></a>poweroff 命令</h3><p>poweroff 命令用于关闭计算器并切断电源。</p>
+<h3 id="poweroff-命令">poweroff 命令</h3>
+<p>poweroff 命令用于关闭计算器并切断电源。</p>
 <p>语法</p>
 <p>poweroff [-n] [-w] [-d] [-f] [-i] [-h]</p>
 <p>参数说明：</p>
@@ -626,10 +644,13 @@
 -d : 不把记录写到 /var/log/wtmp 文件里
 -i : 在关机之前先把所有网络相关的装置先停止
 -p : 关闭操作系统之前将系统中所有的硬件设置为备用模式。
-</code></pre><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i2/2200652270622/O1CN01A9LSoi1GSuyqYAlvI_!!2200652270622.jpg" alt="羊毛双面呢高腰小香风套装"></p>
+</code></pre>
+<h3 id="赞助广告-22">赞助广告</h3>
+<p><img src="https://gd3.alicdn.com/imgextra/i2/2200652270622/O1CN01A9LSoi1GSuyqYAlvI_!!2200652270622.jpg" alt="羊毛双面呢高腰小香风套装"></p>
 <p><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?id=629273346606">查看购买上图商品</a> <a target="_blank" rel="noopener" href="https://shop252294542.taobao.com/">淘宝店铺</a> <a target="_blank" rel="noopener" href="http://www.lxeridium.com/">品牌官网</a></p>
 <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com 
 </code></pre>
+
 
         <hr>
         <!-- Pager -->

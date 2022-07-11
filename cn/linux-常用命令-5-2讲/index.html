@@ -208,9 +208,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              关于
+              归档
               
               
             </a>
@@ -219,9 +219,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              归档
+              关于
               
               
             </a>
@@ -425,7 +425,9 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="文件传输"><a href="#文件传输" class="headerlink" title="文件传输"></a>文件传输</h2><h3 id="Linux-tftp命令"><a href="#Linux-tftp命令" class="headerlink" title="Linux tftp命令"></a>Linux tftp命令</h3><p>Linux tftp命令用于传输文件。</p>
+        <h2 id="文件传输">文件传输</h2>
+<h3 id="Linux-tftp命令">Linux tftp命令</h3>
+<p>Linux tftp命令用于传输文件。</p>
 <p>FTP让用户得以下载存放于远端主机的文件，也能将文件上传到远端主机放置。tftp是简单的文字模式ftp程序，它所使用的指令和FTP类似。 语法</p>
 <p>tftp [主机名称或IP地址]</p>
 <p>操作说明：</p>
@@ -443,7 +445,9 @@ rexmt：设置包传输的超时时间
 timeout：设置重传的超时时间
 help：帮助信息
 ? ：帮助信息
-</code></pre><h3 id="Linux-ftp命令"><a href="#Linux-ftp命令" class="headerlink" title="Linux ftp命令"></a>Linux ftp命令</h3><p>Linux ftp命令设置文件系统相关功能。</p>
+</code></pre>
+<h3 id="Linux-ftp命令">Linux ftp命令</h3>
+<p>Linux ftp命令设置文件系统相关功能。</p>
 <p>FTP是ARPANet的标准文件传输协议，该网络就是现今Internet的前身。 语法</p>
 <p>ftp [-dignv][主机名称或IP地址]</p>
 <p>参数：</p>
@@ -452,7 +456,10 @@ help：帮助信息
 -g 关闭本地主机文件名称支持特殊字符的扩充特性。
 -n 不使用自动登陆。
 -v 显示指令执行过程。
-</code></pre><h2 id="磁盘管理"><a href="#磁盘管理" class="headerlink" title="磁盘管理"></a>磁盘管理</h2><h3 id="Linux-ls（英文全拼：list-files）"><a href="#Linux-ls（英文全拼：list-files）" class="headerlink" title="Linux ls（英文全拼：list files）"></a>Linux ls（英文全拼：list files）</h3><p>Linux ls 命令用于显示指定工作目录下之内容（列出目前工作目录所含之文件及子目录)。 语法</p>
+</code></pre>
+<h2 id="磁盘管理">磁盘管理</h2>
+<h3 id="Linux-ls（英文全拼：list-files）">Linux ls（英文全拼：list files）</h3>
+<p>Linux ls 命令用于显示指定工作目录下之内容（列出目前工作目录所含之文件及子目录)。 语法</p>
 <p>ls [-alrtAFR] [name…]</p>
 <p>参数 :</p>
 <pre><code>-a 显示所有文件及目录 (. 开头的隐藏文件不会列出)
@@ -462,12 +469,16 @@ help：帮助信息
 -A 同 -a ，但不列出 &quot;.&quot; (目前目录) 及 &quot;..&quot; (父目录)
 -F 在列出的文件名称后加一符号；例如可执行档则加 &quot;*&quot;, 目录则加 &quot;/&quot;
 -R 若目录下有文件，则以下之文件亦皆依序列出
-</code></pre><h3 id="Linux-cd（英文全拼：change-directory）"><a href="#Linux-cd（英文全拼：change-directory）" class="headerlink" title="Linux cd（英文全拼：change directory）"></a>Linux cd（英文全拼：change directory）</h3><p>Linux cd 命令用于切换当前工作目录。</p>
+</code></pre>
+<h3 id="Linux-cd（英文全拼：change-directory）">Linux cd（英文全拼：change directory）</h3>
+<p>Linux cd 命令用于切换当前工作目录。</p>
 <p>其中 dirName 表示法可为绝对路径或相对路径。若目录名称省略，则变换至使用者的 home 目录 (也就是刚 login 时所在的目录)。</p>
-<p>另外，~ 也表示为 home 目录 的意思， . 则是表示目前所在的目录， .. 则表示目前目录位置的上一层目录。 语法</p>
+<p>另外，~ 也表示为 home 目录 的意思， . 则是表示目前所在的目录， … 则表示目前目录位置的上一层目录。 语法</p>
 <p>cd [dirName]</p>
 <pre><code>dirName：要切换的目标目录。
-</code></pre><h3 id="Linux-df（英文全拼：disk-free）"><a href="#Linux-df（英文全拼：disk-free）" class="headerlink" title="Linux df（英文全拼：disk free）"></a>Linux df（英文全拼：disk free）</h3><p>Linux df 命令用于显示目前在 Linux 系统上的文件系统磁盘使用情况统计。 语法</p>
+</code></pre>
+<h3 id="Linux-df（英文全拼：disk-free）">Linux df（英文全拼：disk free）</h3>
+<p>Linux df 命令用于显示目前在 Linux 系统上的文件系统磁盘使用情况统计。 语法</p>
 <p>df [选项]… [FILE]…</p>
 <pre><code> 文件-a, --all 包含所有的具有 0 Blocks 的文件系统
  文件--block-size=&#123;SIZE&#125; 使用 &#123;SIZE&#125; 大小的 Blocks
@@ -486,13 +497,17 @@ help：帮助信息
  文件-v (忽略)
  文件--help 显示这个帮手并且离开
  文件--version 输出版本资讯并且离开
-</code></pre><h3 id="Linux-pwd（英文全拼：print-work-directory）"><a href="#Linux-pwd（英文全拼：print-work-directory）" class="headerlink" title="Linux pwd（英文全拼：print work directory）"></a>Linux pwd（英文全拼：print work directory）</h3><p>Linux pwd 命令用于显示工作目录。</p>
+</code></pre>
+<h3 id="Linux-pwd（英文全拼：print-work-directory）">Linux pwd（英文全拼：print work directory）</h3>
+<p>Linux pwd 命令用于显示工作目录。</p>
 <p>执行 pwd 指令可立刻得知您目前所在的工作目录的绝对路径名称。 语法</p>
-<p>pwd [—help][—version]</p>
+<p>pwd [–help][–version]</p>
 <p>参数说明:</p>
 <pre><code>--help 在线帮助。
 --version 显示版本信息。
-</code></pre><h3 id="Linux-tree命令"><a href="#Linux-tree命令" class="headerlink" title="Linux tree命令"></a>Linux tree命令</h3><p>Linux tree命令用于以树状图列出目录的内容。</p>
+</code></pre>
+<h3 id="Linux-tree命令">Linux tree命令</h3>
+<p>Linux tree命令用于以树状图列出目录的内容。</p>
 <p>执行tree指令，它会列出指定目录下的所有文件，包括子目录里的文件。 语法</p>
 <p>tree [-aACdDfFgilnNpqstux][-I &lt;范本样式&gt;][-P &lt;范本样式&gt;][目录…]</p>
 <p>参数说明：</p>
@@ -516,8 +531,12 @@ help：帮助信息
 -t 用文件和目录的更改时间排序。
 -u 列出文件或目录的拥有者名称，没有对应的名称时，则显示用户识别码。
 -x 将范围局限在现行的文件系统中，若指定目录下的某些子目录，其存放于另一个文件系统上，则将该子目录予以排除在寻找范围外。
-</code></pre><h3 id="Linux-mount命令"><a href="#Linux-mount命令" class="headerlink" title="Linux mount命令"></a>Linux mount命令</h3><p>Linux mount命令是经常会使用到的命令，它用于挂载Linux系统外的文件。 语法</p>
-<p>mount [-hV]<br>mount -a [-fFnrsvw] [-t vfstype]<br>mount [-fnrsvw] [-o options [,…]] device | dir mount [-fnrsvw] [-t vfstype] [-o options] device dir</p>
+</code></pre>
+<h3 id="Linux-mount命令">Linux mount命令</h3>
+<p>Linux mount命令是经常会使用到的命令，它用于挂载Linux系统外的文件。 语法</p>
+<p>mount [-hV]<br>
+mount -a [-fFnrsvw] [-t vfstype]<br>
+mount [-fnrsvw] [-o options [,…]] device | dir mount [-fnrsvw] [-t vfstype] [-o options] device dir</p>
 <p>参数说明：</p>
 <pre><code> -V：显示程序版本
  -h：显示辅助讯息
@@ -544,18 +563,25 @@ help：帮助信息
  -o ro：用唯读模式挂上。
  -o rw：用可读写模式挂上。
  -o loop=：使用 loop 模式用来将一个档案当成硬盘分割挂上系统。
-</code></pre><h3 id="Linux-mkdir（英文全拼：make-directory）"><a href="#Linux-mkdir（英文全拼：make-directory）" class="headerlink" title="Linux mkdir（英文全拼：make directory）"></a>Linux mkdir（英文全拼：make directory）</h3><p>Linux mkdir 命令用于创建目录。 语法</p>
+</code></pre>
+<h3 id="Linux-mkdir（英文全拼：make-directory）">Linux mkdir（英文全拼：make directory）</h3>
+<p>Linux mkdir 命令用于创建目录。 语法</p>
 <p>mkdir [-p] dirName</p>
 <p>参数说明：</p>
 <pre><code>-p 确保目录名称存在，不存在的就建一个。
-</code></pre><h3 id="Linux-rmdir（英文全拼：remove-directory）"><a href="#Linux-rmdir（英文全拼：remove-directory）" class="headerlink" title="Linux rmdir（英文全拼：remove directory）"></a>Linux rmdir（英文全拼：remove directory）</h3><p>Linux rmdir 命令删除空的目录。 语法</p>
+</code></pre>
+<h3 id="Linux-rmdir（英文全拼：remove-directory）">Linux rmdir（英文全拼：remove directory）</h3>
+<p>Linux rmdir 命令删除空的目录。 语法</p>
 <p>rmdir [-p] dirName</p>
 <p>参数：</p>
 <pre><code>-p 是当子目录被删除后使它也成为空目录的话，则顺便一并删除。
-</code></pre><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i3/2200652270622/O1CN01LJ6A1s1GSuwym6en3_!!2200652270622.jpg" alt="秋冬款高档小香风珍珠针织二件套装"></p>
+</code></pre>
+<h3 id="赞助广告-17">赞助广告</h3>
+<p><img src="https://gd3.alicdn.com/imgextra/i3/2200652270622/O1CN01LJ6A1s1GSuwym6en3_!!2200652270622.jpg" alt="秋冬款高档小香风珍珠针织二件套装"></p>
 <p><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?id=617158065194">查看购买上图商品</a> <a target="_blank" rel="noopener" href="https://shop252294542.taobao.com/">淘宝店铺</a> <a target="_blank" rel="noopener" href="http://www.lxeridium.com/">品牌官网</a></p>
 <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com 
 </code></pre>
+
 
         <hr>
         <!-- Pager -->
