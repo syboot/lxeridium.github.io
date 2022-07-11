@@ -291,13 +291,6 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/tags/system/</loc>
-    <lastmod>2022-07-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://lxeridium.github.io/tags/Docker-Desktop/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
@@ -306,6 +299,13 @@
   
   <url>
     <loc>http://lxeridium.github.io/tags/%E8%87%AA%E7%84%B6%E6%8B%BC%E8%AF%BB%E6%B3%95/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/system/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -347,13 +347,6 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/tags/configure/</loc>
-    <lastmod>2022-07-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://lxeridium.github.io/tags/%E6%BC%AB%E7%94%BB%E5%8D%81%E4%B8%87%E4%B8%AA%E4%B8%BA%E4%BB%80%E4%B9%88/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
@@ -362,6 +355,13 @@
   
   <url>
     <loc>http://lxeridium.github.io/tags/opensuse/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://lxeridium.github.io/tags/configure/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -419,14 +419,14 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/categories/Linux/centos/</loc>
+    <loc>http://lxeridium.github.io/categories/systools/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/categories/systools/</loc>
+    <loc>http://lxeridium.github.io/categories/Linux/centos/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -454,6 +454,13 @@
   </url>
   
   <url>
+    <loc>http://lxeridium.github.io/categories/systools/virtualbox/</loc>
+    <lastmod>2022-07-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://lxeridium.github.io/categories/systools/VMware-player/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
@@ -468,14 +475,14 @@
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/categories/English/%E8%87%AA%E7%84%B6%E6%8B%BC%E8%AF%BB%E6%B3%95/</loc>
+    <loc>http://lxeridium.github.io/categories/linux/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://lxeridium.github.io/categories/linux/</loc>
+    <loc>http://lxeridium.github.io/categories/English/%E8%87%AA%E7%84%B6%E6%8B%BC%E8%AF%BB%E6%B3%95/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -490,13 +497,6 @@
   
   <url>
     <loc>http://lxeridium.github.io/categories/windows/tools/</loc>
-    <lastmod>2022-07-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://lxeridium.github.io/categories/systools/virtualbox/</loc>
     <lastmod>2022-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -425,32 +425,26 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="linux-ssh免密码-快速登录配置">linux ssh免密码+快速登录配置</h3>
-<h4 id="管理主机生成秘钥">管理主机生成秘钥</h4>
-<p>管理机生成密钥,只需要使用ssh-keygen命令.</p>
+        <h3 id="linux-ssh免密码-快速登录配置"><a href="#linux-ssh免密码-快速登录配置" class="headerlink" title="linux ssh免密码+快速登录配置"></a>linux ssh免密码+快速登录配置</h3><h4 id="管理主机生成秘钥"><a href="#管理主机生成秘钥" class="headerlink" title="管理主机生成秘钥"></a>管理主机生成秘钥</h4><p>管理机生成密钥,只需要使用ssh-keygen命令.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen </span><br></pre></td></tr></table></figure>
 <p>生成密钥过程中，建议采用默认值，只需要按三次回车之后. 就会再~/.ssh目录下生成密钥文件,其中id_rsa为私钥，id_rsa.pub为公钥。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> ~/.ssh</span><br><span class="line">id_rsa</span><br><span class="line">id_rsa.pub</span><br></pre></td></tr></table></figure>
-<h4 id="被管理的主机">被管理的主机</h4>
-<p>被管理的主机的~/.ssh/authorized_keys文件，是保存管理机的公钥，没有可以创建，创建时注意权限,否则无法免密登录。</p>
+<h4 id="被管理的主机"><a href="#被管理的主机" class="headerlink" title="被管理的主机"></a>被管理的主机</h4><p>被管理的主机的~/.ssh/authorized_keys文件，是保存管理机的公钥，没有可以创建，创建时注意权限,否则无法免密登录。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$chmod</span> 600 .ssh/authorized_keys</span><br></pre></td></tr></table></figure>
 <p>只需把管理机生成密钥id_rsa.pub文件的内容拷贝到被管理的主机的~/.ssh/authorized_keys文件的末尾。</p>
 <p>可以用ssh-copy-id将公钥复制到远程机器中</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  ssh-copy-id -i .ssh/id_rsa.pub  用户名字@192.168.1.xxx</span><br></pre></td></tr></table></figure>
 <p>也可以手动，CP过去，添加到authorized_keys文件的末尾。</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
-<h4 id="管理主机快速登录配置">管理主机快速登录配置</h4>
-<p>在管理主机配置机器登录参数 通过配置的~/.ssh/config 配置文件相关参数简化登录命令。</p>
+<h4 id="管理主机快速登录配置"><a href="#管理主机快速登录配置" class="headerlink" title="管理主机快速登录配置"></a>管理主机快速登录配置</h4><p>在管理主机配置机器登录参数 通过配置的~/.ssh/config 配置文件相关参数简化登录命令。</p>
 <p>config： cat ~/.ssh/config 文件没有可以创建，注意权限是600. Host 别名 Hostname 被管理机的 IP或域名 端口 22 用户 syboot</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host 51server</span><br><span class="line">Hostname 192.168.1.51       </span><br><span class="line">Port 22</span><br><span class="line">User syboot</span><br></pre></td></tr></table></figure>
 <p>管理主机上登录 51机器可以简化为</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 51server</span><br></pre></td></tr></table></figure>
-<h3 id="赞助广告-13">赞助广告</h3>
-<p><img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg" alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p>
+<h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i4/2200652270622/O1CN01JAQLRX1GSuy7uSs2Q_!!2200652270622.jpg" alt="秋冬欧美蓝白撞色条纹弹力打底衫"></p>
 <p><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?id=625058323217">查看购买上图商品</a> <a target="_blank" rel="noopener" href="https://shop252294542.taobao.com/">淘宝店铺</a> <a target="_blank" rel="noopener" href="http://www.lxeridium.com/">品牌官网</a></p>
 <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com 
 </code></pre>
-
 
         <hr>
         <!-- Pager -->

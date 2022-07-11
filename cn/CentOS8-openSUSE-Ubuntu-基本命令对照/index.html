@@ -425,9 +425,8 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="Linux-包管理基础命令">Linux 包管理基础命令</h3>
-<p>Linux 包管理基础命令：apt、yum、dnf 和 pkg zypper</p>
-<h3 id="对应关系">对应关系</h3>
+        <h3 id="Linux-包管理基础命令"><a href="#Linux-包管理基础命令" class="headerlink" title="Linux 包管理基础命令"></a>Linux 包管理基础命令</h3><p>Linux 包管理基础命令：apt、yum、dnf 和 pkg zypper</p>
+<h3 id="对应关系"><a href="#对应关系" class="headerlink" title="对应关系"></a>对应关系</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -442,42 +441,36 @@
 <td>Debian</td>
 <td>.deb</td>
 <td>apt, apt-cache, apt-get, dpkg</td>
-<td></td>
 </tr>
 <tr>
 <td>Ubuntu</td>
 <td>.deb</td>
 <td>apt, apt-cache, apt-get, dpkg</td>
-<td></td>
 </tr>
 <tr>
 <td>CentOS</td>
 <td>.rpm</td>
 <td>yum</td>
-<td></td>
 </tr>
 <tr>
 <td>Fedora</td>
 <td>.rpm</td>
 <td>dnf</td>
-<td></td>
 </tr>
 <tr>
 <td>FreeBSD</td>
 <td>Ports,</td>
-<td>.txz 	make, pkg</td>
-<td></td>
+<td>.txz     make, pkg</td>
 </tr>
 <tr>
 <td>opensuse</td>
 <td>.rpm</td>
 <td>yast2,zypper</td>
-<td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="yum命令">yum命令</h3>
-<p>yum命令是在Fedora和RedHat以及SUSE中基于rpm的软件包管理器，它可以使系统管理人员交互和自动化地更细与管理RPM软件包，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软体包，无须繁琐地一次次下载、安装。</p>
+</div>
+<h3 id="yum命令"><a href="#yum命令" class="headerlink" title="yum命令"></a>yum命令</h3><p>yum命令是在Fedora和RedHat以及SUSE中基于rpm的软件包管理器，它可以使系统管理人员交互和自动化地更细与管理RPM软件包，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软体包，无须繁琐地一次次下载、安装。</p>
 <p>yum提供了查找、安装、删除某一个、一组甚至全部软件包的命令，而且命令简洁而又好记。 语法</p>
 <p>yum(选项)(参数)</p>
 <p>选项</p>
@@ -490,8 +483,7 @@
 -e：设置错误等级（0-10）；
 -R：设置yum处理一个命令的最大等待时间；
 -C：完全从缓存中运行，而不去下载或者更新任何头文件。
-</code></pre>
-<p>参数</p>
+</code></pre><p>参数</p>
 <pre><code>install：安装rpm软件包；
 update：更新rpm软件包；
 check-update：检查是否有可用的更新rpm软件包；
@@ -505,12 +497,9 @@ resolvedep：显示rpm软件包的依赖关系；
 localinstall：安装本地的rpm软件包；
 localupdate：显示本地rpm软件包进行更新；
 deplist：显示rpm软件包的所有依赖关系。
-</code></pre>
-<h3 id="apt-get-命令">apt-get 命令</h3>
-<p>apt-get 命令是 Ubuntu 系统中的包管理工具，可以用来安装、卸载包，也可以用来升级包，还可以用来把系统升级到新的版本。</p>
+</code></pre><h3 id="apt-get-命令"><a href="#apt-get-命令" class="headerlink" title="apt-get 命令"></a>apt-get 命令</h3><p>apt-get 命令是 Ubuntu 系统中的包管理工具，可以用来安装、卸载包，也可以用来升级包，还可以用来把系统升级到新的版本。</p>
 <p>语法格式： apt-get [options] command</p>
-<p>配置文件： 早期 apt-get 默认的配置文件为 /etc/apt/apt.conf，但是当前的 Ubuntu 系统中默认没有这个文件。 如果 /etc/apt/apt.conf 文件存在，apt-get<br>
-仍然会读取它。但现在的设计思路是把配置文件分隔后放置在 /etc/apt/apt.conf.d 目录下，这样更容易管理。</p>
+<p>配置文件： 早期 apt-get 默认的配置文件为 /etc/apt/apt.conf，但是当前的 Ubuntu 系统中默认没有这个文件。 如果 /etc/apt/apt.conf 文件存在，apt-get<br>仍然会读取它。但现在的设计思路是把配置文件分隔后放置在 /etc/apt/apt.conf.d 目录下，这样更容易管理。</p>
 <p>常用选项：</p>
 <pre><code>-h, --help              // 查看帮助文档
 -v, --version           // 查看 apt-get 的版本
@@ -522,8 +511,7 @@ deplist：显示rpm软件包的所有依赖关系。
 -q, --quiet             // 减少输出
 --purge                 // 配合 remove 命令删除包的配置文件
 --reinstall             // 重新安装已安装的包或其新版本
-</code></pre>
-<p>命 令 ：</p>
+</code></pre><p>命 令 ：</p>
 <pre><code>软件包列表是最新的：apt-get update
 
 安装一个新软件包：apt-get install packagename
@@ -539,13 +527,10 @@ deplist：显示rpm软件包的所有依赖关系。
 更新所有已安装的软件包：apt-get upgrade
 
 将系统升级到新版本：apt-get dist-upgrade
-</code></pre>
-<h3 id="zypper-命令">zypper 命令</h3>
-<p>Zypper 命令</p>
+</code></pre><h3 id="zypper-命令"><a href="#zypper-命令" class="headerlink" title="zypper 命令"></a>zypper 命令</h3><p>Zypper 命令</p>
 <p>用 法 ：</p>
 <pre><code>   zypper [--全 局 选 项 ] &lt;命 令 &gt; [--命 令 选 项 ] [参 数 ]
-</code></pre>
-<p>全 局 选 项 ：</p>
+</code></pre><p>全 局 选 项 ：</p>
 <pre><code>   --help, -h              帮 助 。 .
    --version, -V           输 出 版 本 号 。
    --quiet, -q             减 少 普 通 输 出 ， 仅 打 印 错 误 信 息 。
@@ -564,12 +549,10 @@ deplist：显示rpm软件包的所有依赖关系。
    --plus-repo, -p &lt;URI&gt;   使 用 额 外 的 安 装 源 。
    --disable-repositories 不 从 安 装 源 读 取 元 数 据 。
    --no-refresh            不 刷 新 安 装 源 。
-</code></pre>
-<p>目 标 选 项 ：</p>
+</code></pre><p>目 标 选 项 ：</p>
 <pre><code>   --root, -R &lt;dir&gt;        在 不 同 的 根 目 录 下 操 作 。
    --disable-system-sources、 -D            不 读 取 系 统 安 装 的 可 解 析 项 。
-</code></pre>
-<p>命 令 ：</p>
+</code></pre><p>命 令 ：</p>
 <pre><code>   help, ?                 打 印 帮 助 。
    shell, sh               一 次 接 受 多 个 命 令 .
 
@@ -608,12 +591,9 @@ deplist：显示rpm软件包的所有依赖关系。
    addlock, al             添 加 一 个 软 件 包 锁 定 。
    removelock, rl          取 消 一 个 软 件 包 锁 定 。
    locks, ll               列 出 当 前 的 软 件 包 锁 定 。
-</code></pre>
-<h3 id="dnf-命令">dnf 命令</h3>
-<p>dnf命令</p>
+</code></pre><h3 id="dnf-命令"><a href="#dnf-命令" class="headerlink" title="dnf 命令"></a>dnf 命令</h3><p>dnf命令</p>
 <p>DNF是新一代的rpm软件包管理器。他首先出现在 Fedora 18 这个发行版中。而最近，它取代了yum，正式成为 Fedora 22 的包管理器。</p>
-<p>DNF包管理器克服了YUM包管理器的一些瓶颈，提升了包括用户体验，内存占用，依赖分析，运行速度等多方面的内容。DNF使用 RPM, libsolv 和 hawkey 库进行包管理操作。尽管它没有预装在 CentOS 和 RHEL 7<br>
-中，但你可以在使用 YUM 的同时使用 DNF</p>
+<p>DNF包管理器克服了YUM包管理器的一些瓶颈，提升了包括用户体验，内存占用，依赖分析，运行速度等多方面的内容。DNF使用 RPM, libsolv 和 hawkey 库进行包管理操作。尽管它没有预装在 CentOS 和 RHEL 7<br>中，但你可以在使用 YUM 的同时使用 DNF</p>
 <p>命令：</p>
 <pre><code>DNF 包管理器版本  # dnf –version
 
@@ -668,11 +648,8 @@ deplist：显示rpm软件包的所有依赖关系。
 重新安装特定软件包 # dnf reinstall nano
 
 回滚某个特定软件的版本 # dnf downgrade acpid
-</code></pre>
-<h3 id="yast-yast2">yast yast2</h3>
-<p>YaST2是SUSE Linux中的配置工具，用于配置系统的硬件，例如打印机，声卡，键盘，网卡。它还帮助我们配置NIS，NFS等网络客户端和服务。</p>
-<p>yast2最常见的用途是安装，升级和删除软件。 Yast2可用作命令行工具和GUI工具。YaST可用于设置硬件，配置网络，系统服务并调整安全设置。所有这些任务都可以从YaST控制中心完成。<br>
-它因易于使用和吸引人的图形界面以及在安装过程中和安装后快速自定义系统的能力而广受欢迎。</p>
+</code></pre><h3 id="yast-yast2"><a href="#yast-yast2" class="headerlink" title="yast yast2"></a>yast yast2</h3><p>YaST2是SUSE Linux中的配置工具，用于配置系统的硬件，例如打印机，声卡，键盘，网卡。它还帮助我们配置NIS，NFS等网络客户端和服务。</p>
+<p>yast2最常见的用途是安装，升级和删除软件。 Yast2可用作命令行工具和GUI工具。YaST可用于设置硬件，配置网络，系统服务并调整安全设置。所有这些任务都可以从YaST控制中心完成。<br>它因易于使用和吸引人的图形界面以及在安装过程中和安装后快速自定义系统的能力而广受欢迎。</p>
 <p>在命令下面使用可列出可以由Yast2配置和管理的模块。 命令：</p>
 <pre><code># yast2 -l
 
@@ -688,13 +665,10 @@ firewall
 .....
 view_anymsg
 xen
-</code></pre>
-<h3 id="赞助广告-2">赞助广告</h3>
-<p><img src="https://gd3.alicdn.com/imgextra/i2/2200652270622/O1CN01A9LSoi1GSuyqYAlvI_!!2200652270622.jpg" alt="羊毛双面呢高腰小香风套装"></p>
+</code></pre><h3 id="赞助广告"><a href="#赞助广告" class="headerlink" title="赞助广告"></a>赞助广告</h3><p><img src="https://gd3.alicdn.com/imgextra/i2/2200652270622/O1CN01A9LSoi1GSuyqYAlvI_!!2200652270622.jpg" alt="羊毛双面呢高腰小香风套装"></p>
 <p><a target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?id=629273346606">查看购买上图商品</a> <a target="_blank" rel="noopener" href="https://shop252294542.taobao.com/">淘宝店铺</a> <a target="_blank" rel="noopener" href="http://www.lxeridium.com/">品牌官网</a></p>
 <pre><code>感谢 lxeridium品牌赞助. 品牌官网：http://www.lxeridium.com 
 </code></pre>
-
 
         <hr>
         <!-- Pager -->
