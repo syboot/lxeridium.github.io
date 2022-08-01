@@ -1,0 +1,525 @@
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=616396766459"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32695.jpg" alt="lxeridium 黑白波点网红西装职业套装"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=616396766459"
+                                                                 target="_blank">黑白波点网红西装职业套装</a></div>
+                                    <div class="product_price">No.LX32695</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="黑白波点网红西装职业套装">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=616503048513"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32696.jpg" alt="lxeridium 开叉喇叭袖西装外套"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=616503048513"
+                                                                 target="_blank">开叉喇叭袖西装外套</a></div>
+                                    <div class="product_price">No.LX32696</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="开叉喇叭袖西装外套">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=616681472021"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32697.jpg" alt="lxeridium V领长袖修身羊毛针织打底衫"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=616681472021"
+                                                                 target="_blank">V领长袖修身羊毛针织打底衫</a></div>
+                                    <div class="product_price">No.LX32697</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="V领长袖修身羊毛针织打底衫">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=617158065194"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32698.jpg" alt="lxeridium 小香风珍珠轻熟法式开衫"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=617158065194"
+                                                                 target="_blank">小香风珍珠轻熟法式开衫</a></div>
+                                    <div class="product_price">No.LX32698</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="小香风珍珠轻熟法式开衫">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=617135916680"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32699.jpg" alt="lxeridium 真丝醋酸缎面阔腿裤套装"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=617135916680"
+                                                                 target="_blank">真丝醋酸缎面阔腿裤套装</a></div>
+                                    <div class="product_price">No.LX32699</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="真丝醋酸缎面阔腿裤套装">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=617529332272"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32700.jpg" alt="lxeridium 真丝醋酸缎面阔腿裤套装"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=617529332272"
+                                                                 target="_blank">真丝醋酸缎面阔腿裤套装</a></div>
+                                    <div class="product_price">No.LX32700</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="真丝醋酸缎面阔腿裤套装">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=621095708162"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32710.jpg" alt="lxeridium 三醋酸缎面大码长袖衬衫"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=621095708162"
+                                                                 target="_blank">三醋酸缎面大码长袖衬衫</a></div>
+                                    <div class="product_price">No.LX32710</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="三醋酸缎面大码长袖衬衫">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=622617371152"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32711.jpg" alt="lxeridium 网红直播表演网纱吊带中长连衣裙"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=622617371152"
+                                                                 target="_blank">网红直播表演网纱吊带中长连衣裙</a></div>
+                                    <div class="product_price">No.LX32711</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="网红直播表演网纱吊带中长连衣裙">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=625058323217"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32714.jpg" alt="lxeridium 蓝白撞色条纹T恤弹力打底衫"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=625058323217"
+                                                                 target="_blank">蓝白撞色条纹T恤弹力打底衫</a></div>
+                                    <div class="product_price">No.LX32714</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="蓝白撞色条纹T恤弹力打底衫">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=626206772173"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32717.jpg" alt="lxeridium 澳洲细羊毛羊绒双面呢青果领套装"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=626206772173"
+                                                                 target="_blank">澳洲细羊毛羊绒双面呢青果领套装</a></div>
+                                    <div class="product_price">No.LX32717</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="澳洲细羊毛羊绒双面呢青果领套装">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=626507248943"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32718.jpg" alt="lxeridium 全羊毛双面呢高腰牛油果绿女西装"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=626507248943"
+                                                                 target="_blank">全羊毛双面呢高腰牛油果绿女西装</a></div>
+                                    <div class="product_price">No.LX32718</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="全羊毛双面呢高腰牛油果绿女西装">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=628513951286"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32719.jpg" alt="lxeridium 双面羊毛中长款宽松韩版大衣"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=628513951286"
+                                                                 target="_blank">双面羊毛中长款宽松韩版大衣</a></div>
+                                    <div class="product_price">No.LX32719</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="双面羊毛中长款宽松韩版大衣">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=627946000579"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32721.jpg" alt="lxeridium 男女同款羊毛羊绒双面尼水波纹大衣"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=627946000579"
+                                                                 target="_blank">男女同款羊毛羊绒双面尼水波纹大衣</a></div>
+                                    <div class="product_price">No.LX32721</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="男女同款羊毛羊绒双面尼水波纹大衣">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=628559657528"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32722.jpg" alt="lxeridium 高端细羊毛小众设计圆领T恤针织衫"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=628559657528"
+                                                                 target="_blank">高端细羊毛小众设计圆领T恤针织衫</a></div>
+                                    <div class="product_price">No.LX32722</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="高端细羊毛小众设计圆领T恤针织衫">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=629273346606"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32724.jpg" alt="lxeridium 高端羊毛双面呢高腰套装"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=629273346606"
+                                                                 target="_blank">高端羊毛双面呢高腰套装</a></div>
+                                    <div class="product_price">No.LX32724</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="高端羊毛双面呢高腰套装">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=629281929649"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32725.jpg" alt="lxeridium 韩版宽松廓形大码棉服外套"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=629281929649"
+                                                                 target="_blank">韩版宽松廓形大码棉服外套</a></div>
+                                    <div class="product_price">No.LX32725</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="韩版宽松廓形大码棉服外套">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=630048952303"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32727.jpg" alt="lxeridium 灯笼袖韩版长袖加厚连衣裙"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=630048952303"
+                                                                 target="_blank">灯笼袖韩版长袖加厚连衣裙</a></div>
+                                    <div class="product_price">No.LX32727</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="灯笼袖韩版长袖加厚连衣裙">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=631021890672"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32728.jpg" alt="lxeridium 针织衫小香风羊毛开衫毛衣"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=631021890672"
+                                                                 target="_blank">针织衫小香风羊毛开衫毛衣</a></div>
+                                    <div class="product_price">No.LX32728</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="针织衫小香风羊毛开衫毛衣">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=631616803880"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32729.jpg" alt="lxeridium 羊毛针织开衫拼色拉链上衣二件套"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=631616803880"
+                                                                 target="_blank">羊毛针织开衫拼色拉链上衣二件套</a></div>
+                                    <div class="product_price">No.LX32729</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="羊毛针织开衫拼色拉链上衣二件套">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=631862067036"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32730.jpg" alt="lxeridium 羊毛双面呢赫本风收腰系带大衣"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=631862067036"
+                                                                 target="_blank">羊毛双面呢赫本风收腰系带大衣</a></div>
+                                    <div class="product_price">No.LX32730</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="羊毛双面呢赫本风收腰系带大衣">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- Product -->
+                        <div class="product">
+                            <div class="product_image"><a href="https://item.taobao.com/item.htm?id=631862067036"
+                                                          target="_blank"
+                                                          title="定制西装"><img
+                                    src="images/product/newpromo/LX32731.jpg" alt="lxeridium 慵懒风针麻花羊毛针织衫"></a></div>
+                            <div class="rating rating_5" data-rating="5">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product_content clearfix">
+                                <div class="product_info">
+                                    <div class="product_name"><a href="https://item.taobao.com/item.htm?id=631862067036"
+                                                                 target="_blank">慵懒风针麻花羊毛针织衫</a></div>
+                                    <div class="product_price">No.LX32731</div>
+                                </div>
+                                <div class="product_options">
+                                    <div class="product_buy product_option"><img src="images/star.svg" alt="慵懒风针麻花羊毛针织衫">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
